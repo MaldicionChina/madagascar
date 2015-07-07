@@ -1,0 +1,10 @@
+Program sfsmstack | Stack a dataset over the second dimensions by smart stacking. 
+[SYNOPSIS]
+sfsmstack < in.rsf > out.rsf s=1 l=0 ifwt=y esp=1e-10
+[PARAMETERS]
+float   | esp | =1e-10 |   | 	
+bool    | ifwt | =y |  [y/n] | 	
+int     | l | =0 |   | 	parameter for alpha-trimmed mean 
+int     | s | =1 |   | 	exponent
+[DIRECTORY]
+user/gchliu

@@ -1,0 +1,203 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sfhelicon</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sfhelicon</strong></big></big> (1.7 Mhelicon.c 12632 2014-05-13 23:21:50Z sfomel)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="http://sourceforge.net/p/rsf/code/HEAD/tree/branches/madagascar-1.7/user/gee/Mhelicon.c">user/gee/Mhelicon.c</a></font></td></tr></table>
+    Multidimensional convolution and deconvolution by helix transform. 
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sfhelicon < in.rsf filt=filt.rsf > out.rsf n= adj=n div=n lag=</td></tr></table><br>
+May 2014 program of the month:<br>
+<a href="http://ahay.org/rsflog/index.php?/archives/387-Program-of-the-math-sfhelicon.html">http://ahay.org/rsflog/index.php?/archives/387-Program-of-the-math-sfhelicon.html</a><br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>adj=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	if y, do adjoint operation <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>div=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	if y, do inverse operation (deconvolution) <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>file    <strong>filt=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	auxiliary input file name<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>lag=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	file with filter lags<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>ints    <strong>n=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	 [dim]<br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#eeaa77">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Used In</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>CUP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/cup/rna2d/real.html">rna2d/real</a><br>
+                        
+                        <a href="book/cup/rna2d/shot.html">rna2d/shot</a><br>
+                        
+                        <a href="book/cup/rna2d/simple.html">rna2d/simple</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GEE</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/gee/hlx/helderiv.html">hlx/helderiv</a><br>
+                        
+                        <a href="book/gee/hlx/helgal.html">hlx/helgal</a><br>
+                        
+                        <a href="book/gee/hlx/helicon.html">hlx/helicon</a><br>
+                        
+                        <a href="book/gee/hlx/helocut.html">hlx/helocut</a><br>
+                        
+                        <a href="book/gee/hlx/mam.html">hlx/mam</a><br>
+                        
+                        <a href="book/gee/mda/geostat.html">mda/geostat</a><br>
+                        
+                        <a href="book/gee/mda/morgan.html">mda/morgan</a><br>
+                        
+                        <a href="book/gee/mda/pefex.html">mda/pefex</a><br>
+                        
+                        <a href="book/gee/noiz/mad.html">noiz/mad</a><br>
+                        
+                        <a href="book/gee/prc/sep95.html">prc/sep95</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GEO391</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/geo391/hw4/rain.html">hw4/rain</a><br>
+                        
+                        <a href="book/geo391/hw6/pattern.html">hw6/pattern</a><br>
+                        
+                        <a href="book/geo391/hw6/seabeam.html">hw6/seabeam</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>JLU</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/jlu/txyapf/curve.html">txyapf/curve</a><br>
+                        
+                        <a href="book/jlu/txyapf/sigmoid.html">txyapf/sigmoid</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>RSF</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/rsf/tutorials/smoothing.html">tutorials/smoothing</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>SEP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/sep/bspl/plane3.html">bspl/plane3</a><br>
+                        
+                        <a href="book/sep/burg/gtens.html">burg/gtens</a><br>
+                        
+                        <a href="book/sep/burg/helix.html">burg/helix</a><br>
+                        
+                        <a href="book/sep/burg/laplac.html">burg/laplac</a><br>
+                        
+                        <a href="book/sep/burg/tension.html">burg/tension</a><br>
+                        
+                        <a href="book/sep/findif/laplace.html">findif/laplace</a><br>
+                        
+                        <a href="book/sep/plane/bob.html">plane/bob</a><br>
+                        
+                        <a href="book/sep/plane/eplane.html">plane/eplane</a><br>
+                        
+                        <a href="book/sep/precon/cube.html">precon/cube</a><br>
+                        
+                        <a href="book/sep/precon/hlx.html">precon/hlx</a><br>
+                        
+                        <a href="book/sep/precon/mis1.html">precon/mis1</a><br>
+                        
+                        <a href="book/sep/texture/fft.html">texture/fft</a><br>
+                        </td></tr></table></td></tr></table>
+    </body></html>

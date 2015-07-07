@@ -1,0 +1,9 @@
+Program sfcconv | 1-D convolution with complex numbers. 
+[SYNOPSIS]
+sfcconv < in.rsf > out.rsf filt=filt.rsf single=y lag=1
+[PARAMETERS]
+file    | filt | = |   | 	auxiliary input file name
+int     | lag | =1 |   | 	lag for internal convolution 
+bool    | single | =y |  [y/n] | 	single channel or multichannel 
+[DIRECTORY]
+user/gee

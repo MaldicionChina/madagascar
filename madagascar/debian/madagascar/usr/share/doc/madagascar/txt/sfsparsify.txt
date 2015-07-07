@@ -1,0 +1,14 @@
+Program sfsparsify | Transforms regular 2-D array to sparse array
+[SYNOPSIS]
+sfsparsify < in.rsf > out.rsf nonzero=n1*n2
+[COMMENTS]
+Input is int or float array
+Output is a float nonzero-by-3 array, where 
+nonzero=`<input.rsf sfattr want=nonzero | awk -F '= ' '{ print $2 }';`
+column 0 holds the data values (converted from int to float, if necessary),
+column 1 holds coordinate values (i.e. o+i*d, not indices i) for dimension
+1 of input, and column 2 the coordinate values for dimension 2 of input 
+[PARAMETERS]
+int     | nonzero | =n1*n2 |   | 	Number of nonzero elements in input 
+[DIRECTORY]
+user/ivlad

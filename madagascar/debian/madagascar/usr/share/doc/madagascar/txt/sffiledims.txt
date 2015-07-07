@@ -1,0 +1,10 @@
+Program sffiledims | Computes number of dimensions and their values
+[SYNOPSIS]
+sffiledims < in.rsf large=n parform=y
+[COMMENTS]
+Wrapper for sf_filedims. 
+[PARAMETERS]
+bool    | large | =n |  [y/n] | 	if y, file with large dimensions. 
+bool    | parform | =y |  [y/n] | 	If y, print out parameter=value. If n, print out value. 
+[DIRECTORY]
+user/ivlad

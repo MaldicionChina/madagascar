@@ -1,0 +1,11 @@
+Program sfshapefill | Missing data interpolation in 2-D by Laplacian regularization. 
+[SYNOPSIS]
+sfshapefill < in.rsf > out.rsf mask=mask.rsf niter=200 verb=n dim=dim rect#=(1,1,...)
+[PARAMETERS]
+int     | dim | =dim |   | 	dimensionality 
+string  | mask | = |   | 	optional mask file with zeroes for missing data locations (auxiliary input file name)
+int     | niter | =200 |   | 	number of iterations 
+int     | rect# | =(1,1,...) |   | 	smoothing radius on #-th axis 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/fomels

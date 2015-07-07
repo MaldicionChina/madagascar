@@ -1,0 +1,19 @@
+Program sfthr | Threshold float/complex inputs given a constant/varying threshold level.
+[SYNOPSIS]
+sfthr < in.rsf > out.rsf fthr=fthr.rsf thr= mode=
+[COMMENTS]
+
+Methods available:
+- soft
+- hard
+- non-negative Garrote (nng)
+
+Written by: Gilles Hennenfent & Colin Russell, UBC
+Created: February 2006
+
+[PARAMETERS]
+string  | fthr | = |   | 	varying threshold level (positive number) (auxiliary input file name)
+string  | mode | = |   | 	'soft', 'hard', 'nng' (default: soft)
+float   | thr | = |   | 	threshold level (positive number) 
+[DIRECTORY]
+user/slim

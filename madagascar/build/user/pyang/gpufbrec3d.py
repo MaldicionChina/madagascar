@@ -1,0 +1,18 @@
+sfgpufbrec3d = rsf.doc.rsfprog('sfgpufbrec3d','user/pyang/Mgpufbrec3d.cu','''Backward reconstruction of forward modeling with random boundary''')
+sfgpufbrec3d.par('verb',rsf.doc.rsfpar('bool','n','','''verbosity '''))
+sfgpufbrec3d.par('nb',rsf.doc.rsfpar('int','20','','''thickness of random boundary '''))
+sfgpufbrec3d.par('nt',rsf.doc.rsfpar('int','','','''total number of time steps '''))
+sfgpufbrec3d.par('kt',rsf.doc.rsfpar('int','','','''record wavefield at time kt '''))
+sfgpufbrec3d.par('dt',rsf.doc.rsfpar('float','','','''time sampling interval '''))
+sfgpufbrec3d.par('fm',rsf.doc.rsfpar('float','20','','''dominant frequency of Ricker wavelet '''))
+sfgpufbrec3d.par('ns',rsf.doc.rsfpar('int','1','','''number of sources '''))
+sfgpufbrec3d.par('szbeg',rsf.doc.rsfpar('int','','','''source beginning of z-axis '''))
+sfgpufbrec3d.par('sxbeg',rsf.doc.rsfpar('int','','','''source beginning of x-axis '''))
+sfgpufbrec3d.par('sybeg',rsf.doc.rsfpar('int','','','''source beginning of y-axis '''))
+sfgpufbrec3d.par('jsz',rsf.doc.rsfpar('int','','','''source jump interval in z-axis '''))
+sfgpufbrec3d.par('jsx',rsf.doc.rsfpar('int','','','''source jump interval in x-axis '''))
+sfgpufbrec3d.par('jsy',rsf.doc.rsfpar('int','','','''source jump interval in y-axis '''))
+sfgpufbrec3d.version('1.7')
+sfgpufbrec3d.synopsis('''sfgpufbrec3d < Fv.rsf > Fw.rsf verb=n nb=20 nt= kt= dt= fm=20 ns=1 szbeg= sxbeg= sybeg= jsz= jsx= jsy=''','''''')
+rsf.doc.progs['sfgpufbrec3d']=sfgpufbrec3d
+

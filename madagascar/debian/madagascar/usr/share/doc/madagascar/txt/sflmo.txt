@@ -1,0 +1,7 @@
+Program sflmo | Linear move-out in the frequency domain
+[SYNOPSIS]
+sflmo < in.rsf > out.rsf p=
+[PARAMETERS]
+float   | p | = |   | 	Slope of LMO 
+[DIRECTORY]
+user/ivlad

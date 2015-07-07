@@ -1,0 +1,18 @@
+Program sffdct | 
+[SYNOPSIS]
+sffdct nbs=4 nba=8 ac=1 adj=n
+[COMMENTS]
+Madagascar wrapper to the Fast Discrete Curvelet Transform (FDCT)
+
+Requirements:
+- Python API enable in Madagascar
+- PyCurveLab (https://wave.eos.ubc.ca/Software/Licenced/)
+- CurveLab (http://www.curvelet.org/)
+
+[PARAMETERS]
+bool    | ac | =1 |  [y/n] | 	curvelets at finest scale
+bool    | adj | =n |  [y/n] | 	adjoint transform
+int     | nba | =8 |   | 	number of angle at the 2nd coarsest scale
+int     | nbs | =4 |   | 	number of scale for the decomposition
+[DIRECTORY]
+user/slim

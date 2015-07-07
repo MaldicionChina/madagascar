@@ -1,0 +1,29 @@
+Program sfsglfd1pml | 1-D Lowrank Finite-difference wave extrapolation 
+[SYNOPSIS]
+sfsglfd1pml < Fsrc.rsf vel=Fvel.rsf den=Fden.rsf > Fwf.rsf rec=Frec.rsf G=FG.rsf sx=Fsx.rsf ic=Fic.rsf presrc=Fpsrc.rsf velsrc=Fvsrc.rsf preinit=Fpint.rsf velinit=Fvint.rsf verb=n srcmms=n slx= srcdecay=n srctrunc=1000 inject=y gdep=0.0 snapinter=1 pmlsize=PMLOUT pmld0=PMLD0 decay=DECAY_FLAG decaybegin=DECAY_BEGIN freesurface=n
+[PARAMETERS]
+file    | G | = |   | 	auxiliary input file name
+int     | decay | =DECAY_FLAG |   | 	Flag of decay boundary condtion: 1 = use ; 0 = not use 
+int     | decaybegin | =DECAY_BEGIN |   | 	Begin time of using decay boundary condition 
+file    | den | = |   | 	auxiliary input file name
+bool    | freesurface | =n |  [y/n] | 	free surface
+float   | gdep | =0.0 |   | 	depth of geophone 
+file    | ic | = |   | 	auxiliary input file name
+bool    | inject | =y |  [y/n] | 	inject=y use inject source; inject=n use initial condition
+int     | pmld0 | =PMLD0 |   | 	PML parameter 
+int     | pmlsize | =PMLOUT |   | 	size of PML layer 
+file    | preinit | = |   | 	auxiliary input file name
+file    | presrc | = |   | 	auxiliary input file name
+file    | rec | = |   | 	auxiliary output file name
+float   | slx | = |   | 	source location in x 
+int     | snapinter | =1 |   | 	snap interval 
+bool    | srcdecay | =n |  [y/n] | 	source decay y=use
+bool    | srcmms | =n |  [y/n] | 	source type: if y, use point source 
+float   | srctrunc | =1000 |   | 	source trunc time (s)
+file    | sx | = |   | 	auxiliary input file name
+file    | vel | = |   | 	auxiliary input file name
+file    | velinit | = |   | 	auxiliary input file name
+file    | velsrc | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity
+[DIRECTORY]
+user/fangg

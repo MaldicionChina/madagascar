@@ -1,0 +1,7 @@
+Program sffileflush | Creates just the ascii header from parameters
+[SYNOPSIS]
+sffileflush < in.rsf > out.rsf
+[COMMENTS]
+Wrapper for sf_fileflush (copy RSF header of a file to another) 
+[DIRECTORY]
+user/ivlad

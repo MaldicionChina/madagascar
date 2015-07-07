@@ -1,0 +1,7 @@
+Program sfbackdire | Background directivity(Dip). 
+[SYNOPSIS]
+sfbackdire < Zz.rsf > Zo.rsf verb=0
+[PARAMETERS]
+bool    | verb | =0 |  [y/n] | 	
+[DIRECTORY]
+user/parvaneh

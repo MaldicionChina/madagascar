@@ -1,0 +1,257 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sftime2depth</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sftime2depth</strong></big></big> (1.7 Mtime2depth.c 10817 2013-08-03 16:36:21Z sfomel)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="http://sourceforge.net/p/rsf/code/HEAD/tree/branches/madagascar-1.7/system/seismic/Mtime2depth.c">system/seismic/Mtime2depth.c</a></font></td></tr></table>
+    Time-to-depth conversion in V(z). 
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sftime2depth < in.rsf velocity=velocity.rsf > out.rsf intime=n nz= dz= z0=0. extend=4 slow=n twoway=y eps=0.01</td></tr></table><br>
+July 2013 program of the month:<br>
+<a href="http://www.ahay.org/rsflog/index.php?/archives/345-Program-of-the-month-sftime2depth.html">http://www.ahay.org/rsflog/index.php?/archives/345-Program-of-the-month-sftime2depth.html</a><br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>dz=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Depth sampling (default: d1) <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>eps=0.01</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	stretch regularization <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>extend=4</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Interpolation accuracy <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>intime=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	y if velocity is in time rather than depth <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>nz=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Number of depth samples (default: n1) <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>slow=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	If y, input slowness; if n, velocity <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>twoway=y</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	if y, two-way traveltime <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>file    <strong>velocity=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	auxiliary input file name<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>z0=0.</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Depth origin <br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#eeaa77">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Used In</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>CWP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/cwp/geo2007StereographicImagingCondition/flat4.html">geo2007StereographicImagingCondition/flat4</a><br>
+                        
+                        <a href="book/cwp/geo2007StereographicImagingCondition/gaus1.html">geo2007StereographicImagingCondition/gaus1</a><br>
+                        
+                        <a href="book/cwp/geo2008NumericWEMVAoperators/flatWEMVA.html">geo2008NumericWEMVAoperators/flatWEMVA</a><br>
+                        
+                        <a href="book/cwp/geo2008NumericWEMVAoperators/saltWEMVA.html">geo2008NumericWEMVAoperators/saltWEMVA</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GALLERY</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/gallery/marmousi/model.html">marmousi/model</a><br>
+                        
+                        <a href="book/gallery/overthrust/model.html">overthrust/model</a><br>
+                        
+                        <a href="book/gallery/segsalt/model.html">segsalt/model</a><br>
+                        
+                        <a href="book/gallery/sigsbee/model.html">sigsbee/model</a><br>
+                        
+                        <a href="book/gallery/teapot/angmig.html">teapot/angmig</a><br>
+                        
+                        <a href="book/gallery/teapot/zomig.html">teapot/zomig</a><br>
+                        
+                        <a href="book/gallery/twohalf/model.html">twohalf/model</a><br>
+                        
+                        <a href="book/gallery/vofz/kirch.html">vofz/kirch</a><br>
+                        
+                        <a href="book/gallery/vofz/stolt.html">vofz/stolt</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GEO384W</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/geo384w/hw3/synth.html">hw3/synth</a><br>
+                        
+                        <a href="book/geo384w/hw4/synth.html">hw4/synth</a><br>
+                        
+                        <a href="book/geo384w/hw5/lsmig.html">hw5/lsmig</a><br>
+                        
+                        <a href="book/geo384w/hw6/blake.html">hw6/blake</a><br>
+                        
+                        <a href="book/geo384w/hw6/sigsbee.html">hw6/sigsbee</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>RSF</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/rsf/school2015/modmig.html">school2015/modmig</a><br>
+                        
+                        <a href="book/rsf/su/rsflab4.html">su/rsflab4</a><br>
+                        
+                        <a href="book/rsf/su/rsflab9.html">su/rsflab9</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>SEP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/sep/fat/migration.html">fat/migration</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>TCCS</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/tccs/nmodeblend/bei.html">nmodeblend/bei</a><br>
+                        
+                        <a href="book/tccs/nmodeblend/synth.html">nmodeblend/synth</a><br>
+                        
+                        <a href="book/tccs/synth/ordexample20hz.html">synth/ordexample20hz</a><br>
+                        
+                        <a href="book/tccs/synth/small-khuff.html">synth/small-khuff</a><br>
+                        
+                        <a href="book/tccs/time2depth/masha2.html">time2depth/masha2</a><br>
+                        
+                        <a href="book/tccs/time2depth/msyn2.html">time2depth/msyn2</a><br>
+                        
+                        <a href="book/tccs/time2depth2/beinew.html">time2depth2/beinew</a><br>
+                        
+                        <a href="book/tccs/time2depth2/hs2grad.html">time2depth2/hs2grad</a><br>
+                        
+                        <a href="book/tccs/time2depth2/synth.html">time2depth2/synth</a><br>
+                        
+                        <a href="book/tccs/time2depth2/vgrad.html">time2depth2/vgrad</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>XJTU</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/xjtu/test/marmousi.html">test/marmousi</a><br>
+                        
+                        <a href="book/xjtu/test/sigsbee.html">test/sigsbee</a><br>
+                        </td></tr></table></td></tr></table>
+    </body></html>

@@ -1,0 +1,8 @@
+Program sfset2zero | replaces content of RSF file with zeros
+[SYNOPSIS]
+sfset2zero file1.rsf [file2.rsf ...]
+[COMMENTS]
+Used to create initial guess for SLIMpy.
+
+[DIRECTORY]
+user/slim

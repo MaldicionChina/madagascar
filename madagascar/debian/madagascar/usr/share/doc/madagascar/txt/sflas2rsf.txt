@@ -1,0 +1,5 @@
+Program sflas2rsf | Convert LAS-2 well logs to RSF
+[SYNOPSIS]
+sflas2rsf
+[DIRECTORY]
+user/fomels

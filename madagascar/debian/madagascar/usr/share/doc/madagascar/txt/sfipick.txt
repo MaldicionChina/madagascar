@@ -1,0 +1,5 @@
+Program sfipick | Simple interactive picking
+[SYNOPSIS]
+sfipick
+[DIRECTORY]
+user/fomels

@@ -1,0 +1,15 @@
+Program sfminmax | Element by element minimum or maximum of two RSF files.
+[SYNOPSIS]
+sfminmax file1=file1.rsf file2=file2.rsf > out.rsf mode=
+[COMMENTS]
+
+file1 and file2 must have the same number of elements.
+
+See also: sflistminmax, sfstack.
+
+[PARAMETERS]
+string  | file1 | = |   | 	RSF filename required, data type must be float (auxiliary input file name)
+string  | file2 | = |   | 	RSF filename required, data type must be float (auxiliary input file name)
+string  | mode | = |   | 	'min' (default) or 'max' 
+[DIRECTORY]
+user/jennings

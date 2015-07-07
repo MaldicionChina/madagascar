@@ -1,0 +1,9 @@
+Program sfofilp | 2-D missing data interpolation by differential offset continuation. 
+[SYNOPSIS]
+sfofilp < in.rsf > out.rsf known=known.rsf niter=10 simple=n
+[PARAMETERS]
+file    | known | = |   | 	auxiliary input file name
+int     | niter | =10 |   | 	number of iterations 
+bool    | simple | =n |  [y/n] | 	if y, use simple h derivative for regularization 
+[DIRECTORY]
+user/fomels

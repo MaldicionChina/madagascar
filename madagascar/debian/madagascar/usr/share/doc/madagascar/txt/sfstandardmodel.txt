@@ -1,0 +1,5 @@
+Program sfstandardmodel | None
+[SYNOPSIS]
+sfstandardmodel
+[DIRECTORY]
+trip/iwave/grid/main

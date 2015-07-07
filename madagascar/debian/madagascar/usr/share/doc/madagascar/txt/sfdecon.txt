@@ -1,0 +1,14 @@
+Program sfdecon | Deconvolution (N-dimensional).
+[SYNOPSIS]
+sfdecon < in.rsf > out.rsf filt=filt.rsf predictive=n rect1=0 lag=
+[COMMENTS]
+
+Uses the helix and patching technology.
+
+[PARAMETERS]
+file    | filt | = |   | 	auxiliary input file name
+string  | lag | = |   | 	
+bool    | predictive | =n |  [y/n] | 	if y, do predictive deconvolution 
+int     | rect1 | =0 |   | 	smoothing in the first axis 
+[DIRECTORY]
+user/gee

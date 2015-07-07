@@ -1,0 +1,9 @@
+Program sfmflt | 3D Recursive median filter 
+[SYNOPSIS]
+sfmflt < in.rsf > out.rsf rect1=1 rect2=0 rect3=0
+[PARAMETERS]
+int     | rect1 | =1 |   | 	filter length on 1st axis 
+int     | rect2 | =0 |   | 	filter length on 2nd axis 
+int     | rect3 | =0 |   | 	filter length on 3nd axis 
+[DIRECTORY]
+user/chen

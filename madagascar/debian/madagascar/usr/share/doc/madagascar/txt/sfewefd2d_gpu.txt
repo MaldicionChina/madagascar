@@ -1,0 +1,20 @@
+Program sfewefd2d_gpu | 2D elastic time-domain FD modeling with GPU
+[SYNOPSIS]
+sfewefd2d_gpu < Fwav.rsf ccc=Fccc.rsf den=Fden.rsf sou=Fsou.rsf rec=Frec.rsf > Fdat.rsf wfl=Fwfl.rsf verb=n snap=n free=n ssou=n dabc=n gpu=0 nbell=5 jdata=1 jsnap=nt
+[PARAMETERS]
+file    | ccc | = |   | 	auxiliary input file name
+bool    | dabc | =n |  [y/n] | 	absorbing BC 
+file    | den | = |   | 	auxiliary input file name
+bool    | free | =n |  [y/n] | 	free surface flag 
+int     | gpu | =0 |   | 	ID of the GPU to be used 
+int     | jdata | =1 |   | 	extract receiver data every jdata time steps 
+int     | jsnap | =nt |   | 	save wavefield every jsnap time steps 
+int     | nbell | =5 |   | 	bell size 
+file    | rec | = |   | 	auxiliary input file name
+bool    | snap | =n |  [y/n] | 	wavefield snapshots flag 
+file    | sou | = |   | 	auxiliary input file name
+bool    | ssou | =n |  [y/n] | 	stress source 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+file    | wfl | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/rweiss

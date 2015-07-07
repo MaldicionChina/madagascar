@@ -1,0 +1,8 @@
+Program sfgui | 
+[SYNOPSIS]
+sfgui
+[COMMENTS]
+Open tkMadagascar GUI
+
+[DIRECTORY]
+user/godwinj

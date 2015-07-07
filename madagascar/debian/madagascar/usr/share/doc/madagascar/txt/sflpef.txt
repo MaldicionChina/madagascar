@@ -1,0 +1,11 @@
+Program sflpef | Find PEF on aliased traces. 
+[SYNOPSIS]
+sflpef < dat.rsf > pef.rsf a= center= gap= jump=2 lag=
+[PARAMETERS]
+ints    | a | = |   | 	 [dim]
+ints    | center | = |   | 	 [dim]
+ints    | gap | = |   | 	 [dim]
+int     | jump | =2 |   | 	
+string  | lag | = |   | 	output file for filter lags 
+[DIRECTORY]
+user/gee

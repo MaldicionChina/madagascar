@@ -1,0 +1,10 @@
+Program sftrismooth2 | 2-D smoothing by triangle directional shaping. 
+[SYNOPSIS]
+sftrismooth2 < in.rsf dip=dip.rsf > out.rsf rect1=3 rect2=3 adj=n
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	
+file    | dip | = |   | 	auxiliary input file name
+int     | rect1 | =3 |   | 	
+int     | rect2 | =3 |   | 	smoothing radius 
+[DIRECTORY]
+user/pwd

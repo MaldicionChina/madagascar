@@ -1,0 +1,12 @@
+Program sflfdanc2_25 | 2D high-order TTI Lowrank FD coefficient
+[SYNOPSIS]
+sflfdanc2_25 < velz.rsf > outm.rsf seed=time(NULL eps=1.e-6 npk=50 dt= size=17 de=1
+[PARAMETERS]
+        | de | =1 |   | 	stencil length
+        | dt | = |   | 	time step
+        | eps | =1.e-6 |   | 	tolerance
+        | npk | =50 |   | 	maximum rank
+        | seed | =time(NULL |   | 	
+        | size | =17 |   | 	stencil length
+[DIRECTORY]
+user/songxl

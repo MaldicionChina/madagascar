@@ -1,0 +1,12 @@
+Program sffileheader | dumps header information to the standard output.
+[SYNOPSIS]
+sffileheader < in.rsf large=n parform=y all=n
+[COMMENTS]
+   Extended sffiledims.
+[PARAMETERS]
+bool    | all | =n |  [y/n] | 	If y, print all values, icluding singleton dimensions.
+       If n, drop trailing singleteon dimensions.
+bool    | large | =n |  [y/n] | 	if y, file with large dimensions. 
+bool    | parform | =y |  [y/n] | 	If y, print out parameter=value. If n, print out value. 
+[DIRECTORY]
+user/slim

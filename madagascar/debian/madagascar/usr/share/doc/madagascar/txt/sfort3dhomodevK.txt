@@ -1,0 +1,48 @@
+Program sfort3dhomodevK | 3D three-components projection deviation correction operators calculation in
+[SYNOPSIS]
+sfort3dhomodevK > Fo1.rsf apvy=Fo2.rsf apvz=Fo3.rsf taper=Fo4.rsf vp0=3000.0 vs0=1500.0 de1=0.05 de2=-0.05 de3=0.15 ep1=0.2 ep2=0.05 ga1=0.1 ga2=0.1 alpha=0. the=0. phi=0. hnx=250 hny=250 hnz=250 dx=10. dy=10. dz=10. itaper=1
+[COMMENTS]
+ * homogeneous orthorhombic media
+   Copyright (C) 2012 Tongji University, Shanghai, China 
+
+   Authors: Jiubing Cheng and Tengfei Wang 
+     
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+             
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+                   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+[PARAMETERS]
+float   | alpha | =0. |   | 	
+file    | apvy | = |   | 	auxiliary output file name
+file    | apvz | = |   | 	auxiliary output file name
+float   | de1 | =0.05 |   | 	
+float   | de2 | =-0.05 |   | 	
+float   | de3 | =0.15 |   | 	
+float   | dx | =10. |   | 	
+float   | dy | =10. |   | 	
+float   | dz | =10. |   | 	
+float   | ep1 | =0.2 |   | 	
+float   | ep2 | =0.05 |   | 	
+float   | ga1 | =0.1 |   | 	
+float   | ga2 | =0.1 |   | 	
+int     | hnx | =250 |   | 	
+int     | hny | =250 |   | 	
+int     | hnz | =250 |   | 	
+int     | itaper | =1 |   | 	
+float   | phi | =0. |   | 	
+file    | taper | = |   | 	auxiliary output file name
+float   | the | =0. |   | 	
+float   | vp0 | =3000.0 |   | 	
+float   | vs0 | =1500.0 |   | 	
+[DIRECTORY]
+user/chengjb

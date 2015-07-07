@@ -1,0 +1,20 @@
+Program sfmkrcv | Make topography mask / receiver list / record list for first-arrival traveltime tomography 
+[SYNOPSIS]
+sfmkrcv < in.rsf > out.rsf reco=reco.rsf shot=shot.rsf topo=topo.rsf time=time.rsf air=0.5 velocity=y order=2 fix=n plane=n offset1=0 offset2=0 np=1 p0=0. dp=1.
+[PARAMETERS]
+float   | air | =0.5 |   | 	air velocity for thresholding topography 
+float   | dp | =1. |   | 	ray-parameter increment 
+bool    | fix | =n |  [y/n] | 	if y, fixed-spread; n, moving acquisition 
+int     | np | =1 |   | 	ray-parameter number 
+int     | offset1 | =0 |   | 	receiver offset inline 
+int     | offset2 | =0 |   | 	receiver offset crossline 
+int     | order | =2 |   | 	fast marching accuracy order 
+float   | p0 | =0. |   | 	ray-parameter start 
+bool    | plane | =n |  [y/n] | 	if y, plane-wave source; n, point source 
+file    | reco | = |   | 	auxiliary output file name
+string  | shot | = |   | 	auxiliary input file name
+string  | time | = |   | 	auxiliary output file name
+string  | topo | = |   | 	auxiliary output file name
+bool    | velocity | =y |  [y/n] | 	if y, the input is velocity; n, slowness squared 
+[DIRECTORY]
+user/llisiw

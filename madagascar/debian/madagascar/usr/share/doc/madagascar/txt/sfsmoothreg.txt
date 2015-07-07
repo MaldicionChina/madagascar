@@ -1,0 +1,8 @@
+Program sfsmoothreg | Smoothing in 1-D by simple regularization.
+[SYNOPSIS]
+sfsmoothreg < in.rsf > smooth.rsf eps=1. repeat=1
+[PARAMETERS]
+float   | eps | =1. |   | 	smoothness parameter 
+int     | repeat | =1 |   | 	repeat smoothing 
+[DIRECTORY]
+user/fomels

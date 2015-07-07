@@ -1,0 +1,8 @@
+Program sfcpef1 | Estimate complex PEF on the first axis. 
+[SYNOPSIS]
+sfcpef1 < in.rsf > out.rsf nf= niter=2*nf
+[PARAMETERS]
+int     | nf | = |   | 	filter length 
+int     | niter | =2*nf |   | 	number of iterations 
+[DIRECTORY]
+user/gee

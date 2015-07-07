@@ -1,0 +1,13 @@
+Program sffxdecon | Random noise attenuation using f-x deconvolution 
+[SYNOPSIS]
+sffxdecon < in.rsf > out.rsf verb=n taper=.1 fmin=1. fmax=1./(2*dt) twlen=(float)(n1-1)*dt n2w=10 lenf=4
+[PARAMETERS]
+float   | fmax | =1./(2*dt) |   | 	maximum frequency to process in Hz 
+float   | fmin | =1. |   | 	minimum frequency to process in Hz 
+int     | lenf | =4 |   | 	number of traces for filter 
+int     | n2w | =10 |   | 	number of traces in window 
+float   | taper | =.1 |   | 	length of taper 
+float   | twlen | =(float)(n1-1)*dt |   | 	time window length 
+bool    | verb | =n |  [y/n] | 	flag to get advisory messages 
+[DIRECTORY]
+user/chenyk

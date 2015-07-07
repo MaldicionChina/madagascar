@@ -1,0 +1,11 @@
+Program sfve2d | Convert interval velocity to Dix velocity 
+[SYNOPSIS]
+sfve2d < fsc.rsf > fid.rsf x=fx.rsf z=fy.rsf nt= dt= order=4
+[PARAMETERS]
+float   | dt | = |   | 	
+int     | nt | = |   | 	
+int     | order | =4 |   | 	interpolation order 
+file    | x | = |   | 	auxiliary output file name
+file    | z | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/kourkina

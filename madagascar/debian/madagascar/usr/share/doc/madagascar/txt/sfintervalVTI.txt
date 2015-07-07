@@ -1,0 +1,10 @@
+Program sfintervalVTI | Interval/Effective VTI parameters from Effective/Interval profiles 
+[SYNOPSIS]
+sfintervalVTI < vn.rsf > vn_out.rsf vH_out=vh_out.rsf eta_out=eta_out.rsf eta=eta.rsf interval=y
+[PARAMETERS]
+string  | eta | = |   | 	input eta(auxiliary input file name)
+string  | eta_out | = |   | 	output eta(auxiliary output file name)
+bool    | interval | =y |  [y/n] | 	output are interval [y] or effective [n] profiles 
+string  | vH_out | = |   | 	output HOR vel(auxiliary output file name)
+[DIRECTORY]
+user/lcasasan

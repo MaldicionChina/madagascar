@@ -1,0 +1,20 @@
+Program sflffd2an25 | 2-D Fourier finite-difference wave extrapolation 
+[SYNOPSIS]
+sflffd2an25 > out.rsf < source.rsf velz=velz.rsf G=G.rsf paras=paras.rsf s1=files1.rsf s2=files2.rsf dt= nt= isx= isz= ax=2.0 az=2.0 factor=1.0 err=0.0001 de=y
+[PARAMETERS]
+file    | G | = |   | 	auxiliary input file name
+float   | ax | =2.0 |   | 	suppress HF parameter
+float   | az | =2.0 |   | 	suppress HF parameter
+bool    | de | =y |  [y/n] | 	
+float   | dt | = |   | 	
+float   | err | =0.0001 |   | 	suppress HF parameter
+float   | factor | =1.0 |   | 	suppress HF parameter
+int     | isx | = |   | 	
+int     | isz | = |   | 	
+int     | nt | = |   | 	
+file    | paras | = |   | 	auxiliary input file name
+file    | s1 | = |   | 	auxiliary input file name
+file    | s2 | = |   | 	auxiliary input file name
+file    | velz | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/songxl

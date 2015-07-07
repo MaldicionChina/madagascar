@@ -1,0 +1,18 @@
+Program sfinvbin1 | 1-D inverse interpolation. 
+[SYNOPSIS]
+sfinvbin1 < in.rsf > out.rsf nx= xmin= xmax= x0=xmin dx= filter=1 prec=y verb=n niter=nx eps=0.2 pef=n head=
+[PARAMETERS]
+float   | dx | = |   | 	grid sampling 
+float   | eps | =0.2 |   | 	regularization parameter 
+int     | filter | =1 |   | 	filter type 
+string  | head | = |   | 	
+int     | niter | =nx |   | 	number of conjugate-gradient iterations 
+int     | nx | = |   | 	number of bins 
+bool    | pef | =n |  [y/n] | 	if y, use PEF for regularization 
+bool    | prec | =y |  [y/n] | 	if y, use preconditioning 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+float   | x0 | =xmin |   | 	grid origin 
+float   | xmax | = |   | 	
+float   | xmin | = |   | 	grid size 
+[DIRECTORY]
+user/gee

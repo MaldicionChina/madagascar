@@ -1,0 +1,11 @@
+Program sfsimilarity | Local similarity measure between two datasets. 
+[SYNOPSIS]
+sfsimilarity < in.rsf > out.rsf other=other.rsf verb=y niter=20 eps=0.0f rect#=(1,1,...)
+[PARAMETERS]
+float   | eps | =0.0f |   | 	regularization 
+int     | niter | =20 |   | 	maximum number of iterations 
+file    | other | = |   | 	auxiliary input file name
+int     | rect# | =(1,1,...) |   | 	smoothing radius on #-th axis 
+bool    | verb | =y |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/fomels

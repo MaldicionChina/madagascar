@@ -1,0 +1,10 @@
+Program sfmiss1 | Missing data interpolation in 1-D. 
+[SYNOPSIS]
+sfmiss1 < in.rsf > out.rsf filtin=filt.rsf niter=n1 diter=niter step=
+[PARAMETERS]
+int     | diter | =niter |   | 	iteration step 
+string  | filtin | = |   | 	auxiliary input file name
+int     | niter | =n1 |   | 	number of iterations 
+string  | step | = |   | 	linear solver type 
+[DIRECTORY]
+user/gee

@@ -1,0 +1,10 @@
+Program sfmpi | MPI wrapper for embarassingly parallel jobs. 
+[SYNOPSIS]
+sfmpi input=inp.rsf output=out.rsf split=ndim join=axis
+[PARAMETERS]
+string  | input | = |   | 	auxiliary input file name
+int     | join | =axis |   | 	axis to join (0 means add) 
+file    | output | = |   | 	auxiliary output file name
+int     | split | =ndim |   | 	axis to split 
+[DIRECTORY]
+system/main

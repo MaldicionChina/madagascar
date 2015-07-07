@@ -1,0 +1,12 @@
+Program sflfdc2_25 | 2D 10th-order Lowrank FD coefficient
+[SYNOPSIS]
+sflfdc2_25 < velf.rsf > outm.rsf s1=s1f.rsf seed=time(NULL eps=1.e-6 npk=50 dt= size=9
+[PARAMETERS]
+        | dt | = |   | 	time step
+        | eps | =1.e-6 |   | 	tolerance
+        | npk | =50 |   | 	maximum rank
+file    | s1 | = |   | 	auxiliary output file name
+        | seed | =time(NULL |   | 	
+        | size | =9 |   | 	stencil length
+[DIRECTORY]
+user/songxl

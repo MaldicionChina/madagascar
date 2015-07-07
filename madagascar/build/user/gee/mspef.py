@@ -1,0 +1,15 @@
+sfmspef = rsf.doc.rsfprog('sfmspef','user/gee/Mmspef.c','''Multi-scale PEF estimation.''')
+sfmspef.par('maskin',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfmspef.par('a',rsf.doc.rsfpar('ints','','',''' [dim]'''))
+sfmspef.par('center',rsf.doc.rsfpar('ints','','',''' [dim]'''))
+sfmspef.par('gap',rsf.doc.rsfpar('ints','','',''' [dim]'''))
+sfmspef.par('jump',rsf.doc.rsfpar('ints','','',''' [ns]'''))
+sfmspef.par('ns',rsf.doc.rsfpar('int','','','''number of scales '''))
+sfmspef.par('niter',rsf.doc.rsfpar('int','nh*2','',''''''))
+sfmspef.par('lag',rsf.doc.rsfpar('string ',desc='''output file for filter lags '''))
+sfmspef.par('maskin',rsf.doc.rsfpar('string ',desc='''optional input mask file (auxiliary input file name)'''))
+sfmspef.par('maskout',rsf.doc.rsfpar('string ',desc='''optional output mask file '''))
+sfmspef.version('1.7 Mmspef.c 11207 2013-10-28 16:56:21Z sfomel')
+sfmspef.synopsis('''sfmspef < in.rsf > pef.rsf maskin=mask.rsf a= center= gap= jump= ns= niter=nh*2 lag= maskout=''','''''')
+rsf.doc.progs['sfmspef']=sfmspef
+

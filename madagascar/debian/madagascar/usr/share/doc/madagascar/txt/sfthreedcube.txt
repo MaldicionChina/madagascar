@@ -1,0 +1,9 @@
+Program sfthreedcube | Interactively displays a 3D cube of RSF data using Python + MayaVi2 + VTK.  
+[SYNOPSIS]
+sfthreedcube < fin.rsf
+[COMMENTS]
+
+REQUIRES NUMPY, SCIPY, and MAyaVi2
+
+[DIRECTORY]
+user/godwinj

@@ -1,0 +1,12 @@
+Program sfdijkstra | Dijkstra shortest-path algorithm in 2-D 
+[SYNOPSIS]
+sfdijkstra < cost.rsf > out.rsf fin1= fin2= paths= ref1=0 ref2=0 nf=0
+[PARAMETERS]
+ints    | fin1 | = |   | 	 [nf]
+ints    | fin2 | = |   | 	final points  [nf]
+int     | nf | =0 |   | 	number of final points 
+strings | paths | = |   | 	 [nf]
+int     | ref1 | =0 |   | 	
+int     | ref2 | =0 |   | 	source point 
+[DIRECTORY]
+user/pwd

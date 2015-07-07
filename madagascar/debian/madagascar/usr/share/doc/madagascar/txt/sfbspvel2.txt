@@ -1,0 +1,10 @@
+Program sfbspvel2 | B-spline coefficients for a 2-D (an)isotropic velocity model. 
+[SYNOPSIS]
+sfbspvel2 < velz.rsf > out.rsf vx=velx.rsf eta=eta.rsf theta=theta.rsf verb=n
+[PARAMETERS]
+string  | eta | = |   | 	Anellipticity (auxiliary input file name)
+string  | theta | = |   | 	Tilt angle (auxiliary input file name)
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+string  | vx | = |   | 	Horizontal velocity (auxiliary input file name)
+[DIRECTORY]
+user/cram

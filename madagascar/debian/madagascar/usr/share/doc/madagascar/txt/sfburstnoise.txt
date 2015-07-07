@@ -1,0 +1,9 @@
+Program sfburstnoise | Synthetics with bursts of noise. 
+[SYNOPSIS]
+sfburstnoise < in.rsf > out.rsf sigma=1. thresh=0.93 thresh2=0.4
+[PARAMETERS]
+float   | sigma | =1. |   | 	noise magnitude 
+float   | thresh | =0.93 |   | 	noise threshold 
+float   | thresh2 | =0.4 |   | 	noise threshold 
+[DIRECTORY]
+user/gee

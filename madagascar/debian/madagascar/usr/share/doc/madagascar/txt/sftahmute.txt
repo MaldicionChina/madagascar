@@ -1,0 +1,17 @@
+Program sftahmute | Read Trace And Header (tah) from standard input, MUTE 
+[SYNOPSIS]
+sftahmute < in.rsf > out.rsf xmute= tmute= verbose=1 ntaper=12
+[PARAMETERS]
+int     | ntaper | =12 |   | 	
+
+       length of the taper on the stack mute
+    
+floats  | tmute | = |   | 	 [numtmute]
+int     | verbose | =1 |   | 	
+
+       flag to control amount of print
+       0 terse, 1 informative, 2 chatty, 3 debug
+    
+floats  | xmute | = |   | 	 [numxmute]
+[DIRECTORY]
+user/karl

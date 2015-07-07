@@ -1,0 +1,17 @@
+Program sfdixshape | Convert RMS to interval velocity using LS and shaping regularization.
+[SYNOPSIS]
+sfdixshape < vrms.rsf > vint.rsf weight=weight.rsf dip=dip.rsf vrmsout=vout.rsf rect1=3 rect2=3 lam=1. order=1 niter=100 rect1= rect2= ...
+[COMMENTS]
+rectN defines the size of the smoothing stencil in N-th dimension.
+
+[PARAMETERS]
+file    | dip | = |   | 	auxiliary input file name
+float   | lam | =1. |   | 	operator scaling for inversion 
+int     | niter | =100 |   | 	maximum number of iterations 
+int     | order | =1 |   | 	accuracy order 
+int     | rect1 | =3 |   | 	
+int     | rect2 | =3 |   | 	smoothing radius 
+string  | vrmsout | = |   | 	optionally, output predicted vrms (auxiliary output file name)
+file    | weight | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/pwd

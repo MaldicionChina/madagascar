@@ -1,0 +1,34 @@
+Program sfdip | 3-D dip estimation by plane wave destruction. 
+[SYNOPSIS]
+sfdip < in.rsf > out.rsf mask=mask.rsf idip=idip0.rsf xdip=xdip0.rsf both=n n4=2 niter=5 liter=20 rect1=1 rect2=1 rect3=1 p0=0. q0=0. order=1 nj1=1 nj2=1 verb=n pmin=-FLT_MAX pmax=+FLT_MAX qmin=-FLT_MAX qmax=+FLT_MAX eps=0.0f
+[COMMENTS]
+
+The output is dimensionless (stepout in time measured in time samples). 
+
+June 2012 program of the month:
+http://ahay.org/rsflog/index.php?/archives/295-Program-of-the-month-sfdip.html
+
+[PARAMETERS]
+bool    | both | =n |  [y/n] | 	if y, compute both left and right predictions 
+float   | eps | =0.0f |   | 	regularization 
+string  | idip | = |   | 	initial in-line dip (auxiliary input file name)
+int     | liter | =20 |   | 	number of linear iterations 
+string  | mask | = |   | 	auxiliary input file name
+int     | n4 | =2 |   | 	what to compute in 3-D. 0: in-line, 1: cross-line, 2: both 
+int     | niter | =5 |   | 	number of iterations 
+int     | nj1 | =1 |   | 	in-line antialiasing 
+int     | nj2 | =1 |   | 	cross-line antialiasing 
+int     | order | =1 |   | 	accuracy order 
+float   | p0 | =0. |   | 	initial in-line dip 
+float   | pmax | =+FLT_MAX |   | 	maximum inline dip 
+float   | pmin | =-FLT_MAX |   | 	minimum inline dip 
+float   | q0 | =0. |   | 	initial cross-line dip 
+float   | qmax | =+FLT_MAX |   | 	maximum cross-line dip 
+float   | qmin | =-FLT_MAX |   | 	minimum cross-line dip 
+int     | rect1 | =1 |   | 	dip smoothness on 1st axis 
+int     | rect2 | =1 |   | 	dip smoothness on 2nd axis 
+int     | rect3 | =1 |   | 	dip smoothness on 3rd axuis 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+string  | xdip | = |   | 	initial cross-line dip (auxiliary input file name)
+[DIRECTORY]
+user/pwd

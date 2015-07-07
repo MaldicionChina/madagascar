@@ -1,0 +1,32 @@
+Program sftmigda | 3D time scattering-angle Kirchhoff migration  
+[SYNOPSIS]
+sftmigda < dataFile.rsf vel=velFile.rsf > imageFile.rsf semb=sembFile.rsf dag=dagFile.rsf cig=cigFile.rsf is3d=n axis2label=0 isAA=y isDipAz=y hmign=dp.hNum sembWindow=11 edgeTaper=5.f itn=dp.zNum ixn=dp.xNum iyn=rp.is3D ? vp.yNum : 1 ito=dp.zStart ixo=dp.xStart iyo=dp.yStart itd=dp.zStep ixd=dp.xStep iyd=dp.yStep dipn=1 sdipn=1 dipo=0.f sdipo=90.f dipd=1.f sdipd=1.f
+[PARAMETERS]
+int     | axis2label | =0 |   | 	0 - shot; 1 - cmp; 2 - receiver 
+string  | cig | = |   | 	output file containing CIGs in the surface-offset domain (auxiliary output file name)
+string  | dag | = |   | 	output file containing CIGs in the dip-angle domain (auxiliary output file name)
+float   | dipd | =1.f |   | 	step in dip-angle 
+int     | dipn | =1 |   | 	number of dip-angles 
+float   | dipo | =0.f |   | 	first dip-angle 
+float   | edgeTaper | =5.f |   | 	edge taper for dip-angle gathers (in degree) 
+int     | hmign | =dp.hNum |   | 	number of migrated offsets 
+bool    | is3d | =n |  [y/n] | 	if y, apply 3D migration 
+bool    | isAA | =y |  [y/n] | 	if y, apply anti-aliasing 
+bool    | isDipAz | =y |  [y/n] | 	if y, apply dip/azimuth mode; if n, apply inline/crossline angle mode 
+float   | itd | =dp.zStep |   | 	step in imaged times  (in ms) 
+int     | itn | =dp.zNum |   | 	number of imaged times 
+float   | ito | =dp.zStart |   | 	first imaged time (in ms) 
+float   | ixd | =dp.xStep |   | 	step in imaged inlines 
+int     | ixn | =dp.xNum |   | 	number of imaged inlines 
+float   | ixo | =dp.xStart |   | 	first imaged inline 
+float   | iyd | =dp.yStep |   | 	step in imaged crosslines 
+int     | iyn | =rp.is3D ? vp.yNum : 1 |   | 	number of imaged crosslines 
+float   | iyo | =dp.yStart |   | 	first imaged crossline 
+float   | sdipd | =1.f |   | 	step in secondary (azimuth or crossline) angle 
+int     | sdipn | =1 |   | 	number of secondary (azimuth or crossline) angles 
+float   | sdipo | =90.f |   | 	first secondary (azimuth or crossline) angle 
+string  | semb | = |   | 	output file containing semblance measure of CIGs stacking (auxiliary output file name)
+int     | sembWindow | =11 |   | 	vertical window for semblance calculation (in samples) 
+string  | vel | = |   | 	velocity model file (velocity in m/s) (auxiliary input file name)
+[DIRECTORY]
+user/aklokov

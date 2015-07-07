@@ -1,0 +1,12 @@
+Program sftvmf | 1D Time-varying median filtering. 
+[SYNOPSIS]
+sftvmf < in.rsf > out.rsf boundary=n nfw= alpha=2 beta=0 gamma=2 delta=4
+[PARAMETERS]
+int     | alpha | =2 |   | 	time-varying window parameter "alpha" (default=2)
+int     | beta | =0 |   | 	time-varying window parameter "beta" (default=0)
+bool    | boundary | =n |  [y/n] | 	if y, boundary is data, whereas zero
+int     | delta | =4 |   | 	time-varying window parameter "delta" (default=4)
+int     | gamma | =2 |   | 	time-varying window parameter "gamma" (default=2)
+int     | nfw | = |   | 	reference filter-window length (>delta, positive and odd integer)
+[DIRECTORY]
+user/yliu

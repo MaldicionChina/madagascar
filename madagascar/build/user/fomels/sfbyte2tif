@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+import sys
+
+sys.stderr.write('''
+%s is not installed.
+Check $RSFROOT/share/madagascar/etc/config.py for TIFF
+and reinstall if necessary.
+Possible missing packages: libtiff-devel
+''' % sys.argv[0])
+sys.exit(1)

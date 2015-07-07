@@ -1,0 +1,22 @@
+Program sfistseislet | Analysis-based IST interpolation using seislet (2d validation)
+[SYNOPSIS]
+sfistseislet < Fin.rsf mask=Fmask.rsf > Fout.rsf dip=Fdip.rsf eps=0.01 order=1 pscale=25 verb=n niter=10 pclip=99 p=0.35 type= mode=
+[COMMENTS]
+IST=iterative shrinkage-thresholding
+
+[PARAMETERS]
+file    | dip | = |   | 	auxiliary input file name
+float   | eps | =0.01 |   | 	regularization 
+string  | mask | = |   | 	auxiliary input file name
+string  | mode | = |   | 	thresholding mode: 'hard', 'soft','pthresh','exp';
+	'hard', hard thresholding;	'soft', soft thresholding; 
+	'pthresh', generalized quasi-p; 'exp', exponential shrinkage 
+int     | niter | =10 |   | 	total number iterations 
+int     | order | =1 |   | 	accuracy order for seislet transform
+float   | p | =0.35 |   | 	norm=p, where 0<p<=1 
+float   | pclip | =99 |   | 	starting data clip percentile (default is 99)
+float   | pscale | =25 |   | 	percentile of small scale to be preserved (default is 25)
+string  | type | = |   | 	[haar,linear,biorthogonal] wavelet type, the default is linear  
+bool    | verb | =n |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/pyang

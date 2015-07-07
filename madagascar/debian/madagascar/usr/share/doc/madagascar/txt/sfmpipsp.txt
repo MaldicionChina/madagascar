@@ -1,0 +1,16 @@
+Program sfmpipsp | Parallel Sweeping Preconditioner (PSP) for solving 3D Helmholtz equations.
+
+[SYNOPSIS]
+sfmpipsp velocity=in.rsf source=src.rsf solution=out.rsf n1=origNx n2=origNy n3=origNz freq= sigma=1.5  pmlSize=5 
+[PARAMETERS]
+        | freq | = |   | 	frequency in HZ
+        | n1 | =origNx |   | 	
+        | n2 | =origNy |   | 	
+        | n3 | =origNz |   | 	
+        | pmlSize | =5  |   | 	number of grid points of PML
+        | sigma | =1.5  |   | 	magnitude of PML stretching
+file    | solution | = |   | 	auxiliary output file name
+file    | source | = |   | 	auxiliary input file name
+file    | velocity | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/poulsonj

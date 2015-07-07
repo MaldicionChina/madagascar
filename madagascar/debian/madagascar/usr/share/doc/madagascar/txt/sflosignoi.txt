@@ -1,0 +1,17 @@
+Program sflosignoi | Local signal and noise separation (N-dimensional).
+[SYNOPSIS]
+sflosignoi < dat.rsf > signal.rsf sfilt=spef.rsf nfilt=npef.rsf eps= niter=20 slag= nlag=
+[COMMENTS]
+
+Signal and noise separation by inversion (super-deconvolution).
+Uses the helix and patching technologies.
+
+[PARAMETERS]
+float   | eps | = |   | 	regularization parameter 
+file    | nfilt | = |   | 	auxiliary input file name
+int     | niter | =20 |   | 	number of iterations 
+string  | nlag | = |   | 	
+file    | sfilt | = |   | 	auxiliary input file name
+string  | slag | = |   | 	
+[DIRECTORY]
+user/gee

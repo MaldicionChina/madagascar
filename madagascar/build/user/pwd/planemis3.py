@@ -1,0 +1,15 @@
+sfplanemis3 = rsf.doc.rsfprog('sfplanemis3','user/pwd/Mplanemis3.c','''Missing data interpolation in 3-D using plane-wave destruction. ''')
+sfplanemis3.par('dip',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfplanemis3.par('mask',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfplanemis3.par('niter',rsf.doc.rsfpar('int','100','','''number of iterations '''))
+sfplanemis3.par('order',rsf.doc.rsfpar('int','1','[1,2,3]','''accuracy order '''))
+sfplanemis3.par('nj1',rsf.doc.rsfpar('int','1','',''''''))
+sfplanemis3.par('nj2',rsf.doc.rsfpar('int','1','','''antialiasing '''))
+sfplanemis3.par('verb',rsf.doc.rsfpar('bool','n','','''verbosity flag '''))
+sfplanemis3.par('seed',rsf.doc.rsfpar('int','time(NULL)','','''random seed '''))
+sfplanemis3.par('var',rsf.doc.rsfpar('float','0.','','''noise variance '''))
+sfplanemis3.par('mask',rsf.doc.rsfpar('string ',desc='''auxiliary input file name'''))
+sfplanemis3.version('1.7')
+sfplanemis3.synopsis('''sfplanemis3 < in.rsf > out.rsf dip=dip.rsf mask=mask.rsf niter=100 order=1 nj1=1 nj2=1 verb=n seed=time(NULL) var=0.''','''''')
+rsf.doc.progs['sfplanemis3']=sfplanemis3
+

@@ -1,0 +1,12 @@
+Program sfirays | Fast marching for image rays 
+[SYNOPSIS]
+sfirays < in.rsf > out.rsf t0=ot0.rsf x0=ox0.rsf f0=of0.rsf velocity=y order=1 thres=10.
+[PARAMETERS]
+string  | f0 | = |   | 	auxiliary output file name
+int     | order | =1 |   | 	fastmarching accuracy order 
+string  | t0 | = |   | 	auxiliary output file name
+float   | thres | =10. |   | 	thresholding for caustics 
+bool    | velocity | =y |  [y/n] | 	y, inputs are velocity / n, slowness-squared 
+string  | x0 | = |   | 	output upwind neighbor (auxiliary output file name)
+[DIRECTORY]
+user/llisiw

@@ -1,0 +1,11 @@
+Program sfsignal | Generate signal series 
+[SYNOPSIS]
+sfsignal > out.rsf para= n=100 o=0.0 d=0.004 waveform=
+[PARAMETERS]
+float   | d | =0.004 |   | 	interval 
+int     | n | =100 |   | 	length 
+float   | o | =0.0 |   | 	original 
+floats  | para | = |   | 	 [4]
+string  | waveform | = |   | 	waveform: ricker,sinc,harmonic,randn,rand 
+[DIRECTORY]
+user/chen

@@ -1,0 +1,18 @@
+sfcltft = rsf.doc.rsfprog('sfcltft','user/fomels/Mcltft.c','''Complex local time-frequency transform. ''')
+sfcltft.par('basis',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sfcltft.par('inv',rsf.doc.rsfpar('bool','n','','''if y, do inverse transform '''))
+sfcltft.par('verb',rsf.doc.rsfpar('bool','n','','''verbosity flag '''))
+sfcltft.par('dip',rsf.doc.rsfpar('bool','n','','''if y, do dip decomposition '''))
+sfcltft.par('rect',rsf.doc.rsfpar('int','10','','''smoothing radius (in time, samples) '''))
+sfcltft.par('niter',rsf.doc.rsfpar('int','100','','''number of inversion iterations '''))
+sfcltft.par('np',rsf.doc.rsfpar('int','','','''number of slopes '''))
+sfcltft.par('dp',rsf.doc.rsfpar('float','','','''slope step '''))
+sfcltft.par('p0',rsf.doc.rsfpar('float','','','''first slope '''))
+sfcltft.par('nw',rsf.doc.rsfpar('int','kiss_fft_next_fast_size(n1)','','''number of frequencies '''))
+sfcltft.par('dw',rsf.doc.rsfpar('float','1./(nw*d1)','','''frequency step '''))
+sfcltft.par('w0',rsf.doc.rsfpar('float','-0.5/d1','','''first frequency '''))
+sfcltft.par('basis',rsf.doc.rsfpar('string ',desc='''auxiliary output file name'''))
+sfcltft.version('1.7')
+sfcltft.synopsis('''sfcltft < in.rsf > out.rsf basis=basis.rsf inv=n verb=n dip=n rect=10 niter=100 np= dp= p0= nw=kiss_fft_next_fast_size(n1) dw=1./(nw*d1) w0=-0.5/d1''','''''')
+rsf.doc.progs['sfcltft']=sfcltft
+

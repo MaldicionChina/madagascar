@@ -1,0 +1,771 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sfsegyread</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sfsegyread</strong></big></big> (1.7 Msegyread.c 13681 2014-12-14 00:35:32Z kschleicher)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="http://sourceforge.net/p/rsf/code/HEAD/tree/branches/madagascar-1.7/system/seismic/Msegyread.c">system/seismic/Msegyread.c</a><br><a href="http://ahay.org/wiki/Guide_to_madagascar_programs#sfsegyread">Documentation</a></font></td></tr></table>
+    Convert a SEG-Y or SU dataset to RSF.
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sfsegyread mask=msk.rsf > out.rsf tfile=hdr.rsf verb=n su= suxdr=n endian=y n2=0 format=segyformat (bhead) ns=segyns (bhead) ns=itrace[ segykey("ns")] tape= hfile= bfile= read=</td></tr></table><br>
+Data headers and trace headers are separated from the data.<br>
+<br>
+"suread" is equivalent to "segyread su=y"<br>
+<br>
+<br>
+SEGY key names:<br>
+<br>
+tracl: trace sequence number within line 0<br>
+<br>
+tracr: trace sequence number within reel 4<br>
+<br>
+fldr:     field record number 8 <br>
+<br>
+tracf:    trace number within field record 12 <br>
+<br>
+ep:       energy source point number 16 <br>
+<br>
+cdp:      CDP ensemble number 20 <br>
+<br>
+cdpt:     trace number within CDP ensemble 24 <br>
+<br>
+trid:     trace identification code:<br>
+1 = seismic data<br>
+2 = dead<br>
+3 = dummy<br>
+4 = time break<br>
+5 = uphole<br>
+6 = sweep<br>
+7 = timing<br>
+8 = water break<br>
+9---, N = optional use (N = 32,767) 28 <br>
+<br>
+nvs:      number of vertically summed traces 30 <br>
+<br>
+nhs:      number of horizontally summed traces 32 <br>
+<br>
+duse:     data use:<br>
+1 = production<br>
+2 = test 34<br>
+<br>
+offset:   distance from source point to receiver<br>
+group (negative if opposite to direction<br>
+in which the line was shot) 36 <br>
+<br>
+gelev:    receiver group elevation from sea level<br>
+(above sea level is positive) 40 <br>
+<br>
+selev:    source elevation from sea level<br>
+(above sea level is positive) 44 <br>
+<br>
+sdepth:   source depth (positive) 48 <br>
+<br>
+gdel:     datum elevation at receiver group 52 <br>
+<br>
+sdel:     datum elevation at source 56 <br>
+<br>
+swdep:    water depth at source 60 <br>
+<br>
+gwdep:    water depth at receiver group 64 <br>
+<br>
+scalel:   scale factor for previous 7 entries<br>
+with value plus or minus 10 to the<br>
+power 0, 1, 2, 3, or 4 (if positive,<br>
+multiply, if negative divide) 68 <br>
+<br>
+scalco:   scale factor for next 4 entries<br>
+with value plus or minus 10 to the<br>
+power 0, 1, 2, 3, or 4 (if positive,<br>
+multiply, if negative divide) 70 <br>
+<br>
+sx:       X source coordinate 72 <br>
+<br>
+sy:       Y source coordinate 76 <br>
+<br>
+gx:       X group coordinate 80 <br>
+<br>
+gy:       Y group coordinate 84 <br>
+<br>
+counit:   coordinate units code:<br>
+for previous four entries<br>
+1 = length (meters or feet)<br>
+2 = seconds of arc (in this case, the<br>
+X values are unsigned longitude and the Y values<br>
+are latitude, a positive value designates<br>
+the number of seconds east of Greenwich<br>
+or north of the equator 88 <br>
+<br>
+wevel:     weathering velocity 90 <br>
+<br>
+swevel:    subweathering velocity 92 <br>
+<br>
+sut:       uphole time at source 94 <br>
+<br>
+gut:       uphole time at receiver group 96 <br>
+<br>
+sstat:     source static correction 98 <br>
+<br>
+gstat:     group static correction 100 <br>
+<br>
+tstat:     total static applied 102 <br>
+<br>
+laga:      lag time A, time in ms between end of 240-<br>
+byte trace identification header and time<br>
+break, positive if time break occurs after<br>
+end of header, time break is defined as<br>
+the initiation pulse which maybe recorded<br>
+on an auxiliary trace or as otherwise<br>
+specified by the recording system 104 <br>
+<br>
+lagb:      lag time B, time in ms between the time<br>
+break and the initiation time of the energy source,<br>
+may be positive or negative 106 <br>
+<br>
+delrt:     delay recording time, time in ms between<br>
+initiation time of energy source and time<br>
+when recording of data samples begins<br>
+(for deep water work if recording does not<br>
+start at zero time) 108 <br>
+<br>
+muts:      mute time--start 110 <br>
+<br>
+mute:      mute time--end 112 <br>
+<br>
+ns:        number of samples in this trace 114 <br>
+<br>
+dt:        sample interval, in micro-seconds 116 <br>
+<br>
+gain:      gain type of field instruments code:<br>
+1 = fixed<br>
+2 = binary<br>
+3 = floating point<br>
+4 ---- N = optional use 118 <br>
+<br>
+igc:       instrument gain constant 120 <br>
+<br>
+igi:       instrument early or initial gain 122 <br>
+<br>
+corr:      correlated:<br>
+1 = no<br>
+2 = yes 124<br>
+<br>
+sfs:       sweep frequency at start 126 <br>
+<br>
+sfe:       sweep frequency at end 128 <br>
+<br>
+slen:      sweep length in ms 130 <br>
+<br>
+styp:      sweep type code:<br>
+1 = linear<br>
+2 = cos-squared<br>
+3 = other 132<br>
+<br>
+stas:      sweep trace length at start in ms 134 <br>
+<br>
+stae:      sweep trace length at end in ms 136 <br>
+<br>
+tatyp:     taper type: 1=linear, 2=cos^2, 3=other 138 <br>
+<br>
+afilf:     alias filter frequency if used 140 <br>
+<br>
+afils:     alias filter slope 142 <br>
+<br>
+nofilf:    notch filter frequency if used 144 <br>
+<br>
+nofils:    notch filter slope 146 <br>
+<br>
+lcf:       low cut frequency if used 148 <br>
+<br>
+hcf:       high cut frequncy if used 150 <br>
+<br>
+lcs:       low cut slope 152 <br>
+<br>
+hcs:       high cut slope 154 <br>
+<br>
+year:      year data recorded 156 <br>
+<br>
+day:       day of year 158 <br>
+<br>
+hour:      hour of day (24 hour clock) 160 <br>
+<br>
+minute:    minute of hour 162 <br>
+<br>
+sec:       second of minute 164 <br>
+<br>
+timbas:    time basis code:<br>
+1 = local<br>
+2 = GMT<br>
+3 = other 166<br>
+<br>
+trwf:      trace weighting factor, defined as 1/2^N<br>
+volts for the least sigificant bit 168 <br>
+<br>
+grnors:    geophone group number of roll switch<br>
+position one 170<br>
+<br>
+grnofr:    geophone group number of trace one within<br>
+original field record 172<br>
+<br>
+grnlof:    geophone group number of last trace within<br>
+original field record 174<br>
+<br>
+gaps:      gap size (total number of groups dropped) 176 <br>
+<br>
+otrav:     overtravel taper code: <br>
+1 = down (or behind)<br>
+2 = up (or ahead) 178<br>
+<br>
+cdpx:   X coordinate of CDP 180<br>
+<br>
+cdpy:   Y coordinate of CDP 184<br>
+<br>
+iline:  in-line number 188 <br>
+<br>
+xline:  cross-line number 192<br>
+<br>
+shnum:  shotpoint number 196<br>
+<br>
+shsca:  shotpoint scalar 200<br>
+<br>
+tval:   trace value meas. 202<br>
+<br>
+tconst4: transduction const 204<br>
+<br>
+tconst2: transduction const 208<br>
+<br>
+tunits:  transduction units 210<br>
+<br>
+device:  device identifier 212<br>
+<br>
+tscalar: time scalar 214<br>
+<br>
+stype:   source type 216<br>
+<br>
+sendir:  source energy dir. 218<br>
+ <br>
+unknown: unknown 222<br>
+<br>
+smeas4:  source measurement 224<br>
+<br>
+smeas2:  source measurement 228<br>
+<br>
+smeasu:  source measurement unit 230 <br>
+<br>
+unass1:  unassigned 232<br>
+<br>
+unass2:  unassigned 236<br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>bfile=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	output binary data header file <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>endian=y</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Whether to automatically estimate endianness or not <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>format=segyformat (bhead)</strong> [1,2,3,5]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Data format. The default is taken from binary header.<br>
+	   1 is IBM floating point<br>
+	   2 is 4-byte integer<br>
+	   3 is 2-byte integer<br>
+	   5 is IEEE floating point<br>
+       6 is native_float (same as RSF binary default)<br>
+	<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>hfile=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	output text data header file <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>mask=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	optional header mask for reading only selected traces (auxiliary input file name)<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>n2=0</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	number of traces to read (if 0, read all traces) <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>ns=itrace[ segykey("ns")]</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>read=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	what to read: h - header, d - data, b - both (default) <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>su=</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	y if input is SU, n if input is SEGY <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>suxdr=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	y, SU has XDR support <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>tape=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	input data <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>tfile=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	output trace header file (auxiliary output file name)<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>verb=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Verbosity flag <br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#eeaa77">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Used In</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>CWP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/cwp/geo2006TimeShiftImagingCondition/zicig.html">geo2006TimeShiftImagingCondition/zicig</a><br>
+                        
+                        <a href="book/cwp/geo2007StereographicImagingCondition/sigsbee2.html">geo2007StereographicImagingCondition/sigsbee2</a><br>
+                        
+                        <a href="book/cwp/geo2008InterferometricImagingCondition/sact1.html">geo2008InterferometricImagingCondition/sact1</a><br>
+                        
+                        <a href="book/cwp/geo2008InterferometricImagingCondition/sigs2.html">geo2008InterferometricImagingCondition/sigs2</a><br>
+                        
+                        <a href="book/cwp/geo2008IsotropicAngleDomainElasticRTM/marm2allA.html">geo2008IsotropicAngleDomainElasticRTM/marm2allA</a><br>
+                        
+                        <a href="book/cwp/geo2008IsotropicAngleDomainElasticRTM/marm2oneA.html">geo2008IsotropicAngleDomainElasticRTM/marm2oneA</a><br>
+                        
+                        <a href="book/cwp/geo2008NumericWEMVAoperators/saltWEMVA.html">geo2008NumericWEMVAoperators/saltWEMVA</a><br>
+                        
+                        <a href="book/cwp/geo2009TTIModeSeparation/marmousi2.html">geo2009TTIModeSeparation/marmousi2</a><br>
+                        
+                        <a href="book/cwp/geo2009VTIModeSeparation/sigsbee.html">geo2009VTIModeSeparation/sigsbee</a><br>
+                        
+                        <a href="book/cwp/geo2011WideAzimuthAngleDecomposition/seam357.html">geo2011WideAzimuthAngleDecomposition/seam357</a><br>
+                        
+                        <a href="book/cwp/jse2006RWEImagingOverturningReflections/sigsbee.html">jse2006RWEImagingOverturningReflections/sigsbee</a><br>
+                        
+                        <a href="book/cwp/pept2011MicroearthquakeMonitoring/saf1.html">pept2011MicroearthquakeMonitoring/saf1</a><br>
+                        
+                        <a href="book/cwp/pept2011MicroearthquakeMonitoring/saf2.html">pept2011MicroearthquakeMonitoring/saf2</a><br>
+                        
+                        <a href="book/cwp/pept2011MicroearthquakeMonitoring/saf3.html">pept2011MicroearthquakeMonitoring/saf3</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>DATA</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/data/alaska/foldplot.html">alaska/foldplot</a><br>
+                        
+                        <a href="book/data/alaska/line31-81-m8r.html">alaska/line31-81-m8r</a><br>
+                        
+                        <a href="book/data/bptti/data.html">bptti/data</a><br>
+                        
+                        <a href="book/data/bptti/modl.html">bptti/modl</a><br>
+                        
+                        <a href="book/data/freeusp/land.html">freeusp/land</a><br>
+                        
+                        <a href="book/data/marmousi2/curl.html">marmousi2/curl</a><br>
+                        
+                        <a href="book/data/marmousi2/div.html">marmousi2/div</a><br>
+                        
+                        <a href="book/data/marmousi2/fdMod.html">marmousi2/fdMod</a><br>
+                        
+                        <a href="book/data/marmousi2/model.html">marmousi2/model</a><br>
+                        
+                        <a href="book/data/marmousi2/vx.html">marmousi2/vx</a><br>
+                        
+                        <a href="book/data/marmousi2/vz.html">marmousi2/vz</a><br>
+                        
+                        <a href="book/data/nankai/shots.html">nankai/shots</a><br>
+                        
+                        <a href="book/data/nankai/stack.html">nankai/stack</a><br>
+                        
+                        <a href="book/data/pluto/fdmod.html">pluto/fdmod</a><br>
+                        
+                        <a href="book/data/pluto/model.html">pluto/model</a><br>
+                        
+                        <a href="book/data/pluto/shot.html">pluto/shot</a><br>
+                        
+                        <a href="book/data/segsalt/data.html">segsalt/data</a><br>
+                        
+                        <a href="book/data/sigsbee/data2A.html">sigsbee/data2A</a><br>
+                        
+                        <a href="book/data/sigsbee/fdmod2A.html">sigsbee/fdmod2A</a><br>
+                        
+                        <a href="book/data/sigsbee/fs2B.html">sigsbee/fs2B</a><br>
+                        
+                        <a href="book/data/sigsbee/model2A.html">sigsbee/model2A</a><br>
+                        
+                        <a href="book/data/sigsbee/model2B.html">sigsbee/model2B</a><br>
+                        
+                        <a href="book/data/sigsbee/nfs2B.html">sigsbee/nfs2B</a><br>
+                        
+                        <a href="book/data/sigsbee/ptest.html">sigsbee/ptest</a><br>
+                        
+                        <a href="book/data/sigsbee/pwemig.html">sigsbee/pwemig</a><br>
+                        
+                        <a href="book/data/sigsbee/wemig.html">sigsbee/wemig</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GALLERY</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/gallery/bp/model.html">bp/model</a><br>
+                        
+                        <a href="book/gallery/bptti/model.html">bptti/model</a><br>
+                        
+                        <a href="book/gallery/hessvti/model.html">hessvti/model</a><br>
+                        
+                        <a href="book/gallery/model94/model.html">model94/model</a><br>
+                        
+                        <a href="book/gallery/pluto/model.html">pluto/model</a><br>
+                        
+                        <a href="book/gallery/sigsbee/ffd.html">sigsbee/ffd</a><br>
+                        
+                        <a href="book/gallery/sigsbee/kirMulti.html">sigsbee/kirMulti</a><br>
+                        
+                        <a href="book/gallery/sigsbee/lowrank.html">sigsbee/lowrank</a><br>
+                        
+                        <a href="book/gallery/sigsbee/lrostep.html">sigsbee/lrostep</a><br>
+                        
+                        <a href="book/gallery/sigsbee/model.html">sigsbee/model</a><br>
+                        
+                        <a href="book/gallery/sigsbee/oway.html">sigsbee/oway</a><br>
+                        
+                        <a href="book/gallery/statics94/model.html">statics94/model</a><br>
+                        
+                        <a href="book/gallery/teapot/angmig.html">teapot/angmig</a><br>
+                        
+                        <a href="book/gallery/twohalf/kirMulti.html">twohalf/kirMulti</a><br>
+                        
+                        <a href="book/gallery/twohalf/lowrank.html">twohalf/lowrank</a><br>
+                        
+                        <a href="book/gallery/twohalf/model.html">twohalf/model</a><br>
+                        
+                        <a href="book/gallery/twohalf/oway.html">twohalf/oway</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GEO384W</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/geo384w/hw1/code.html">hw1/code</a><br>
+                        
+                        <a href="book/geo384w/hw4/sigsbee.html">hw4/sigsbee</a><br>
+                        
+                        <a href="book/geo384w/hw5/sigsbee.html">hw5/sigsbee</a><br>
+                        
+                        <a href="book/geo384w/hw6/sigsbee.html">hw6/sigsbee</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>JLU</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/jlu/txyapf/curve.html">txyapf/curve</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>RSF</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/rsf/rsf/format.html">rsf/format</a><br>
+                        
+                        <a href="book/rsf/rsf/sfenvelope.html">rsf/sfenvelope</a><br>
+                        
+                        <a href="book/rsf/school/data.html">school/data</a><br>
+                        
+                        <a href="book/rsf/school/modeling.html">school/modeling</a><br>
+                        
+                        <a href="book/rsf/school/sigsbee.html">school/sigsbee</a><br>
+                        
+                        <a href="book/rsf/su/rsfkfupm.html">su/rsfkfupm</a><br>
+                        
+                        <a href="book/rsf/su/rsflab10.html">su/rsflab10</a><br>
+                        
+                        <a href="book/rsf/su/rsflab11.html">su/rsflab11</a><br>
+                        
+                        <a href="book/rsf/su/rsflab12.html">su/rsflab12</a><br>
+                        
+                        <a href="book/rsf/su/rsflab13.html">su/rsflab13</a><br>
+                        
+                        <a href="book/rsf/su/rsflab14.html">su/rsflab14</a><br>
+                        
+                        <a href="book/rsf/su/rsflab15.html">su/rsflab15</a><br>
+                        
+                        <a href="book/rsf/su/rsflab16.html">su/rsflab16</a><br>
+                        
+                        <a href="book/rsf/su/rsflab2.html">su/rsflab2</a><br>
+                        
+                        <a href="book/rsf/su/rsflab7.html">su/rsflab7</a><br>
+                        
+                        <a href="book/rsf/su/rsflab8.html">su/rsflab8</a><br>
+                        
+                        <a href="book/rsf/su/rsflab9.html">su/rsflab9</a><br>
+                        
+                        <a href="book/rsf/su/rsfreadwrite.html">su/rsfreadwrite</a><br>
+                        
+                        <a href="book/rsf/su/rsfshape.html">su/rsfshape</a><br>
+                        
+                        <a href="book/rsf/tutorials/hilbert.html">tutorials/hilbert</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>SWAG</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/swag/tau/hess.html">tau/hess</a><br>
+                        
+                        <a href="book/swag/tau/iso.html">tau/iso</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>TCCS</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/tccs/apefint/misscurv.html">apefint/misscurv</a><br>
+                        
+                        <a href="book/tccs/apefint/ray.html">apefint/ray</a><br>
+                        
+                        <a href="book/tccs/attr/vecta.html">attr/vecta</a><br>
+                        
+                        <a href="book/tccs/avo/avo2.html">avo/avo2</a><br>
+                        
+                        <a href="book/tccs/deblend/fairfield-initmfnew.html">deblend/fairfield-initmfnew</a><br>
+                        
+                        <a href="book/tccs/ffd/bptti.html">ffd/bptti</a><br>
+                        
+                        <a href="book/tccs/fpwd/teapot.html">fpwd/teapot</a><br>
+                        
+                        <a href="book/tccs/lfd/bptti.html">lfd/bptti</a><br>
+                        
+                        <a href="book/tccs/lowrank/bptti.html">lowrank/bptti</a><br>
+                        
+                        <a href="book/tccs/lpf/plut.html">lpf/plut</a><br>
+                        
+                        <a href="book/tccs/lpf/ray.html">lpf/ray</a><br>
+                        
+                        <a href="book/tccs/ltft/vecta.html">ltft/vecta</a><br>
+                        
+                        <a href="book/tccs/medianfilter/dragon.html">medianfilter/dragon</a><br>
+                        
+                        <a href="book/tccs/nar/vecta.html">nar/vecta</a><br>
+                        
+                        <a href="book/tccs/nmo3/mcelroy.html">nmo3/mcelroy</a><br>
+                        
+                        <a href="book/tccs/optapert/gibson.html">optapert/gibson</a><br>
+                        
+                        <a href="book/tccs/optapert/rightSigsbee.html">optapert/rightSigsbee</a><br>
+                        
+                        <a href="book/tccs/optapert/sigsbee.html">optapert/sigsbee</a><br>
+                        
+                        <a href="book/tccs/opwd/pick.html">opwd/pick</a><br>
+                        
+                        <a href="book/tccs/ortho/orthofair.html">ortho/orthofair</a><br>
+                        
+                        <a href="book/tccs/ortho/orthonine.html">ortho/orthonine</a><br>
+                        
+                        <a href="book/tccs/phase/boon.html">phase/boon</a><br>
+                        
+                        <a href="book/tccs/phase/boon3.html">phase/boon3</a><br>
+                        
+                        <a href="book/tccs/scan3/realdata.html">scan3/realdata</a><br>
+                        
+                        <a href="book/tccs/specrecom/gulf.html">specrecom/gulf</a><br>
+                        
+                        <a href="book/tccs/strfilter/hongliu.html">strfilter/hongliu</a><br>
+                        
+                        <a href="book/tccs/synwav/lowf.html">synwav/lowf</a><br>
+                        
+                        <a href="book/tccs/synwav/pp.html">synwav/pp</a><br>
+                        
+                        <a href="book/tccs/timefreq/lowf.html">timefreq/lowf</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>TONGJI</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/tongji/lrmode/bptti2007.comparison.html">lrmode/bptti2007.comparison</a><br>
+                        
+                        <a href="book/tongji/lrmode/bptti2007.smth.html">lrmode/bptti2007.smth</a><br>
+                        
+                        <a href="book/tongji/lrmode/bptti2007.html">lrmode/bptti2007</a><br>
+                        
+                        <a href="book/tongji/lrmode/hessvti.html">lrmode/hessvti</a><br>
+                        
+                        <a href="book/tongji/qpwave/bptti2007.html">qpwave/bptti2007</a><br>
+                        
+                        <a href="book/tongji/qpwave/hessvti.html">qpwave/hessvti</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>TRIP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/trip/asg/project.html">asg/project</a><br>
+                        
+                        <a href="book/trip/struct/project.html">struct/project</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>UWA</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/uwa/geo2013ElasticModellingGPU/bp2d.html">geo2013ElasticModellingGPU/bp2d</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>XJTU</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/xjtu/gpurtm/sigsbee.html">gpurtm/sigsbee</a><br>
+                        
+                        <a href="book/xjtu/primer/sigsbee.html">primer/sigsbee</a><br>
+                        
+                        <a href="book/xjtu/primer/testaniso.html">primer/testaniso</a><br>
+                        
+                        <a href="book/xjtu/test/sigsbee.html">test/sigsbee</a><br>
+                        </td></tr></table></td></tr></table>
+    </body></html>

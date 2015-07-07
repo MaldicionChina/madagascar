@@ -1,0 +1,15 @@
+Program sfkirdatsr | 2-D Pre-stack Kirchhoff redatuming. 
+[SYNOPSIS]
+sfkirdatsr < in.rsf > out.rsf sgreen=sgreen.rsf rgreen=rgreen.rsf interm=interm.rsf verb=n sdatum= rdatum= aperture=50 taper=10 length=0.025
+[PARAMETERS]
+int     | aperture | =50 |   | 	aperture (number of traces) 
+string  | interm | = |   | 	auxiliary output file name
+float   | length | =0.025 |   | 	filter length (in seconds) 
+float   | rdatum | = |   | 	receiver datum depth 
+file    | rgreen | = |   | 	auxiliary input file name
+float   | sdatum | = |   | 	source datum depth 
+file    | sgreen | = |   | 	auxiliary input file name
+int     | taper | =10 |   | 	taper (number of traces) 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/llisiw

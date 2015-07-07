@@ -1,0 +1,14 @@
+Program sfangle | Illustration of angle gathers.
+[SYNOPSIS]
+sfangle > angle.rsf nw=513 nm=257 nh=257 dw=1./(2*(nw-1)*0.004) dm=1./(2*(nm-1)*0.01) dh=1./(2*(nh-1)*0.01) w0=dw vel=2.
+[PARAMETERS]
+float   | dh | =1./(2*(nh-1)*0.01) |   | 	
+float   | dm | =1./(2*(nm-1)*0.01) |   | 	
+float   | dw | =1./(2*(nw-1)*0.004) |   | 	
+int     | nh | =257 |   | 	
+int     | nm | =257 |   | 	
+int     | nw | =513 |   | 	
+float   | vel | =2. |   | 	
+float   | w0 | =dw |   | 	
+[DIRECTORY]
+user/fomels

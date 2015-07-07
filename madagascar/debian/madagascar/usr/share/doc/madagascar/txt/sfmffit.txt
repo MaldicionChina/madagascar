@@ -1,0 +1,10 @@
+Program sfmffit | Fitting multi-focusing approximations 
+[SYNOPSIS]
+sfmffit < in.rsf coef=coef.rsf > out.rsf fit=fit.rsf x0=m0 type=
+[PARAMETERS]
+file    | coef | = |   | 	auxiliary input file name
+file    | fit | = |   | 	auxiliary output file name
+string  | type | = |   | 	Type of approximation (crs,mf,nonhyperbolic) 
+float   | x0 | =m0 |   | 	central midpoint 
+[DIRECTORY]
+user/fomels

@@ -1,0 +1,18 @@
+sfzoeppritz = rsf.doc.rsfprog('sfzoeppritz','system/seismic/Mzoeppritz.c','''Testing Zoeppritz equation ''')
+sfzoeppritz.par('na',rsf.doc.rsfpar('int','90','','''number of angles '''))
+sfzoeppritz.par('a0',rsf.doc.rsfpar('float','0.','','''first angle '''))
+sfzoeppritz.par('da',rsf.doc.rsfpar('float','90./na','','''angle increment '''))
+sfzoeppritz.par('icoef',rsf.doc.rsfpar('int','4','[1,2,3,4]','''particle displacement, displacement potential, energy, real part '''))
+sfzoeppritz.par('vp1',rsf.doc.rsfpar('float','','',''''''))
+sfzoeppritz.par('vp2',rsf.doc.rsfpar('float','','',''''''))
+sfzoeppritz.par('vs1',rsf.doc.rsfpar('float','','',''''''))
+sfzoeppritz.par('vs2',rsf.doc.rsfpar('float','','',''''''))
+sfzoeppritz.par('rho1',rsf.doc.rsfpar('float','1.','',''''''))
+sfzoeppritz.par('rho2',rsf.doc.rsfpar('float','1.','',''''''))
+sfzoeppritz.par('incp',rsf.doc.rsfpar('bool','y','','''incident P (or S) '''))
+sfzoeppritz.par('outp',rsf.doc.rsfpar('bool','y','','''rellected/transmitted P (or S) '''))
+sfzoeppritz.par('refl',rsf.doc.rsfpar('bool','y','','''reflection or transmission '''))
+sfzoeppritz.version('1.7')
+sfzoeppritz.synopsis('''sfzoeppritz > out.rsf na=90 a0=0. da=90./na icoef=4 vp1= vp2= vs1= vs2= rho1=1. rho2=1. incp=y outp=y refl=y''','''''')
+rsf.doc.progs['sfzoeppritz']=sfzoeppritz
+

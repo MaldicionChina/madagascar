@@ -1,0 +1,10 @@
+Program sfconvf | 1-D convolution, adjoint is the filter. 
+[SYNOPSIS]
+sfconvf < inp.rsf > out.rsf other=oth.rsf adj=n nf= lag=1
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+int     | lag | =1 |   | 	lag for internal convolution 
+int     | nf | = |   | 	filter size 
+file    | other | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/gee

@@ -1,0 +1,12 @@
+Program sfdlct | discrete linear chirp transfrom (DLCT)
+[SYNOPSIS]
+sfdlct < in.rsf > out.rsf inv=n verb=n C=0.005 L=
+[COMMENTS]
+ 
+[PARAMETERS]
+float   | C | =0.005 |   | 	C=2*Lambda/L, unit slice 
+int     | L | = |   | 	
+bool    | inv | =n |  [y/n] | 	if y, do inverse transform (Here adjoint is the same as inverse!) 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/pyang

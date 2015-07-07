@@ -1,0 +1,16 @@
+sfapef = rsf.doc.rsfprog('sfapef','user/yliu/Mapef.c','''Estimate adaptive nonstationary PEF on aliased traces. ''')
+sfapef.par('pred',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sfapef.par('maskin',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfapef.par('maskout',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sfapef.par('a',rsf.doc.rsfpar('ints','','',''' [ndim]'''))
+sfapef.par('jump',rsf.doc.rsfpar('int','2','','''Jump parameter '''))
+sfapef.par('dim',rsf.doc.rsfpar('int','mdim','','''number of dimensions '''))
+sfapef.par('niter',rsf.doc.rsfpar('int','100','','''number of iterations '''))
+sfapef.par('verb',rsf.doc.rsfpar('bool','n','','''verbosity flag '''))
+sfapef.par('pred',rsf.doc.rsfpar('string ',desc='''auxiliary output file name'''))
+sfapef.par('maskin',rsf.doc.rsfpar('string ',desc='''optional input mask file (auxiliary input file name)'''))
+sfapef.par('maskout',rsf.doc.rsfpar('string ',desc='''optional output mask file (auxiliary output file name)'''))
+sfapef.version('1.7 Mapef.c 12892 2014-06-26 01:10:04Z sfomel')
+sfapef.synopsis('''sfapef < mat.rsf > flt.rsf pred=pre.rsf maskin=maskin.rsf maskout=maskout.rsf a= jump=2 dim=mdim niter=100 verb=n''','''''')
+rsf.doc.progs['sfapef']=sfapef
+

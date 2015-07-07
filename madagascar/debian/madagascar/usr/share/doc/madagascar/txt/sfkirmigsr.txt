@@ -1,0 +1,26 @@
+Program sfkirmigsr | 2-D Prestack Kirchhoff depth migration. 
+[SYNOPSIS]
+sfkirmigsr < dat.rsf > mig.rsf stable=stim.rsf sderiv=sder.rsf rtable=rtim.rsf rderiv=rder.rsf adj=y cmp=y nt= nh=1 ns=1 t0=0.0 dt= h0=0.0 dh= s0=0.0 ds= tau=0. aperture=90. antialias=1.0 cig=n type=
+[PARAMETERS]
+bool    | adj | =y |  [y/n] | 	y for migration, n for modeling 
+float   | antialias | =1.0 |   | 	antialiasing 
+float   | aperture | =90. |   | 	migration aperture (in degree) 
+bool    | cig | =n |  [y/n] | 	y - output common offset gathers 
+bool    | cmp | =y |  [y/n] | 	y for CMP gather, n for shot gather 
+float   | dh | = |   | 	offset sampling 
+float   | ds | = |   | 	shot sampling 
+float   | dt | = |   | 	time sampling 
+float   | h0 | =0.0 |   | 	offset origin 
+int     | nh | =1 |   | 	offset samples 
+int     | ns | =1 |   | 	shot samples 
+int     | nt | = |   | 	time samples 
+file    | rderiv | = |   | 	auxiliary input file name
+file    | rtable | = |   | 	auxiliary input file name
+float   | s0 | =0.0 |   | 	shot origin 
+file    | sderiv | = |   | 	auxiliary input file name
+file    | stable | = |   | 	auxiliary input file name
+float   | t0 | =0.0 |   | 	time origin 
+float   | tau | =0. |   | 	static time-shift (in second) 
+string  | type | = |   | 	type of interpolation (default Hermit) 
+[DIRECTORY]
+user/llisiw

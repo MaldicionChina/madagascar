@@ -1,0 +1,16 @@
+sfdsreiko = rsf.doc.rsfprog('sfdsreiko','user/llisiw/Mdsreiko.c','''Double square-root eikonal solver (2D) ''')
+sfdsreiko.par('mask',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfdsreiko.par('flag',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sfdsreiko.par('alpha',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sfdsreiko.par('velocity',rsf.doc.rsfpar('bool','y','','''if y, the input is velocity; n, slowness squared '''))
+sfdsreiko.par('thres',rsf.doc.rsfpar('float','5.e-5','','''threshold (percentage) '''))
+sfdsreiko.par('tol',rsf.doc.rsfpar('float','1.e-3','','''tolerance for bisection root-search '''))
+sfdsreiko.par('nloop',rsf.doc.rsfpar('int','10','','''number of bisection root-search '''))
+sfdsreiko.par('causal',rsf.doc.rsfpar('bool','y','','''if y, neglect non-causal branches of DSR '''))
+sfdsreiko.par('mask',rsf.doc.rsfpar('string ',desc='''auxiliary input file name'''))
+sfdsreiko.par('flag',rsf.doc.rsfpar('string ',desc='''auxiliary output file name'''))
+sfdsreiko.par('alpha',rsf.doc.rsfpar('string ',desc='''auxiliary output file name'''))
+sfdsreiko.version('1.7')
+sfdsreiko.synopsis('''sfdsreiko < in.rsf > out.rsf mask=mask.rsf flag=flag.rsf alpha=alpha.rsf velocity=y thres=5.e-5 tol=1.e-3 nloop=10 causal=y''','''''')
+rsf.doc.progs['sfdsreiko']=sfdsreiko
+

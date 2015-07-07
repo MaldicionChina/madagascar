@@ -1,0 +1,13 @@
+Program sfpysvd | Perform SVD on a matrix using SCIPY.  
+[SYNOPSIS]
+sfpysvd < fin.rsf > fout.rsf > lout.rsf > rout.rsf vectors=n left= right=
+[COMMENTS]
+
+REQUIRES the PYTHON API, NUMPY AND SCIPY
+
+[PARAMETERS]
+string  | left | = |   | 	File to store left singular vectors
+string  | right | = |   | 	File to store right singular vectors
+bool    | vectors | =n |  [y/n] | 	Output singular vectors?
+[DIRECTORY]
+user/godwinj

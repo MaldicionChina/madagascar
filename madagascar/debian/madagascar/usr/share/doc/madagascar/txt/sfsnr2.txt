@@ -1,0 +1,9 @@
+Program sfsnr2 | Compute signal-noise-ratio.
+[SYNOPSIS]
+sfsnr2 < signal.rsf noise=noise.rsf > snrf.rsf
+[COMMENTS]
+SNR=10 log10(sum(clean)/sum(noise))
+[PARAMETERS]
+file    | noise | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/chenyk

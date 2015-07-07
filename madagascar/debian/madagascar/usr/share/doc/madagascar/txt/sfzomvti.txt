@@ -1,0 +1,34 @@
+Program sfzomvti | acoustic VTI wavefield
+[SYNOPSIS]
+sfzomvti vnmo=Fvnmo.rsf vz=Fvver.rsf eta=Fheta.rsf cr=Fcr.rsf wave=Fwave.rsf < Fimag.rsf > Fdata.rsf vmap=Fvmap.rsf sigm=Fsigm.rsf inv=n tau=n verb=n opt=n nt=1 dt=1. bzl=0 bzh=0 bxl=0 bxh=0 czl=1. czh=1. cxl=1. cxh=1. n3=nt eps=1
+[COMMENTS]
+ * exploding reflector modeling : < imag.rsf sfzomvti inv=y > data.rsf
+ * zero-offset migration        : < data.rsf sfzomvti inv=n > imag.rsf
+ * prestack forward modeling    : < data.rsf sfzomvti inv=n > imag.rsf
+ Need (1) vnmo *= 2, vver *= 2 (2) nr=1 
+[PARAMETERS]
+int     | bxh | =0 |   | 	
+int     | bxl | =0 |   | 	
+int     | bzh | =0 |   | 	
+int     | bzl | =0 |   | 	
+file    | cr | = |   | 	auxiliary input file name
+float   | cxh | =1. |   | 	
+float   | cxl | =1. |   | 	
+float   | czh | =1. |   | 	
+float   | czl | =1. |   | 	
+float   | dt | =1. |   | 	time d (if inv=y) 
+float   | eps | =1 |   | 	regularize sigma 
+file    | eta | = |   | 	auxiliary input file name
+bool    | inv | =n |  [y/n] | 	if y, modeling; if n, migration 
+int     | n3 | =nt |   | 	wave time n 
+int     | nt | =1 |   | 	time n (if inv=y) 
+bool    | opt | =n |  [y/n] | 	optimze fft size 
+file    | sigm | = |   | 	auxiliary input file name
+bool    | tau | =n |  [y/n] | 	if y, tau domain; if n, cartesian 
+bool    | verb | =n |  [y/n] | 	verbosity 
+file    | vmap | = |   | 	auxiliary input file name
+file    | vnmo | = |   | 	auxiliary input file name
+file    | vz | = |   | 	auxiliary input file name
+file    | wave | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/xuxin

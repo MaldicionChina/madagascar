@@ -1,0 +1,13 @@
+Program sfkilltraces | 
+[SYNOPSIS]
+sfkilltraces perc=.75 maxfactor=1. seed=np.random.randn(
+[COMMENTS]
+Return mask to remove random traces in 2D and 3D using a maximum gap
+size constraint
+
+[PARAMETERS]
+float   | maxfactor | =1. |   | 	maximum gap factor
+float   | perc | =.75 |   | 	percentage of traces to remove
+int     | seed | =np.random.randn( |   | 	
+[DIRECTORY]
+user/slim

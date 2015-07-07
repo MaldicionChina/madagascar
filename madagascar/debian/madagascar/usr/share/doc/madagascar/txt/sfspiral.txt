@@ -1,0 +1,25 @@
+Program sfspiral | Spiral function 
+[SYNOPSIS]
+sfspiral > spiral.rsf nx=500 ny=200 xmax=20. ymax=3. xmin=0. ymin=0. dx=(xmax-xmin)/(nx-1) dy=(ymax-ymin)/(ny-1) xc=10. yc=5. eps=1.0e-6 v0=2.0 v1=2.0 r0=1.0 r1=0.4 b=0.1 fac=0.2 sp_r=1. sp_t=0.05
+[PARAMETERS]
+float   | b | =0.1 |   | 	exponential decay factor 
+float   | dx | =(xmax-xmin)/(nx-1) |   | 	
+float   | dy | =(ymax-ymin)/(ny-1) |   | 	
+float   | eps | =1.0e-6 |   | 	
+float   | fac | =0.2 |   | 	
+int     | nx | =500 |   | 	
+int     | ny | =200 |   | 	
+float   | r0 | =1.0 |   | 	
+float   | r1 | =0.4 |   | 	paramters of original shape 
+float   | sp_r | =1. |   | 	speed in radius 
+float   | sp_t | =0.05 |   | 	speed in angle 
+float   | v0 | =2.0 |   | 	
+float   | v1 | =2.0 |   | 	
+float   | xc | =10. |   | 	
+float   | xmax | =20. |   | 	
+float   | xmin | =0. |   | 	
+float   | yc | =5. |   | 	
+float   | ymax | =3. |   | 	
+float   | ymin | =0. |   | 	
+[DIRECTORY]
+user/kourkina

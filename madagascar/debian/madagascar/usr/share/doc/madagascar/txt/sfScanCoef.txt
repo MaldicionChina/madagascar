@@ -1,0 +1,23 @@
+Program sfScanCoef | Coeffecients of the eta expansion eikonal solver (3-D). 
+[SYNOPSIS]
+sfScanCoef < btime.rsf > time.rsf shotfile=shots.rsf btime=y order=2 br1=d1 br2=d2 br3=d3 plane1=n plane2=n plane3=n b1=plane[2]? n1: (int) (br1/d1+0.5) b2=plane[1]? n2: (int) (br2/d2+0.5) b3=plane[0]? n3: (int) (br3/d3+0.5) zshot=0. yshot=o2 + 0.5*(n2-1)*d2 xshot=o3 + 0.5*(n3-1)*d3 t1= t2=
+[PARAMETERS]
+int     | b1 | =plane[2]? n1: (int) (br1/d1+0.5) |   | 	
+int     | b2 | =plane[1]? n2: (int) (br2/d2+0.5) |   | 	
+int     | b3 | =plane[0]? n3: (int) (br3/d3+0.5) |   | 	Constant-velocity box around the source (in samples) 
+float   | br1 | =d1 |   | 	
+float   | br2 | =d2 |   | 	
+float   | br3 | =d3 |   | 	Constant-velocity box around the source (in physical dimensions) 
+bool    | btime | =y |  [y/n] | 	if y, the input is background time; n, Velocity 
+int     | order | =2 |  [1,2] | 	Accuracy order 
+bool    | plane1 | =n |  [y/n] | 	
+bool    | plane2 | =n |  [y/n] | 	
+bool    | plane3 | =n |  [y/n] | 	plane-wave source 
+string  | shotfile | = |   | 	File with shot locations (n2=number of shots, n1=3) (auxiliary input file name)
+string  | t1 | = |   | 	
+string  | t2 | = |   | 	
+float   | xshot | =o3 + 0.5*(n3-1)*d3 |   | 	
+float   | yshot | =o2 + 0.5*(n2-1)*d2 |   | 	
+float   | zshot | =0. |   | 	Shot location (used if no shotfile) 
+[DIRECTORY]
+user/tariq

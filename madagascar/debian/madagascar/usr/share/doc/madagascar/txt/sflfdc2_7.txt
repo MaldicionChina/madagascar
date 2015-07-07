@@ -1,0 +1,11 @@
+Program sflfdc2_7 | 2D 10th-order Lowrank FD coefficient
+[SYNOPSIS]
+sflfdc2_7 < velf.rsf > outm.rsf seed=time(NULL eps=1.e-6 npk=50 dt= size=6
+[PARAMETERS]
+        | dt | = |   | 	time step
+        | eps | =1.e-6 |   | 	tolerance
+        | npk | =50 |   | 	maximum rank
+        | seed | =time(NULL |   | 	
+        | size | =6 |   | 	stencil length
+[DIRECTORY]
+user/songxl

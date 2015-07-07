@@ -1,0 +1,11 @@
+Program sfimospray | Inversion of constant-velocity nearest-neighbor inverse NMO. 
+[SYNOPSIS]
+sfimospray < in.rsf > out.rsf adj=n n2=20 d2=200. o2=0. v=1000.
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+float   | d2 | =200. |   | 	offset sampling (if inv=n) 
+int     | n2 | =20 |   | 	number of offsets (if inv=n) 
+float   | o2 | =0. |   | 	offset origin (if inv=n) 
+float   | v | =1000. |   | 	velocity 
+[DIRECTORY]
+user/gee

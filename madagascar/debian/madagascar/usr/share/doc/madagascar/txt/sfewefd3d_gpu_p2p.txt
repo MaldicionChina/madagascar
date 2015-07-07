@@ -1,0 +1,21 @@
+Program sfewefd3d_gpu_p2p | 3D elastic time-domain FD modeling with GPU (For use in single node with one or more GPUs)
+[SYNOPSIS]
+sfewefd3d_gpu_p2p < Fwav.rsf ccc=Fccc.rsf den=Fden.rsf sou=Fsou.rsf rec=Frec.rsf wfl=Fwfl.rsf > Fdat.rsf ngpu=1 verb=n snap=n free=n ssou=n dabc=n interp=y nbell=5 jdata=1 jsnap=nt
+[PARAMETERS]
+file    | ccc | = |   | 	auxiliary input file name
+bool    | dabc | =n |  [y/n] | 	absorbing BC 
+file    | den | = |   | 	auxiliary input file name
+bool    | free | =n |  [y/n] | 	free surface flag 
+bool    | interp | =y |  [y/n] | 	perform linear interpolation on receiver data 
+int     | jdata | =1 |   | 	extract receiver data every jdata time steps 
+int     | jsnap | =nt |   | 	save wavefield every jsnap time steps 
+int     | nbell | =5 |   | 	bell size 
+int     | ngpu | =1 |   | 	how many local GPUs to use 
+file    | rec | = |   | 	auxiliary input file name
+bool    | snap | =n |  [y/n] | 	wavefield snapshots flag 
+file    | sou | = |   | 	auxiliary input file name
+bool    | ssou | =n |  [y/n] | 	stress source 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+file    | wfl | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/rweiss

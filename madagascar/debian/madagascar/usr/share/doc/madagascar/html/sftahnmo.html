@@ -1,0 +1,156 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sftahnmo</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sftahnmo</strong></big></big> (1.7)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="http://sourceforge.net/p/rsf/code/HEAD/tree/branches/madagascar-1.7/user/karl/Mtahnmo.c">user/karl/Mtahnmo.c</a></font></td></tr></table>
+    Trace And Header Normal MoveOut
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sftahnmo < in.rsf > out.rsf vnmo= tnmo= verbose=1 str=0.5 lmute=12.*d1 inv=n</td></tr></table><br>
+tah is the abbreviation of Trace And Header.  Madagascar programs <br>
+that begin with sftah are a designed to:<br>
+1- read trace and headers from separate rsf files and write them to <br>
+   standard output (ie sftahread)<br>
+2- filter programs that read and write standard input/output and <br>
+   process the tah data (eg sftahnmo, sftahstack)<br>
+3- read tah data from standard input and write separate rsf files for <br>
+   the trace and headers data (ie sftahwrite)<br>
+<br>
+These programs allow Seismic Unix (su) like processing in Madagascar.  <br>
+Some programs have su like names.<br>
+<br>
+Some programs in this suite are sftahread, sftahgethw, ftahhdrmath, <br>
+and sftahwrite.<br>
+<br>
+The sftahnmo uses offset in the trace headers to apply moveout using <br>
+the velocity function defined in the tnmo= vnmo= parameters. Largely<br>
+based on the seismic unix program sunmo.<br>
+<br>
+NMO interpolation error is less than 1% for frequencies less than 60% of<br>
+the Nyquist frequency. <br>
+                                                                             <br>
+Exact inverse NMO is impossible, particularly for early times at large<br>
+offsets and for frequencies near Nyquist with large interpolation <br>
+errors.  <br>
+ <br>
+<br>
+EXAMPLE:<br>
+<br>
+sftahread \<br>
+   verbose=1 \<br>
+   input=npr3_gathers.rsf \<br>
+| sftahnmo \<br>
+   verbose=1  \<br>
+   tnmo=0,.373,.619,.826,.909,1.017,1.132,1.222,1.716,3.010 \<br>
+   vnmo=9086,10244,11085,10803,10969,11578,12252,12669,14590,17116 \<br>
+| sftahstack key=iline,xline verbose=1 \<br>
+| sftahwrite \<br>
+   verbose=1                           \<br>
+   label2="xline" o2=1 n2=188 d2=1   \<br>
+   label3="iline" o3=1 n3=345 d3=1   \<br>
+   output=mappedstack.rsf \<br>
+>/dev/null<br>
+<br>
+sfgrey <mappedstack.rsf | sfpen<br>
+<br>
+In this example the cmp sorted prestack data, npr3_gathers.rsf,  are <br>
+read by sftahread.  The headers are in the file npr3_gathers_hdr.rsf, <br>
+the headers parameter default.  The headers are merged with the trace <br>
+amplitudes and the tah data sent down the pipe for nmo and stack.  The<br>
+sftahstack program uses both the iline and xline keys to determine<br>
+which traces blong to a gather.  Using both keys avoids a problem on <br>
+edges of a survey when uising xline along may merge gathers across <br>
+ilines (a special case that does sometimes happen). sftahwrite writes<br>
+the trace data to mappedstack.rsf and the headers are written to the<br>
+file mappedstack_hdr.rsf.  The order of the data in the output file<br>
+is defined by the iline and xline trace headers, so the  data order<br>
+is (time,xline,iline).  Finally, the output volume is displayed using<br>
+sfgrey.<br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>inv=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	if y, do inverse nmo.  Otherwise forward nmo <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>lmute=12.*d1</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	length of the mute zone in seconds <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>str=0.5</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	maximum stretch allowed <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>floats  <strong>tnmo=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	list of NMO times for the vnmo velocities.  [numtnmo]<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>verbose=1</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+     flag to control amount of print<br>
+     0 terse, 1 informative, 2 chatty, 3 debug<br>
+  <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>floats  <strong>vnmo=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	list of NMO velocities for the tnmo times.  [numvnmo]<br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    </body></html>

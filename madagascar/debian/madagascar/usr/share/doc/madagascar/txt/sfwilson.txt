@@ -1,0 +1,17 @@
+Program sfwilson | Wilson-Burg spectral factorization. 
+[SYNOPSIS]
+sfwilson < in.rsf > out.rsf lag=lag0.rsf lagout=lag.rsf maxlag= niter=20 eps=1.e-6 n1=maxlag a0=1. verb=y stable=n lagin= filtin=
+[PARAMETERS]
+float   | a0 | =1. |   | 	
+float   | eps | =1.e-6 |   | 	truncation tolerance 
+string  | filtin | = |   | 	
+string  | lag | = |   | 	optional input file with filter lags (auxiliary input file name)
+string  | lagin | = |   | 	optional input file with output filter lags 
+string  | lagout | = |   | 	auxiliary output file name
+int     | maxlag | = |   | 	maximum lag 
+int     | n1 | =maxlag |   | 	output filter length 
+int     | niter | =20 |   | 	number of iterations 
+bool    | stable | =n |  [y/n] | 	stability flag 
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/gee

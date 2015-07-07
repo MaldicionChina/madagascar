@@ -1,0 +1,20 @@
+Program sfviscoe2d | 2D 4-th order visco-elastic wave propagation using sponge ABC
+[SYNOPSIS]
+sfviscoe2d < Fvp.rsf vs=Fvs.rsf rho=Frho.rsf taup=Ftaup.rsf taus=Ftaus.rsf tauo=Ftauo.rsf > Fwavz.rsf wavx=Fwavx.rsf verb=n nb=30 nt= kt= dt= fm=20.0 ft=0 jt=1
+[PARAMETERS]
+float   | dt | = |   | 	time sampling interval 
+float   | fm | =20.0 |   | 	dominant freq of Ricker wavelet 
+int     | ft | =0 |   | 	first recorded time 
+int     | jt | =1 |   | 	time interval 
+int     | kt | = |   | 	record wavefield at time kt 
+int     | nb | =30 |   | 	thickness of sponge ABC 
+int     | nt | = |   | 	number of time steps 
+file    | rho | = |   | 	auxiliary input file name
+file    | tauo | = |   | 	auxiliary input file name
+file    | taup | = |   | 	auxiliary input file name
+file    | taus | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity 
+file    | vs | = |   | 	auxiliary input file name
+file    | wavx | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/pyang

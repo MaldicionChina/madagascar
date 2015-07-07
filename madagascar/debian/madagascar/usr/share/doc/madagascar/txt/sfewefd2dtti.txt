@@ -1,0 +1,25 @@
+Program sfewefd2dtti | elastic time-domain FD modeling 
+[SYNOPSIS]
+sfewefd2dtti < Fwav.rsf ccc=Fccc.rsf sou=Fsou.rsf rec=Frec.rsf wfl=Fwfl.rsf > Fdat.rsf den=Fden.rsf ompchunk=1 ompnth=0 verb=n snap=n free=n ssou=n opot=n nbell=1 jdata=1 jsnap=nt nq1=sf_n(az) nq2=sf_n(ax) oq1=sf_o(az) oq2=sf_o(ax)
+[PARAMETERS]
+file    | ccc | = |   | 	auxiliary input file name
+file    | den | = |   | 	auxiliary input file name
+bool    | free | =n |  [y/n] | 	free surface flag 
+int     | jdata | =1 |   | 	
+int     | jsnap | =nt |   | 	
+int     | nbell | =1 |   | 	bell size 
+int     | nq1 | =sf_n(az) |   | 	
+int     | nq2 | =sf_n(ax) |   | 	
+int     | ompchunk | =1 |   | 	OpenMP data chunk size 
+int     | ompnth | =0 |   | 	OpenMP available threads 
+bool    | opot | =n |  [y/n] | 	output potential 
+float   | oq1 | =sf_o(az) |   | 	
+float   | oq2 | =sf_o(ax) |   | 	
+file    | rec | = |   | 	auxiliary input file name
+bool    | snap | =n |  [y/n] | 	wavefield snapshots flag 
+file    | sou | = |   | 	auxiliary input file name
+bool    | ssou | =n |  [y/n] | 	stress source 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+file    | wfl | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/jyan

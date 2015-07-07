@@ -1,0 +1,12 @@
+Program sfdiradon32 | direct azimuthally isotropic 3to2 hyper Radon transform
+[SYNOPSIS]
+sfdiradon32 < input.rsf > output.rsf ntau= np= tau0= dtau= p0= dp=
+[PARAMETERS]
+        | dp | = |   | 	
+        | dtau | = |   | 	
+        | np | = |   | 	
+        | ntau | = |   | 	
+        | p0 | = |   | 	
+        | tau0 | = |   | 	
+[DIRECTORY]
+user/jingwei

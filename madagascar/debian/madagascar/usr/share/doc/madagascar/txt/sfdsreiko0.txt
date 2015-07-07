@@ -1,0 +1,7 @@
+Program sfdsreiko0 | Double square-root eikonal solver (2D + explicit) 
+[SYNOPSIS]
+sfdsreiko0 < in.rsf > out.rsf velocity=y
+[PARAMETERS]
+bool    | velocity | =y |  [y/n] | 	if y, the input is velocity; n, slowness squared 
+[DIRECTORY]
+user/llisiw

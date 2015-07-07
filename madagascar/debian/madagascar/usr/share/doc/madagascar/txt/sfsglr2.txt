@@ -1,0 +1,24 @@
+Program sfsglr2 | Simple 2-D wave propagation on staggered grid
+[SYNOPSIS]
+sfsglr2 vel=Fvel.rsf den=Fden.rsf < Fsrc.rsf > Fo.rsf rec=Frec.rsf left=left.rsf right=right.rsf fft=Ffft.rsf verb=n cmplx=n pad1=1 gdep=0.0 slx=-1.0 spx=-1 slz=-1.0 spz=-1 gdep=-1.0 gp=0 srcdecay=n srcrange=10 srctrunc=100
+[PARAMETERS]
+bool    | cmplx | =n |  [y/n] | 	use complex FFT 
+file    | den | = |   | 	auxiliary input file name
+file    | fft | = |   | 	auxiliary input file name
+float   | gdep | =-1.0 |   | 	recorder depth on grid
+int     | gp | =0 |   | 	recorder depth on index
+file    | left | = |   | 	auxiliary input file name
+int     | pad1 | =1 |   | 	padding factor on the first axis 
+file    | rec | = |   | 	auxiliary output file name
+file    | right | = |   | 	auxiliary input file name
+float   | slx | =-1.0 |   | 	source location x 
+float   | slz | =-1.0 |   | 	source location z 
+int     | spx | =-1 |   | 	source location x (index)
+int     | spz | =-1 |   | 	source location z (index)
+bool    | srcdecay | =n |  [y/n] | 	source decay
+int     | srcrange | =10 |   | 	source decay range
+float   | srctrunc | =100 |   | 	trunc source after srctrunc time (s)
+file    | vel | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/fangg

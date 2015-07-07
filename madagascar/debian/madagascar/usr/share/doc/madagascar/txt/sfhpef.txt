@@ -1,0 +1,16 @@
+Program sfhpef | Multi-dimensional PEF (prediction error filter) estimation on a helix. 
+[SYNOPSIS]
+sfhpef < in.rsf > filt.rsf maskin=mask.rsf a= center= gap= n= na=0 tol=1.e-6 niter=2*(aa->nh) lag= maskout=
+[PARAMETERS]
+ints    | a | = |   | 	 [dim]
+ints    | center | = |   | 	 [dim]
+ints    | gap | = |   | 	 [dim]
+string  | lag | = |   | 	output file for filter lags 
+string  | maskin | = |   | 	optional input mask file (auxiliary input file name)
+string  | maskout | = |   | 	optional output mask file 
+ints    | n | = |   | 	 [dim]
+int     | na | =0 |   | 	filter size 
+int     | niter | =2*(aa->nh) |   | 	number of iterations 
+float   | tol | =1.e-6 |   | 	tolerance for filter compression 
+[DIRECTORY]
+user/gee

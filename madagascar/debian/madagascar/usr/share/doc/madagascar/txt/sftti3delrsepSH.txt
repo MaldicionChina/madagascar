@@ -1,0 +1,10 @@
+Program sftti3delrsepSH | None
+[SYNOPSIS]
+sftti3delrsepSH < vp0.rsf seed=time(NULL eps=1.e-6 npk=20 iflagvti=
+[PARAMETERS]
+        | eps | =1.e-6 |   | 	tolerance
+        | iflagvti | = |   | 	
+        | npk | =20 |   | 	maximum rank
+        | seed | =time(NULL |   | 	
+[DIRECTORY]
+user/chengjb

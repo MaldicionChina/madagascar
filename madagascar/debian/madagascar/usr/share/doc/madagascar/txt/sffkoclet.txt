@@ -1,0 +1,17 @@
+Program sffkoclet | 1-D seislet transform using omega-wavenumber offset continuation 
+[SYNOPSIS]
+sffkoclet < in.rsf > out.rsf inv=n adj=n dwt=n verb=y eps=0.01 type=
+[COMMENTS]
+Forward transform (adj=n inv=y/n) m=T[d]
+Inverse transform (adj=y inv=y)   d=T^(-1)[d]
+Adjoint transform (adj=y inv=n)   d=T'[d]
+
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	if y, do adjoint transform 
+bool    | dwt | =n |  [y/n] | 	if y, do wavelet transform 
+float   | eps | =0.01 |   | 	regularization 
+bool    | inv | =n |  [y/n] | 	if y, do inverse transform 
+string  | type | = |   | 	[haar,linear,biorthogonal] wavelet type, the default is biorthogonal  
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/yliu

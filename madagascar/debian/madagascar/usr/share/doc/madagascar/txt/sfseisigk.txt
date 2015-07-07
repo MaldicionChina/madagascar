@@ -1,0 +1,19 @@
+Program sfseisigk | Signal component separation using seislet transforms. 
+[SYNOPSIS]
+sfseisigk < in.rsf dips=dips.rsf > out.rsf weight=weight.rsf niter=50 nliter=1 eps=0. eps0=0.01 verb=n order=1 type=
+[COMMENTS]
+
+The program works with 2-D data. The second dimension should be a power of 2.
+
+[PARAMETERS]
+file    | dips | = |   | 	auxiliary input file name
+float   | eps | =0. |   | 	regularization parameter 
+float   | eps0 | =0.01 |   | 	regularization for seislet 
+int     | niter | =50 |   | 	maximum number of iterations 
+int     | nliter | =1 |   | 	number of reweighting iterations 
+int     | order | =1 |   | 	accuracy order 
+string  | type | = |   | 	wavelet type (haar,linear) 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+string  | weight | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/pwd

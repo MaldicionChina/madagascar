@@ -1,0 +1,7 @@
+Program sfmulticheck | Check whether all values in a dataset are a multiple of a factor or not 
+[SYNOPSIS]
+sfmulticheck < in.rsf i_fac=
+[PARAMETERS]
+int     | i_fac | = |   | 	
+[DIRECTORY]
+user/ivlad

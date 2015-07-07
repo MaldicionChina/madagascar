@@ -1,0 +1,16 @@
+Program sfdealias | 3-D trace interpolation to a denser grid using PWD.
+[SYNOPSIS]
+sfdealias < in.rsf > out.rsf dip=dip.rsf both=n eps=0.01 order=1
+[COMMENTS]
+
+It may be necessary to bandpass the data before and after dealiasing 
+to ensure that the temporal spectrum is banded. Rule of thumb: if 
+max(jx,jy)=N, the temporal bandwidth should be 1/N of Nyquist.
+
+[PARAMETERS]
+bool    | both | =n |  [y/n] | 	if use left and right slopes 
+file    | dip | = |   | 	auxiliary input file name
+float   | eps | =0.01 |   | 	regularization 
+int     | order | =1 |   | 	accuracy order 
+[DIRECTORY]
+user/pwd

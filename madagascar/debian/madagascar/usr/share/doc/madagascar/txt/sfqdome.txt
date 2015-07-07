@@ -1,0 +1,23 @@
+Program sfqdome | 3-D synthetic image from Jon Claerbout. 
+[SYNOPSIS]
+sfqdome > mod.rsf trace=trace.rsf ranget=3. n1=400 n2=100 n3=50 large=(int) n1*ranget d1=0.004 d2=0.01 d3=0.02 o1=0. o2=-3.*d2 o3=-3.*d3 gaussvel=2.5 throw=0.01 endtaper=20 slicei=40 impedance=n
+[PARAMETERS]
+float   | d1 | =0.004 |   | 	
+float   | d2 | =0.01 |   | 	
+float   | d3 | =0.02 |   | 	
+int     | endtaper | =20 |   | 	
+float   | gaussvel | =2.5 |   | 	
+bool    | impedance | =n |  [y/n] | 	
+int     | large | =(int) n1*ranget |   | 	
+int     | n1 | =400 |   | 	
+int     | n2 | =100 |   | 	
+int     | n3 | =50 |   | 	
+float   | o1 | =0. |   | 	
+float   | o2 | =-3.*d2 |   | 	
+float   | o3 | =-3.*d3 |   | 	
+float   | ranget | =3. |   | 	
+int     | slicei | =40 |   | 	
+float   | throw | =0.01 |   | 	
+string  | trace | = |   | 	file to optionally output the master trace (auxiliary output file name)
+[DIRECTORY]
+user/gee

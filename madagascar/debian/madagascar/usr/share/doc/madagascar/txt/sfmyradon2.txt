@@ -1,0 +1,24 @@
+Program sfmyradon2 | Linear/parabolic radon transform frequency domain implementation 
+[SYNOPSIS]
+sfmyradon2 < in.rsf > out.rsf adj=y inv=n np= dp= p0= niter=100 eps=0.01 nx= ox= dx= parab=n x0=1. invmode=
+[COMMENTS]
+Also referred to as high-resolution radon transform
+Note: I borrowed a lot from /system/seismic/radon+Mradon.c. The distinction:
+	I am using FFTW because I am inexperienced in invoking kiss_fft. 
+
+[PARAMETERS]
+bool    | adj | =y |  [y/n] | 	if y, perform adjoint operation 
+float   | dp | = |   | 	p sampling (if adj=y) 
+float   | dx | = |   | 	sampling interval in x 
+float   | eps | =0.01 |   | 	regularization parameter 
+bool    | inv | =n |  [y/n] | 	if y, perform inverse operation 
+string  | invmode | = |   | 	inverse method: 'ls' if least-squares; 'toeplitz' if use FFT 
+int     | niter | =100 |   | 	number of CGLS iterations 
+int     | np | = |   | 	number of p values (if adj=y) 
+int     | nx | = |   | 	number of offsets (if adj=n) 
+float   | ox | = |   | 	x origin 
+float   | p0 | = |   | 	p origin (if adj=y) 
+bool    | parab | =n |  [y/n] | 	if y, parabolic Radon transform 
+float   | x0 | =1. |   | 	reference offset 
+[DIRECTORY]
+user/pyang

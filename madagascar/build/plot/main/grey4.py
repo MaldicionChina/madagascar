@@ -1,0 +1,21 @@
+sfgrey4 = rsf.doc.rsfprog('sfgrey4','plot/main/grey4.c','''Generate movie of 3-D cube plots.''')
+sfgrey4.par('point1',rsf.doc.rsfpar('float','0.5','','''fraction of the vertical axis for front face '''))
+sfgrey4.par('point2',rsf.doc.rsfpar('float','0.5','','''fraction of the horizontal axis for front face '''))
+sfgrey4.par('frame1',rsf.doc.rsfpar('int','0','','''top frame number '''))
+sfgrey4.par('frame2',rsf.doc.rsfpar('int','n2-1','','''side frame number '''))
+sfgrey4.par('frame3',rsf.doc.rsfpar('int','0','','''front frame number '''))
+sfgrey4.par('n1pix',rsf.doc.rsfpar('int','n1/point1+n3/(1.-point1)','','''number of vertical pixels '''))
+sfgrey4.par('n2pix',rsf.doc.rsfpar('int','n2/point2+n3/(1.-point2)','','''number of horizontal pixels '''))
+sfgrey4.par('flat',rsf.doc.rsfpar('bool','y','','''if n, display perspective view '''))
+sfgrey4.par('scalebar',rsf.doc.rsfpar('bool','n','','''if y, draw scalebar '''))
+sfgrey4.par('minval',rsf.doc.rsfpar('float','','','''minimum value for scalebar (default is the data minimum) '''))
+sfgrey4.par('maxval',rsf.doc.rsfpar('float','','','''maximum value for scalebar (default is the data maximum) '''))
+sfgrey4.par('barreverse',rsf.doc.rsfpar('bool','n','','''if y, go from small to large on the bar scale '''))
+sfgrey4.par('nreserve',rsf.doc.rsfpar('int','8','','''reserved colors '''))
+sfgrey4.par('bar',rsf.doc.rsfpar('string ',desc='''file for scalebar data '''))
+sfgrey4.par('color',rsf.doc.rsfpar('string ',desc='''color scheme (default is i) '''))
+sfgrey4.version('1.7')
+sfgrey4.synopsis('''sfgrey4 < in.rsf point1=0.5 point2=0.5 frame1=0 frame2=n2-1 frame3=0 n1pix=n1/point1+n3/(1.-point1) n2pix=n2/point2+n3/(1.-point2) flat=y scalebar=n minval= maxval= barreverse=n nreserve=8 bar= color= > plot.vpl''','''Requires an "unsigned char" input (the output of sfbyte).
+''')
+rsf.doc.progs['sfgrey4']=sfgrey4
+

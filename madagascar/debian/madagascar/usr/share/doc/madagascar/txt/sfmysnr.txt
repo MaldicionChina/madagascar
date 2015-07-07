@@ -1,0 +1,7 @@
+Program sfmysnr | print out signal-to-noise ratio in decibel (dB)
+[SYNOPSIS]
+sfmysnr < in.rsf ref=ref.rsf > out.rsf
+[PARAMETERS]
+file    | ref | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/pyang

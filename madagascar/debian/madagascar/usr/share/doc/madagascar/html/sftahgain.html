@@ -1,0 +1,188 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sftahgain</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sftahgain</strong></big></big> (1.7)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="http://sourceforge.net/p/rsf/code/HEAD/tree/branches/madagascar-1.7/user/karl/Mtahgain.c">user/karl/Mtahgain.c</a></font></td></tr></table>
+    Read Trace And Header (tah) from standard input and apply GAIN
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sftahgain < in.rsf > out.rsf xxstart= tstart= verbose=1 scale=1.0 tpow=0.0 epow=0.0 agc=0.0</td></tr></table><br>
+   tah is the abbreviation of Trace And Header.  Madagascar programs <br>
+   that begin with sftah are a designed to:<br>
+   1- read trace and headers from separate rsf files and write them to <br>
+   standard output (ie sftahread)<br>
+   2- filter programs that read and write standard input/output and <br>
+   process the tah data (eg sftahnmo, sftahstack)<br>
+   3- read tah data from standard input and write separate rsf files for <br>
+   the trace and headers data (ie sftahwrite)<br>
+<br>
+   These programs allow Seismic Unix (su) like processing in Madagascar.  <br>
+   Some programs have su like names.<br>
+<br>
+   Some programs in this suite are sftahread, sftahgethw, ftahhdrmath, <br>
+   and sftahwrite.<br>
+<br>
+   The sftahgain program is designed to apply various amplitude gain <br>
+   functions.  These gain functions include multiply by a constant, <br>
+   trace balance, clipping, AGC, t**pow, exp(epow*t) and AGC.  Trace <br>
+   and header data (tah) are read from standard input (usually a pipe).<br>
+   Data is scaled:<br>
+   out(t) = scale * BAL{CLIP[AGC{[t^tpow * exp(epow * t)}]}<br>
+   Then trace and header data is written to standard output.<br>
+<br>
+   EXAMPLE:<br>
+<br>
+   sftahsort input=shots-receivers-23900_headfix.rsf          \<br>
+   sort="xline:600,601 offset"                             \<br>
+   | sftahgain agc=.5                                         \<br>
+   | sftahmakeskey pkey=xline skey=cdpt                       \<br>
+   | sftahwrite                                               \<br>
+   verbose=1                                                \<br>
+   label2=cdpt  o2=1 n2=100 d2=1                            \<br>
+   label3=xline o3=600 n3=1 d3=1                            \<br>
+   output=agccmps.rsf                                       \<br>
+   >/dev/null<br>
+<br>
+   sfgrey <agccmps.rsf | sfpen<br>
+<br>
+   In this example the shot organized prestack data in the file <br>
+   shots-receivers-23900_headfix.rsf are read in xline offset order by <br>
+   sftahsort program.  The headers are in the file <br>
+   shots-receivers-23900_headfix_hdr.rsf, the headers parameter default.<br>
+   The headers are merged with the trace amplitudes and the tah data sent <br>
+   down the pipe for scaling (agc).<br>
+<br>
+   sftahagc applies a .5 second automatic gain control (agc)<br>
+<br>
+   The program sftahmakeskey is used to create a secondary key used <br>
+   in the following sftahwrite to define the location to wrte the trace <br>
+   in the output file. Sftahmakeskey makes a secondary key (skey=cdpt) <br>
+   the count the traces starting in the a primary key gather (pkey=xline).<br>
+   The input traces gathered by xline by sftahsort. Sftahmakeskey sets <br>
+   cdpt to 1 when the trace has a new xline.  If the trace has the same <br>
+   xline as the previous trace cdpt is incremented<br>
+<br>
+   Sftahwrite writes the the trace data to agccmp.rsf and the headers are <br>
+   written to the file agccmp_hdr.rsf.  The order of the data in the output <br>
+   file is defined by the cdpt and xline trace headers, so the  data order<br>
+   is (time,cmpt,xline).  Finally, the output volume is displayed using<br>
+   sfgrey.<br>
+<br>
+   PARAMETERS<br>
+   int verbose=1<br>
+   flag to control amount of print<br>
+   0 terse, 1 informative, 2 chatty, 3 debug<br>
+<br>
+   float scale=1.0<br>
+   multiply data by this float<br>
+<br>
+   float tpow=0.0<br>
+   multiply data by t^tpow<br>
+<br>
+   float epow=0.0<br>
+   multiply data by exp(epow*t)<br>
+<br>
+   float agc=0.0<br>
+   Length of agc window in seconds.  0.0 means no agc<br>
+<br>
+   Operation order:<br>
+<br>
+   out(t) = scale * BAL{CLIP[AGC{[t^tpow * exp(epow * t)}]}	<br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>agc=0.0</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Length of agc window in seconds.  0.0 means no agc <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>epow=0.0</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	multiply data by exp(epow*t) <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>scale=1.0</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	multiply data by this float <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>tpow=0.0</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	multiply data by t^tpow <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>floats  <strong>tstart=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	 [numtstart]<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>verbose=1</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+       flag to control amount of print<br>
+       0 terse, 1 informative, 2 chatty, 3 debug<br>
+    <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>floats  <strong>xxstart=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	 [numxstart]<br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    </body></html>

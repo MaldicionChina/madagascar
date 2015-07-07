@@ -1,0 +1,9 @@
+Program sfftoper | First-arrival Traveltime Tomography (linear operator) 
+[SYNOPSIS]
+sfftoper < in.rsf > out.rsf time=time.rsf mask=mask.rsf adj=n
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+string  | mask | = |   | 	auxiliary input file name
+string  | time | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/llisiw

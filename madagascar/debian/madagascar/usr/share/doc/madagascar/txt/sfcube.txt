@@ -1,0 +1,9 @@
+Program sfcube | Simple cube fault synthetic 
+[SYNOPSIS]
+sfcube > cube.rsf n=51 p=0.5 q=0.5
+[PARAMETERS]
+int     | n | =51 |   | 	cube dimensions 
+float   | p | =0.5 |   | 	inline slope 
+float   | q | =0.5 |   | 	crossline slope 
+[DIRECTORY]
+user/gee

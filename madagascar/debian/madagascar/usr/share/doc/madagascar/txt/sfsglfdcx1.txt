@@ -1,0 +1,11 @@
+Program sfsglfdcx1 | 1D Lowrank FD coefficient of d/dx on staggered grid
+[SYNOPSIS]
+sfsglfdcx1 < velf.rsf > outm.rsf seed=time(NULL eps=1.e-4 npk=20 dt= size=6
+[PARAMETERS]
+        | dt | = |   | 	time step
+        | eps | =1.e-4 |   | 	tolerance
+        | npk | =20 |   | 	maximum rank
+        | seed | =time(NULL |   | 	
+        | size | =6 |   | 	stencil length
+[DIRECTORY]
+user/fangg

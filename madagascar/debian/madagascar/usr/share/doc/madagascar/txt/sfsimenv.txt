@@ -1,0 +1,15 @@
+Program sfsimenv | Rotate phase and compute similarity with enevelope. 
+[SYNOPSIS]
+sfsimenv < inp.rsf > sim.rsf na=360 da=1.0 a0=-180. order=100 ref=1. verb=y inv=y niter=20 rect=3
+[PARAMETERS]
+float   | a0 | =-180. |   | 	first angle 
+float   | da | =1.0 |   | 	angle increment 
+bool    | inv | =y |  [y/n] | 	inverse similarity 
+int     | na | =360 |   | 	number of angles 
+int     | niter | =20 |   | 	maximum number of iterations 
+int     | order | =100 |   | 	Hilbert transformer order 
+int     | rect | =3 |   | 	smoothing radius 
+float   | ref | =1. |   | 	Hilbert transformer reference (0.5 < ref <= 1) 
+bool    | verb | =y |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/fomels

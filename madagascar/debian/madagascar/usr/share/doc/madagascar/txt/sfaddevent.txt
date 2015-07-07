@@ -1,0 +1,17 @@
+Program sfaddevent | Add a dispersive event to a seismic profile 
+[SYNOPSIS]
+sfaddevent < in.rsf > out.rsf wvtype=0 w0=35.0 event=2 nfft= t0=0.3 v0=1500.0 a0=1.0 qv=-1.0 qa=qv f0=w0 a0ref=0
+[PARAMETERS]
+float   | a0 | =1.0 |   | 	event amplitude at t=a0ref (x=0) 
+int     | a0ref | =0 |   | 	reference point for a0: 0 - t0; 1 - a0 
+int     | event | =2 |   | 	0: linear; 1: parabolic; 2:hyperbolic 
+float   | f0 | =w0 |   | 	reference frequency for velocity dispersion and amplitude attenuation 
+int     | nfft | = |   | 	fft length 
+float   | qa | =qv |   | 	Q factor for amplitude attenuation 
+float   | qv | =-1.0 |   | 	Q factor for velocity dispersion 
+float   | t0 | =0.3 |   | 	event travel time at x=0 
+float   | v0 | =1500.0 |   | 	event velocity at x=0, for reference frequency f0 
+float   | w0 | =35.0 |   | 	central frequency of Ricker wavelet or bandwidth of sinc wavelet 
+int     | wvtype | =0 |   | 	0: ricker; 1: sinc; x: not support 
+[DIRECTORY]
+user/chen

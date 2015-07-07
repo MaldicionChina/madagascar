@@ -1,0 +1,13 @@
+Program sfmf | 1D median filtering. 
+[SYNOPSIS]
+sfmf < in.rsf > out.rsf nfw= boundary=n
+[COMMENTS]
+
+January 2015 program of the month:
+http://ahay.org/rsflog/index.php?/archives/425-Program-of-the-month-sfmf.html
+
+[PARAMETERS]
+bool    | boundary | =n |  [y/n] | 	if y, boundary is data, whereas zero
+int     | nfw | = |   | 	filter-window length (positive and odd integer)
+[DIRECTORY]
+user/yliu

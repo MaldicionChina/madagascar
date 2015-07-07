@@ -1,0 +1,182 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sfheaderwindow</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sfheaderwindow</strong></big></big> (1.7 headerwindow.c 13686 2014-12-15 00:23:45Z sfomel)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="http://sourceforge.net/p/rsf/code/HEAD/tree/branches/madagascar-1.7/system/main/headerwindow.c">system/main/headerwindow.c</a><br><a href="http://ahay.org/wiki/Guide_to_madagascar_programs#sfheaderwindow">Documentation</a></font></td></tr></table>
+    Window a dataset based on a header mask.
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sfheaderwindow mask=head.rsf < in.rsf > out.rsf inv=n</td></tr></table><br>
+The input data is a collection of traces n1xn2,<br>
+mask is an integer array os size n2, windowed is n1xm2,<br>
+where m2 is the number of nonzero elements in mask.<br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>inv=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	inversion flag <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>file    <strong>mask=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	auxiliary input file name<br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#eeaa77">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Used In</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>CWP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/cwp/jse2006RWEImagingOverturningReflections/sigsbee.html">jse2006RWEImagingOverturningReflections/sigsbee</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>DATA</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/data/alaska/line31-81-m8r.html">alaska/line31-81-m8r</a><br>
+                        
+                        <a href="book/data/nankai/shots.html">nankai/shots</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GALLERY</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/gallery/bp/model.html">bp/model</a><br>
+                        
+                        <a href="book/gallery/hessvti/model.html">hessvti/model</a><br>
+                        
+                        <a href="book/gallery/sigsbee/ffd.html">sigsbee/ffd</a><br>
+                        
+                        <a href="book/gallery/sigsbee/lowrank.html">sigsbee/lowrank</a><br>
+                        
+                        <a href="book/gallery/sigsbee/lrostep.html">sigsbee/lrostep</a><br>
+                        
+                        <a href="book/gallery/sigsbee/model.html">sigsbee/model</a><br>
+                        
+                        <a href="book/gallery/sigsbee/oway.html">sigsbee/oway</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GEE</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/gee/ajt/galilee.html">ajt/galilee</a><br>
+                        
+                        <a href="book/gee/hlx/helgal.html">hlx/helgal</a><br>
+                        
+                        <a href="book/gee/iin/galilee.html">iin/galilee</a><br>
+                        
+                        <a href="book/gee/noiz/antoine.html">noiz/antoine</a><br>
+                        
+                        <a href="book/gee/noiz/mad.html">noiz/mad</a><br>
+                        
+                        <a href="book/gee/noiz/rbst.html">noiz/rbst</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>RSF</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/rsf/reprobook/exam3.html">reprobook/exam3</a><br>
+                        
+                        <a href="book/rsf/scons/rsf.html">scons/rsf</a><br>
+                        
+                        <a href="book/rsf/su/rsfkfupm.html">su/rsfkfupm</a><br>
+                        
+                        <a href="book/rsf/su/rsflab11.html">su/rsflab11</a><br>
+                        
+                        <a href="book/rsf/su/rsflab12.html">su/rsflab12</a><br>
+                        
+                        <a href="book/rsf/su/rsflab13.html">su/rsflab13</a><br>
+                        
+                        <a href="book/rsf/su/rsflab14.html">su/rsflab14</a><br>
+                        
+                        <a href="book/rsf/su/rsflab16.html">su/rsflab16</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>SEP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/sep/bspl/sei3d.html">bspl/sei3d</a><br>
+                        
+                        <a href="book/sep/burg/gtens.html">burg/gtens</a><br>
+                        
+                        <a href="book/sep/super/tau.html">super/tau</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>TCCS</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/tccs/nar/mirko.html">nar/mirko</a><br>
+                        
+                        <a href="book/tccs/nar/trace.html">nar/trace</a><br>
+                        
+                        <a href="book/tccs/nmo3/mcelroy.html">nmo3/mcelroy</a><br>
+                        
+                        <a href="book/tccs/scan3/realdata.html">scan3/realdata</a><br>
+                        </td></tr></table></td></tr></table>
+    </body></html>

@@ -1,0 +1,13 @@
+Program sfradon32 | azimuthally isotropic 3to2 Radon transform (using 2to2 butterfly)
+[SYNOPSIS]
+sfradon32 < input.rsf > output.rsf ntau= np= tau0= dtau= p0= dp= N=
+[PARAMETERS]
+        | N | = |   | 	number of partitions
+        | dp | = |   | 	
+        | dtau | = |   | 	
+        | np | = |   | 	
+        | ntau | = |   | 	
+        | p0 | = |   | 	
+        | tau0 | = |   | 	
+[DIRECTORY]
+user/jingwei

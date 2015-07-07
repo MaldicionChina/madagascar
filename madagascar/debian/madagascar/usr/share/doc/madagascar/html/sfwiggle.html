@@ -1,0 +1,470 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sfwiggle</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sfwiggle</strong></big></big> (1.7)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="http://sourceforge.net/p/rsf/code/HEAD/tree/branches/madagascar-1.7/plot/main/wiggle.c">plot/main/wiggle.c</a></font></td></tr></table>
+    Plot data with wiggly traces. 
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sfwiggle < in.rsf xpos=xpos.rsf xmax= xmin= poly=n polyneg=n fatp=1 xmask=1 ymask=1 pclip=98. zplot=0.75 clip=0. seemean=n verb=n transp=n yreverse=n xreverse=n > plot.vpl</td></tr></table>Run "sfdoc stdplot" for more parameters.<br>
+<br>
+June 2013 program of the month:<br>
+<a href="http://www.ahay.org/rsflog/index.php?/archives/340-Program-of-the-month-sfwiggle.html">http://www.ahay.org/rsflog/index.php?/archives/340-Program-of-the-month-sfwiggle.html</a><br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>clip=0.</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	data clip (estimated from pclip by default <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>fatp=1</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	polygon border fatness <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>pclip=98.</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	clip percentile <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>poly=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	if draw polygons <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>polyneg=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	if polygons for negative values <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>seemean=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	if y, plot mean lines of traces <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>transp=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	if y, transpose the axes <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>verb=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	verbosity flag <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>xmask=1</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	polygon filling <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>xmax=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	maximum trace position (if using xpos) <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>xmin=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	minimum trace position (if using xpos) <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>xpos=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	optional header file with trace positions (auxiliary input file name)<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>xreverse=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	if y, reverse the horizontal axis <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>ymask=1</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	polygon filling <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>bool    <strong>yreverse=n</strong> [y/n]</font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	if y, reverse the vertical axis <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>zplot=0.75</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	vertical separation <br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#eeaa77">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Used In</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>BEI</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/bei/ft1/matrix.html">ft1/matrix</a><br>
+                        
+                        <a href="book/bei/sg/toldi.html">sg/toldi</a><br>
+                        
+                        <a href="book/bei/wvs/head.html">wvs/head</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>CUP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/cup/rna2d/shot.html">rna2d/shot</a><br>
+                        
+                        <a href="book/cup/rna2d/simple.html">rna2d/simple</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>DATA</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/data/alaska/line31-81-m8r.html">alaska/line31-81-m8r</a><br>
+                        
+                        <a href="book/data/freeusp/land.html">freeusp/land</a><br>
+                        
+                        <a href="book/data/nankai/shots.html">nankai/shots</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GEE</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/gee/lsq/vesuvio.html">lsq/vesuvio</a><br>
+                        
+                        <a href="book/gee/noiz/antoine.html">noiz/antoine</a><br>
+                        
+                        <a href="book/gee/noiz/mad.html">noiz/mad</a><br>
+                        
+                        <a href="book/gee/noiz/softclip.html">noiz/softclip</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>HANSUNG</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/hansung/cgg/syn.html">cgg/syn</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>JLU</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/jlu/txyapf/curve.html">txyapf/curve</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>OSU</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/osu/shalek/mod2d.html">shalek/mod2d</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>RSF</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/rsf/bash/plot.html">bash/plot</a><br>
+                        
+                        <a href="book/rsf/reprobook/exam2.html">reprobook/exam2</a><br>
+                        
+                        <a href="book/rsf/reprobook/exam3.html">reprobook/exam3</a><br>
+                        
+                        <a href="book/rsf/rsf/format.html">rsf/format</a><br>
+                        
+                        <a href="book/rsf/rsf/plot.html">rsf/plot</a><br>
+                        
+                        <a href="book/rsf/rsf/rsftour.html">rsf/rsftour</a><br>
+                        
+                        <a href="book/rsf/rsf/sfawefd.html">rsf/sfawefd</a><br>
+                        
+                        <a href="book/rsf/rsf/sfwiggle.html">rsf/sfwiggle</a><br>
+                        
+                        <a href="book/rsf/rsf/test.html">rsf/test</a><br>
+                        
+                        <a href="book/rsf/rsf/wedge.html">rsf/wedge</a><br>
+                        
+                        <a href="book/rsf/school/complex.html">school/complex</a><br>
+                        
+                        <a href="book/rsf/school/data.html">school/data</a><br>
+                        
+                        <a href="book/rsf/school/sigsbee.html">school/sigsbee</a><br>
+                        
+                        <a href="book/rsf/school/single.html">school/single</a><br>
+                        
+                        <a href="book/rsf/school2012/plot.html">school2012/plot</a><br>
+                        
+                        <a href="book/rsf/scons/rsf.html">scons/rsf</a><br>
+                        
+                        <a href="book/rsf/su/rsfcurves.html">su/rsfcurves</a><br>
+                        
+                        <a href="book/rsf/su/rsfdecon.html">su/rsfdecon</a><br>
+                        
+                        <a href="book/rsf/su/rsfdipfilt.html">su/rsfdipfilt</a><br>
+                        
+                        <a href="book/rsf/su/rsfkfupm.html">su/rsfkfupm</a><br>
+                        
+                        <a href="book/rsf/su/rsflab1.html">su/rsflab1</a><br>
+                        
+                        <a href="book/rsf/su/rsflab11.html">su/rsflab11</a><br>
+                        
+                        <a href="book/rsf/su/rsflab12.html">su/rsflab12</a><br>
+                        
+                        <a href="book/rsf/su/rsflab14.html">su/rsflab14</a><br>
+                        
+                        <a href="book/rsf/su/rsflab16.html">su/rsflab16</a><br>
+                        
+                        <a href="book/rsf/su/rsflab4.html">su/rsflab4</a><br>
+                        
+                        <a href="book/rsf/su/rsflab7.html">su/rsflab7</a><br>
+                        
+                        <a href="book/rsf/su/rsflab8.html">su/rsflab8</a><br>
+                        
+                        <a href="book/rsf/su/rsfmodel.html">su/rsfmodel</a><br>
+                        
+                        <a href="book/rsf/su/rsfplane.html">su/rsfplane</a><br>
+                        
+                        <a href="book/rsf/su/rsftaup.html">su/rsftaup</a><br>
+                        
+                        <a href="book/rsf/su/rsfwellrf.html">su/rsfwellrf</a><br>
+                        
+                        <a href="book/rsf/tutorials/spitz.html">tutorials/spitz</a><br>
+                        
+                        <a href="book/rsf/tutorials/tuning.html">tutorials/tuning</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>SEP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/sep/avo/bsr.html">avo/bsr</a><br>
+                        
+                        <a href="book/sep/cdstep/inter.html">cdstep/inter</a><br>
+                        
+                        <a href="book/sep/findif/heat.html">findif/heat</a><br>
+                        
+                        <a href="book/sep/pefmult/haskell.html">pefmult/haskell</a><br>
+                        
+                        <a href="book/sep/pefmult/mobil.html">pefmult/mobil</a><br>
+                        
+                        <a href="book/sep/steer/steering.html">steer/steering</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>SWAG</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/swag/itime/oz2.html">itime/oz2</a><br>
+                        
+                        <a href="book/swag/itime/oz6.html">itime/oz6</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>TCCS</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/tccs/apefint/ray.html">apefint/ray</a><br>
+                        
+                        <a href="book/tccs/attr/vecta.html">attr/vecta</a><br>
+                        
+                        <a href="book/tccs/avo/avo2.html">avo/avo2</a><br>
+                        
+                        <a href="book/tccs/emdpf/dipfilter.html">emdpf/dipfilter</a><br>
+                        
+                        <a href="book/tccs/ltft/groll.html">ltft/groll</a><br>
+                        
+                        <a href="book/tccs/ltft/vecta.html">ltft/vecta</a><br>
+                        
+                        <a href="book/tccs/medianfilter/dragon.html">medianfilter/dragon</a><br>
+                        
+                        <a href="book/tccs/medianfilter/model.html">medianfilter/model</a><br>
+                        
+                        <a href="book/tccs/medianfilter/window.html">medianfilter/window</a><br>
+                        
+                        <a href="book/tccs/nmo3/azimuthtest.html">nmo3/azimuthtest</a><br>
+                        
+                        <a href="book/tccs/nmo3/mcelroy.html">nmo3/mcelroy</a><br>
+                        
+                        <a href="book/tccs/nmodeblend/timespace.html">nmodeblend/timespace</a><br>
+                        
+                        <a href="book/tccs/ortho/orthocomplex.html">ortho/orthocomplex</a><br>
+                        
+                        <a href="book/tccs/ortho/orthocsimul.html">ortho/orthocsimul</a><br>
+                        
+                        <a href="book/tccs/phase/boon.html">phase/boon</a><br>
+                        
+                        <a href="book/tccs/phase/nonstat.html">phase/nonstat</a><br>
+                        
+                        <a href="book/tccs/phase/zero.html">phase/zero</a><br>
+                        
+                        <a href="book/tccs/pmig/mig.html">pmig/mig</a><br>
+                        
+                        <a href="book/tccs/scan3/realdata.html">scan3/realdata</a><br>
+                        
+                        <a href="book/tccs/seislet/diplet.html">seislet/diplet</a><br>
+                        
+                        <a href="book/tccs/seislet/plane.html">seislet/plane</a><br>
+                        
+                        <a href="book/tccs/shape/beivc.html">shape/beivc</a><br>
+                        
+                        <a href="book/tccs/simistack/flat4.html">simistack/flat4</a><br>
+                        
+                        <a href="book/tccs/simistack/simple.html">simistack/simple</a><br>
+                        
+                        <a href="book/tccs/specrecom/ricker.html">specrecom/ricker</a><br>
+                        
+                        <a href="book/tccs/stackadcig/simple.html">stackadcig/simple</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>XJTU</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/xjtu/test/mwni2d.html">test/mwni2d</a><br>
+                        
+                        <a href="book/xjtu/test/pocs5d.html">test/pocs5d</a><br>
+                        </td></tr></table></td></tr></table>
+    </body></html>

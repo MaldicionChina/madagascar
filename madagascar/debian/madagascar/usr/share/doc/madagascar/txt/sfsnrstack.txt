@@ -1,0 +1,10 @@
+Program sfsnrstack | Stack a dataset over the second dimensions by SNR weighted method. 
+[SYNOPSIS]
+sfsnrstack < in.rsf > out.rsf w=50 sft=1 ee=1.0 esp=1.0
+[PARAMETERS]
+float   | ee | =1.0 |   | 	
+float   | esp | =1.0 |   | 	
+float   | sft | =1 |   | 	weight shift
+int     | w | =50 |   | 	sliding window size
+[DIRECTORY]
+user/gchliu

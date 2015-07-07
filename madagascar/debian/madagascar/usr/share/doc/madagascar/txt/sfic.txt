@@ -1,0 +1,12 @@
+Program sfic | Imaging condition 
+[SYNOPSIS]
+sfic < Fs.rsf ur=Fr.rsf > Fi.rsf ompchunk=1 verb=n nbuf=1 version=0 eps=1e-6
+[PARAMETERS]
+float   | eps | =1e-6 |   | 	epsilon 
+int     | nbuf | =1 |   | 	buffer size 
+int     | ompchunk | =1 |   | 	OpenMP data chunk size 
+file    | ur | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+int     | version | =0 |   | 	I.C. version (see paper) 
+[DIRECTORY]
+user/psava

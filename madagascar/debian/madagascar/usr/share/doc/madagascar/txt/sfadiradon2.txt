@@ -1,0 +1,12 @@
+Program sfadiradon2 | direct adjoint 2to2 hyper Radon transform (single integral, nearest point interpolation)
+[SYNOPSIS]
+sfadiradon2 < input.rsf > output.rsf nt= nx= t0= dt= x0= dx=
+[PARAMETERS]
+        | dt | = |   | 	
+        | dx | = |   | 	
+        | nt | = |   | 	
+        | nx | = |   | 	
+        | t0 | = |   | 	
+        | x0 | = |   | 	
+[DIRECTORY]
+user/jingwei

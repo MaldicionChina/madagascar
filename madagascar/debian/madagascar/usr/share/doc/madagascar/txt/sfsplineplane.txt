@@ -1,0 +1,11 @@
+Program sfsplineplane | B-spline plane-wave filter 
+[SYNOPSIS]
+sfsplineplane > out.rsf lag=lag.rsf nw=2 p=0. niter=20 eps=SF_EPS
+[PARAMETERS]
+float   | eps | =SF_EPS |   | 	
+string  | lag | = |   | 	auxiliary output file name
+int     | niter | =20 |   | 	number of spectral decomposition iterations 
+int     | nw | =2 |   | 	filter size 
+float   | p | =0. |   | 	plane-wave slope 
+[DIRECTORY]
+user/gee

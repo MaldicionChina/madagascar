@@ -1,0 +1,15 @@
+Program sfcisolr2 | Complex lowrank decomposition for 2-D isotropic wave propagation. 
+[SYNOPSIS]
+sfcisolr2 < vel.rsf fft=fft.rsf left=left.rsf > right.rsf seed=time(NULL eps=1.e-4 npk=20 dt= os=true sub=false sub=true lap=false
+[PARAMETERS]
+        | dt | = |   | 	time step
+        | eps | =1.e-4 |   | 	tolerance
+file    | fft | = |   | 	auxiliary input file name
+        | lap | =false |   | 	
+file    | left | = |   | 	auxiliary output file name
+        | npk | =20 |   | 	maximum rank
+        | os | =true |   | 	
+        | seed | =time(NULL |   | 	
+        | sub | =true |   | 	for twostep, default true
+[DIRECTORY]
+user/jsun

@@ -1,0 +1,27 @@
+Program sfsglr1 | 1-D lowrank wave propagation on staggered grid
+[SYNOPSIS]
+sfsglr1 vel=Fvel.rsf den=Fden.rsf < Fsrc.rsf > Fo.rsf rec=Frec.rsf left=left.rsf right=right.rsf fft=Ffft.rsf ic=Fic.rsf presrc=Fpsrc.rsf velsrc=Fvsrc.rsf preinit=Fpint.rsf velinit=Fvint.rsf verb=n srcmms=n slx= srcdecay=y srcrange=10 srctrunc=100 cmplx=n pad1=1 inject=y gdep=0.0
+[PARAMETERS]
+bool    | cmplx | =n |  [y/n] | 	use complex FFT 
+file    | den | = |   | 	auxiliary input file name
+file    | fft | = |   | 	auxiliary input file name
+float   | gdep | =0.0 |   | 	depth of geophone (meter)
+file    | ic | = |   | 	auxiliary input file name
+bool    | inject | =y |  [y/n] | 	=y inject source; =n initial condition
+file    | left | = |   | 	auxiliary input file name
+int     | pad1 | =1 |   | 	padding factor on the first axis 
+file    | preinit | = |   | 	auxiliary input file name
+file    | presrc | = |   | 	auxiliary input file name
+file    | rec | = |   | 	auxiliary output file name
+file    | right | = |   | 	auxiliary input file name
+float   | slx | = |   | 	source location in x 
+bool    | srcdecay | =y |  [y/n] | 	source decay
+bool    | srcmms | =n |  [y/n] | 	use MMS source 
+int     | srcrange | =10 |   | 	source decay range
+float   | srctrunc | =100 |   | 	trunc source after srctrunc time (s)
+file    | vel | = |   | 	auxiliary input file name
+file    | velinit | = |   | 	auxiliary input file name
+file    | velsrc | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/fangg

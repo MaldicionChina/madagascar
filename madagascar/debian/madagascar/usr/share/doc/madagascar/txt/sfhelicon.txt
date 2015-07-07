@@ -1,0 +1,16 @@
+Program sfhelicon | Multidimensional convolution and deconvolution by helix transform. 
+[SYNOPSIS]
+sfhelicon < in.rsf filt=filt.rsf > out.rsf n= adj=n div=n lag=
+[COMMENTS]
+
+May 2014 program of the month:
+http://ahay.org/rsflog/index.php?/archives/387-Program-of-the-math-sfhelicon.html
+
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	if y, do adjoint operation 
+bool    | div | =n |  [y/n] | 	if y, do inverse operation (deconvolution) 
+file    | filt | = |   | 	auxiliary input file name
+string  | lag | = |   | 	file with filter lags
+ints    | n | = |   | 	 [dim]
+[DIRECTORY]
+user/gee

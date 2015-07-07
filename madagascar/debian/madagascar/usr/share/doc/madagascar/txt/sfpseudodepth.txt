@@ -1,0 +1,15 @@
+Program sfpseudodepth | depth to vertical-time interpolation
+[SYNOPSIS]
+sfpseudodepth < Fin.rsf tau=Ftau.rsf > Fout.rsf inv=n linear=y n= o=0. d=
+[COMMENTS]
+   z to tau : pseudodepth < FZ.rsf inv=n tau=tau.rsf n=ntau o=otau d=dtau > FT.rsf
+   tau to z : pseudodepth < FT.rsf inv=y tau=tau.rsf > FZ.rsf 
+[PARAMETERS]
+float   | d | = |   | 	tau d (>0) 
+bool    | inv | =n |  [y/n] | 	if y, tau to z; if n, tau to z 
+bool    | linear | =y |  [y/n] | 	if y, linear spline; if n, cubic spline (buggy) 
+int     | n | = |   | 	tau n 
+float   | o | =0. |   | 	tau o 
+file    | tau | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/xuxin

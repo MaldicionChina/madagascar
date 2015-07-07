@@ -1,0 +1,28 @@
+Program sfsepcmplx2rsf | Convert legacy SEPlib complex datasets to RSF
+[SYNOPSIS]
+sfsepcmplx2rsf file= preserve_t=y verb=n
+[COMMENTS]
+
+I.e. from 
+
+esize=8 data_format=xdr_float
+
+to 
+
+esize=8 data_format=xdr_complex 
+
+This combination is tolerated by SEPlib versions released after 2011-01-20,
+and required by all versions of Madagascar. Previous to the date above, it
+was impossible to have a complex single-precision dataset that was valid both
+in SEPlib and Madagascar
+
+This program opens the SEPlib file in read-write mode!
+
+Handles in=stdin case (header and data in one file)
+
+[PARAMETERS]
+string  | file | = |   | 	Name of file to process
+bool    | preserve_t | =y |  [y/n] | 	Whether to preserve timestamp
+bool    | verb | =n |  [y/n] | 	Say if file was converted or unchanged
+[DIRECTORY]
+user/seplib_compat

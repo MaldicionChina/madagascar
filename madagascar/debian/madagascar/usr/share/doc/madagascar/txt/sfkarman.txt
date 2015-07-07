@@ -1,0 +1,10 @@
+Program sfkarman | Estimation of von Karman autocorrelation 1D spectrum. 
+[SYNOPSIS]
+sfkarman < in.rsf > out.rsf x0=1. niter=100 nliter=1 verb=n
+[PARAMETERS]
+int     | niter | =100 |   | 	number of iterations 
+int     | nliter | =1 |   | 	number of reweighting iterations 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+float   | x0 | =1. |   | 	initial squared length scale 
+[DIRECTORY]
+user/browaeys

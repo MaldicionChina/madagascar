@@ -1,0 +1,24 @@
+Program sfewefd2d_omp | 2D elastic time-domain FD modeling 
+[SYNOPSIS]
+sfewefd2d_omp < Fwav.rsf ccc=Fccc.rsf den=Fden.rsf sou=Fsou.rsf rec=Frec.rsf > Fdat.rsf wfl=Fwfl.rsf verb=n snap=n free=n ssou=n dabc=n opot=n nbell=5 jdata=1 jsnap=nt nqz=sf_n(az) nqx=sf_n(ax) oqz=sf_o(az) oqx=sf_o(ax)
+[PARAMETERS]
+file    | ccc | = |   | 	auxiliary input file name
+bool    | dabc | =n |  [y/n] | 	absorbing BC 
+file    | den | = |   | 	auxiliary input file name
+bool    | free | =n |  [y/n] | 	free surface flag 
+int     | jdata | =1 |   | 	
+int     | jsnap | =nt |   | 	
+int     | nbell | =5 |   | 	bell size 
+int     | nqx | =sf_n(ax) |   | 	
+int     | nqz | =sf_n(az) |   | 	
+bool    | opot | =n |  [y/n] | 	output potentials 
+float   | oqx | =sf_o(ax) |   | 	
+float   | oqz | =sf_o(az) |   | 	
+file    | rec | = |   | 	auxiliary input file name
+bool    | snap | =n |  [y/n] | 	wavefield snapshots flag 
+file    | sou | = |   | 	auxiliary input file name
+bool    | ssou | =n |  [y/n] | 	stress source 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+file    | wfl | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/jeff

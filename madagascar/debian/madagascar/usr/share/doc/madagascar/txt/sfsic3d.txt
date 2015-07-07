@@ -1,0 +1,20 @@
+Program sfsic3d | Local slant stacks I.C. 
+[SYNOPSIS]
+sfsic3d < Fs.rsf ur=Fr.rsf > Fi.rsf ompchunk=1 verb=n stack=n sig=1.0 nanga=1 oanga=0.0 danga=1.0 nangb=1 oangb=0.0 dangb=1.0 nl=1 dl=1. ol=0.
+[PARAMETERS]
+float   | danga | =1.0 |   | 	
+float   | dangb | =1.0 |   | 	
+float   | dl | =1. |   | 	
+int     | nanga | =1 |   | 	
+int     | nangb | =1 |   | 	
+int     | nl | =1 |   | 	
+float   | oanga | =0.0 |   | 	
+float   | oangb | =0.0 |   | 	
+float   | ol | =0. |   | 	
+int     | ompchunk | =1 |   | 	OpenMP data chunk size 
+float   | sig | =1.0 |   | 	
+bool    | stack | =n |  [y/n] | 	
+file    | ur | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/psava

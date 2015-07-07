@@ -1,0 +1,9 @@
+Program sftxrna3 | 3D space-noncausal t-x-y nonstationary regularized autoregression. 
+[SYNOPSIS]
+sftxrna3 < mat.rsf > pre.rsf a= niter=20 verb=n
+[PARAMETERS]
+ints    | a | = |   | 	 [mdim]
+int     | niter | =20 |   | 	number of iterations 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/yliu

@@ -1,0 +1,13 @@
+Program sfsplinebank | Prepare a filter bank for B-spline plane wave filters 
+[SYNOPSIS]
+sfsplinebank > out.rsf nt=40 np= pmax=2. niter=20 eps=FLT_EPSILON nh= lag=
+[PARAMETERS]
+float   | eps | =FLT_EPSILON |   | 	tolerance 
+string  | lag | = |   | 	
+string  | nh | = |   | 	
+int     | niter | =20 |   | 	number of iterations 
+int     | np | = |   | 	number of dips 
+int     | nt | =40 |   | 	length of the fast axis 
+float   | pmax | =2. |   | 	maximum dip 
+[DIRECTORY]
+user/gee

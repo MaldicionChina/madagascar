@@ -1,0 +1,7 @@
+Program sfdifference | Difference profile of two data 
+[SYNOPSIS]
+sfdifference < in.rsf > out.rsf subtracter=sub.rsf
+[PARAMETERS]
+file    | subtracter | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/yliu

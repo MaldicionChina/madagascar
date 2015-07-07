@@ -1,0 +1,22 @@
+Program sft2diter | Time-to-depth conversion (linear operator) 
+[SYNOPSIS]
+sft2diter < in.rsf > out.rsf s0=is0.rsf t0=it0.rsf x0=ix0.rsf f0=if0.rsf mask=mask.rsf prec=prec.rsf dix=dix.rsf velocity=y adj=n shape=n eps=0.1 verb=n tol=1.e-6 cgiter=200 rect#=(1,1,...) what=
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+int     | cgiter | =200 |   | 	number of CG iterations 
+string  | dix | = |   | 	auxiliary input file name
+float   | eps | =0.1 |   | 	regularization parameter 
+string  | f0 | = |   | 	auxiliary input file name
+string  | mask | = |   | 	auxiliary input file name
+string  | prec | = |   | 	auxiliary input file name
+int     | rect# | =(1,1,...) |   | 	smoothing radius on #-th axis 
+string  | s0 | = |   | 	auxiliary input file name
+bool    | shape | =n |  [y/n] | 	regularization (default Tikhnov) 
+string  | t0 | = |   | 	auxiliary input file name
+float   | tol | =1.e-6 |   | 	tolerance for shaping regularization 
+bool    | velocity | =y |  [y/n] | 	y, inputs are velocity / n, slowness-squared 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+string  | what | = |   | 	what to compute (default inversion) 
+string  | x0 | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/llisiw

@@ -1,0 +1,10 @@
+Program sflum | 1D LUM filter
+[SYNOPSIS]
+sflum < in.rsf > out.rsf nfw= smnclip=(nfw+1)/2 shnclip=(nfw+1)/2 boundary=n
+[PARAMETERS]
+bool    | boundary | =n |  [y/n] | 	if y, boundary is data, whereas zero
+int     | nfw | = |   | 	filter-window length (positive and odd integer)
+int     | shnclip | =(nfw+1)/2 |   | 	sharpener tuning parameter (1 <= shnclip <= (nfw+1)/2, the default is (nfw+1)/2)
+int     | smnclip | =(nfw+1)/2 |   | 	smoother tuning parameter (1 <= smnclip <= (nfw+1)/2, the default is (nfw+1)/2)
+[DIRECTORY]
+user/yliu

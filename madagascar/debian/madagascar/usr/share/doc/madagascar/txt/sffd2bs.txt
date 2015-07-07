@@ -1,0 +1,14 @@
+Program sffd2bs | 2-D Fourth-order Finite-difference wave extrapolation 
+[SYNOPSIS]
+sffd2bs > out.rsf vel=vel.rsf < source.rsf opt=y dt= nt= isx= isz= nb=30 c=0.01
+[PARAMETERS]
+float   | c | =0.01 |   | 	decaying parameter
+float   | dt | = |   | 	
+int     | isx | = |   | 	
+int     | isz | = |   | 	
+int     | nb | =30 |   | 	
+int     | nt | = |   | 	
+bool    | opt | =y |  [y/n] | 	if y, determine optimal size for efficiency 
+file    | vel | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/songxl

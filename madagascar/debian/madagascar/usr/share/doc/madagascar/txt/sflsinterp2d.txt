@@ -1,0 +1,11 @@
+Program sflsinterp2d | Least-squares interpolation for 2D validition
+[SYNOPSIS]
+sflsinterp2d < Fin.rsf mask=Fmask.rsf > Fout.rsf verb=n niter=100 nouter=5 eps=1.e-2
+[PARAMETERS]
+float   | eps | =1.e-2 |   | 	regularization parameter 
+string  | mask | = |   | 	auxiliary input file name
+int     | niter | =100 |   | 	inner iterations 
+int     | nouter | =5 |   | 	outer iterations 
+bool    | verb | =n |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/pyang

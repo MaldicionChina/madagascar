@@ -1,0 +1,20 @@
+Program sfffd2_ps | 2-D Fourier finite-difference wave extrapolation, point source 
+[SYNOPSIS]
+sfffd2_ps > out.rsf vel=vel.rsf < source.rsf opt=y dt= nt= isx= isz= nbt=44 nbb=44 nbl=44 nbr=44 ct=0.01 cb=0.01 cl=0.01 cr=0.01
+[PARAMETERS]
+float   | cb | =0.01 |   | 	decaying parameter
+float   | cl | =0.01 |   | 	decaying parameter
+float   | cr | =0.01 |   | 	decaying parameter
+float   | ct | =0.01 |   | 	decaying parameter
+float   | dt | = |   | 	
+int     | isx | = |   | 	
+int     | isz | = |   | 	
+int     | nbb | =44 |   | 	
+int     | nbl | =44 |   | 	
+int     | nbr | =44 |   | 	
+int     | nbt | =44 |   | 	
+int     | nt | = |   | 	
+bool    | opt | =y |  [y/n] | 	if y, determine optimal size for efficiency 
+file    | vel | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/songxl

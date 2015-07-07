@@ -1,0 +1,11 @@
+Program sfwdf | Assymptotic Wigner distribution 
+[SYNOPSIS]
+sfwdf < Fu.rsf > Fw.rsf ompchunk=1 verb=n nh1=0 nh2=0 nh3=0
+[PARAMETERS]
+int     | nh1 | =0 |   | 	
+int     | nh2 | =0 |   | 	
+int     | nh3 | =0 |   | 	
+int     | ompchunk | =1 |   | 	OpenMP data chunk size 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/psava

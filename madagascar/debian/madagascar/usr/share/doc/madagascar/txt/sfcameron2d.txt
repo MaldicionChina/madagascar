@@ -1,0 +1,17 @@
+Program sfcameron2d | Convert Dix velocity to interval velocity. 
+[SYNOPSIS]
+sfcameron2d < fv.rsf > fv2.rsf x0=fx.rsf t0=ft.rsf nz= dz= nc=100 neval=20 method=
+[COMMENTS]
+
+Input in (x0,t0), output in (x,z).
+
+[PARAMETERS]
+float   | dz | = |   | 	
+string  | method | = |   | 	method (chebyshev,lax-friedrichs) 
+int     | nc | =100 |   | 	number of chebyshev coefficients 
+int     | neval | =20 |   | 	numvber of used chebyshev coefficients 
+int     | nz | = |   | 	
+file    | t0 | = |   | 	auxiliary output file name
+file    | x0 | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/kourkina

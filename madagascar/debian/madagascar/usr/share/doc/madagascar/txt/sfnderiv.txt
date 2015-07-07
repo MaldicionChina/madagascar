@@ -1,0 +1,17 @@
+Program sfnderiv | 
+[SYNOPSIS]
+sfnderiv < Fin.rsf > Fout.rsf order=1 length=5 scale=y axis=1
+[COMMENTS]
+This program implements Fornberg, 1988
+paper for digital differentiators
+of arbitrary order.
+
+So, it computes first, second, n derivative along axis 1,2 or 3.
+
+[PARAMETERS]
+int     | axis | =1 |   | 	apply differentiator along axis, default is fast axis
+int     | length | =5 |   | 	filter length, the lengthier the accurate, but also gets costlier
+int     | order | =1 |   | 	order of the derivative, default first derivative
+bool    | scale | =y |  [y/n] | 	scales by 1/d^order
+[DIRECTORY]
+user/ediazp

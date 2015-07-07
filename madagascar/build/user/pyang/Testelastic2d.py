@@ -1,0 +1,16 @@
+sfTestelastic2d = rsf.doc.rsfprog('sfTestelastic2d','user/pyang/MTestelastic2d.c','''2D 8-th order elastic wave propagation using sponge ABC ''')
+sfTestelastic2d.par('vs',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfTestelastic2d.par('rho',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfTestelastic2d.par('wavx',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sfTestelastic2d.par('verb',rsf.doc.rsfpar('bool','n','','''verbosity '''))
+sfTestelastic2d.par('nb',rsf.doc.rsfpar('int','30','','''thickness of PML boundary '''))
+sfTestelastic2d.par('nt',rsf.doc.rsfpar('int','','','''number of time steps '''))
+sfTestelastic2d.par('kt',rsf.doc.rsfpar('int','','','''record wavefield at time kt '''))
+sfTestelastic2d.par('dt',rsf.doc.rsfpar('float','','','''time sampling interval '''))
+sfTestelastic2d.par('fm',rsf.doc.rsfpar('float','20.0','','''dominant freq of Ricker wavelet '''))
+sfTestelastic2d.par('ft',rsf.doc.rsfpar('int','0','','''first recorded time '''))
+sfTestelastic2d.par('jt',rsf.doc.rsfpar('int','1','','''time interval '''))
+sfTestelastic2d.version('1.7')
+sfTestelastic2d.synopsis('''sfTestelastic2d < Fvp.rsf vs=Fvs.rsf rho=Frho.rsf > Fwavz.rsf wavx=Fwavx.rsf verb=n nb=30 nt= kt= dt= fm=20.0 ft=0 jt=1''','''''')
+rsf.doc.progs['sfTestelastic2d']=sfTestelastic2d
+

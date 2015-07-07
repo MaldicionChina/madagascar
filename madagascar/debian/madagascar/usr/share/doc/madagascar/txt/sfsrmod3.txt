@@ -1,0 +1,20 @@
+Program sfsrmod3 | 3-D S/R modeling with extended split-step 
+[SYNOPSIS]
+sfsrmod3 slo=Fs_s.rsf sls=Fs_r.rsf < Fw_s.rsf > Fw_r.rsf ref=Fr.rsf ompchunk=1 ompnth=0 verb=y eps=0.01 nrmax=1 dtmax=0.004 pmx=0 pmy=0 tmx=0 tmy=0 twoway=n
+[PARAMETERS]
+float   | dtmax | =0.004 |   | 	time error 
+float   | eps | =0.01 |   | 	stability parameter 
+int     | nrmax | =1 |   | 	maximum number of refs 
+int     | ompchunk | =1 |   | 	OpenMP data chunk size 
+int     | ompnth | =0 |   | 	OpenMP available threads 
+int     | pmx | =0 |   | 	padding on x 
+int     | pmy | =0 |   | 	padding on y 
+file    | ref | = |   | 	auxiliary input file name
+file    | slo | = |   | 	auxiliary input file name
+string  | sls | = |   | 	auxiliary input file name
+int     | tmx | =0 |   | 	taper on x   
+int     | tmy | =0 |   | 	taper on y   
+bool    | twoway | =n |  [y/n] | 	two-way traveltime 
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/psava

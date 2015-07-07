@@ -1,0 +1,15 @@
+sformatrix = rsf.doc.rsfprog('sformatrix','user/songxl/Mormatrix.cc','''Lowrank decomposition for 3-D orthorhombic wave propagation. ''')
+sformatrix.par('fft',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sformatrix.par('app',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sformatrix.par('real',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sformatrix.par('seed',rsf.doc.rsfpar('','time(NULL','',''''''))
+sformatrix.par('eps',rsf.doc.rsfpar('','1.e-4','','''tolerance'''))
+sformatrix.par('npk',rsf.doc.rsfpar('','20','','''maximum rank'''))
+sformatrix.par('xx1',rsf.doc.rsfpar('','','','''x location'''))
+sformatrix.par('xx2',rsf.doc.rsfpar('','','','''x location'''))
+sformatrix.par('xx3',rsf.doc.rsfpar('','','','''x location'''))
+sformatrix.par('dt',rsf.doc.rsfpar('','','','''time step'''))
+sformatrix.version('1.7')
+sformatrix.synopsis('''sformatrix < velz.rsf fft=fft.rsf > middle.rsf app=app.rsf real=real.rsf seed=time(NULL eps=1.e-4 npk=20 xx1= xx2= xx3= dt=''','''''')
+rsf.doc.progs['sformatrix']=sformatrix
+

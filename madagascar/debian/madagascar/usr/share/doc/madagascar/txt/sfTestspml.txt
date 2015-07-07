@@ -1,0 +1,19 @@
+Program sfTestspml | 2D acoustic FD using Split PML (SPML) absorbing boundary condition
+[SYNOPSIS]
+sfTestspml < Fv.rsf > Fw.rsf pz=Fpz.rsf px=Fpx.rsf nb=30 nt= dt= fm=20.0 ft=0 jt=1 verb=n kt=
+[COMMENTS]
+NB: Staggered grid finite difference used!
+
+[PARAMETERS]
+float   | dt | = |   | 	time sampling interval 
+float   | fm | =20.0 |   | 	dominant freq of Ricker wavelet 
+int     | ft | =0 |   | 	first recorded time 
+int     | jt | =1 |   | 	time interval 
+int     | kt | = |   | 	output px and pz component at kt 
+int     | nb | =30 |   | 	thickness of PML ABC 
+int     | nt | = |   | 	number of time steps 
+file    | px | = |   | 	auxiliary output file name
+file    | pz | = |   | 	auxiliary output file name
+bool    | verb | =n |  [y/n] | 	verbosity, if y, output px and pz 
+[DIRECTORY]
+user/pyang

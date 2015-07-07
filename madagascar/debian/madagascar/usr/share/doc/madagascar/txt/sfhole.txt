@@ -1,0 +1,7 @@
+Program sfhole | Cut an elliptic hole in data (for interpolation tests).
+[SYNOPSIS]
+sfhole < in.rsf > out.rsf maskout=mask.rsf
+[PARAMETERS]
+file    | maskout | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/gee

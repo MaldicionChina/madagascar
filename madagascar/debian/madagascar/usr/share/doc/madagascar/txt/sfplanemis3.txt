@@ -1,0 +1,15 @@
+Program sfplanemis3 | Missing data interpolation in 3-D using plane-wave destruction. 
+[SYNOPSIS]
+sfplanemis3 < in.rsf > out.rsf dip=dip.rsf mask=mask.rsf niter=100 order=1 nj1=1 nj2=1 verb=n seed=time(NULL) var=0.
+[PARAMETERS]
+file    | dip | = |   | 	auxiliary input file name
+string  | mask | = |   | 	auxiliary input file name
+int     | niter | =100 |   | 	number of iterations 
+int     | nj1 | =1 |   | 	
+int     | nj2 | =1 |   | 	antialiasing 
+int     | order | =1 |  [1,2,3] | 	accuracy order 
+int     | seed | =time(NULL) |   | 	random seed 
+float   | var | =0. |   | 	noise variance 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/pwd

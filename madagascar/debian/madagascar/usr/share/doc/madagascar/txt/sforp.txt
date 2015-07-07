@@ -1,0 +1,13 @@
+Program sforp | 2-D 10th-order Finite-difference dispersion
+[SYNOPSIS]
+sforp > out.rsf < vel.rsf vx=2.1 vy=2.05 vz=2.0 e1=0.3 e2=0.1 e3=1.0 phi=45.0
+[PARAMETERS]
+float   | e1 | =0.3 |   | 	
+float   | e2 | =0.1 |   | 	
+float   | e3 | =1.0 |   | 	
+float   | phi | =45.0 |   | 	
+float   | vx | =2.1 |   | 	
+float   | vy | =2.05 |   | 	
+float   | vz | =2.0 |   | 	
+[DIRECTORY]
+user/songxl

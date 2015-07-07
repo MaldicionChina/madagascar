@@ -1,0 +1,42 @@
+Program sfbooklist | List properties of Madagascar example book directories.
+[SYNOPSIS]
+sfbooklist levels=3 list= timer= rsfproj= size=1024**2 uses= nofetch=y public=n private=n local=n command= skipfile=
+[COMMENTS]
+Scan a directory tree (or list of directory trees) to a given depth,
+inventory the contents, and optionally execute a command in each leaf.
+
+The inventory and optional command occurs only at the specified depth
+(default 3), not the intervening depths.  Directories named .svn are
+skipped.  Only directories containing an SConstruct file are listed or
+executed.
+
+Optional directory filters controlling inventory or command execution
+may be specified based on existence of .rsfproj file, sf programs used,
+type of external data required, and total rsf data-file size of the
+completed example.  A an optional input text file may also be specified
+containing a list of examples to skip.
+
+The optional command is executed in /bin/sh.
+
+Examples (from within $RSFSRC):
+
+sfbooklist book                         # inventory of book
+sfbooklist levels=2 book/geostats       # inventory of book/geostats
+sfbooklist command=scons book           # build examples with default filters
+sfbooklist size=5 command=scons book    # build examples smaller than 5MB
+
+[PARAMETERS]
+string  | command | = |   | 	command to execute in each directory, default = none
+int     | levels | =3 |   | 	directory search depth
+string  | list | = |   | 	how much to list [all,filter,none], default = all
+bool    | local | =n |  [y/n] | 	fetch-local-data filter
+bool    | nofetch | =y |  [y/n] | 	fetch-no-data filter
+bool    | private | =n |  [y/n] | 	fetch-private-data filter
+bool    | public | =n |  [y/n] | 	fetch-public-data filter
+string  | rsfproj | = |   | 	rsfproj filter [yes,no,both], default = yes
+int     | size | =1024**2 |   | 	max data size filter (MB)
+string  | skipfile | = |   | 	file with list of directories to skip
+string  | timer | = |   | 	output execution time [log,file,none], default = none
+string  | uses | = |   | 	uses filter, default = any
+[DIRECTORY]
+user/jennings

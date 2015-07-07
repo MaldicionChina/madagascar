@@ -1,0 +1,15 @@
+Program sfpick3 | Automatic picking  from 3-D semblance-like panels. 
+[SYNOPSIS]
+sfpick3 < scn.rsf > pik.rsf vel1=o2 vel2=o3 rect1=1 niter=100 an1=1. an2=1. gate1=3 gate2=3 smooth=y
+[PARAMETERS]
+float   | an1 | =1. |   | 	
+float   | an2 | =1. |   | 	axes anisotropy 
+int     | gate1 | =3 |   | 	
+int     | gate2 | =3 |   | 	picking gate 
+int     | niter | =100 |   | 	number of iterations 
+int     | rect1 | =1 |   | 	smoothing radius 
+bool    | smooth | =y |  [y/n] | 	if apply smoothing 
+float   | vel1 | =o2 |   | 	
+float   | vel2 | =o3 |   | 	surface velocity 
+[DIRECTORY]
+user/fomels

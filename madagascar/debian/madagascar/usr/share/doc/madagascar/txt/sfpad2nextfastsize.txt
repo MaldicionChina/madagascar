@@ -1,0 +1,9 @@
+Program sfpad2nextfastsize | How much to pad to get to next fast c2c FFT size (factors: 2,3 and 5)
+[SYNOPSIS]
+sfpad2nextfastsize n=
+[COMMENTS]
+Wrapper for kiss_fft_next_fast_size. 
+[PARAMETERS]
+int     | n | = |   | 	
+[DIRECTORY]
+user/ivlad

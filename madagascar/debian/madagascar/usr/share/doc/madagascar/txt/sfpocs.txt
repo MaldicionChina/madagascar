@@ -1,0 +1,14 @@
+Program sfpocs | n-D POCS interpolation using a hard thresholding
+[SYNOPSIS]
+sfpocs < in.rsf > out.rsf mask=Fmask.rsf verb=n niter=100 pclip=10. n#=
+[COMMENTS]
+Note: Acquistion geometry specified by mask operator.
+
+[PARAMETERS]
+string  | mask | = |   | 	auxiliary input file name
+int     | n# | = |   | 	size of #-th axis 
+int     | niter | =100 |   | 	total number iterations 
+float   | pclip | =10. |   | 	starting data clip percentile (default is 99)
+bool    | verb | =n |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/pyang

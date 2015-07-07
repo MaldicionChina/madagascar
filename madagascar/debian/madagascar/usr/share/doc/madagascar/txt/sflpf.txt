@@ -1,0 +1,12 @@
+Program sflpf | Local prediction filter (n-dimensional). 
+[SYNOPSIS]
+sflpf < dat.rsf match=mat.rsf > flt.rsf pred=pre.rsf niter=100 verb=y pef= lag=
+[PARAMETERS]
+string  | lag | = |   | 	file with PEF lags (optional) 
+file    | match | = |   | 	auxiliary input file name
+int     | niter | =100 |   | 	number of iterations 
+string  | pef | = |   | 	signal PEF file (optional) 
+string  | pred | = |   | 	auxiliary output file name
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/fomels

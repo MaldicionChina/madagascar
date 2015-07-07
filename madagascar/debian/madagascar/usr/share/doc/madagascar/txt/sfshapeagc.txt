@@ -1,0 +1,11 @@
+Program sfshapeagc | Automatic gain control by shaping regularization. 
+[SYNOPSIS]
+sfshapeagc < in.rsf > out.rsf gain=fgain.rsf niter=100 eps=0.0f verb=n rect#=(125,1,1,...)
+[PARAMETERS]
+float   | eps | =0.0f |   | 	regularization 
+string  | gain | = |   | 	output gain file (optional) (auxiliary output file name)
+int     | niter | =100 |   | 	number of iterations 
+int     | rect# | =(125,1,1,...) |   | 	smoothing radius on #-th axis 
+bool    | verb | =n |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/fomels

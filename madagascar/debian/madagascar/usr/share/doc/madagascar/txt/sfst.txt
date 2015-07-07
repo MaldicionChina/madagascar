@@ -1,0 +1,9 @@
+Program sfst | S transform 
+[SYNOPSIS]
+sfst < in.rsf > out.rsf inv=n flo= fhi=
+[PARAMETERS]
+float   | fhi | = |   | 	High frequency in band, default is Nyquist 
+float   | flo | = |   | 	Low frequency in band, default is 0 
+bool    | inv | =n |  [y/n] | 	if y, do inverse transform 
+[DIRECTORY]
+user/yliu

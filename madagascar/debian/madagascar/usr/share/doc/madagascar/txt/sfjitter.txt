@@ -1,0 +1,12 @@
+Program sfjitter | 
+[SYNOPSIS]
+sfjitter perc=.75 jit=1/(1-perc seed=np.random.randn(
+[COMMENTS]
+Return mask to remove random traces in 2D using jittered sampling
+
+[PARAMETERS]
+float   | jit | =1/(1-perc |   | 	
+float   | perc | =.75 |   | 	percentage of traces to remove
+int     | seed | =np.random.randn( |   | 	
+[DIRECTORY]
+user/slim

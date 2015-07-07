@@ -1,0 +1,56 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sflistminmax</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sflistminmax</strong></big></big> (1.7 Mlistminmax.c 4796 2009-09-29 19:39:07Z ivlad)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="http://sourceforge.net/p/rsf/code/HEAD/tree/branches/madagascar-1.7/user/jennings/Mlistminmax.c">user/jennings/Mlistminmax.c</a></font></td></tr></table>
+    Construct incremental minimum or maximum lists from an RSF file.
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sflistminmax < in.rsf > out.rsf mode=</td></tr></table><br>
+Constructs the following set of minimum or maximum lists for each<br>
+x2, x3, ... xn in the input RSF file:<br>
+<br>
+out[0] = in[0]<br>
+out[i] = min or max of (in[i], out[i-1]) for i = 1, 2, 3, ... n1<br>
+<br>
+The input file data type must be float.<br>
+The output file data type will be float.<br>
+<br>
+sflistminmax mode=min, can be used to simulate "erosion" for a set of <br>
+geological surfaces, producing a new set of surfaces that do not cross.<br>
+<br>
+See also: sfminmax, sfstack.<br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>mode=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	'min' (default) or 'max' <br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    </body></html>

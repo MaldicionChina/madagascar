@@ -1,0 +1,5 @@
+Program sftif2byte | Convert TIFF image to byte RSF. 
+[SYNOPSIS]
+sftif2byte > out.rsf < file.tiff 
+[DIRECTORY]
+user/fomels

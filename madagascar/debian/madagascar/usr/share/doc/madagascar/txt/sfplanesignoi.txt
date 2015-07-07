@@ -1,0 +1,18 @@
+Program sfplanesignoi | Signal and noise separation using plane-wave destruction filters.  
+[SYNOPSIS]
+sfplanesignoi < in.rsf ndip=ndip.rsf sdip=sdip.rsf > out.rsf niter=50 eps=1. order=1 nj1=1 nj2=1 verb=n
+[COMMENTS]
+
+If n3=1 in the output, outputs both signal and noise. Otherwise, only signal.
+
+[PARAMETERS]
+float   | eps | =1. |   | 	regularization parameter 
+file    | ndip | = |   | 	auxiliary input file name
+int     | niter | =50 |   | 	maximum number of iterations 
+int     | nj1 | =1 |   | 	antialiasing for noise dip 
+int     | nj2 | =1 |   | 	antialiasing for signal dip 
+int     | order | =1 |  [1,2,3] | 	accuracy order 
+file    | sdip | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/pwd

@@ -1,0 +1,11 @@
+Program sfmaskinv | Missing data interpolation using one or two prediction-error filters. 
+[SYNOPSIS]
+sfmaskinv < in.rsf > out.rsf mask=mask.rsf center= a= b= niter=80
+[PARAMETERS]
+ints    | a | = |   | 	first filter dimensions  [dim]
+ints    | b | = |   | 	second filter dimensions  [dim]
+ints    | center | = |   | 	filter center  [dim]
+file    | mask | = |   | 	auxiliary input file name
+int     | niter | =80 |   | 	number of iterations 
+[DIRECTORY]
+user/gee

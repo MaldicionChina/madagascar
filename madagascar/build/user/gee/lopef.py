@@ -1,0 +1,17 @@
+sflopef = rsf.doc.rsfprog('sflopef','user/gee/Mlopef.c','''Local Prediction-Error Filter (1-D, 2-D, and 3-D). ''')
+sflopef.par('mask',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sflopef.par('w',rsf.doc.rsfpar('ints','','','''window size  [dim1]'''))
+sflopef.par('a',rsf.doc.rsfpar('ints','','','''filter size  [dim1]'''))
+sflopef.par('k',rsf.doc.rsfpar('ints','','','''number of windows  [dim1]'''))
+sflopef.par('gap',rsf.doc.rsfpar('ints','','','''filter gap  [dim1]'''))
+sflopef.par('center',rsf.doc.rsfpar('ints','','','''filter center  [dim1]'''))
+sflopef.par('dim',rsf.doc.rsfpar('int','dim','','''PEF dimensionality '''))
+sflopef.par('steepdip',rsf.doc.rsfpar('bool','n','','''if y, do steep-dip PEF estimation '''))
+sflopef.par('vel',rsf.doc.rsfpar('float','1.7','','''velocity for steep-dip decon '''))
+sflopef.par('tgap',rsf.doc.rsfpar('float','0.030','','''time gap for steep-dip decon '''))
+sflopef.par('lag',rsf.doc.rsfpar('string ',desc='''output file for filter lags '''))
+sflopef.par('mask',rsf.doc.rsfpar('string ',desc='''auxiliary input file name'''))
+sflopef.version('1.7 Mlopef.c 4796 2009-09-29 19:39:07Z ivlad')
+sflopef.synopsis('''sflopef < dat.rsf > pef.rsf mask=known.rsf w= a= k= gap= center= dim=dim steepdip=n vel=1.7 tgap=0.030 lag=''','''''')
+rsf.doc.progs['sflopef']=sflopef
+

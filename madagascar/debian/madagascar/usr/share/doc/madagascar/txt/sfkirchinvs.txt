@@ -1,0 +1,18 @@
+Program sfkirchinvs | Kirchhoff 2-D post-stack least-squares time migration with sparse constrains. 
+[SYNOPSIS]
+sfkirchinvs < in.rsf > out.rsf velocity=vel.rsf hd=y ps=y verb=n sw=0 niter=5 liter=5 eps=0. err=
+[COMMENTS]
+
+ Antialiasing by reparameterization. 
+[PARAMETERS]
+float   | eps | =0. |   | 	regularization parameters 
+string  | err | = |   | 	output file for error 
+bool    | hd | =y |  [y/n] | 	if y, apply half-derivative filter 
+int     | liter | =5 |   | 	number of linear iterations 
+int     | niter | =5 |   | 	number of non-linear iterations, when niter=1, it's linear 
+bool    | ps | =y |  [y/n] | 	if y, apply pseudo-unitary weighting 
+int     | sw | =0 |   | 	if > 0, select a branch of the antialiasing operation 
+file    | velocity | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/seisinv

@@ -1,0 +1,8 @@
+Program sfungrad | Phase unwrapping by least squares. 
+[SYNOPSIS]
+sfungrad < inp.rsf > out.rsf badness=bad.rsf niter=0
+[PARAMETERS]
+string  | badness | = |   | 	auxiliary output file name
+int     | niter | =0 |   | 	number of iterations 
+[DIRECTORY]
+user/gee

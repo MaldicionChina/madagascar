@@ -1,0 +1,9 @@
+Program sfwcorr | Stack a dataset over the second dimensions by SNR weighted method. 
+[SYNOPSIS]
+sfwcorr < in.rsf other=other.rsf > out.rsf w=50 eps=0
+[PARAMETERS]
+float   | eps | =0 |   | 	stable parameter
+file    | other | = |   | 	auxiliary input file name
+int     | w | =50 |   | 	size of window
+[DIRECTORY]
+user/gchliu

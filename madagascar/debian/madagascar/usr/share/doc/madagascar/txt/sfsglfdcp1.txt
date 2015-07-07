@@ -1,0 +1,13 @@
+Program sfsglfdcp1 | Relative error of phase velocity of 16-th order 1D SG Lowrank FD and 1D FD coefficient 
+[SYNOPSIS]
+sfsglfdcp1 < velf.rsf > outm.rsf Mfd=Mfdfile.rsf Mlr=Mlrfile.rsf seed=time(NULL eps=1.e-4 npk=20 dt= size=16
+[PARAMETERS]
+file    | Mfd | = |   | 	auxiliary output file name
+file    | Mlr | = |   | 	auxiliary output file name
+        | dt | = |   | 	time step
+        | eps | =1.e-4 |   | 	tolerance
+        | npk | =20 |   | 	maximum rank
+        | seed | =time(NULL |   | 	
+        | size | =16 |   | 	stencil length
+[DIRECTORY]
+user/fangg

@@ -1,0 +1,12 @@
+Program sfnhelicon | Non-stationary helix convolution and deconvolution. 
+[SYNOPSIS]
+sfnhelicon < in.rsf > out.rsf filt=filt.rsf nh=fnh.rsf pch=fpch.rsf adj=n div=n lag=
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	if y, do adjoint operation 
+bool    | div | =n |  [y/n] | 	if y, do inverse operation (deconvolution) 
+file    | filt | = |   | 	auxiliary input file name
+string  | lag | = |   | 	
+string  | nh | = |   | 	auxiliary input file name
+string  | pch | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/gee

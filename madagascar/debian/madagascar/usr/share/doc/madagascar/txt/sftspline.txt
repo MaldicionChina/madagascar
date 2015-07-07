@@ -1,0 +1,10 @@
+Program sftspline | Helix filters for spline in tension 
+[SYNOPSIS]
+sftspline > flt.rsf tension=0. niter=20 eps=FLT_EPSILON lag=
+[PARAMETERS]
+float   | eps | =FLT_EPSILON |   | 	tolerance for filter compressing 
+string  | lag | = |   | 	
+int     | niter | =20 |   | 	number of iterations 
+float   | tension | =0. |   | 	spline tension 
+[DIRECTORY]
+user/gee

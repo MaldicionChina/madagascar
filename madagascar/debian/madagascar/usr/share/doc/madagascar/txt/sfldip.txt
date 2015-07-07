@@ -1,0 +1,16 @@
+Program sfldip | dip estimation by line interpolating pwd 
+[SYNOPSIS]
+sfldip < in.rsf > out.rsf idip=p0.rsf m=1 n=1 rect1=0 rect2=0 niter=5 liter=20 eta=1.0 verb=n interp=
+[PARAMETERS]
+float   | eta | =1.0 |   | 	steps for iteration 
+string  | idip | = |   | 	auxiliary input file name
+string  | interp | = |   | 	interpolation method: maxflat lagrange bspline 
+int     | liter | =20 |   | 	number of linear iterations 
+int     | m | =1 |   | 	b[-m, ... ,n] 
+int     | n | =1 |   | 	b[-m, ... ,n] 
+int     | niter | =5 |   | 	number of iterations 
+int     | rect1 | =0 |   | 	dip smoothness on 1st axis 
+int     | rect2 | =0 |   | 	dip smoothness on 2nd axis 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/chen

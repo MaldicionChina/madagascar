@@ -1,0 +1,13 @@
+Program sftimefreq | Time-frequency analysis using local attributes. 
+[SYNOPSIS]
+sftimefreq < time.rsf > timefreq.rsf mask=mask.rsf nw= dw= w0=0. rect=10 niter=100 phase=n
+[PARAMETERS]
+float   | dw | = |   | 	f	requency step 
+string  | mask | = |   | 	auxiliary input file name
+int     | niter | =100 |   | 	number of inversion iterations 
+int     | nw | = |   | 	number of frequencies 
+bool    | phase | =n |  [y/n] | 	output phase instead of amplitude 
+int     | rect | =10 |   | 	smoothing radius 
+float   | w0 | =0. |   | 	first frequency 
+[DIRECTORY]
+user/fomels

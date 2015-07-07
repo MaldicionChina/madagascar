@@ -1,0 +1,15 @@
+sfhwt2d = rsf.doc.rsfprog('sfhwt2d','system/seismic/Mhwt2d.c','''2-D Huygens wavefront tracing traveltimes ''')
+sfhwt2d.par('verb',rsf.doc.rsfpar('bool','n','',''''''))
+sfhwt2d.par('rays',rsf.doc.rsfpar('bool','n','','''velocity file '''))
+sfhwt2d.par('xsou',rsf.doc.rsfpar('float','sf_o(ax) + nx*sf_d(ax)/2','',''''''))
+sfhwt2d.par('zsou',rsf.doc.rsfpar('float','sf_o(az) + nz*sf_d(az)/2','',''''''))
+sfhwt2d.par('nt',rsf.doc.rsfpar('int','100','',''''''))
+sfhwt2d.par('ot',rsf.doc.rsfpar('float','0','',''''''))
+sfhwt2d.par('dt',rsf.doc.rsfpar('float','0.001','',''''''))
+sfhwt2d.par('ng',rsf.doc.rsfpar('int','360','',''''''))
+sfhwt2d.par('og',rsf.doc.rsfpar('float','-180','',''''''))
+sfhwt2d.par('dg',rsf.doc.rsfpar('float','1','',''''''))
+sfhwt2d.version('1.7')
+sfhwt2d.synopsis('''sfhwt2d < Fv.rsf > Fw.rsf verb=n rays=n xsou=sf_o(ax) + nx*sf_d(ax)/2 zsou=sf_o(az) + nz*sf_d(az)/2 nt=100 ot=0 dt=0.001 ng=360 og=-180 dg=1''','''''')
+rsf.doc.progs['sfhwt2d']=sfhwt2d
+

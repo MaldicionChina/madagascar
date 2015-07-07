@@ -1,0 +1,25 @@
+Program sfcram2 | 2-D angle-domain Kirchhoff migration based on escape tables. 
+[SYNOPSIS]
+sfcram2 < esct.rsf data=data.rsf vz=vz.rsf > oimag.rsf imap=oimap.rsf smap=osmap.rsf dipagath=dimag.rsf dipimap=dimap.rsf dipsmap=dsmap.rsf full=fimag.rsf mute=n sqsmb=n oazmin=180.0 oazmax=180.0 dazmin=180.0 dazmax=180.0 ts=3 th=5 vconst=1.5 smax=10*fabsf (ds) hmax=20*fabsf (dh)
+[PARAMETERS]
+string  | data | = |   | 	Processed prestack data (auxiliary input file name)
+float   | dazmax | =180.0 |   | 	Maximum allowed dip angle (abs.value) at z max 
+float   | dazmin | =180.0 |   | 	Maximum allowed dip angle (abs.value) at z min 
+string  | dipagath | = |   | 	Dip angle gathers (angle, z, x) (auxiliary output file name)
+string  | dipimap | = |   | 	Dip gathers illumination (angle, z, x) (auxiliary output file name)
+string  | dipsmap | = |   | 	Dip gathers semblance (angle, z, x) (auxiliary output file name)
+string  | full | = |   | 	Full image (scattering angle, dip angle, z, x) (auxiliary output file name)
+float   | hmax | =20*fabsf (dh) |   | 	Maximum allowed width of the receiver ray branch  
+string  | imap | = |   | 	Scattering gathers illumination (angle, z, x) (auxiliary output file name)
+bool    | mute | =n |  [y/n] | 	y - mute signal in constant z plane before stacking 
+float   | oazmax | =180.0 |   | 	Maximum allowed scattering angle at z max 
+float   | oazmin | =180.0 |   | 	Maximum allowed scattering angle at z min 
+string  | smap | = |   | 	Scattering gathers semblance (angle, z, x) (auxiliary output file name)
+float   | smax | =10*fabsf (ds) |   | 	Maximum allowed width of the shot ray branch  
+bool    | sqsmb | =n |  [y/n] | 	y - output energy traces instead of semblance 
+int     | th | =5 |   | 	Tapering length at the edges of the receiver direction 
+int     | ts | =3 |   | 	Tapering length at the edges of the source direction 
+float   | vconst | =1.5 |   | 	Constant velocity, if vz= is not used 
+string  | vz | = |   | 	Velocity model for amplitude weights (auxiliary input file name)
+[DIRECTORY]
+user/cram

@@ -1,0 +1,10 @@
+Program sfsyntop | Make synthetic topography map. 
+[SYNOPSIS]
+sfsyntop mod=mod.rsf > syn.rsf mask=mask.rsf n1=100 n2=100
+[PARAMETERS]
+file    | mask | = |   | 	auxiliary output file name
+file    | mod | = |   | 	auxiliary output file name
+int     | n1 | =100 |   | 	
+int     | n2 | =100 |   | 	data dimensions 
+[DIRECTORY]
+user/gee

@@ -1,0 +1,22 @@
+Program sfpmod | Random plane wave modeling. 
+[SYNOPSIS]
+sfpmod < inp.rsf > out.rsf np=1 gauss=0 type=1 ampmax=1. rc1=0.2 rc2=0.2 h1=200. h2=150. v1=2000. v2=3000. pmax=0.000332 phi=0.1 xloc=200. seed=time(NULL)
+[PARAMETERS]
+float   | ampmax | =1. |   | 	
+int     | gauss | =0 |   | 	
+float   | h1 | =200. |   | 	
+float   | h2 | =150. |   | 	
+int     | np | =1 |   | 	
+float   | phi | =0.1 |   | 	
+float   | pmax | =0.000332 |   | 	
+float   | rc1 | =0.2 |   | 	
+float   | rc2 | =0.2 |   | 	
+int     | seed | =time(NULL) |   | 	random seed 
+int     | type | =1 |   | 	1 single plane layer
+       2 two plane layers
+       3 point diffractor 
+float   | v1 | =2000. |   | 	
+float   | v2 | =3000. |   | 	
+float   | xloc | =200. |   | 	
+[DIRECTORY]
+user/rickettj

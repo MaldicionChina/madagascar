@@ -1,0 +1,10 @@
+Program sfxcor2d | OpenMP time- or freq-domain cross-correlation on axes 1,2,3 
+[SYNOPSIS]
+sfxcor2d < Fs.rsf uu=Fr.rsf > Fi.rsf verb=n axis=2 nbuf=1
+[PARAMETERS]
+int     | axis | =2 |   | 	stack axis 
+int     | nbuf | =1 |   | 	buffer size 
+file    | uu | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/psava

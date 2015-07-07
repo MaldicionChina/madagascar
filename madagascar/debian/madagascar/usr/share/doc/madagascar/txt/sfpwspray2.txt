@@ -1,0 +1,12 @@
+Program sfpwspray2 | Plane-wave spray in 3-D. 
+[SYNOPSIS]
+sfpwspray2 < inp.rsf dip=dip.rsf > out.rsf verb=n eps=0.01 order=1 ns2= ns3=
+[PARAMETERS]
+file    | dip | = |   | 	auxiliary input file name
+float   | eps | =0.01 |   | 	regularization 
+int     | ns2 | = |   | 	
+int     | ns3 | = |   | 	spray radius 
+int     | order | =1 |   | 	accuracy order 
+bool    | verb | =n |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/pwd

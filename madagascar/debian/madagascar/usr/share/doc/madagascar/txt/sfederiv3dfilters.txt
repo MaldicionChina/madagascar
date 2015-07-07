@@ -1,0 +1,19 @@
+Program sfederiv3dfilters | 
+[SYNOPSIS]
+sfederiv3dfilters ccc=Fccc.rsf < Fspk.rsf pzdel=Fpzdel.rsf pxdel=Fpxdel.rsf pydel=Fpydel.rsf hzdel=Fhzdel.rsf hxdel=Fhxdel.rsf hydel=Fhydel.rsf vzdel=Fvzdel.rsf vxdel=Fvxdel.rsf vydel=Fvydel.rsf verb=n stat=y domain=
+[PARAMETERS]
+file    | ccc | = |   | 	auxiliary input file name
+string  | domain | = |   | 	
+file    | hxdel | = |   | 	auxiliary output file name
+file    | hydel | = |   | 	auxiliary output file name
+file    | hzdel | = |   | 	auxiliary output file name
+file    | pxdel | = |   | 	auxiliary output file name
+file    | pydel | = |   | 	auxiliary output file name
+file    | pzdel | = |   | 	auxiliary output file name
+bool    | stat | =y |  [y/n] | 	stationary operator 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+file    | vxdel | = |   | 	auxiliary output file name
+file    | vydel | = |   | 	auxiliary output file name
+file    | vzdel | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/jyan

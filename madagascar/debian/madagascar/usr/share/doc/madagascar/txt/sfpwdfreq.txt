@@ -1,0 +1,15 @@
+Program sfpwdfreq | frequency response of PWD operator 
+[SYNOPSIS]
+sfpwdfreq > out.rsf n1=50 order=1 o3=20 d3=30 n3=1 iir=n opwd=y radius=1.0 interp=
+[PARAMETERS]
+float   | d3 | =30 |   | 	dip angle increment 
+bool    | iir | =n |  [y/n] | 	y: iir; n: fir 
+string  | interp | = |   | 	interpolation method: maxflat lagrange bspline 
+int     | n1 | =50 |   | 	samples in frequency domain between (0:f_c] 
+int     | n3 | =1 |   | 	number dip angle 
+float   | o3 | =20 |   | 	first dip angle 
+bool    | opwd | =y |  [y/n] | 	y: circle interpolating pwd; n: line interpolating pwd 
+int     | order | =1 |   | 	order of PWD 
+float   | radius | =1.0 |   | 	radius for circle interpolating pwd 
+[DIRECTORY]
+user/chen

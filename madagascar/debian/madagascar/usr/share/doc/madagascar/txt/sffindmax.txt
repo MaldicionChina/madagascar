@@ -1,0 +1,10 @@
+Program sffindmax | 
+[SYNOPSIS]
+sffindmax < Fin.rsf > Fou.rsf verb=n
+[COMMENTS]
+find max value in a file
+
+[PARAMETERS]
+bool    | verb | =n |  [y/n] | 	verbosity flag
+[DIRECTORY]
+user/psava

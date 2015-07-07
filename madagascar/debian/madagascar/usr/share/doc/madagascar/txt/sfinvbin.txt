@@ -1,0 +1,29 @@
+Program sfinvbin | Data interpolation in 2-D slices using helix preconditioning. 
+[SYNOPSIS]
+sfinvbin < in.rsf > out.rsf filt=flt.rsf pch=pch.rsf n= xkey= ykey= xmax= xmin= ymax= ymin= x0=xmin y0=ymin nx=(int) (xmax - xmin + 1.) ny=(int) (ymax - ymin + 1.) dx= dy= interp=2 der=n stat=y niter=20 eps=0.01 head= lag= nh=
+[PARAMETERS]
+bool    | der | =n |  [y/n] | 	if y, apply derivative filter on the residual 
+float   | dx | = |   | 	bin size in x 
+float   | dy | = |   | 	bin size in y 
+float   | eps | =0.01 |   | 	regularization parameter 
+file    | filt | = |   | 	auxiliary input file name
+string  | head | = |   | 	
+int     | interp | =2 |   | 	interpolation length 
+string  | lag | = |   | 	
+ints    | n | = |   | 	 [2]
+string  | nh | = |   | 	
+int     | niter | =20 |   | 	number of iterations 
+int     | nx | =(int) (xmax - xmin + 1.) |   | 	Number of bins in x 
+int     | ny | =(int) (ymax - ymin + 1.) |   | 	Number of bins in y 
+file    | pch | = |   | 	auxiliary input file name
+bool    | stat | =y |  [y/n] | 	stationary or nonstationary filter 
+float   | x0 | =xmin |   | 	
+int     | xkey | = |   | 	x key number 
+float   | xmax | = |   | 	
+float   | xmin | = |   | 	
+float   | y0 | =ymin |   | 	grid origin 
+int     | ykey | = |   | 	y key number 
+float   | ymax | = |   | 	
+float   | ymin | = |   | 	Grid dimensions 
+[DIRECTORY]
+user/gee

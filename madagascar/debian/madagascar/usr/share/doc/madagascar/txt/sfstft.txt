@@ -1,0 +1,10 @@
+Program sfstft | Short-time Fourier transform (STFT). 
+[SYNOPSIS]
+sfstft < in.rsf > out.rsf inv=n sym=n opt=y ntw=7
+[PARAMETERS]
+bool    | inv | =n |  [y/n] | 	if y, perform inverse transform 
+int     | ntw | =7 |   | 	time-window length 
+bool    | opt | =y |  [y/n] | 	if y, determine optimal size for efficiency 
+bool    | sym | =n |  [y/n] | 	if y, apply symmetric scaling to make the FFT operator Hermitian 
+[DIRECTORY]
+user/yliu

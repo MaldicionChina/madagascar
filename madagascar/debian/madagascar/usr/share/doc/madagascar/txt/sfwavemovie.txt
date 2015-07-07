@@ -1,0 +1,22 @@
+Program sfwavemovie | Helmholtz factorization 
+[SYNOPSIS]
+sfwavemovie > out.rsf imp=imp.rsf nz=96 nx=48 nt=12 nw=2 init=1 v=1. dz=1. dx=2. lambda=nz*dz/4. sixth=0.0833 gamma=0.667 epsdamp=0.01 padfactor=1024 nfilt=nx+2 impresp=n
+[PARAMETERS]
+float   | dx | =2. |   | 	
+float   | dz | =1. |   | 	
+float   | epsdamp | =0.01 |   | 	
+float   | gamma | =0.667 |   | 	
+file    | imp | = |   | 	auxiliary output file name
+bool    | impresp | =n |  [y/n] | 	
+int     | init | =1 |   | 	
+float   | lambda | =nz*dz/4. |   | 	
+int     | nfilt | =nx+2 |   | 	
+int     | nt | =12 |   | 	
+int     | nw | =2 |   | 	
+int     | nx | =48 |   | 	
+int     | nz | =96 |   | 	
+int     | padfactor | =1024 |   | 	
+float   | sixth | =0.0833 |   | 	
+float   | v | =1. |   | 	
+[DIRECTORY]
+user/gee

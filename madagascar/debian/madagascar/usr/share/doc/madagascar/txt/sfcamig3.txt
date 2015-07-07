@@ -1,0 +1,25 @@
+Program sfcamig3 | 3-D common-azimuth modeling/migration with extended SSF 
+[SYNOPSIS]
+sfcamig3 slo=Fs.rsf < Fd.rsf > Fw.rsf < Fi.rsf ompchunk=1 ompnth=0 verb=n eps=0.01 inv=n twoway=n nrmax=1 dtmax=0.004 pmx=0 pmy=0 phx=0 tmx=0 tmy=0 thx=0 nw= dw= ow=0. mode=
+[PARAMETERS]
+float   | dtmax | =0.004 |   | 	time error 
+float   | dw | = |   | 	
+float   | eps | =0.01 |   | 	stability parameter 
+bool    | inv | =n |  [y/n] | 	y=modeling; n=migration 
+string  | mode | = |   | 	
+int     | nrmax | =1 |   | 	maximum number of refs 
+int     | nw | = |   | 	
+int     | ompchunk | =1 |   | 	OpenMP data chunk size 
+int     | ompnth | =0 |   | 	OpenMP available threads 
+float   | ow | =0. |   | 	
+int     | phx | =0 |   | 	padding hx
+int     | pmx | =0 |   | 	padding mx
+int     | pmy | =0 |   | 	padding my
+file    | slo | = |   | 	auxiliary input file name
+int     | thx | =0 |   | 	taper hx 
+int     | tmx | =0 |   | 	taper mx 
+int     | tmy | =0 |   | 	taper my 
+bool    | twoway | =n |  [y/n] | 	two-way traveltime 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/psava

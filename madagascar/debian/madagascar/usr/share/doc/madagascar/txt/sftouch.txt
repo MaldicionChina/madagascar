@@ -1,0 +1,15 @@
+Program sftouch | Applies the Unix command touch to binaries of RSF datasets in a directory.
+[SYNOPSIS]
+sftouch verb=n dir=. rec=n chk4nan=n
+[COMMENTS]
+Will go down recursively in subdirectories. Current date and time is used.
+Useful for determining disk leaks: Orphan binaries (those without headers) will
+not be touched. You can remove them with commands such as:
+find $DATAPATH -type f -mmin +15 -exec rm -f {} \;
+[PARAMETERS]
+bool    | chk4nan | =n |  [y/n] | 	Check for NaN values. Expensive!!
+string  | dir | =. |   | 	Directory with files
+bool    | rec | =n |  [y/n] | 	Whether to go down recursively
+bool    | verb | =n |  [y/n] | 	Display what is wrong with the dataset
+[DIRECTORY]
+user/ivlad

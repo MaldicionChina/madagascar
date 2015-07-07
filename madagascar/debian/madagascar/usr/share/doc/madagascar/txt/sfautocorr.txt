@@ -1,0 +1,8 @@
+Program sfautocorr | Autocorrelation for helix filters. 
+[SYNOPSIS]
+sfautocorr < in.rsf > out.rsf lag=lag0.rsf lagout=lag.rsf
+[PARAMETERS]
+string  | lag | = |   | 	optional input file with filter lags (auxiliary input file name)
+string  | lagout | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/gee

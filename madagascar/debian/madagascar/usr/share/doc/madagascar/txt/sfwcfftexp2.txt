@@ -1,0 +1,15 @@
+Program sfwcfftexp2 | 2-D FFT-based zero-offset exploding reflector modeling/migration  
+[SYNOPSIS]
+sfwcfftexp2 < data.rsf > image.rsf left=left.rsf right=right.rsf mig=n timer=n pad1=1 nz= dz= nt= dt=
+[PARAMETERS]
+float   | dt | = |   | 	time sampling (if modeling) 
+float   | dz | = |   | 	depth sampling (if migration) 
+file    | left | = |   | 	auxiliary input file name
+bool    | mig | =n |  [y/n] | 	if n, modeling; if y, migration 
+int     | nt | = |   | 	time samples (if modeling) 
+int     | nz | = |   | 	depth samples (if migration) 
+int     | pad1 | =1 |   | 	padding factor on the first axis 
+file    | right | = |   | 	auxiliary input file name
+bool    | timer | =n |  [y/n] | 	
+[DIRECTORY]
+user/jsun

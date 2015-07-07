@@ -1,0 +1,18 @@
+sfradon34 = rsf.doc.rsfprog('sfradon34','user/jingwei/Mradon34.cc','''azimuthally anisotropic 3to4 Radon transform (using 3to3 butterfly)''')
+sfradon34.par('ntau',rsf.doc.rsfpar('','','',''''''))
+sfradon34.par('np',rsf.doc.rsfpar('','','',''''''))
+sfradon34.par('nq',rsf.doc.rsfpar('','','',''''''))
+sfradon34.par('ns',rsf.doc.rsfpar('','','',''''''))
+sfradon34.par('tau0',rsf.doc.rsfpar('','','',''''''))
+sfradon34.par('dtau',rsf.doc.rsfpar('','','',''''''))
+sfradon34.par('p0',rsf.doc.rsfpar('','','',''''''))
+sfradon34.par('dp',rsf.doc.rsfpar('','','',''''''))
+sfradon34.par('q0',rsf.doc.rsfpar('','','',''''''))
+sfradon34.par('dq',rsf.doc.rsfpar('','','',''''''))
+sfradon34.par('s0',rsf.doc.rsfpar('','','',''''''))
+sfradon34.par('ds',rsf.doc.rsfpar('','','',''''''))
+sfradon34.par('N',rsf.doc.rsfpar('','','','''number of partitions'''))
+sfradon34.version('1.7')
+sfradon34.synopsis('''sfradon34 < input.rsf > output.rsf ntau= np= nq= ns= tau0= dtau= p0= dp= q0= dq= s0= ds= N=''','''''')
+rsf.doc.progs['sfradon34']=sfradon34
+

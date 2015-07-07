@@ -1,0 +1,17 @@
+Program sfnoise | Add random noise to the data.
+[SYNOPSIS]
+sfnoise < in.rsf > out.rsf seed=time(NULL) type=y var= range= mean=0 rep=n
+[COMMENTS]
+
+July 2011 program of the month:
+http://ahay.org/rsflog/index.php?/archives/262-Program-of-the-month-sfnoise.html
+
+[PARAMETERS]
+float   | mean | =0 |   | 	noise mean 
+float   | range | = |   | 	noise range (default=1) 
+bool    | rep | =n |  [y/n] | 	if y, replace data with noise 
+int     | seed | =time(NULL) |   | 	random seed 
+bool    | type | =y |  [y/n] | 	noise distribution, y: normal, n: uniform 
+float   | var | = |   | 	noise variance 
+[DIRECTORY]
+system/generic

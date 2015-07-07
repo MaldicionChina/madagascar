@@ -1,0 +1,8 @@
+Program sfconvft | Trace-by-trace or data-by-trace convolution using Fourier transform. 
+[SYNOPSIS]
+sfconvft < in.rsf other=other.rsf > conv.rsf axis=1
+[PARAMETERS]
+int     | axis | =1 |   | 	across which axis to convolve.
+file    | other | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/saragiotis

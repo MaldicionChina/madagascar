@@ -1,0 +1,15 @@
+Program sffpocs2d | 2-D Two-step POCS interpolation using a general Lp-norm optimization
+[SYNOPSIS]
+sffpocs2d < Fin.rsf mask=Fmask.rsf > Fout.rsf verb=n niter=100 tol=1.0e-6 pclip=99. p=0.35 mode=
+[PARAMETERS]
+string  | mask | = |   | 	auxiliary input file name
+string  | mode | = |   | 	thresholding mode: 'hard', 'soft','pthresh','exp';
+	'hard', hard thresholding;	'soft', soft thresholding; 
+	'pthresh', generalized quasi-p; 'exp', exponential shrinkage 
+int     | niter | =100 |   | 	total number iterations 
+float   | p | =0.35 |   | 	norm=p, where 0<p<=1 
+float   | pclip | =99. |   | 	starting data clip percentile (default is 99)
+float   | tol | =1.0e-6 |   | 	iteration tolerance 
+bool    | verb | =n |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/pyang

@@ -1,0 +1,237 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sfmake_ix_indx</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sfmake_ix_indx</strong></big></big> (1.7)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="http://sourceforge.net/p/rsf/code/HEAD/tree/branches/madagascar-1.7/user/karl/Mmake_ix_indx.c">user/karl/Mmake_ix_indx.c</a></font></td></tr></table>
+    MAKE Iline Xline INDX files for quick 3D data subsets (superbins)
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sfmake_ix_indx < infile.rsf > out.rsf verbose=1 ilinemin=-1e31 ilinemax=-1e31 xlinemin=-1e31 xlinemax=-1e31 ilineinc=10 input= headers= iline= xline= indxdir=</td></tr></table><br>
+These indexes are intended to be used by future sftahsort and sftah5dinterp.<br>
+<br>
+EXAMPLE:<br>
+Runnning the programs:<br>
+<br>
+sfmake_ix_indx           \<br>
+   verbose=1             \<br>
+   input=npr3_fielda.rsf \<br>
+   indxdir=npr3_field    \<br>
+   ilineinc=10           \<br>
+   iline=iline           \<br>
+   xline=xline           \<br>
+   append=no             \<br>
+>/dev/null <br>
+sfmake_ix_indx           \<br>
+   verbose=1             \<br>
+   input=npr3_fieldb.rsf \<br>
+   indxdir=npr3_field    \<br>
+   ilineinc=10           \<br>
+   iline=iline           \<br>
+   xline=xline           \<br>
+   append=yes            \<br>
+>/dev/null <br>
+<br>
+Will create a set of files:<br>
+npr3_field/il0<br>
+npr3_field/il5<br>
+...<br>
+npr3_field/il350<br>
+and<br>
+npr3_field/filename_indx<br>
+<br>
+The file npr3_field/il15 will contain the trace headers of the traces with <br>
+trace header "iline" nearest to 15.  The file also has the file number and<br>
+the trace number, so you can locate the trace in the input files (either <br>
+npr3_fielda.rsf or npr3_fieldb.rsf.  The trace headers in the file are all <br>
+sorted by xline.  With this information you can quickly find all the traces<br>
+that are in a range of ilines and xlines.  This supports sftah5dinterp which<br>
+processes all the traces in a midpoint superbin that might be 800 meters by 800<br>
+meters (about 16 ilines and 32 xlines).  This is not a simple sort problem <br>
+because sftah5dinterp processes data in overlapping bin (i.e. the 800 meter <br>
+superbin centers moveup by 400 meters).  Overlapping superbins are supported by<br>
+allowing traces to be reread.<br>
+<br>
+The program also allows sftahsort to read from multiple files. This is useful<br>
+on larger 3D projects where the input data is on multiple segy files.  <br>
+Previously I merged the files into one big file after running sfsegyread.  This<br>
+required an additional copy of all the data to be saved on disk.    <br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>headers=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+     Trace header file name.  Default is the input data file<br>
+     name, with the final .rsf changed to _hdr.rsf <br>
+  <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>iline=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+     header key for the main index key.  This should be iline, but you <br>
+     may have non-standard trace headers or a wierd use of this program <br>
+  <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>ilineinc=10</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+     incrment in iline for the index<br>
+  <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>ilinemax=-1e31</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+     maximum "iline" header key to include in the index.  Use this parameter<br>
+     to remove null trace headers or traces outside project area.<br>
+  <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>ilinemin=-1e31</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+     minimum "iline" header key to include in the index.  Use this parameter<br>
+     to remove null trace headers or traces outside project area.<br>
+  <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>indxdir=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+     The name of the directory containing the iline,xline index.  This <br>
+     directory will be in DATAPATH (probably the environment variable). The <br>
+     directory also continues a file "filenames", a list of the trace and <br>
+     header files that contributes to this index. The directory contains files <br>
+     with names "indx#" here # is an integer multiple of ilineinc. These files <br>
+     contains a record for each contributing trace with filenumber, <br>
+     tracenumber, and the trace header. The file containing the trace is <br>
+     determined using the  can be read by using the filenumber and the <br>
+     "filenames" file.  The tracenumber defines the location of the trace <br>
+     in the file.<br>
+  <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>input=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+     Input file for traces amplitudes<br>
+  <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>verbose=1</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+     flag to control amount of print<br>
+     0 terse, 1 informative, 2 chatty, 3 debug<br>
+  <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>xline=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>xlinemax=-1e31</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+     maximum "xline" header key to include in the index.  Use this parameter<br>
+     to remove null trace headers or traces outside project area.<br>
+  <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>xlinemin=-1e31</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+     minimum "xline" header key to include in the index.  Use this parameter<br>
+     to remove null trace headers or traces outside project area.<br>
+  <br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    </body></html>

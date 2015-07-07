@@ -1,0 +1,158 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sftahmakeevent</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sftahmakeevent</strong></big></big> (1.7)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="http://sourceforge.net/p/rsf/code/HEAD/tree/branches/madagascar-1.7/user/karl/Mtahmakeevent.c">user/karl/Mtahmakeevent.c</a></font></td></tr></table>
+    Trace And Header MAKEEVENT makes constant velocity dipping event synthetic.
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sftahmakeevent < in.rsf > out.rsf verbose=1 v= dx= dy= x0= y0= t0=</td></tr></table><br>
+tah is the abbreviation of Trace And Header.  Madagascar programs <br>
+that begin with sftah are a designed to:<br>
+1- read trace and headers from separate rsf files and write them to <br>
+   standard output (ie sftahread)<br>
+2- filter programs that read and write standard input/output and <br>
+   process the tah data (eg sftahnmo, sftahstack)<br>
+3- read tah data from standard input and write separate rsf files for <br>
+   the trace and headers data (ie sftahwrite)<br>
+<br>
+These programs allow Seismic Unix (su) like processing in Madagascar.  <br>
+Some programs have su like names.<br>
+<br>
+Some programs in this suite are sftahread, sftahgethw, ftahhdrmath, <br>
+and sftahwrite.<br>
+<br>
+The sftahmakeevent program makes simple synthetic on input data source<br>
+and group xy coordinates (i.e. sx, sy, gx, gy).  The event has constant<br>
+velocity and dip.  The nmo velocity will depend on source/receiver azimuth.<br>
+EXAMPLE:<br>
+<br>
+sftahsort          \<br>
+   input=npr3_gathers \<br>
+   sort="iline:169,181  xline:104,116 offset:0,11000"  \ <br>
+   verbose=1       \<br>
+| sftahmakeevent   \<br>
+| sftahmakeskey pkey=iline,xline skey=cdpt verbose=1  \      <br>
+| sftahnmo         \<br>
+  verbose=1        \<br>
+  tnmo=0.000,4.000 \<br>
+  vnmo=11000,11000 \<br>
+| sftahwrite       \<br>
+  verbose=1        \      <br>
+  label2="cdpt"  o2=1 n2=34  d2=1     \<br>
+  label3="xline" o3=104 n3=13 d3=1    \<br>
+  label4="iline" o4=169 n4=13  d4=1   \<br>
+  output=gather_subset.rsf            \<br>
+>/dev/null<br>
+<br>
+The headers are in the file npr3_gathers_hdr.rsf, <br>
+the headers parameter default.  The headers are merged with the trace <br>
+amplitudes and the tah data sent down the pipe for sftahmakeevent.  The <br>
+Traces are sent to STDOUT to have nmo applied and data to be written to <br>
+disk.  Data is also sent to /dev/null (the bit bucket).<br>
+<br>
+PARAMETERS<br>
+   none yest, but eventually ude this template:<br>
+   strings key= no default<br>
+<br>
+        list of header keys print.  Look at the sfsegyread for a list<br>
+	of header names.<br>
+<br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>dx=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>dy=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>t0=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	****************************************<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>v=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>verbose=1</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+     flag to control amount of print<br>
+     0 terse, 1 informative, 2 chatty, 3 debug<br>
+  <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>x0=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>y0=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    </body></html>

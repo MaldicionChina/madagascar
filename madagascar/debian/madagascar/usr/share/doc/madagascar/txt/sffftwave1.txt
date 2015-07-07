@@ -1,0 +1,13 @@
+Program sffftwave1 | 1-D FFT wave extrapolation 
+[SYNOPSIS]
+sffftwave1 < inp.rsf > out.rsf prop=prop.rsf right=right.rsf nt= dt= sub=y step=y nsps=n
+[PARAMETERS]
+float   | dt | = |   | 	
+bool    | nsps | =n |  [y/n] | 	if using NSPS 
+int     | nt | = |   | 	
+file    | prop | = |   | 	auxiliary input file name
+string  | right | = |   | 	auxiliary input file name
+bool    | step | =y |  [y/n] | 	if two-step propagation 
+bool    | sub | =y |  [y/n] | 	if -1 is included in the matrix 
+[DIRECTORY]
+user/fomels

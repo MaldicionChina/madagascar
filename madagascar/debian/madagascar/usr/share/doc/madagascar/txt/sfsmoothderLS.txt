@@ -1,0 +1,16 @@
+Program sfsmoothderLS | Convert input to its derivative using LS and shaping regularization
+[SYNOPSIS]
+sfsmoothderLS < DATA.rsf > MODEL.rsf dataout=DATA_OUT.rsf niter=100 rect#=(1,1,...)
+[COMMENTS]
+ * applied to causint_lop d = L m
+
+ Takes: rect1= rect2= ...
+
+ rectN defines the size of the smoothing stencil in N-th dimension.
+
+[PARAMETERS]
+string  | dataout | = |   | 	optionally, output predicted data (auxiliary output file name)
+int     | niter | =100 |   | 	maximum number of iterations 
+int     | rect# | =(1,1,...) |   | 	smoothing radius on #-th axis 
+[DIRECTORY]
+user/lcasasan

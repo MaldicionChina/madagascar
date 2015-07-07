@@ -1,0 +1,532 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sfpad</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sfpad</strong></big></big> (1.7 pad.c 11208 2013-10-28 23:36:36Z sfomel)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="http://sourceforge.net/p/rsf/code/HEAD/tree/branches/madagascar-1.7/system/main/pad.c">system/main/pad.c</a><br><a href="http://ahay.org/wiki/Guide_to_madagascar_programs#sfpad">Documentation</a></font></td></tr></table>
+    Pad a dataset with zeros.
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sfpad < in.rsf > out.rsf beg#=0 end#=0 n#=</td></tr></table><br>
+   n#out is equivalent to n#, both of them overwrite end#.<br>
+<br>
+   Other parameters from the command line are passed to the output (similar to sfput).<br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>beg#=0</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	the number of zeros to add before the beginning of #-th axis <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>end#=0</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	the number of zeros to add after the end of #-th axis <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>n#=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	the output length of #-th axis - padding at the end <br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#eeaa77">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Used In</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>BEI</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/bei/dwnc/sigmoid.html">dwnc/sigmoid</a><br>
+                        
+                        <a href="book/bei/ft1/autocor.html">ft1/autocor</a><br>
+                        
+                        <a href="book/bei/ft1/brad.html">ft1/brad</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>CUP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/cup/rna2d/real.html">rna2d/real</a><br>
+                        
+                        <a href="book/cup/rna2d/shot.html">rna2d/shot</a><br>
+                        
+                        <a href="book/cup/rna2d/simple.html">rna2d/simple</a><br>
+                        
+                        <a href="book/cup/rna3d/real.html">rna3d/real</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>CWP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/cwp/geo2006TimeShiftImagingCondition/flat.html">geo2006TimeShiftImagingCondition/flat</a><br>
+                        
+                        <a href="book/cwp/geo2006TimeShiftImagingCondition/zicig.html">geo2006TimeShiftImagingCondition/zicig</a><br>
+                        
+                        <a href="book/cwp/geo2007StereographicImagingCondition/sigsbee2.html">geo2007StereographicImagingCondition/sigsbee2</a><br>
+                        
+                        <a href="book/cwp/geo2008InterferometricImagingCondition/circle.html">geo2008InterferometricImagingCondition/circle</a><br>
+                        
+                        <a href="book/cwp/geo2008InterferometricImagingCondition/sact1.html">geo2008InterferometricImagingCondition/sact1</a><br>
+                        
+                        <a href="book/cwp/geo2008InterferometricImagingCondition/sigs2.html">geo2008InterferometricImagingCondition/sigs2</a><br>
+                        
+                        <a href="book/cwp/geo2008IsotropicAngleDomainElasticRTM/marm2allA.html">geo2008IsotropicAngleDomainElasticRTM/marm2allA</a><br>
+                        
+                        <a href="book/cwp/geo2008IsotropicAngleDomainElasticRTM/marm2oneA.html">geo2008IsotropicAngleDomainElasticRTM/marm2oneA</a><br>
+                        
+                        <a href="book/cwp/geo2008NumericWEMVAoperators/flatWEMVA.html">geo2008NumericWEMVAoperators/flatWEMVA</a><br>
+                        
+                        <a href="book/cwp/geo2008NumericWEMVAoperators/saltWEMVA.html">geo2008NumericWEMVAoperators/saltWEMVA</a><br>
+                        
+                        <a href="book/cwp/geo2009TTIModeSeparation/fold.html">geo2009TTIModeSeparation/fold</a><br>
+                        
+                        <a href="book/cwp/geo2009TTIModeSeparation/marmousi2.html">geo2009TTIModeSeparation/marmousi2</a><br>
+                        
+                        <a href="book/cwp/geo2009TTIModeSeparation/tti3.html">geo2009TTIModeSeparation/tti3</a><br>
+                        
+                        <a href="book/cwp/geo2009VTIModeSeparation/separate2.html">geo2009VTIModeSeparation/separate2</a><br>
+                        
+                        <a href="book/cwp/geo2009VTIModeSeparation/separate3.html">geo2009VTIModeSeparation/separate3</a><br>
+                        
+                        <a href="book/cwp/geo2009VTIModeSeparation/sigsbee.html">geo2009VTIModeSeparation/sigsbee</a><br>
+                        
+                        <a href="book/cwp/geo2011WideAzimuthAngleDecomposition/flatEICangle.html">geo2011WideAzimuthAngleDecomposition/flatEICangle</a><br>
+                        
+                        <a href="book/cwp/geo2011WideAzimuthAngleDecomposition/seam357.html">geo2011WideAzimuthAngleDecomposition/seam357</a><br>
+                        
+                        <a href="book/cwp/jse2006RWEImagingOverturningReflections/sigsbee.html">jse2006RWEImagingOverturningReflections/sigsbee</a><br>
+                        
+                        <a href="book/cwp/pept2011MicroearthquakeMonitoring/saf1.html">pept2011MicroearthquakeMonitoring/saf1</a><br>
+                        
+                        <a href="book/cwp/pept2011MicroearthquakeMonitoring/saf2.html">pept2011MicroearthquakeMonitoring/saf2</a><br>
+                        
+                        <a href="book/cwp/pept2011MicroearthquakeMonitoring/saf3.html">pept2011MicroearthquakeMonitoring/saf3</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>DATA</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/data/nankai/shots.html">nankai/shots</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GALLERY</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/gallery/gradient/oway.html">gradient/oway</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GEE</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/gee/ajt/conv.html">ajt/conv</a><br>
+                        
+                        <a href="book/gee/iin/miss1figs.html">iin/miss1figs</a><br>
+                        
+                        <a href="book/gee/lmn/sep73.html">lmn/sep73</a><br>
+                        
+                        <a href="book/gee/lsq/antoine.html">lsq/antoine</a><br>
+                        
+                        <a href="book/gee/lsq/lomask.html">lsq/lomask</a><br>
+                        
+                        <a href="book/gee/mda/misif.html">mda/misif</a><br>
+                        
+                        <a href="book/gee/noiz/antoine.html">noiz/antoine</a><br>
+                        
+                        <a href="book/gee/noiz/mad.html">noiz/mad</a><br>
+                        
+                        <a href="book/gee/pch/tvdecon.html">pch/tvdecon</a><br>
+                        
+                        <a href="book/gee/prc/seabeam.html">prc/seabeam</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GEO384W</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/geo384w/hw3/synth.html">hw3/synth</a><br>
+                        
+                        <a href="book/geo384w/hw4/sigsbee.html">hw4/sigsbee</a><br>
+                        
+                        <a href="book/geo384w/hw5/hyper.html">hw5/hyper</a><br>
+                        
+                        <a href="book/geo384w/hw5/lsmig.html">hw5/lsmig</a><br>
+                        
+                        <a href="book/geo384w/hw6/hyper.html">hw6/hyper</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GEO391</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/geo391/hw6/seabeam.html">hw6/seabeam</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GEOSTATS</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/geostats/spatial_stats/correlogram.html">spatial_stats/correlogram</a><br>
+                        
+                        <a href="book/geostats/spatial_stats/covariance.html">spatial_stats/covariance</a><br>
+                        
+                        <a href="book/geostats/spatial_stats/gr_variogram.html">spatial_stats/gr_variogram</a><br>
+                        
+                        <a href="book/geostats/spatial_stats/variogram.html">spatial_stats/variogram</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GPGN658</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/gpgn658/fdmod/exercise.html">fdmod/exercise</a><br>
+                        
+                        <a href="book/gpgn658/rtmig/exercise.html">rtmig/exercise</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>HANSUNG</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/hansung/cgg/syn.html">cgg/syn</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>JLU</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/jlu/txyapf/curve.html">txyapf/curve</a><br>
+                        
+                        <a href="book/jlu/txyapf/real3d.html">txyapf/real3d</a><br>
+                        
+                        <a href="book/jlu/txyapf/sigmoid.html">txyapf/sigmoid</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>MILANO</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/milano/taupvel/cmp.html">taupvel/cmp</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>RSF</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/rsf/rsf/rsftour.html">rsf/rsftour</a><br>
+                        
+                        <a href="book/rsf/school/complex.html">school/complex</a><br>
+                        
+                        <a href="book/rsf/school/modeling.html">school/modeling</a><br>
+                        
+                        <a href="book/rsf/school/sigsbee.html">school/sigsbee</a><br>
+                        
+                        <a href="book/rsf/school/single.html">school/single</a><br>
+                        
+                        <a href="book/rsf/su/rsflab8.html">su/rsflab8</a><br>
+                        
+                        <a href="book/rsf/tutorials/hilbert.html">tutorials/hilbert</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>SEP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/sep/angle/agmig.html">angle/agmig</a><br>
+                        
+                        <a href="book/sep/bspl/chirp.html">bspl/chirp</a><br>
+                        
+                        <a href="book/sep/fmeiko/tri.html">fmeiko/tri</a><br>
+                        
+                        <a href="book/sep/forwd/chirp.html">forwd/chirp</a><br>
+                        
+                        <a href="book/sep/helft/mult.html">helft/mult</a><br>
+                        
+                        <a href="book/sep/helft/spike.html">helft/spike</a><br>
+                        
+                        <a href="book/sep/oc2/cup.html">oc2/cup</a><br>
+                        
+                        <a href="book/sep/oc2/elfshot.html">oc2/elfshot</a><br>
+                        
+                        <a href="book/sep/passive/synth.html">passive/synth</a><br>
+                        
+                        <a href="book/sep/pwd/dune.html">pwd/dune</a><br>
+                        
+                        <a href="book/sep/pwd/hector.html">pwd/hector</a><br>
+                        
+                        <a href="book/sep/pwd/lomo.html">pwd/lomo</a><br>
+                        
+                        <a href="book/sep/stack/miginv.html">stack/miginv</a><br>
+                        
+                        <a href="book/sep/stack/velinv.html">stack/velinv</a><br>
+                        
+                        <a href="book/sep/vc2/beivc.html">vc2/beivc</a><br>
+                        
+                        <a href="book/sep/vc2/elfvc.html">vc2/elfvc</a><br>
+                        
+                        <a href="book/sep/vc2/sigvc.html">vc2/sigvc</a><br>
+                        
+                        <a href="book/sep/vc2/spec.html">vc2/spec</a><br>
+                        
+                        <a href="book/sep/vc2/vcmod.html">vc2/vcmod</a><br>
+                        
+                        <a href="book/sep/velspec/impls.html">velspec/impls</a><br>
+                        
+                        <a href="book/sep/velspec/sigvc.html">velspec/sigvc</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>SWAG</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/swag/tau/iso.html">tau/iso</a><br>
+                        
+                        <a href="book/swag/tau/lens.html">tau/lens</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>TCCS</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/tccs/attr/vecta.html">attr/vecta</a><br>
+                        
+                        <a href="book/tccs/butterfly/synth2D-1-timer.html">butterfly/synth2D-1-timer</a><br>
+                        
+                        <a href="book/tccs/butterfly/synth2D-4.html">butterfly/synth2D-4</a><br>
+                        
+                        <a href="book/tccs/deblend/fairfield-initmfnew.html">deblend/fairfield-initmfnew</a><br>
+                        
+                        <a href="book/tccs/deblend/linear.html">deblend/linear</a><br>
+                        
+                        <a href="book/tccs/deblend/synthcomplex.html">deblend/synthcomplex</a><br>
+                        
+                        <a href="book/tccs/deblend/synthhyper.html">deblend/synthhyper</a><br>
+                        
+                        <a href="book/tccs/diffr/chan3d.html">diffr/chan3d</a><br>
+                        
+                        <a href="book/tccs/diffr/fault.html">diffr/fault</a><br>
+                        
+                        <a href="book/tccs/diffr/gom.html">diffr/gom</a><br>
+                        
+                        <a href="book/tccs/dsrtomo/marm.html">dsrtomo/marm</a><br>
+                        
+                        <a href="book/tccs/emdpf/dipfilter.html">emdpf/dipfilter</a><br>
+                        
+                        <a href="book/tccs/flat/comaz.html">flat/comaz</a><br>
+                        
+                        <a href="book/tccs/flat/flat.html">flat/flat</a><br>
+                        
+                        <a href="book/tccs/flat/flatelf.html">flat/flatelf</a><br>
+                        
+                        <a href="book/tccs/lowrank/fio.html">lowrank/fio</a><br>
+                        
+                        <a href="book/tccs/lpf/lpf.html">lpf/lpf</a><br>
+                        
+                        <a href="book/tccs/lpf/plut.html">lpf/plut</a><br>
+                        
+                        <a href="book/tccs/lpf/ray.html">lpf/ray</a><br>
+                        
+                        <a href="book/tccs/lpf/simon.html">lpf/simon</a><br>
+                        
+                        <a href="book/tccs/ltft/groll.html">ltft/groll</a><br>
+                        
+                        <a href="book/tccs/ltft/timefreq.html">ltft/timefreq</a><br>
+                        
+                        <a href="book/tccs/ltft/vecta.html">ltft/vecta</a><br>
+                        
+                        <a href="book/tccs/nmodeblend/bei.html">nmodeblend/bei</a><br>
+                        
+                        <a href="book/tccs/nmodeblend/synth.html">nmodeblend/synth</a><br>
+                        
+                        <a href="book/tccs/oc3/bei.html">oc3/bei</a><br>
+                        
+                        <a href="book/tccs/oc3/fault.html">oc3/fault</a><br>
+                        
+                        <a href="book/tccs/oc3/french.html">oc3/french</a><br>
+                        
+                        <a href="book/tccs/oc3/frenchint.html">oc3/frenchint</a><br>
+                        
+                        <a href="book/tccs/opwd/pick.html">opwd/pick</a><br>
+                        
+                        <a href="book/tccs/ortho/orthorna.html">ortho/orthorna</a><br>
+                        
+                        <a href="book/tccs/phase/nonstat.html">phase/nonstat</a><br>
+                        
+                        <a href="book/tccs/phase/signal.html">phase/signal</a><br>
+                        
+                        <a href="book/tccs/reversible/delta.html">reversible/delta</a><br>
+                        
+                        <a href="book/tccs/scan3/realdata.html">scan3/realdata</a><br>
+                        
+                        <a href="book/tccs/seislet/plane.html">seislet/plane</a><br>
+                        
+                        <a href="book/tccs/shape/beivc.html">shape/beivc</a><br>
+                        
+                        <a href="book/tccs/simistack/bei.html">simistack/bei</a><br>
+                        
+                        <a href="book/tccs/stackadcig/flat.html">stackadcig/flat</a><br>
+                        
+                        <a href="book/tccs/strat/sigmoid1.html">strat/sigmoid1</a><br>
+                        
+                        <a href="book/tccs/strat/spec-decom.html">strat/spec-decom</a><br>
+                        
+                        <a href="book/tccs/strat/three-d.html">strat/three-d</a><br>
+                        
+                        <a href="book/tccs/time2depth/masha2.html">time2depth/masha2</a><br>
+                        
+                        <a href="book/tccs/time2depth2/beinew.html">time2depth2/beinew</a><br>
+                        
+                        <a href="book/tccs/timefreq/chev.html">timefreq/chev</a><br>
+                        
+                        <a href="book/tccs/timelapse/timelapse.html">timelapse/timelapse</a><br>
+                        
+                        <a href="book/tccs/uncert/beivc.html">uncert/beivc</a><br>
+                        
+                        <a href="book/tccs/vc3/fracs.html">vc3/fracs</a><br>
+                        
+                        <a href="book/tccs/vc3/threedim.html">vc3/threedim</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>TRIP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/trip/test/flat.html">test/flat</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>UWA</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/uwa/geo2013ElasticModellingGPU/bp2d.html">geo2013ElasticModellingGPU/bp2d</a><br>
+                        
+                        <a href="book/uwa/geo2013ElasticModellingGPU/homo3d.html">geo2013ElasticModellingGPU/homo3d</a><br>
+                        
+                        <a href="book/uwa/geo2013ElasticModellingGPU/hti3d.html">geo2013ElasticModellingGPU/hti3d</a><br>
+                        
+                        <a href="book/uwa/geo2013ElasticModellingGPU/test2d.html">geo2013ElasticModellingGPU/test2d</a><br>
+                        
+                        <a href="book/uwa/geo2013ElasticModellingGPU/test3d.html">geo2013ElasticModellingGPU/test3d</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>XJTU</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/xjtu/mcaseislet/interp.html">mcaseislet/interp</a><br>
+                        
+                        <a href="book/xjtu/mcaseislet/sep2.html">mcaseislet/sep2</a><br>
+                        
+                        <a href="book/xjtu/test/dlct.html">test/dlct</a><br>
+                        
+                        <a href="book/xjtu/test/interpseislet.html">test/interpseislet</a><br>
+                        
+                        <a href="book/xjtu/test/myradon2.html">test/myradon2</a><br>
+                        
+                        <a href="book/xjtu/test/sigsbee.html">test/sigsbee</a><br>
+                        </td></tr></table></td></tr></table>
+    </body></html>

@@ -1,0 +1,7 @@
+Program sfdiff | Compare the difference of two rsf data sets with the same size. 
+[SYNOPSIS]
+sfdiff < inp1.rsf match=inp2.rsf > dif.rsf
+[PARAMETERS]
+file    | match | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/chenyk

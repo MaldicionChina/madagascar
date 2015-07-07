@@ -1,0 +1,9 @@
+Program sfdeburst | Remove bursty noise by IRLS. 
+[SYNOPSIS]
+sfdeburst < in.rsf > out.rsf niter=10 eps=1. norm=
+[PARAMETERS]
+float   | eps | =1. |   | 	regularization parameter 
+int     | niter | =10 |   | 	number of iterations 
+string  | norm | = |   | 	norm to use in IRLS (cauchy,l1) 
+[DIRECTORY]
+user/gee

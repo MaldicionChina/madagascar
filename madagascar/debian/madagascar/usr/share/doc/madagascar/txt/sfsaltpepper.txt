@@ -1,0 +1,12 @@
+Program sfsaltpepper | Add salt and pepper noise to the data.
+[SYNOPSIS]
+sfsaltpepper < in.rsf > out.rsf den=10. inten=0.1 rep=n allpos=n noise=n seed=time(NULL)
+[PARAMETERS]
+bool    | allpos | =n |  [y/n] | 	if y, assume positive noise 
+float   | den | =10. |   | 	noise density (percent, default=10, Min=0, Max=100) 
+float   | inten | =0.1 |   | 	noise intensity (multiple peak value of data, default=0.1) 
+bool    | noise | =n |  [y/n] | 	if y, output noise only 
+bool    | rep | =n |  [y/n] | 	if y, replace data with noise 
+int     | seed | =time(NULL) |   | 	random seed 
+[DIRECTORY]
+user/yliu

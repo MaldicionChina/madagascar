@@ -1,0 +1,12 @@
+Program sfwigner | Assymptotic Wigner distribution in space-time 
+[SYNOPSIS]
+sfwigner < Fu.rsf > Fw.rsf ompchunk=1 verb=n nh1=0 nh2=0 nh3=0 wk=0.0
+[PARAMETERS]
+int     | nh1 | =0 |   | 	
+int     | nh2 | =0 |   | 	
+int     | nh3 | =0 |   | 	
+int     | ompchunk | =1 |   | 	OpenMP data chunk size 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+float   | wk | =0.0 |   | 	
+[DIRECTORY]
+user/psava

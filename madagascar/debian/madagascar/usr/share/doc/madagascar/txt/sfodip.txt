@@ -1,0 +1,18 @@
+Program sfodip | omnidirectional dip estimation  
+[SYNOPSIS]
+sfodip < in.rsf > out.rsf m=1 n=1 rect1=0 rect2=0 niter=5 liter=20 radius=1.0 eta=0.5 dip0=0.0 verb=n slope=n interp=
+[PARAMETERS]
+float   | dip0 | =0.0 |   | 	starting dip 
+float   | eta | =0.5 |   | 	steps for iteration 
+string  | interp | = |   | 	interpolation method: maxflat lagrange bspline 
+int     | liter | =20 |   | 	number of linear iterations 
+int     | m | =1 |   | 	b[-m, ... ,n] 
+int     | n | =1 |   | 	b[-m, ... ,n] 
+int     | niter | =5 |   | 	number of iterations 
+float   | radius | =1.0 |   | 	interpolating radius for opwd 
+int     | rect1 | =0 |   | 	dip smoothness on 1st axis 
+int     | rect2 | =0 |   | 	dip smoothness on 2nd axis 
+bool    | slope | =n |  [y/n] | 	slope (y) or dip (n) estimation 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/chen

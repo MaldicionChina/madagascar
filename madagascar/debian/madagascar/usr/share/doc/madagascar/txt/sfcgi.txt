@@ -1,0 +1,5 @@
+Program sfcgi | A generic CGI script
+[SYNOPSIS]
+sfcgi
+[DIRECTORY]
+user/fomels

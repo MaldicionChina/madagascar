@@ -1,0 +1,13 @@
+Program sfsizes | Display the size of RSF files.
+[SYNOPSIS]
+sfsizes files=y human=n su=n file1.rsf file2.rsf ...
+[COMMENTS]
+Prints the element size, number of elements, and number of bytes
+for a list of RSF files.  Non-RSF files are ignored.
+
+[PARAMETERS]
+bool    | files | =y |  [y/n] | 	If y, print size of each file.  If n, print only total. 
+bool    | human | =n |  [y/n] | 	If y, print human-readable file size.  If n, print byte count. 
+bool    | su | =n |  [y/n] | 	Same for Seismic Unix 
+[DIRECTORY]
+user/jennings

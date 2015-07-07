@@ -1,0 +1,19 @@
+Program sfdip2 | 2-D dip estimation by plane wave destruction. 
+[SYNOPSIS]
+sfdip2 < in.rsf > out.rsf mask=mask.rsf idip=idip0.rsf niter=5 liter=20 rect1=1 rect2=1 p0=0. order=1 nj1=1 verb=n pmin=-FLT_MAX pmax=+FLT_MAX eps=0.0f
+[PARAMETERS]
+float   | eps | =0.0f |   | 	regularization 
+string  | idip | = |   | 	initial in-line dip (auxiliary input file name)
+int     | liter | =20 |   | 	number of linear iterations 
+string  | mask | = |   | 	auxiliary input file name
+int     | niter | =5 |   | 	number of iterations 
+int     | nj1 | =1 |   | 	antialiasing 
+int     | order | =1 |   | 	accuracy order 
+float   | p0 | =0. |   | 	initial dip 
+float   | pmax | =+FLT_MAX |   | 	maximum dip 
+float   | pmin | =-FLT_MAX |   | 	minimum dip 
+int     | rect1 | =1 |   | 	dip smoothness on 1st axis 
+int     | rect2 | =1 |   | 	dip smoothness on 2nd axis 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/pwd

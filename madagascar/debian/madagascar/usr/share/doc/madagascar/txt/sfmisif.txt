@@ -1,0 +1,10 @@
+Program sfmisif | Find MISSing Input values and Filter in 1-D. 
+[SYNOPSIS]
+sfmisif < in.rsf > out.rsf filtout=flt.rsf nmiss=n1 na=3 lag=1
+[PARAMETERS]
+file    | filtout | = |   | 	auxiliary output file name
+int     | lag | =1 |   | 	filter lag 
+int     | na | =3 |   | 	filter size 
+int     | nmiss | =n1 |   | 	number of iterations 
+[DIRECTORY]
+user/gee

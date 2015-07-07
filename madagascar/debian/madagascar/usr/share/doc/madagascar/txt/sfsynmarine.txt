@@ -1,0 +1,10 @@
+Program sfsynmarine | Simple synthetic marine data example. 
+[SYNOPSIS]
+sfsynmarine > out.rsf nt=250 nh=48 ny=10 nz=25
+[PARAMETERS]
+int     | nh | =48 |   | 	offset samples 
+int     | nt | =250 |   | 	time samples 
+int     | ny | =10 |   | 	midpoint samples 
+int     | nz | =25 |   | 	depth samples 
+[DIRECTORY]
+user/gee

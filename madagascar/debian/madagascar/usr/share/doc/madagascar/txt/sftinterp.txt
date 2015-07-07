@@ -1,0 +1,9 @@
+Program sftinterp | Traveltime interpolation by cubic Hermite spline 
+[SYNOPSIS]
+sftinterp < in.rsf > out.rsf deriv=deriv.rsf pattern=pattern.rsf type=
+[PARAMETERS]
+string  | deriv | = |   | 	auxiliary input file name
+string  | pattern | = |   | 	auxiliary input file name
+string  | type | = |   | 	type of interpolation (default Hermit) 
+[DIRECTORY]
+user/llisiw

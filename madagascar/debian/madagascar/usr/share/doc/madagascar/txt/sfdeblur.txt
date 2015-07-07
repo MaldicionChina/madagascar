@@ -1,0 +1,11 @@
+Program sfdeblur | Non-stationary debluring by inversion 
+[SYNOPSIS]
+sfdeblur < in.rsf > out.rsf rect=rect.rsf niter=100 nliter=1 verb=n eps=0.
+[PARAMETERS]
+float   | eps | =0. |   | 	regularization parameter 
+int     | niter | =100 |   | 	number of iterations 
+int     | nliter | =1 |   | 	number of nonlinear iterations 
+file    | rect | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/fomels

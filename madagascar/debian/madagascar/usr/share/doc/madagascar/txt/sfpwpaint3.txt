@@ -1,0 +1,13 @@
+Program sfpwpaint3 | 3-D painting by plane-wave construction. 
+[SYNOPSIS]
+sfpwpaint3 < dip.rsf > out.rsf seed=seed.rsf cost=cost.rsf verb=n eps=0.01 ref2=0 ref3=0 order=1
+[PARAMETERS]
+file    | cost | = |   | 	auxiliary input file name
+float   | eps | =0.01 |   | 	regularization 
+int     | order | =1 |   | 	accuracy order 
+int     | ref2 | =0 |   | 	
+int     | ref3 | =0 |   | 	reference trace 
+file    | seed | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	
+[DIRECTORY]
+user/pwd

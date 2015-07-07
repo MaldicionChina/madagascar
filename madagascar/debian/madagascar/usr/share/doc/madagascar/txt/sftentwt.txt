@@ -1,0 +1,13 @@
+Program sftentwt | Tent-like weight for patching.
+[SYNOPSIS]
+sftentwt > wallwt.rsf windwt=windwt.rsf w= k= a= center= dim=2 tent=y
+[PARAMETERS]
+ints    | a | = |   | 	filter size  [dim]
+ints    | center | = |   | 	 [dim]
+int     | dim | =2 |   | 	number of dimensions 
+ints    | k | = |   | 	number of windows  [dim]
+bool    | tent | =y |  [y/n] | 	if y, use tent-like weight; n, cosine weight 
+ints    | w | = |   | 	window size  [dim]
+file    | windwt | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/gee

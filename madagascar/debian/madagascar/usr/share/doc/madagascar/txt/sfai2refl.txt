@@ -1,0 +1,10 @@
+Program sfai2refl | Convert acoustic impedance to reflectivity. 
+[SYNOPSIS]
+sfai2refl < ai.rsf > mod.rsf
+[COMMENTS]
+
+August 2013 program of the month:
+http://www.ahay.org/rsflog/index.php?/archives/350-Program-of-the-month-sfai2refl.html
+
+[DIRECTORY]
+system/seismic

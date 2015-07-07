@@ -1,0 +1,17 @@
+Program sfTestfd3d | 3D acoustic time-domain FD modeling
+[SYNOPSIS]
+sfTestfd3d < Fv.rsf > Fw.rsf verb=n verb=n frsf=n nt= kt= ns=1 nb=30 dt= fm=20
+[COMMENTS]
+4th order in space, 2nd order in time, sponge absorbing boundary condition.
+
+[PARAMETERS]
+float   | dt | = |   | 	
+float   | fm | =20 |   | 	
+bool    | frsf | =n |  [y/n] | 	free surface or not 
+int     | kt | = |   | 	record wavefield at time kt 
+int     | nb | =30 |   | 	
+int     | ns | =1 |   | 	
+int     | nt | = |   | 	
+bool    | verb | =n |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/pyang

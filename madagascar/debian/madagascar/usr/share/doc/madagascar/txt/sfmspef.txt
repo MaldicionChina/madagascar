@@ -1,0 +1,15 @@
+Program sfmspef | Multi-scale PEF estimation.
+[SYNOPSIS]
+sfmspef < in.rsf > pef.rsf maskin=mask.rsf a= center= gap= jump= ns= niter=nh*2 lag= maskout=
+[PARAMETERS]
+ints    | a | = |   | 	 [dim]
+ints    | center | = |   | 	 [dim]
+ints    | gap | = |   | 	 [dim]
+ints    | jump | = |   | 	 [ns]
+string  | lag | = |   | 	output file for filter lags 
+string  | maskin | = |   | 	optional input mask file (auxiliary input file name)
+string  | maskout | = |   | 	optional output mask file 
+int     | niter | =nh*2 |   | 	
+int     | ns | = |   | 	number of scales 
+[DIRECTORY]
+user/gee

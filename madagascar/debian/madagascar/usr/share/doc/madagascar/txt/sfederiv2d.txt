@@ -1,0 +1,15 @@
+Program sfederiv2d | 
+[SYNOPSIS]
+sfederiv2d ccc=Fccc.rsf < Fspk.rsf zdel=Fzdel.rsf xdel=Fxdel.rsf verb=n stat=y sig=1.5 order=8 domain= tapertype=
+[PARAMETERS]
+file    | ccc | = |   | 	auxiliary input file name
+string  | domain | = |   | 	
+int     | order | =8 |   | 	order 
+float   | sig | =1.5 |   | 	sigma 
+bool    | stat | =y |  [y/n] | 	stationary operator 
+string  | tapertype | = |   | 	
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+file    | xdel | = |   | 	auxiliary output file name
+file    | zdel | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/jyan

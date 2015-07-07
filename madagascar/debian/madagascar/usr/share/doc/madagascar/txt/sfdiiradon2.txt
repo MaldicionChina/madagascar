@@ -1,0 +1,12 @@
+Program sfdiiradon2 | direct 2to2 hyper Radon transform (double integral, exact)
+[SYNOPSIS]
+sfdiiradon2 < input.rsf > output.rsf ntau= np= tau0= dtau= p0= dp=
+[PARAMETERS]
+        | dp | = |   | 	
+        | dtau | = |   | 	
+        | np | = |   | 	
+        | ntau | = |   | 	
+        | p0 | = |   | 	
+        | tau0 | = |   | 	
+[DIRECTORY]
+user/jingwei

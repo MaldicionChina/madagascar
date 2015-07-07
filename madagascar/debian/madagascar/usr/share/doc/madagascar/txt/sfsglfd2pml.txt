@@ -1,0 +1,31 @@
+Program sfsglfd2pml | 2-D Lowrank Finite-difference wave extrapolation on staggered grid
+[SYNOPSIS]
+sfsglfd2pml < fsource.rsf vel=fvel.rsf den=fden.rsf > fwf.rsf rec=frec.rsf Gx=fGx.rsf Gz=fGz.rsf sxx=fsxx.rsf sxz=fsxz.rsf szx=fszx.rsf szz=fszz.rsf verb=n srcdecay=n srcrange=10 srctrunc=100 snapinter=1 pmlsize=PMLOUT pmld0=PMLD0 decay=DECAY_FLAG decaybegin=DECAY_BEGIN freesurface=n slx=-1.0 spx=-1 slz=-1.0 spz=-1 gdep=-1.0 gp=0
+[PARAMETERS]
+file    | Gx | = |   | 	auxiliary input file name
+file    | Gz | = |   | 	auxiliary input file name
+int     | decay | =DECAY_FLAG |   | 	Flag of decay boundary condtion: 1 = use ; 0 = not use 
+int     | decaybegin | =DECAY_BEGIN |   | 	Begin time of using decay boundary condition 
+file    | den | = |   | 	auxiliary input file name
+bool    | freesurface | =n |  [y/n] | 	free surface
+float   | gdep | =-1.0 |   | 	recorder depth on grid
+int     | gp | =0 |   | 	recorder depth on index
+int     | pmld0 | =PMLD0 |   | 	PML parameter 
+int     | pmlsize | =PMLOUT |   | 	size of PML layer 
+file    | rec | = |   | 	auxiliary output file name
+float   | slx | =-1.0 |   | 	source location x 
+float   | slz | =-1.0 |   | 	source location z 
+int     | snapinter | =1 |   | 	snap interval 
+int     | spx | =-1 |   | 	source location x (index)
+int     | spz | =-1 |   | 	source location z (index)
+bool    | srcdecay | =n |  [y/n] | 	source decay
+int     | srcrange | =10 |   | 	source decay range
+float   | srctrunc | =100 |   | 	trunc source after srctrunc time (s)
+file    | sxx | = |   | 	auxiliary input file name
+file    | sxz | = |   | 	auxiliary input file name
+file    | szx | = |   | 	auxiliary input file name
+file    | szz | = |   | 	auxiliary input file name
+file    | vel | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity
+[DIRECTORY]
+user/fangg

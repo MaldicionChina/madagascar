@@ -1,0 +1,5 @@
+#! /usr/bin/dh-exec
+
+debian/modificaciones_madagascar/env_madagascar.sh etc/profile.d/
+debian/modificaciones_madagascar/env.sh usr/share/madagascar/etc/
+debian/modificaciones_madagascar/env.csh usr/share/madagascar/etc/

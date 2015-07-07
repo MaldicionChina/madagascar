@@ -1,0 +1,11 @@
+Program sfrmrf | Recursively removes all RSF headers in a directory (associated binaries too)
+[SYNOPSIS]
+sfrmrf verb=n dir= rec=n
+[COMMENTS]
+Missing binaries do not cause failure.
+[PARAMETERS]
+string  | dir | = |   | 	Directory with files
+bool    | rec | =n |  [y/n] | 	Whether to go down recursively
+bool    | verb | =n |  [y/n] | 	Display headers and binaries being deleted
+[DIRECTORY]
+user/ivlad

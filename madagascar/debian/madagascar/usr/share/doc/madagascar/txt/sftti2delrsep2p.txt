@@ -1,0 +1,26 @@
+Program sftti2delrsep2p | None
+[SYNOPSIS]
+sftti2delrsep2p < vp0.rsf Errpolxp1=Errpolxp1.rsf Errpolxp2=Errpolxp2.rsf Polxp1=Polxp1.rsf Polxp2=Polxp2.rsf Errpolzp1=Errpolzp1.rsf Errpolzp2=Errpolzp2.rsf Polzp1=Polzp1.rsf Polzp2=Polzp2.rsf > Elasticx.rsf ElasticSepP=ElasticSepP.rsf ElasticSepSV=ElasticSepSV.rsf seed=time(NULL eps=1.e-6 npk=20 ns= dt= ireconstruct= xrec1= zrec1= xrec2= zrec2=
+[PARAMETERS]
+file    | ElasticSepP | = |   | 	auxiliary output file name
+file    | ElasticSepSV | = |   | 	auxiliary output file name
+file    | Errpolxp1 | = |   | 	auxiliary output file name
+file    | Errpolxp2 | = |   | 	auxiliary output file name
+file    | Errpolzp1 | = |   | 	auxiliary output file name
+file    | Errpolzp2 | = |   | 	auxiliary output file name
+file    | Polxp1 | = |   | 	auxiliary output file name
+file    | Polxp2 | = |   | 	auxiliary output file name
+file    | Polzp1 | = |   | 	auxiliary output file name
+file    | Polzp2 | = |   | 	auxiliary output file name
+        | dt | = |   | 	
+        | eps | =1.e-6 |   | 	tolerance
+        | ireconstruct | = |   | 	
+        | npk | =20 |   | 	maximum rank
+        | ns | = |   | 	
+        | seed | =time(NULL |   | 	
+        | xrec1 | = |   | 	
+        | xrec2 | = |   | 	
+        | zrec1 | = |   | 	
+        | zrec2 | = |   | 	
+[DIRECTORY]
+user/chengjb

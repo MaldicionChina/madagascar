@@ -1,0 +1,16 @@
+Program sformatrix | Lowrank decomposition for 3-D orthorhombic wave propagation. 
+[SYNOPSIS]
+sformatrix < velz.rsf fft=fft.rsf > middle.rsf app=app.rsf real=real.rsf seed=time(NULL eps=1.e-4 npk=20 xx1= xx2= xx3= dt=
+[PARAMETERS]
+file    | app | = |   | 	auxiliary output file name
+        | dt | = |   | 	time step
+        | eps | =1.e-4 |   | 	tolerance
+file    | fft | = |   | 	auxiliary input file name
+        | npk | =20 |   | 	maximum rank
+file    | real | = |   | 	auxiliary output file name
+        | seed | =time(NULL |   | 	
+        | xx1 | = |   | 	x location
+        | xx2 | = |   | 	x location
+        | xx3 | = |   | 	x location
+[DIRECTORY]
+user/songxl

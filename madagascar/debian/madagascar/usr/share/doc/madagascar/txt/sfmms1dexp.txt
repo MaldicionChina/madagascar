@@ -1,0 +1,19 @@
+Program sfmms1dexp | 1D method of manufactured solution using Gaussian pulsa
+[SYNOPSIS]
+sfmms1dexp < Fvel.rsf dvel=Fdvel.rsf den=Fden.rsf velhf=Fvelhf.rsf dvelhf=Fdvelhf.rsf denhf=Fdenhf.rsf presrc=Fpsrc.rsf velsrc=Fvsrc.rsf preinit=Fpint.rsf velinit=Fvint.rsf > Fmms.rsf nt= dt= slx=nx*dx*0.5 alpha=1.0e-2
+[PARAMETERS]
+float   | alpha | =1.0e-2 |   | 	source parameter
+file    | den | = |   | 	auxiliary input file name
+file    | denhf | = |   | 	auxiliary input file name
+float   | dt | = |   | 	time step
+file    | dvel | = |   | 	auxiliary input file name
+file    | dvelhf | = |   | 	auxiliary input file name
+int     | nt | = |   | 	number of time step
+file    | preinit | = |   | 	auxiliary output file name
+file    | presrc | = |   | 	auxiliary output file name
+float   | slx | =nx*dx*0.5 |   | 	center of source location: x
+file    | velhf | = |   | 	auxiliary input file name
+file    | velinit | = |   | 	auxiliary output file name
+file    | velsrc | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/fangg

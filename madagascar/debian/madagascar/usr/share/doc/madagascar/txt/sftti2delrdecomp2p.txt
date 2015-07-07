@@ -1,0 +1,32 @@
+Program sftti2delrdecomp2p | None
+[SYNOPSIS]
+sftti2delrdecomp2p < vp0.rsf Errdecxp1=Errdecxp1.rsf Errdecxp2=Errdecxp2.rsf Decompxp1=Decompxp1.rsf Decompxp2=Decompxp2.rsf Errdecxzp1=Errdecxzp1.rsf Errdecxzp2=Errdecxzp2.rsf Decompxzp1=Decompxzp1.rsf Decompxzp2=Decompxzp2.rsf Errdeczp1=Errdeczp1.rsf Errdeczp2=Errdeczp2.rsf Decompzp1=Decompzp1.rsf Decompzp2=Decompzp2.rsf > ElasticX.rsf ElasticPx=ElasticPx.rsf ElasticPz=ElasticPz.rsf ElasticSVx=ElasticSVx.rsf ElasticSVz=ElasticSVz.rsf seed=time(NULL eps=1.e-6 npk=20 ns= dt= ireconstruct= xrec1= zrec1= xrec2= zrec2=
+[PARAMETERS]
+file    | Decompxp1 | = |   | 	auxiliary output file name
+file    | Decompxp2 | = |   | 	auxiliary output file name
+file    | Decompxzp1 | = |   | 	auxiliary output file name
+file    | Decompxzp2 | = |   | 	auxiliary output file name
+file    | Decompzp1 | = |   | 	auxiliary output file name
+file    | Decompzp2 | = |   | 	auxiliary output file name
+file    | ElasticPx | = |   | 	auxiliary output file name
+file    | ElasticPz | = |   | 	auxiliary output file name
+file    | ElasticSVx | = |   | 	auxiliary output file name
+file    | ElasticSVz | = |   | 	auxiliary output file name
+file    | Errdecxp1 | = |   | 	auxiliary output file name
+file    | Errdecxp2 | = |   | 	auxiliary output file name
+file    | Errdecxzp1 | = |   | 	auxiliary output file name
+file    | Errdecxzp2 | = |   | 	auxiliary output file name
+file    | Errdeczp1 | = |   | 	auxiliary output file name
+file    | Errdeczp2 | = |   | 	auxiliary output file name
+        | dt | = |   | 	
+        | eps | =1.e-6 |   | 	tolerance
+        | ireconstruct | = |   | 	
+        | npk | =20 |   | 	maximum rank
+        | ns | = |   | 	
+        | seed | =time(NULL |   | 	
+        | xrec1 | = |   | 	
+        | xrec2 | = |   | 	
+        | zrec1 | = |   | 	
+        | zrec2 | = |   | 	
+[DIRECTORY]
+user/chengjb

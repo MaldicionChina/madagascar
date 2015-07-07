@@ -1,0 +1,14 @@
+Program sffftexp3 | 3-D FFT-based zero-offset exploding reflector modeling/migration  
+[SYNOPSIS]
+sffftexp3 < data.rsf > image.rsf left=left.rsf right=right.rsf mig=n ompchunk=1 nz= dz= nt= dt=
+[PARAMETERS]
+float   | dt | = |   | 	time sampling (if modeling) 
+float   | dz | = |   | 	time sampling (if migration) 
+file    | left | = |   | 	auxiliary input file name
+bool    | mig | =n |  [y/n] | 	if n, modeling; if y, migration 
+int     | nt | = |   | 	time samples (if modeling) 
+int     | nz | = |   | 	time samples (if migration) 
+int     | ompchunk | =1 |   | 	OpenMP data chunk size 
+file    | right | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/fomels

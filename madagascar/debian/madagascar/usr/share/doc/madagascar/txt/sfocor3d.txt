@@ -1,0 +1,24 @@
+Program sfocor3d | 
+[SYNOPSIS]
+sfocor3d < Fwfl.rsf opr=Fopr.rsf > Fcor.rsf verb=n adj=n ocox=0.0 ocoy=0.0 ocoz=0.0 ntlag=100 nxlag=0 nylag=0 nzlag=0
+[COMMENTS]
+Oriented correlation
+wfl [file] : is taken from stdin
+opr [file] : is taken from  "opr"
+requires both files to have the same dimensions
+correlation is computed at coordinates (ocox,ocoy,ocoz)
+the (half) lags are: ntlag, nxlag, nylag, nzlag
+
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag
+int     | ntlag | =100 |   | 	
+int     | nxlag | =0 |   | 	
+int     | nylag | =0 |   | 	
+int     | nzlag | =0 |   | 	
+float   | ocox | =0.0 |   | 	
+float   | ocoy | =0.0 |   | 	
+float   | ocoz | =0.0 |   | 	
+file    | opr | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag
+[DIRECTORY]
+user/psava

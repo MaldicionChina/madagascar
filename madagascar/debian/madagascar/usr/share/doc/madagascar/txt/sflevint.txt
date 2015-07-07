@@ -1,0 +1,13 @@
+Program sflevint | Leveler inverse interpolation in 1-D. 
+[SYNOPSIS]
+sflevint < in.rsf > out.rsf nx= x0= dx= niter=1+m1*3/2 eps=0.2 na=3 head=
+[PARAMETERS]
+float   | dx | = |   | 	grid sampling 
+float   | eps | =0.2 |   | 	regularization parameter 
+string  | head | = |   | 	
+int     | na | =3 |   | 	
+int     | niter | =1+m1*3/2 |   | 	
+int     | nx | = |   | 	number of bins 
+float   | x0 | = |   | 	grid origin 
+[DIRECTORY]
+user/gee

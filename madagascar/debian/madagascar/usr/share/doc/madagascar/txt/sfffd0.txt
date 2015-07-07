@@ -1,0 +1,24 @@
+Program sfffd0 | 2-D FFD zero-offset migration: MPI + OMP
+[SYNOPSIS]
+sfffd0 vel=vel.rsf < source.rsf > output.rsf opt=y jr=1 r0=0 jm=20 err=0.00001 alpha=-0.7 nbt=44 nbb=44 nbl=44 nbr=44 ct=0.01 cb=0.01 cl=0.01 cr=0.01 ax=2.0 az=2.0 factor=2.0/3.0
+[PARAMETERS]
+float   | alpha | =-0.7 |   | 	
+float   | ax | =2.0 |   | 	suppress HF parameter
+float   | az | =2.0 |   | 	suppress HF parameter
+float   | cb | =0.01 |   | 	decaying parameter
+float   | cl | =0.01 |   | 	decaying parameter
+float   | cr | =0.01 |   | 	decaying parameter
+float   | ct | =0.01 |   | 	decaying parameter
+float   | err | =0.00001 |   | 	
+float   | factor | =2.0/3.0 |   | 	suppress HF parameter
+int     | jm | =20 |   | 	
+int     | jr | =1 |   | 	
+int     | nbb | =44 |   | 	
+int     | nbl | =44 |   | 	
+int     | nbr | =44 |   | 	
+int     | nbt | =44 |   | 	
+bool    | opt | =y |  [y/n] | 	
+int     | r0 | =0 |   | 	
+file    | vel | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/songxl

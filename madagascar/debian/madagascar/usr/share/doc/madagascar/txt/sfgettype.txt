@@ -1,0 +1,8 @@
+Program sfgettype | Displays numerical type of a dataset
+[SYNOPSIS]
+sfgettype < in.rsf
+[COMMENTS]
+Output can be be: SF_CHAR, SF_COMPLEX, SF_FLOAT, SF_INT, SF_SHORT, SF_UCHAR
+Shell/tester for sf_gettype
+[DIRECTORY]
+user/ivlad

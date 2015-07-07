@@ -1,0 +1,11 @@
+Program sffreshape | Nonstationary spectral balancing in frequency domain. 
+[SYNOPSIS]
+sffreshape < in.rsf in2=in2.rsf ma=ma.rsf ma2=ma2.rsf > out.rsf out2=out2.rsf dim=1
+[PARAMETERS]
+int     | dim | =1 |   | 	data dimensionality 
+string  | in2 | = |   | 	optional second input file (auxiliary input file name)
+file    | ma | = |   | 	auxiliary input file name
+file    | ma2 | = |   | 	auxiliary input file name
+file    | out2 | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/yliu

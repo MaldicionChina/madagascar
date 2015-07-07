@@ -1,0 +1,13 @@
+Program sfgpurayt | Parallel shortest path ray tracing
+[SYNOPSIS]
+sfgpurayt < in.rsf > out.rsf ray=rayout.rsf ctime=ctimeout.rsf sx=0 sz=0 bs=16 ord=3 dx=1.0f ray= ctime=
+[PARAMETERS]
+        | bs | =16 |   | 	Cuda block is a square with bs*bs threads. Must divide dimensions of in.rsf, bs >= 1 (int)
+        | ctime | = |   | 	Output rsf file for computation time. Empty for no computation time output.
+        | dx | =1.0f |   | 	Horizontal and vertical separation between nodes, dx > 0.0 (float)
+        | ord | =3 |   | 	Forward star has (ord*ord-1) nodes, ord >= 1 (int)
+        | ray | = |   | 	Output file for a sfgraph compatible ray file. Empty for no ray output.
+        | sx | =0 |   | 	Horizontal node source coordinate (int)
+        | sz | =0 |   | 	Vertical node source coordinate (int)
+[DIRECTORY]
+user/jmonsegny

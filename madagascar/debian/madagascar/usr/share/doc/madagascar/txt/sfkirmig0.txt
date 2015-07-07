@@ -1,0 +1,18 @@
+Program sfkirmig0 | 2-D Post-stack Kirchhoff depth migration. 
+[SYNOPSIS]
+sfkirmig0 < dat.rsf > mig.rsf table=tbl.rsf deriv=der.rsf adj=y nt= ns= t0=0.0 dt= s0=0.0 ds= aperture=90. antialias=1.0 type=
+[PARAMETERS]
+bool    | adj | =y |  [y/n] | 	y for migration, n for modeling 
+float   | antialias | =1.0 |   | 	antialiasing 
+float   | aperture | =90. |   | 	migration aperture (in degree) 
+file    | deriv | = |   | 	auxiliary input file name
+float   | ds | = |   | 	midpoint sampling 
+float   | dt | = |   | 	time sampling 
+int     | ns | = |   | 	midpoint samples 
+int     | nt | = |   | 	time samples 
+float   | s0 | =0.0 |   | 	midpoint origin 
+float   | t0 | =0.0 |   | 	time origin 
+file    | table | = |   | 	auxiliary input file name
+string  | type | = |   | 	type of interpolation (default Hermit) 
+[DIRECTORY]
+user/llisiw

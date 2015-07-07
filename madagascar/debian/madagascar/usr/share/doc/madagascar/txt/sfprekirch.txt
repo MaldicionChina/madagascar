@@ -1,0 +1,15 @@
+Program sfprekirch | 2-D Prestack Kirchhoff time migration with antialiasing. 
+[SYNOPSIS]
+sfprekirch < inp.rsf vel=vel.rsf > mig.rsf nz=nt dz=dt z0=t0 antialias=1.0
+[COMMENTS]
+The axes in the input are {time,midpoint,offset}
+The axes in the output are {time,midpoint}
+
+[PARAMETERS]
+float   | antialias | =1.0 |   | 	antialiasing 
+float   | dz | =dt |   | 	
+int     | nz | =nt |   | 	
+file    | vel | = |   | 	auxiliary input file name
+float   | z0 | =t0 |   | 	
+[DIRECTORY]
+user/chenyk

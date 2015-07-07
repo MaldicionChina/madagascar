@@ -1,0 +1,12 @@
+Program sflsfit | Simple least-squares regression. 
+[SYNOPSIS]
+sflsfit < inp.rsf fit=fit.rsf > out.rsf coef=coef.rsf weight=wht.rsf linear=y dim=dim eps=0.0f
+[PARAMETERS]
+string  | coef | = |   | 	auxiliary output file name
+int     | dim | =dim |   | 	number of dimensions 
+float   | eps | =0.0f |   | 	regularization parameter 
+file    | fit | = |   | 	auxiliary input file name
+bool    | linear | =y |  [y/n] | 	if linear LS 
+string  | weight | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/fomels

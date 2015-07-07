@@ -1,0 +1,10 @@
+Program sfemd | Empirical Mode Decomposition 
+[SYNOPSIS]
+sfemd < inp.rsf > outp.rsf threshold=DEFAULT_THRESHOLD tolerance=DEFAULT_TOLERANCE miter=MAX_ITERATIONS mimf=0
+[PARAMETERS]
+int     | mimf | =0 |   | 	Maximum number of IMFs, the default is as many as possible. 
+int     | miter | =MAX_ITERATIONS |   | 	Maximum number of iterations during sifting, the default is 1000. 
+float   | threshold | =DEFAULT_THRESHOLD |   | 	Sifting stoping parameter: threshold, the default is 0.05. 
+float   | tolerance | =DEFAULT_TOLERANCE |   | 	Sifting stoping parameter: tolerance, the default is 0.05. 
+[DIRECTORY]
+user/chenyk

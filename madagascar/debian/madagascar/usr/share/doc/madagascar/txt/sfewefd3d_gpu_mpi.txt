@@ -1,0 +1,22 @@
+Program sfewefd3d_gpu_mpi | 3D elastic time-domain FD modeling with multiple GPUs coordinated via MPI
+[SYNOPSIS]
+sfewefd3d_gpu_mpi wav=Fwav.rsf ccc=Fccc.rsf den=Fden.rsf sou=Fsou.rsf rec=Frec.rsf wfl=Fwfl.rsf > Fdat.rsf verb=n snap=n free=n ssou=n dabc=n interp=y ngpu=1 nbell=5 jdata=1 jsnap=nt
+[PARAMETERS]
+file    | ccc | = |   | 	auxiliary input file name
+bool    | dabc | =n |  [y/n] | 	absorbing BC 
+file    | den | = |   | 	auxiliary input file name
+bool    | free | =n |  [y/n] | 	free surface flag 
+bool    | interp | =y |  [y/n] | 	perform linear interpolation on receiver locations 
+int     | jdata | =1 |   | 	extract receiver data every jdata time steps 
+int     | jsnap | =nt |   | 	save wavefield every jsnap time steps 
+int     | nbell | =5 |   | 	bell size 
+int     | ngpu | =1 |   | 	Number of GPUs in each node, must be set to lowest common number of GPUs
+file    | rec | = |   | 	auxiliary input file name
+bool    | snap | =n |  [y/n] | 	wavefield snapshots flag 
+file    | sou | = |   | 	auxiliary input file name
+bool    | ssou | =n |  [y/n] | 	stress source 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+file    | wav | = |   | 	auxiliary input file name
+file    | wfl | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/rweiss

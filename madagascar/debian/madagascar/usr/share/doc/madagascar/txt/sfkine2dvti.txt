@@ -1,0 +1,39 @@
+Program sfkine2dvti | 2-D two-components wavefield modeling using pseudo-pure mode P-wave equation in VTI media.
+[SYNOPSIS]
+sfkine2dvti > Fo1.rsf WFp=Fo2.rsf WFs=Fo3.rsf nx=201 nz=201 dx=0.008 dz=0.008 time=0.2 da=0.05 vp0=3000.0 vs0=1200.0 eps=0.2 del=0.1 the=0.0 t0=0.04 f0=20.0
+[COMMENTS]
+   Copyright (C) 2012 Tongji University, Shanghai, China 
+   Authors: Jiubing Cheng and Wei Kang
+     
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+             
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+                   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+[PARAMETERS]
+file    | WFp | = |   | 	auxiliary output file name
+file    | WFs | = |   | 	auxiliary output file name
+float   | da | =0.05 |   | 	
+float   | del | =0.1 |   | 	
+float   | dx | =0.008 |   | 	
+float   | dz | =0.008 |   | 	
+float   | eps | =0.2 |   | 	
+float   | f0 | =20.0 |   | 	
+int     | nx | =201 |   | 	
+int     | nz | =201 |   | 	
+float   | t0 | =0.04 |   | 	
+float   | the | =0.0 |   | 	
+float   | time | =0.2 |   | 	unit: SECOND 
+float   | vp0 | =3000.0 |   | 	
+float   | vs0 | =1200.0 |   | 	
+[DIRECTORY]
+user/chengjb

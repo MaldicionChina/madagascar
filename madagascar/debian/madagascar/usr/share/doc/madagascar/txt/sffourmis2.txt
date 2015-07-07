@@ -1,0 +1,22 @@
+Program sffourmis2 | Missing data interpolation in 2-D using Fourier transform and compressive sensing. 
+[SYNOPSIS]
+sffourmis2 < in.rsf > out.rsf mask=mask.rsf res=res.rsf ref=ref.rsf niter=20 verb=n error=n cut=n f0=0. k0=0. parf=0. parw=0. orderf=1. orderw=1. perc=99. ordert=1. ordert=1. oper=
+[PARAMETERS]
+bool    | cut | =n |  [y/n] | 	cutting verbosity flag, the default is soft-thresholding 
+bool    | error | =n |  [y/n] | 	error verbosity flag 
+float   | f0 | =0. |   | 	initial cutting frequency 
+float   | k0 | =0. |   | 	initial cutting wavenumber 
+string  | mask | = |   | 	auxiliary input file name
+int     | niter | =20 |   | 	number of iterations 
+string  | oper | = |   | 	[shaping,pocs,bregman] method, the default is shaping 
+float   | orderf | =1. |   | 	Curve order for frequency window, default is linear 
+float   | ordert | =1. |   | 	Curve order for thresholding parameter, default is linear 
+float   | orderw | =1. |   | 	Curve order for frequency window, default is linear 
+float   | parf | =0. |   | 	Ajustable parameter for frequency window, default is fixed window 
+float   | parw | =0. |   | 	Ajustable parameter for wavenumber window, default is fixed window 
+float   | perc | =99. |   | 	percentage for soft-thresholding 
+file    | ref | = |   | 	auxiliary input file name
+string  | res | = |   | 	auxiliary output file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/yliu

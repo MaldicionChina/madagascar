@@ -1,0 +1,12 @@
+Program sfbilat2 | 2-D bilateral filtering 
+[SYNOPSIS]
+sfbilat2 < inp.rsf > out.rsf r1=1 r2=1 a1=0.0f a2=a1 a3=0.0f repeat=1
+[PARAMETERS]
+float   | a1 | =0.0f |   | 	vertical attenuation factor 
+float   | a2 | =a1 |   | 	horizontal attenuation factor 
+float   | a3 | =0.0f |   | 	data attenuation factor 
+int     | r1 | =1 |   | 	vertical smoothing radius 
+int     | r2 | =1 |   | 	horizontal smoothing radius 
+int     | repeat | =1 |   | 	repeat the operation 
+[DIRECTORY]
+user/fomels

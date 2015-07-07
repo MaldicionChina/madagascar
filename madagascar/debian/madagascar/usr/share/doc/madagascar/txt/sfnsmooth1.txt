@@ -1,0 +1,8 @@
+Program sfnsmooth1 | 1-D non-stationary smoothing. 
+[SYNOPSIS]
+sfnsmooth1 < in.rsf > out.rsf rect=rect.rsf repeat=1
+[PARAMETERS]
+file    | rect | = |   | 	auxiliary input file name
+int     | repeat | =1 |   | 	repeat filtering several times 
+[DIRECTORY]
+user/fomels

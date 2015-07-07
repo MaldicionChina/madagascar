@@ -1,0 +1,17 @@
+Program sfsp | 2-D Pseudo-spectral wave extrapolation 
+[SYNOPSIS]
+sfsp > out.rsf vel=vel.rsf < source.rsf opt=y dt= nt= isx= isz= nb=30 c=0.01 ax=5.0 az=5.0 factor=5.0/6.0
+[PARAMETERS]
+float   | ax | =5.0 |   | 	suppress HF parameter
+float   | az | =5.0 |   | 	suppress HF parameter
+float   | c | =0.01 |   | 	decaying parameter
+float   | dt | = |   | 	
+float   | factor | =5.0/6.0 |   | 	suppress HF parameter
+int     | isx | = |   | 	
+int     | isz | = |   | 	
+int     | nb | =30 |   | 	
+int     | nt | = |   | 	
+bool    | opt | =y |  [y/n] | 	if y, determine optimal size for efficiency 
+file    | vel | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/songxl

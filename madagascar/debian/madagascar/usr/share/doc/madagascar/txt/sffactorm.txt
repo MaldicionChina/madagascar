@@ -1,0 +1,13 @@
+Program sffactorm | Plane-wave destruction with 3-D plane-wave filter. 
+[SYNOPSIS]
+sffactorm < in.rsf > out.rsf dip=dip.rsf eps=0.001 nt= nx= npx=100 npy=100 niter=10
+[PARAMETERS]
+file    | dip | = |   | 	auxiliary input file name
+float   | eps | =0.001 |   | 	
+int     | niter | =10 |   | 	number of iterations 
+int     | npx | =100 |   | 	
+int     | npy | =100 |   | 	np = npx *npy; 
+int     | nt | = |   | 	
+int     | nx | = |   | 	
+[DIRECTORY]
+user/gee

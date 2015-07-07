@@ -1,0 +1,9 @@
+Program sfpredict | 2-D plane-wave prediction. 
+[SYNOPSIS]
+sfpredict < in.rsf dip=dip.rsf > out.rsf adj=n order=1
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	
+file    | dip | = |   | 	auxiliary input file name
+int     | order | =1 |   | 	accuracy order 
+[DIRECTORY]
+user/pwd

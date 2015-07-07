@@ -1,0 +1,19 @@
+Program sfradon34 | azimuthally anisotropic 3to4 Radon transform (using 3to3 butterfly)
+[SYNOPSIS]
+sfradon34 < input.rsf > output.rsf ntau= np= nq= ns= tau0= dtau= p0= dp= q0= dq= s0= ds= N=
+[PARAMETERS]
+        | N | = |   | 	number of partitions
+        | dp | = |   | 	
+        | dq | = |   | 	
+        | ds | = |   | 	
+        | dtau | = |   | 	
+        | np | = |   | 	
+        | nq | = |   | 	
+        | ns | = |   | 	
+        | ntau | = |   | 	
+        | p0 | = |   | 	
+        | q0 | = |   | 	
+        | s0 | = |   | 	
+        | tau0 | = |   | 	
+[DIRECTORY]
+user/jingwei

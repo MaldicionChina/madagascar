@@ -1,0 +1,11 @@
+Program sflow | Calculating local (signal-and-noise) orthogonalization weight (LOW)  
+[SYNOPSIS]
+sflow < fnoi.rsf sig=fsig.rsf > flow.rsf niter=100 verb=y eps=0.0f rect#=(1,1,...)
+[PARAMETERS]
+float   | eps | =0.0f |   | 	regularization 
+int     | niter | =100 |   | 	number of iterations 
+int     | rect# | =(1,1,...) |   | 	smoothing radius on #-th axis 
+file    | sig | = |   | 	auxiliary input file name
+bool    | verb | =y |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/chenyk

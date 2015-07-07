@@ -1,0 +1,14 @@
+Program sfwavmod | 1-2-3D finite difference modeling 
+[SYNOPSIS]
+sfwavmod < in.rsf vel=vel.rsf sgrid=sgrid.rsf ggrid=ggrid.rsf > dat.rsf wfl=wfl.rsf jt=1 jtm=100 ot=0.0 verb=n
+[PARAMETERS]
+file    | ggrid | = |   | 	auxiliary input file name
+int     | jt | =1 |   | 	time interval in observation system 
+int     | jtm | =100 |   | 	time interval of wave movie 
+float   | ot | =0.0 |   | 	time delay 
+file    | sgrid | = |   | 	auxiliary input file name
+file    | vel | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity 
+string  | wfl | = |   | 	wavefield movie file (auxiliary output file name)
+[DIRECTORY]
+user/chen

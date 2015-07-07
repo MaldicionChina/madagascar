@@ -1,0 +1,14 @@
+Program sfseislet | Seislet transform 
+[SYNOPSIS]
+sfseislet < in.rsf > out.rsf dip=dip.rsf inv=n adj=n eps=0.01 unit=n order=1 verb=n type=
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	if y, do adjoint transform 
+file    | dip | = |   | 	auxiliary input file name
+float   | eps | =0.01 |   | 	regularization 
+bool    | inv | =n |  [y/n] | 	if y, do inverse transform 
+int     | order | =1 |   | 	accuracy order 
+string  | type | = |   | 	[haar,linear,biorthogonal] wavelet type, the default is linear  
+bool    | unit | =n |  [y/n] | 	if y, use unitary scaling 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/pwd

@@ -1,0 +1,15 @@
+Program sfpfactor2 | Plane prediction filter on a helix. 
+[SYNOPSIS]
+sfpfactor2 > filt.rsf nt= nx= p= q= niter=20 na=25 eps=FLT_EPSILON fixed=y lag=
+[PARAMETERS]
+float   | eps | =FLT_EPSILON |   | 	compression tolerance 
+bool    | fixed | =y |  [y/n] | 	if fixed size 
+string  | lag | = |   | 	
+int     | na | =25 |   | 	filter size 
+int     | niter | =20 |   | 	number of factorization iterations 
+int     | nt | = |   | 	
+int     | nx | = |   | 	
+float   | p | = |   | 	
+float   | q | = |   | 	
+[DIRECTORY]
+user/gee

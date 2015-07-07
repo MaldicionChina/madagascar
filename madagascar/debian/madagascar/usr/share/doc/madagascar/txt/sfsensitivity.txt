@@ -1,0 +1,27 @@
+Program sfsensitivity | Traveltime sensitivity kernels. 
+[SYNOPSIS]
+sfsensitivity > out.rsf nx=100 ny=1 nz=100 ox=0. oy=0. oz=0. dx=0.02 dy=0.02 dz=0.02 v0=1.5 vgrad=.8 mode=6 sx=0.15 sy=0. sz=0.15 rx=1.6 ry=0. rz=1.605 t1=0.8 t2=1.2 dt=0.008
+[PARAMETERS]
+float   | dt | =0.008 |   | 	
+float   | dx | =0.02 |   | 	
+float   | dy | =0.02 |   | 	
+float   | dz | =0.02 |   | 	grid spacing 
+int     | mode | =6 |   | 	source coordinates 
+int     | nx | =100 |   | 	
+int     | ny | =1 |   | 	
+int     | nz | =100 |   | 	dimensions 
+float   | ox | =0. |   | 	
+float   | oy | =0. |   | 	
+float   | oz | =0. |   | 	grid origin 
+float   | rx | =1.6 |   | 	
+float   | ry | =0. |   | 	
+float   | rz | =1.605 |   | 	receiver 
+float   | sx | =0.15 |   | 	
+float   | sy | =0. |   | 	
+float   | sz | =0.15 |   | 	source 
+float   | t1 | =0.8 |   | 	
+float   | t2 | =1.2 |   | 	
+float   | v0 | =1.5 |   | 	surface velocity 
+float   | vgrad | =.8 |   | 	velocity gradient 
+[DIRECTORY]
+user/rickettj

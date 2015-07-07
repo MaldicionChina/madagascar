@@ -1,0 +1,10 @@
+Program sfexpand | Expand 2D data  
+[SYNOPSIS]
+sfexpand > out.rsf < in.rsf left=0.5*nx right=0.5*nx top=0 bottom=0
+[PARAMETERS]
+int     | bottom | =0 |   | 	
+int     | left | =0.5*nx |   | 	
+int     | right | =0.5*nx |   | 	
+int     | top | =0 |   | 	
+[DIRECTORY]
+user/fangg

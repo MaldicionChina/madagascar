@@ -1,0 +1,10 @@
+Program sfcdivn | Smooth division for complex data. 
+[SYNOPSIS]
+sfcdivn < fnum.rsf den=fden.rsf > frat.rsf niter=100 verb=y rect#=(1,1,...)
+[PARAMETERS]
+file    | den | = |   | 	auxiliary input file name
+int     | niter | =100 |   | 	number of iterations 
+int     | rect# | =(1,1,...) |   | 	smoothing radius on #-th axis 
+bool    | verb | =y |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/fomels

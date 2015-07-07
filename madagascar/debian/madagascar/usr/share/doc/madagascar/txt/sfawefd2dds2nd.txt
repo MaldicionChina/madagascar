@@ -1,0 +1,23 @@
+Program sfawefd2dds2nd | 2D acoustic time-domain FD modeling  for source perturbation- 2nd order approximation
+[SYNOPSIS]
+sfawefd2dds2nd < Fwav.rsf vel=Fvel.rsf sou=Fsou.rsf rec=Frec.rsf wfl=Fwfl.rsf > Fdat.rsf den=Fden.rsf verb=n snap=n free=n expl=n dabc=n dl=0.0 jdata=1 jsnap=nt nqz=sf_n(az) nqx=sf_n(ax) oqz=sf_o(az) oqx=sf_o(ax)
+[PARAMETERS]
+bool    | dabc | =n |  [y/n] | 	absorbing BC 
+file    | den | = |   | 	auxiliary input file name
+float   | dl | =0.0 |   | 	dl=0.0  perturbation distance 
+bool    | expl | =n |  [y/n] | 	"exploding reflector" 
+bool    | free | =n |  [y/n] | 	free surface flag 
+int     | jdata | =1 |   | 	
+int     | jsnap | =nt |   | 	
+int     | nqx | =sf_n(ax) |   | 	
+int     | nqz | =sf_n(az) |   | 	
+float   | oqx | =sf_o(ax) |   | 	
+float   | oqz | =sf_o(az) |   | 	
+file    | rec | = |   | 	auxiliary input file name
+bool    | snap | =n |  [y/n] | 	wavefield snapshots flag 
+file    | sou | = |   | 	auxiliary input file name
+file    | vel | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+file    | wfl | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/tariq

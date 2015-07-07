@@ -1,0 +1,13 @@
+Program sffdip | 3D fast dip estimation by plane wave destruction 
+[SYNOPSIS]
+sffdip < in.rsf > out.rsf mask=mask.rsf n4=2 liter=20 rect1=1 rect2=1 rect3=1 verb=n
+[PARAMETERS]
+int     | liter | =20 |   | 	number of linear iterations 
+string  | mask | = |   | 	auxiliary input file name
+int     | n4 | =2 |   | 	what to compute in 3-D. 0: in-line, 1: cross-line, 2: both 
+int     | rect1 | =1 |   | 	dip smoothness on 1st axis 
+int     | rect2 | =1 |   | 	dip smoothness on 2nd axis 
+int     | rect3 | =1 |   | 	dip smoothness on 3rd axuis 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/pwd

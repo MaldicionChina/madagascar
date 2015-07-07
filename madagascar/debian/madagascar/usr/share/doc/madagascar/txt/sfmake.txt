@@ -1,0 +1,14 @@
+Program sfmake | Simple 2-D synthetics with crossing plane waves.
+[SYNOPSIS]
+sfmake > mod.rsf n1=100 n2=14 n3=1 second=y n=3 p=3 t1=4 t2=4
+[PARAMETERS]
+int     | n | =3 |   | 	
+int     | n1 | =100 |   | 	
+int     | n2 | =14 |   | 	
+int     | n3 | =1 |   | 	dimensions 
+int     | p | =3 |   | 	
+bool    | second | =y |  [y/n] | 	if n, only one plane wave is modeled 
+int     | t1 | =4 |   | 	triangle smoother for first wave 
+int     | t2 | =4 |   | 	triangle smoother for second wave 
+[DIRECTORY]
+user/gee

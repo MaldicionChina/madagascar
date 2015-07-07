@@ -1,0 +1,26 @@
+Program sftdconvert | Iterative time-to-depth velocity conversion 
+[SYNOPSIS]
+sftdconvert < in.rsf > out.rsf dix=dix.rsf t0=t_0.rsf x0=x_0.rsf f0=f_0.rsf grad=grad.rsf cost=cost.rsf mask=mini.rsf prec=prec.rsf velocity=y order=1 thres=10. niter=1 cgiter=200 shape=n eps=0.1 nline=0 verb=n tol=1.e-6 rect#=(1,1,...) mval=
+[PARAMETERS]
+int     | cgiter | =200 |   | 	number of CG iterations 
+string  | cost | = |   | 	auxiliary output file name
+string  | dix | = |   | 	auxiliary input file name
+float   | eps | =0.1 |   | 	regularization parameter 
+string  | f0 | = |   | 	auxiliary output file name
+string  | grad | = |   | 	auxiliary output file name
+string  | mask | = |   | 	auxiliary input file name
+string  | mval | = |   | 	
+int     | niter | =1 |   | 	number of nonlinear updates 
+int     | nline | =0 |   | 	maximum number of line search (default turned-off) 
+int     | order | =1 |   | 	fastmarch accuracy order 
+string  | prec | = |   | 	auxiliary input file name
+int     | rect# | =(1,1,...) |   | 	smoothing radius on #-th axis 
+bool    | shape | =n |  [y/n] | 	regularization (default Tikhnov) 
+string  | t0 | = |   | 	auxiliary output file name
+float   | thres | =10. |   | 	thresholding for caustics 
+float   | tol | =1.e-6 |   | 	tolerance for shaping regularization 
+bool    | velocity | =y |  [y/n] | 	y, input is velocity / n, slowness-squared 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+string  | x0 | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/llisiw

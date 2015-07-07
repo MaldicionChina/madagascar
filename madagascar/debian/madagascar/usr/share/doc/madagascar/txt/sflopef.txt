@@ -1,0 +1,17 @@
+Program sflopef | Local Prediction-Error Filter (1-D, 2-D, and 3-D). 
+[SYNOPSIS]
+sflopef < dat.rsf > pef.rsf mask=known.rsf w= a= k= gap= center= dim=dim steepdip=n vel=1.7 tgap=0.030 lag=
+[PARAMETERS]
+ints    | a | = |   | 	filter size  [dim1]
+ints    | center | = |   | 	filter center  [dim1]
+int     | dim | =dim |   | 	PEF dimensionality 
+ints    | gap | = |   | 	filter gap  [dim1]
+ints    | k | = |   | 	number of windows  [dim1]
+string  | lag | = |   | 	output file for filter lags 
+string  | mask | = |   | 	auxiliary input file name
+bool    | steepdip | =n |  [y/n] | 	if y, do steep-dip PEF estimation 
+float   | tgap | =0.030 |   | 	time gap for steep-dip decon 
+float   | vel | =1.7 |   | 	velocity for steep-dip decon 
+ints    | w | = |   | 	window size  [dim1]
+[DIRECTORY]
+user/gee

@@ -1,0 +1,19 @@
+Program sfvelinvww | Inverse velocity spectrum with interpolation by modeling from inversion result
+[SYNOPSIS]
+sfvelinvww < infile.rsf > outfile.rsf velout=vtr.rsf ns=nh ds=0.001 os=0.00000001 huber=0 irls=0 nstep=1 niter=20 rwt=0. mwt=0. srate=0.01 epw=0.01 savevel=0
+[PARAMETERS]
+        | ds | =0.001 |   | 	
+        | epw | =0.01 |   | 	
+        | huber | =0 |   | 	
+        | irls | =0 |   | 	
+        | mwt | =0. |   | 	
+        | niter | =20 |   | 	
+        | ns | =nh |   | 	
+        | nstep | =1 |   | 	
+        | os | =0.00000001 |   | 	
+        | rwt | =0. |   | 	
+        | savevel | =0 |   | 	
+        | srate | =0.01 |   | 	
+file    | velout | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/jun

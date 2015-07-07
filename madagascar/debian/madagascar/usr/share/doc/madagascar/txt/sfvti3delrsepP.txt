@@ -1,0 +1,9 @@
+Program sfvti3delrsepP | None
+[SYNOPSIS]
+sfvti3delrsepP < vp0.rsf seed=time(NULL eps=1.e-6 npk=20
+[PARAMETERS]
+        | eps | =1.e-6 |   | 	tolerance
+        | npk | =20 |   | 	maximum rank
+        | seed | =time(NULL |   | 	
+[DIRECTORY]
+user/chengjb

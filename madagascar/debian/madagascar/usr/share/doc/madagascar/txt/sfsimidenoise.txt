@@ -1,0 +1,8 @@
+Program sfsimidenoise | Random noise attenuation using local similarity 
+[SYNOPSIS]
+sfsimidenoise < in.rsf > out.rsf similarity=simi.rsf thr=
+[PARAMETERS]
+file    | similarity | = |   | 	auxiliary input file name
+float   | thr | = |   | 	thresholding level 
+[DIRECTORY]
+user/chenyk

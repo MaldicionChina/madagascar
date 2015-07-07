@@ -1,0 +1,8 @@
+Program sfparcel | Patching test.
+[SYNOPSIS]
+sfparcel < in.rsf > out.rsf w= k=
+[PARAMETERS]
+ints    | k | = |   | 	 [dim]
+ints    | w | = |   | 	 [dim]
+[DIRECTORY]
+user/gee

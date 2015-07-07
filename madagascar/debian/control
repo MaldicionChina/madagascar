@@ -1,0 +1,17 @@
+Source: madagascar
+Section: math
+Priority: optional
+Maintainer: Alexis Enrique Rodríguez Gutiérrez <alexisrodgtz@gmail.com>
+Build-Depends: debhelper (>= 9), autotools-dev, python, dh-exec (>=0.3),scons
+Standards-Version: 3.9.5
+Homepage: http://reproducibility.org/wiki/Main_Page
+Vcs-Svn: http://sourceforge.net/p/rsf/code/HEAD/tree/trunk/
+
+Package: madagascar
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends} 
+Description: Madagascar is an open-source software package for multidimensional data analysis and reproducible computational experiments
+ Madagascar is an open-source software package for multidimensional data analysis and reproducible computational experiments. Its mission is to provide
+  - a convenient and powerful environment
+  - a convenient technology transfer tool
+  for researchers working with digital image and data processing in geophysics and related fields. Technology developed using the Madagascar project management system is transferred in the form of recorded processing histories, which become "computational recipes" to be verified, exchanged, and modified by users of the system.

@@ -1,0 +1,15 @@
+Program sfwarp1 | Multicomponent data registration by 1-D warping. 
+[SYNOPSIS]
+sfwarp1 < in.rsf > warped.rsf other=other.rsf warpout=warpout.rsf amplout=amplout.rsf warpin=warpin.rsf verb=n noamp=n accuracy= nliter=10 niter=100
+[PARAMETERS]
+int     | accuracy | = |  [1-4] | 	interpolation accuracy 
+file    | amplout | = |   | 	auxiliary output file name
+int     | niter | =100 |   | 	maximum number of linear iterations 
+int     | nliter | =10 |   | 	number of non-linear iterations 
+bool    | noamp | =n |  [y/n] | 	if y, don't correct amplitudes 
+file    | other | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+string  | warpin | = |   | 	optional initial warp file (auxiliary input file name)
+file    | warpout | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/fomels

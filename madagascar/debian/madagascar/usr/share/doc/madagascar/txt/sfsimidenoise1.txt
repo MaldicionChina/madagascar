@@ -1,0 +1,15 @@
+Program sfsimidenoise1 | Random noise attenuation using local similarity (different weighting approach) 
+[SYNOPSIS]
+sfsimidenoise1 < in.rsf > out.rsf similarity=simi.rsf s1= s2=
+[COMMENTS]
+The weighting function is defined as
+W(s) = 1				if s>s2
+	 = (s-s1)/(s2-s1)	if s1<=s<=s2
+	 = 0				if s<s1
+
+[PARAMETERS]
+float   | s1 | = |   | 	thresholding level 1 
+float   | s2 | = |   | 	thresholding level 2 
+file    | similarity | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/chenyk

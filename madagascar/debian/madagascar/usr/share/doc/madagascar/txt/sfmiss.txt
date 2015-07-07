@@ -1,0 +1,16 @@
+Program sfmiss | Multi-dimensional missing data interpolation. 
+[SYNOPSIS]
+sfmiss < in.rsf filt=filt.rsf > out.rsf lag=lag.rsf mask=mask.rsf n= prec=y niter=100 exact=y eps=0. padin=0 padout=0
+[PARAMETERS]
+float   | eps | =0. |   | 	regularization parameter 
+bool    | exact | =y |  [y/n] | 	If y, preserve the known data values (when prec=y) 
+file    | filt | = |   | 	auxiliary input file name
+string  | lag | = |   | 	optional input file with filter lags (auxiliary input file name)
+string  | mask | = |   | 	optional input mask file for known data (auxiliary input file name)
+ints    | n | = |   | 	 [dim]
+int     | niter | =100 |   | 	Number of iterations 
+int     | padin | =0 |   | 	Pad beginning 
+int     | padout | =0 |   | 	Pad end 
+bool    | prec | =y |  [y/n] | 	If y, use preconditioning 
+[DIRECTORY]
+user/gee

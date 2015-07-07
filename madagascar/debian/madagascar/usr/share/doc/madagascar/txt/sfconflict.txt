@@ -1,0 +1,8 @@
+Program sfconflict | 2-D synthetic data of conflicting dips. 
+[SYNOPSIS]
+sfconflict > mod.rsf n1=150 n2=80
+[PARAMETERS]
+int     | n1 | =150 |   | 	
+int     | n2 | =80 |   | 	
+[DIRECTORY]
+user/gee

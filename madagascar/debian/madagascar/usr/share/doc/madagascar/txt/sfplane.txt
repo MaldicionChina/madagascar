@@ -1,0 +1,11 @@
+Program sfplane | Generating plane waves with steering filters. 
+[SYNOPSIS]
+sfplane < inp.rsf > out.rsf p=0.7 a1=2 b1=1 hyp=n lag=
+[PARAMETERS]
+int     | a1 | =2 |   | 	filter length 
+int     | b1 | =1 |   | 	denominator length 
+bool    | hyp | =n |  [y/n] | 	generate hyperbolas 
+string  | lag | = |   | 	
+float   | p | =0.7 |   | 	plane wave slope 
+[DIRECTORY]
+user/fomels

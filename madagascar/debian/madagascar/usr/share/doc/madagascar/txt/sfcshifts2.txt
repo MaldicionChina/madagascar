@@ -1,0 +1,8 @@
+Program sfcshifts2 | Generate shifts for 2-D regularized autoregression in complex domain. From (x,y,f) to (x,y,s,f) 
+[SYNOPSIS]
+sfcshifts2 < in.rsf > shifts.rsf ns1= ns2=
+[PARAMETERS]
+int     | ns1 | = |   | 	number of shifts in first dim 
+int     | ns2 | = |   | 	number of shifts in second dim 
+[DIRECTORY]
+user/gchliu

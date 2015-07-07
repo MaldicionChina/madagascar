@@ -1,0 +1,19 @@
+Program sfgpufbrec3d | Backward reconstruction of forward modeling with random boundary
+[SYNOPSIS]
+sfgpufbrec3d < Fv.rsf > Fw.rsf verb=n nb=20 nt= kt= dt= fm=20 ns=1 szbeg= sxbeg= sybeg= jsz= jsx= jsy=
+[PARAMETERS]
+float   | dt | = |   | 	time sampling interval 
+float   | fm | =20 |   | 	dominant frequency of Ricker wavelet 
+int     | jsx | = |   | 	source jump interval in x-axis 
+int     | jsy | = |   | 	source jump interval in y-axis 
+int     | jsz | = |   | 	source jump interval in z-axis 
+int     | kt | = |   | 	record wavefield at time kt 
+int     | nb | =20 |   | 	thickness of random boundary 
+int     | ns | =1 |   | 	number of sources 
+int     | nt | = |   | 	total number of time steps 
+int     | sxbeg | = |   | 	source beginning of x-axis 
+int     | sybeg | = |   | 	source beginning of y-axis 
+int     | szbeg | = |   | 	source beginning of z-axis 
+bool    | verb | =n |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/pyang

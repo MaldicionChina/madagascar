@@ -1,0 +1,21 @@
+Program sfmig2 | 2-D Prestack Kirchhoff time migration with antialiasing. 
+[SYNOPSIS]
+sfmig2 < inp.rsf vel=vel.rsf > mig.rsf gather=gather.rsf offset=offset.rsf antialias=1.0 apt=nx angle=90.0 half=y verb=y rho=1.-1./nt
+[COMMENTS]
+The axes in the input are {time,midpoint,offset}
+The axes in the offset are {1,midpoint,offset}
+The axes in the output are {time,midpoint}
+The axes in the "image gather" are {time,midpoint,offset}
+
+[PARAMETERS]
+float   | angle | =90.0 |   | 	angle aperture 
+float   | antialias | =1.0 |   | 	antialiasing 
+int     | apt | =nx |   | 	integral aperture 
+string  | gather | = |   | 	auxiliary output file name
+bool    | half | =y |  [y/n] | 	if y, the third axis is half-offset instead of full offset 
+string  | offset | = |   | 	auxiliary input file name
+float   | rho | =1.-1./nt |   | 	Leaky integration constant 
+file    | vel | = |   | 	auxiliary input file name
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/yliu

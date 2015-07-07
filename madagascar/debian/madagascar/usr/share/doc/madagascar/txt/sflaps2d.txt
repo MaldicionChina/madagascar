@@ -1,0 +1,13 @@
+Program sflaps2d | OpenMP lagged-products in the time-domain 
+[SYNOPSIS]
+sflaps2d < Fs.rsf ur=Fr.rsf cc=Fc.rsf > Fi.rsf verb=n buf=n nhz=0 nhx=0 nht=0
+[PARAMETERS]
+bool    | buf | =n |  [y/n] | 	
+file    | cc | = |   | 	auxiliary input file name
+int     | nht | =0 |   | 	number of lags on the t axis 
+int     | nhx | =0 |   | 	number of lags on the x axis 
+int     | nhz | =0 |   | 	number of lags on the z axis 
+file    | ur | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/psava

@@ -1,0 +1,34 @@
+Program sfdmigda | 2D depth scattering-angle Kirchhoff migration  
+[SYNOPSIS]
+sfdmigda < dataFile.rsf vel=velFile.rsf > imageFile.rsf dag=dagFile.rsf cig=acigFile.rsf mcig=mcigFile.rsf esct=tEscFile.rsf escx=xEscFile.rsf axis2label=0 isAA=y izn=dp.zNum ixn=dp.xNum iyn=rp.is3D ? vp.yNum : 1 izo=dp.zStart ixo=dp.xStart iyo=dp.yStart izd=dp.zStep ixd=dp.xStep iyd=dp.yStep dipn=161 dipo=-80.f dipd=1.f iscatn=1 iscato=0.f iscatd=2 * gp.dipStep ttd=0.002f ttn=(int) floor(0.001 * 0.5 * maxTime / ttStep + 1) ttrayd=gp.dipStep / 2.f ttrayo=minttRay ttrayn=(int) floor((maxttRay - minttRay) / ttRayStep + 1)
+[PARAMETERS]
+int     | axis2label | =0 |   | 	0 - shot; 1 - cmp; 2 - receiver 
+string  | cig | = |   | 	output file containing CIGs in the scattering-angle domain (auxiliary output file name)
+string  | dag | = |   | 	output file containing CIGs in the dip-angle domain (auxiliary output file name)
+float   | dipd | =1.f |   | 	step in dip-angle 
+int     | dipn | =161 |   | 	number of dip-angles 
+float   | dipo | =-80.f |   | 	first dip-angle 
+string  | esct | = |   | 	output file containing escqpe times (auxiliary output file name)
+string  | escx | = |   | 	output file containing escape positions (auxiliary output file name)
+bool    | isAA | =y |  [y/n] | 	if y, apply anti-aliasing 
+float   | iscatd | =2 * gp.dipStep |   | 	scattering-angle increment (in degree) 
+int     | iscatn | =1 |   | 	number of scattering-angles 
+float   | iscato | =0.f |   | 	first scattering-angle (in degree) 
+float   | ixd | =dp.xStep |   | 	step in inlines (in meters) 
+int     | ixn | =dp.xNum |   | 	number of imaged inlines 
+float   | ixo | =dp.xStart |   | 	first imaged inline (in meters) 
+float   | iyd | =dp.yStep |   | 	step in crosslines (in meters) 
+int     | iyn | =rp.is3D ? vp.yNum : 1 |   | 	number of imaged crosslines 
+float   | iyo | =dp.yStart |   | 	first imaged crossline (in meters) 
+float   | izd | =dp.zStep |   | 	step in depth (in meters) 
+int     | izn | =dp.zNum |   | 	number of imaged depth samples 
+float   | izo | =dp.zStart |   | 	first imaged depth (in meters) 
+string  | mcig | = |   | 	output file containing multi-CIGs (in the dip-angle and the scattering-angle domain both (auxiliary output file name)
+float   | ttd | =0.002f |   | 	travel-times increment 
+int     | ttn | =(int) floor(0.001 * 0.5 * maxTime / ttStep + 1) |   | 	travel-times number 
+float   | ttrayd | =gp.dipStep / 2.f |   | 	travel-times rays increment 
+int     | ttrayn | =(int) floor((maxttRay - minttRay) / ttRayStep + 1) |   | 	travel-times rays number 
+float   | ttrayo | =minttRay |   | 	travel-times rays start 
+string  | vel | = |   | 	velocity model file (velocity in m/s) (auxiliary input file name)
+[DIRECTORY]
+user/aklokov

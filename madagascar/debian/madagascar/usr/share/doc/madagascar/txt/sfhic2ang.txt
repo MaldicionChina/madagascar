@@ -1,0 +1,31 @@
+Program sfhic2ang | angle decomposition of CIPs 
+[SYNOPSIS]
+sfhic2ang < Fcip.rsf > Fang.rsf vel=Fvel.rsf nor=Fnor.rsf tlt=Ftlt.rsf ani=Fani.rsf verb=n anis=n adj=y nth=90 oth=0 dth=1. nph=360 oph=-180 dph=1. nhx=1 ohx=0 dhx=1. nhy=1 ohy=0 dhy=1. nht=1 oht=0. dht=1. nps=251 ops=-25 dps=0.2
+[PARAMETERS]
+bool    | adj | =y |  [y/n] | 	adj flag 
+file    | ani | = |   | 	auxiliary input file name
+bool    | anis | =n |  [y/n] | 	anisotropy flag 
+float   | dht | =1. |   | 	
+float   | dhx | =1. |   | 	
+float   | dhy | =1. |   | 	
+float   | dph | =1. |   | 	
+float   | dps | =0.2 |   | 	
+float   | dth | =1. |   | 	
+int     | nht | =1 |   | 	
+int     | nhx | =1 |   | 	
+int     | nhy | =1 |   | 	
+file    | nor | = |   | 	auxiliary input file name
+int     | nph | =360 |   | 	
+int     | nps | =251 |   | 	
+int     | nth | =90 |   | 	
+float   | oht | =0. |   | 	
+float   | ohx | =0 |   | 	
+float   | ohy | =0 |   | 	
+float   | oph | =-180 |   | 	
+float   | ops | =-25 |   | 	
+float   | oth | =0 |   | 	
+file    | tlt | = |   | 	auxiliary input file name
+file    | vel | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/psava

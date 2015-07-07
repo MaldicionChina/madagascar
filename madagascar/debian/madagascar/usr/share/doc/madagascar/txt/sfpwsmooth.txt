@@ -1,0 +1,12 @@
+Program sfpwsmooth | 2-D structure-enhancing filtering. 
+[SYNOPSIS]
+sfpwsmooth < in.rsf dip=dip.rsf > out.rsf verb=n ns=0 adj=n eps=0.01 order=1
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+file    | dip | = |   | 	auxiliary input file name
+float   | eps | =0.01 |   | 	regularization 
+int     | ns | =0 |   | 	smoothing radius 
+int     | order | =1 |   | 	accuracy order 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/pwd

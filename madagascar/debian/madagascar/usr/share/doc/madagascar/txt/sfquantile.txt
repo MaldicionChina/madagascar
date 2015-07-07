@@ -1,0 +1,10 @@
+Program sfquantile | Computes what clip value corresponds to a given pclip.
+[SYNOPSIS]
+sfquantile < in.rsf pclip= memsize=sf_memsize()
+[COMMENTS]
+Loads the entire dataset in core. Use it to find a clip= parameter for sfclip, given a wanted pclip=
+[PARAMETERS]
+int     | memsize | =sf_memsize() |   | 	Max amount of RAM (in Mb) to be used 
+float   | pclip | = |   | 	Percentage clip, between 0 and 100 
+[DIRECTORY]
+user/ivlad

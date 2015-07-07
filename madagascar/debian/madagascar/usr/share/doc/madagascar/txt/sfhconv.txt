@@ -1,0 +1,9 @@
+Program sfhconv | Convolution of two helix filters. 
+[SYNOPSIS]
+sfhconv < inp.rsf other=oth.rsf > out.rsf one=y lag=
+[PARAMETERS]
+string  | lag | = |   | 	
+bool    | one | =y |  [y/n] | 	include leading one 
+file    | other | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/gee

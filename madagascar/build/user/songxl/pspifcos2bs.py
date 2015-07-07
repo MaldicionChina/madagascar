@@ -1,0 +1,15 @@
+sfpspifcos2bs = rsf.doc.rsfprog('sfpspifcos2bs','user/songxl/Mpspifcos2bs.c','''1-D finite-difference wave extrapolation ''')
+sfpspifcos2bs.par('vel',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfpspifcos2bs.par('source',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfpspifcos2bs.par('opt',rsf.doc.rsfpar('bool','y','','''if y, determine optimal size for efficiency '''))
+sfpspifcos2bs.par('dt',rsf.doc.rsfpar('float','','',''''''))
+sfpspifcos2bs.par('nt',rsf.doc.rsfpar('int','','',''''''))
+sfpspifcos2bs.par('nv',rsf.doc.rsfpar('int','','',''''''))
+sfpspifcos2bs.par('isx',rsf.doc.rsfpar('int','','',''''''))
+sfpspifcos2bs.par('isz',rsf.doc.rsfpar('int','','',''''''))
+sfpspifcos2bs.par('nb',rsf.doc.rsfpar('int','30','',''''''))
+sfpspifcos2bs.par('c',rsf.doc.rsfpar('float','0.01','','''decaying parameter'''))
+sfpspifcos2bs.version('1.7')
+sfpspifcos2bs.synopsis('''sfpspifcos2bs < inp.rsf > out.rsf vel=vel.rsf source=source.rsf opt=y dt= nt= nv= isx= isz= nb=30 c=0.01''','''''')
+rsf.doc.progs['sfpspifcos2bs']=sfpspifcos2bs
+

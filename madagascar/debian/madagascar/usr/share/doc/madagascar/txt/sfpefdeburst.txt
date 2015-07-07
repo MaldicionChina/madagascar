@@ -1,0 +1,8 @@
+Program sfpefdeburst | Burst noise removal using PEF. 
+[SYNOPSIS]
+sfpefdeburst < in.rsf > out.rsf na=3 niter=10
+[PARAMETERS]
+int     | na | =3 |   | 	PEF length 
+int     | niter | =10 |   | 	number of iterations 
+[DIRECTORY]
+user/gee

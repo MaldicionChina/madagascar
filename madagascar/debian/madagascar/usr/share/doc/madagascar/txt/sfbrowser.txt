@@ -1,0 +1,8 @@
+Program sfbrowser | 
+[SYNOPSIS]
+sfbrowser
+[COMMENTS]
+Open tkMadagascar program browser.
+
+[DIRECTORY]
+user/godwinj

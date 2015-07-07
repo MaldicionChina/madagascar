@@ -1,0 +1,7 @@
+Program sfshiftd1 | Generate shifts for 1-D regularized autoregression double sides (not include the trace self). 
+[SYNOPSIS]
+sfshiftd1 < in.rsf > shift.rsf ns=
+[PARAMETERS]
+int     | ns | = |   | 	number of shifts 
+[DIRECTORY]
+user/gchliu

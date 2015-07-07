@@ -1,0 +1,13 @@
+Program sfpwdsmooth2 | 2-D smoothing by triangle plane-wave construction shaping. 
+[SYNOPSIS]
+sfpwdsmooth2 < in.rsf dip=dip.rsf > out.rsf rect1=3 rect2=3 adj=n verb=n eps=0.01 order=1
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+file    | dip | = |   | 	auxiliary input file name
+float   | eps | =0.01 |   | 	regularization 
+int     | order | =1 |   | 	accuracy order 
+int     | rect1 | =3 |   | 	
+int     | rect2 | =3 |   | 	smoothing radius 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/pwd

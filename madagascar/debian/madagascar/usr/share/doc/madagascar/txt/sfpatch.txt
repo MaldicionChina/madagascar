@@ -1,0 +1,24 @@
+Program sfpatch | Patching (N-dimensional). 
+[SYNOPSIS]
+sfpatch < in.rsf > out.rsf n0= w= p= inv=n verb=n weight=n dim=dim0
+[COMMENTS]
+
+w is window size (defaults to n1,n2,...)
+p is number of patches in different dimensions (defaults to 1,1,...)
+
+If inv=n, the number of output dimensions is twice the number of input dimensions.
+If inv=y, the number of output dimensions is half the number of input dimensions.
+
+September 2013 program of the month:
+http://ahay.org/rsflog/index.php?/archives/357-Program-of-the-month-sfpatch.html
+
+[PARAMETERS]
+int     | dim | =dim0 |   | 	
+bool    | inv | =n |  [y/n] | 	inverse or forward operation 
+ints    | n0 | = |   | 	data dimensions (for inv=y)  [dim]
+ints    | p | = |   | 	number of windows  [dim]
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+ints    | w | = |   | 	window size  [dim]
+bool    | weight | =n |  [y/n] | 	if y, apply weighting to each patch 
+[DIRECTORY]
+user/fomels

@@ -1,0 +1,16 @@
+Program sfrickerfit | Model wavelet spectrum by fitting spectral components of ricker wavelet.
+[SYNOPSIS]
+sfrickerfit < in.rsf > out.rsf ma1=ma1.rsf ma2=ma2.rsf m= n= niter=100 verb=n
+[COMMENTS]
+
+   n is the number of components. ma1 is amplitude, ma2 is peak frequency.
+
+[PARAMETERS]
+floats  | m | = |   | 	 [n]
+file    | ma1 | = |   | 	auxiliary output file name
+file    | ma2 | = |   | 	auxiliary output file name
+int     | n | = |   | 	
+int     | niter | =100 |   | 	
+bool    | verb | =n |  [y/n] | 	
+[DIRECTORY]
+user/tsai

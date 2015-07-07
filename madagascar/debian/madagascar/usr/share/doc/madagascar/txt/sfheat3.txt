@@ -1,0 +1,8 @@
+Program sfheat3 | Finite-difference 3-D heat-flow equation using helix 
+[SYNOPSIS]
+sfheat3 > out.rsf n3=10 nh=5
+[PARAMETERS]
+int     | n3 | =10 |   | 	
+int     | nh | =5 |   | 	
+[DIRECTORY]
+user/gee

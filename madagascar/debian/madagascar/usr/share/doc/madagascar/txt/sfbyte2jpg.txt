@@ -1,0 +1,7 @@
+Program sfbyte2jpg | Convert byte RSF to a JPEG image. 
+[SYNOPSIS]
+sfbyte2jpg < in.rsf color=(bool)(3==n1)
+[PARAMETERS]
+bool    | color | =(bool)(3==n1) |  [y/n] | 	
+[DIRECTORY]
+user/fomels

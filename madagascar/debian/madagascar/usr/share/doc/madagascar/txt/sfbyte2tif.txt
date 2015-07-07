@@ -1,0 +1,7 @@
+Program sfbyte2tif | Convert byte RSF to a TIFF image. 
+[SYNOPSIS]
+sfbyte2tif < in.rsf color=(bool)(3==n1)
+[PARAMETERS]
+bool    | color | =(bool)(3==n1) |  [y/n] | 	
+[DIRECTORY]
+user/fomels

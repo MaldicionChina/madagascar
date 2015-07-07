@@ -1,0 +1,7 @@
+Program sfcorral | Cross-correlate every trace with every other in frequency domain. 
+[SYNOPSIS]
+sfcorral < inp.rsf > out.rsf nlags=100
+[PARAMETERS]
+int     | nlags | =100 |   | 	number of lags 
+[DIRECTORY]
+user/rickettj

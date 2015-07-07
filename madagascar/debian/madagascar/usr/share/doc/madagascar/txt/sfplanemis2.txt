@@ -1,0 +1,14 @@
+Program sfplanemis2 | Missing data interpolation in 2-D using plane-wave destruction. 
+[SYNOPSIS]
+sfplanemis2 < in.rsf > out.rsf dip=dip.rsf mask=mask.rsf niter=100 order=1 nj1=1 nj2=1 prec=n verb=n
+[PARAMETERS]
+file    | dip | = |   | 	auxiliary input file name
+string  | mask | = |   | 	auxiliary input file name
+int     | niter | =100 |   | 	number of iterations 
+int     | nj1 | =1 |   | 	antialiasing for first dip 
+int     | nj2 | =1 |   | 	antialiasing for second dip 
+int     | order | =1 |   | 	accuracy order 
+bool    | prec | =n |  [y/n] | 	if y, apply preconditioning 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/pwd

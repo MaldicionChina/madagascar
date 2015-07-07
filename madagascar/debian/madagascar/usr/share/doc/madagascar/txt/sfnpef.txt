@@ -1,0 +1,18 @@
+Program sfnpef | Estimate Non-stationary PEF in N dimensions.
+[SYNOPSIS]
+sfnpef < in.rsf > flt.rsf maskin=mask.rsf pch=patch.rsf filt=reg.rsf a= center= gap= niter=100 epsilon=0.01 lag= maskout= filt_pch= filt_lag=
+[PARAMETERS]
+ints    | a | = |   | 	 [dim]
+ints    | center | = |   | 	 [dim]
+float   | epsilon | =0.01 |   | 	regularization parameter 
+file    | filt | = |   | 	auxiliary input file name
+string  | filt_lag | = |   | 	input file for double-helix filter lags 
+string  | filt_pch | = |   | 	
+ints    | gap | = |   | 	 [dim]
+string  | lag | = |   | 	output file for filter lags 
+string  | maskin | = |   | 	optional input mask file (auxiliary input file name)
+string  | maskout | = |   | 	optional output mask file 
+int     | niter | =100 |   | 	number of iterations 
+string  | pch | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/gee

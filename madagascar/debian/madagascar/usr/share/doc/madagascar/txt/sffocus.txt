@@ -1,0 +1,10 @@
+Program sffocus | Focusing indicator. 
+[SYNOPSIS]
+sffocus < in.rsf > out.rsf dim= niter=100 verb=y rect#=(1,1,...)
+[PARAMETERS]
+int     | dim | = |   | 	dimensionality 
+int     | niter | =100 |   | 	number of iterations 
+int     | rect# | =(1,1,...) |   | 	smoothing radius on #-th axis 
+bool    | verb | =y |  [y/n] | 	
+[DIRECTORY]
+user/fomels

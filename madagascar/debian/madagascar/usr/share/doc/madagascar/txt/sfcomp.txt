@@ -1,0 +1,10 @@
+Program sfcomp | Compare 2 data set 
+[SYNOPSIS]
+sfcomp < in.rsf > out.rsf ref=ref.rsf mode=0
+[PARAMETERS]
+int     | mode | =0 |   | 	compare method: 
+	0 - normalized xcorrelation; 
+	1 - mean square error 
+file    | ref | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/chen

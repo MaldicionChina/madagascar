@@ -1,0 +1,17 @@
+Program sfidempatch | Patching test. 
+[SYNOPSIS]
+sfidempatch > out.rsf wind=wind.rsf n1=100 n2=30 w1=17 w2=6 k1=5 k2=11 a1=1 a2=1 lag1=1 lag2=1
+[PARAMETERS]
+int     | a1 | =1 |   | 	
+int     | a2 | =1 |   | 	
+int     | k1 | =5 |   | 	
+int     | k2 | =11 |   | 	
+int     | lag1 | =1 |   | 	
+int     | lag2 | =1 |   | 	
+int     | n1 | =100 |   | 	
+int     | n2 | =30 |   | 	
+int     | w1 | =17 |   | 	
+int     | w2 | =6 |   | 	
+string  | wind | = |   | 	optional output file for window weight (auxiliary output file name)
+[DIRECTORY]
+user/gee

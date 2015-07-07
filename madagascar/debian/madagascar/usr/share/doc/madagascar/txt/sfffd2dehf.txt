@@ -1,0 +1,23 @@
+Program sfffd2dehf | 2-D Fourier finite-difference wave extrapolation, smooth point source, depress high frequency 
+[SYNOPSIS]
+sfffd2dehf > out.rsf vel=vel.rsf < source.rsf opt=y dt= nt= isx= isz= nbt=44 nbb=44 nbl=44 nbr=44 ct=0.01 cb=0.01 cl=0.01 cr=0.01 ax=5.0 az=5.0 factor=5.0/6.0
+[PARAMETERS]
+float   | ax | =5.0 |   | 	suppress HF parameter
+float   | az | =5.0 |   | 	suppress HF parameter
+float   | cb | =0.01 |   | 	decaying parameter
+float   | cl | =0.01 |   | 	decaying parameter
+float   | cr | =0.01 |   | 	decaying parameter
+float   | ct | =0.01 |   | 	decaying parameter
+float   | dt | = |   | 	
+float   | factor | =5.0/6.0 |   | 	suppress HF parameter
+int     | isx | = |   | 	
+int     | isz | = |   | 	
+int     | nbb | =44 |   | 	
+int     | nbl | =44 |   | 	
+int     | nbr | =44 |   | 	
+int     | nbt | =44 |   | 	
+int     | nt | = |   | 	
+bool    | opt | =y |  [y/n] | 	if y, determine optimal size for efficiency 
+file    | vel | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/songxl

@@ -1,0 +1,8 @@
+Program sfcpef | 1-D prediction-error filter estimation from complex data 
+[SYNOPSIS]
+sfcpef < in.rsf > out.rsf single=y nf=
+[PARAMETERS]
+int     | nf | = |   | 	filter length 
+bool    | single | =y |  [y/n] | 	single channel or multichannel 
+[DIRECTORY]
+user/fomels

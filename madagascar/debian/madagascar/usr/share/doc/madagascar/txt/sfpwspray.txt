@@ -1,0 +1,13 @@
+Program sfpwspray | Plane-wave spray. 
+[SYNOPSIS]
+sfpwspray < inp.rsf dip=dip.rsf > out.rsf verb=n eps=0.01 ns= order=1 rect=2 reduce=
+[PARAMETERS]
+file    | dip | = |   | 	auxiliary input file name
+float   | eps | =0.01 |   | 	regularization 
+int     | ns | = |   | 	spray radius 
+int     | order | =1 |   | 	accuracy order 
+int     | rect | =2 |   | 	radius for predictive coherence (reduce=coherence) 
+string  | reduce | = |   | 	reduction method (none,stack,median,triangle,gaussian,predict,coherence) 
+bool    | verb | =n |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/pwd

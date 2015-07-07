@@ -1,0 +1,12 @@
+Program sfvelcon | Post-stack velocity continuation by implicit finite differences 
+[SYNOPSIS]
+sfvelcon < in.rsf > out.rsf vel=0.75 v0=0. nv=n1 adj=n add=n inv=0
+[PARAMETERS]
+bool    | add | =n |  [y/n] | 	addition flag 
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+int     | inv | =0 |   | 	amplitude type 
+int     | nv | =n1 |   | 	number of steps 
+float   | v0 | =0. |   | 	starting velocity 
+float   | vel | =0.75 |   | 	final velocity 
+[DIRECTORY]
+user/fomels

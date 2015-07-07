@@ -1,0 +1,10 @@
+Program sfmsmiss | Multiscale missing data interpolation (N-dimensional). 
+[SYNOPSIS]
+sfmsmiss < in.rsf filt=filt.rsf > out.rsf mask=mask.rsf niter=100 lag=
+[PARAMETERS]
+file    | filt | = |   | 	auxiliary input file name
+string  | lag | = |   | 	optional input file with filter lags 
+string  | mask | = |   | 	optional input mask file for known data (auxiliary input file name)
+int     | niter | =100 |   | 	Number of iterations 
+[DIRECTORY]
+user/gee

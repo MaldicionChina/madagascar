@@ -1,0 +1,14 @@
+Program sflphfreq | frequency response of linear phase approximators 
+[SYNOPSIS]
+sflphfreq > out.rsf m=1 n=1 iir=y n1=50 o2=0.1 d2=0.3 n2=1 interp=
+[PARAMETERS]
+float   | d2 | =0.3 |   | 	phase shift increment 
+bool    | iir | =y |  [y/n] | 	y:iir,  n:fir 
+string  | interp | = |   | 	interpolation method: maxflat lagrange bspline 
+int     | m | =1 |   | 	b[-m, ... ,n] 
+int     | n | =1 |   | 	b[-m, ... ,n] 
+int     | n1 | =50 |   | 	samples in frequency domain between (0:f_c] 
+int     | n2 | =1 |   | 	number of phase shift 
+float   | o2 | =0.1 |   | 	first phase shift 
+[DIRECTORY]
+user/chen

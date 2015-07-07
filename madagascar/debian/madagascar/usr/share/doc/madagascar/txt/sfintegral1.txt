@@ -1,0 +1,7 @@
+Program sfintegral1 | integration 
+[SYNOPSIS]
+sfintegral1 < Fin.rsf > Fout.rsf rule=
+[PARAMETERS]
+string  | rule | = |   | 	t, s : quadrature rules 
+[DIRECTORY]
+user/xuxin

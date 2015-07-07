@@ -1,0 +1,10 @@
+Program sfrandline | Construct data from random lines 
+[SYNOPSIS]
+sfrandline > out.rsf n1=10 n2=10 lines=3 seed=2000
+[PARAMETERS]
+int     | lines | =3 |   | 	number of lines 
+int     | n1 | =10 |   | 	
+int     | n2 | =10 |   | 	dimensions 
+int     | seed | =2000 |   | 	random number seed 
+[DIRECTORY]
+user/gee

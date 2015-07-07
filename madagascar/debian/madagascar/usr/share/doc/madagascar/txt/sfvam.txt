@@ -1,0 +1,10 @@
+Program sfvam | Create a layered model. 
+[SYNOPSIS]
+sfvam > vfile.rsf nz= nx= dz= dx=
+[PARAMETERS]
+float   | dx | = |   | 	distance sampling 
+float   | dz | = |   | 	depth sampling 
+int     | nx | = |   | 	distance grid 
+int     | nz | = |   | 	depth grid 
+[DIRECTORY]
+user/hpcss

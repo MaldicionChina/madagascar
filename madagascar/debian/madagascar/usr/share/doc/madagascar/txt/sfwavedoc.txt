@@ -1,0 +1,24 @@
+Program sfwavedoc | Rice HPCSS seismic modeling and migration. 
+[SYNOPSIS]
+sfwavedoc < vfile.rsf source=mfile.rsf > tfile.rsf receiver=rmfile.rsf > imfile.rsf nt= dt= nm=0 isz=1 isxbeg=(nx)/2 isxend=(nx)/2 iskip=1 igz=1 igxbeg=1 igxend=0 fpeak=0.01 ihmax=0 imbeg=ihmax imend=nx-ihmax-1 imskip=1
+[PARAMETERS]
+float   | dt | = |   | 	step in t 
+float   | fpeak | =0.01 |   | 	center frequency of Ricker wavelet 
+int     | igxbeg | =1 |   | 	far left receiver x coord in units of dx 
+int     | igxend | =0 |   | 	far right receiver x coord in units of dx 
+int     | igz | =1 |   | 	recvr depth, in units of dz 
+int     | ihmax | =0 |   | 	offset radius, units of dx 
+int     | imbeg | =ihmax |   | 	midpoint begin 
+int     | imend | =nx-ihmax-1 |   | 	midpoint end 
+int     | imskip | =1 |   | 	midpoint skip 
+int     | iskip | =1 |   | 	interval between sources in units of dx 
+int     | isxbeg | =(nx)/2 |   | 	far left source x coord in units of dx 
+int     | isxend | =(nx)/2 |   | 	far right source x coord in units of dx 
+int     | isz | =1 |   | 	source depth, in units of dz 
+int     | nm | =0 |   | 	number of time steps to skip between movie frames
+       (<=0 for no movie) 
+int     | nt | = |   | 	number of time steps 
+string  | receiver | = |   | 	receiver movie file (auxiliary output file name)
+string  | source | = |   | 	source movie file (auxiliary output file name)
+[DIRECTORY]
+user/hpcss

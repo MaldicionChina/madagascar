@@ -1,0 +1,11 @@
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p madagascar 
+fi
+
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p madagascar /usr/share/madagascar
+fi
+
+# End automatically added section

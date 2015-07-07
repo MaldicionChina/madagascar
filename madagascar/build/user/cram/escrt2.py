@@ -1,0 +1,18 @@
+sfescrt2 = rsf.doc.rsfprog('sfescrt2','user/cram/Mescrt2.c','''Escape tables by ray tracing with escape equations in 2-D. ''')
+sfescrt2.par('traj',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sfescrt2.par('vspl',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfescrt2.par('na',rsf.doc.rsfpar('int','360','','''Number of phase angles '''))
+sfescrt2.par('df',rsf.doc.rsfpar('float','0.25','','''< Maximum distance to travel per step (fraction of the cell size) >'''))
+sfescrt2.par('md',rsf.doc.rsfpar('float','SF_HUGE','','''Maximum distance for a ray to travel (default - up to model boundaries) '''))
+sfescrt2.par('aper',rsf.doc.rsfpar('float','SF_HUGE','','''Maximum aperture in x and y directions from current point (default - up to model boundaries) '''))
+sfescrt2.par('nc',rsf.doc.rsfpar('int','0','','''Number of threads to use for ray tracing (OMP_NUM_THREADS by default) '''))
+sfescrt2.par('parab',rsf.doc.rsfpar('bool','y','','''y - use parabolic approximation of trajectories, n - straight line '''))
+sfescrt2.par('verb',rsf.doc.rsfpar('bool','n','','''verbosity flag '''))
+sfescrt2.par('nt',rsf.doc.rsfpar('int','1001','','''Number of time samples for each trajectory '''))
+sfescrt2.par('dt',rsf.doc.rsfpar('float','0.001','','''Time sampling '''))
+sfescrt2.par('traj',rsf.doc.rsfpar('string ',desc='''Trajectory output (auxiliary output file name)'''))
+sfescrt2.par('vspl',rsf.doc.rsfpar('string ',desc='''Spline coefficients for velocity model (auxiliary input file name)'''))
+sfescrt2.version('1.7')
+sfescrt2.synopsis('''sfescrt2 < spdom.rsf > out.rsf traj=traj.rsf vspl=vspline.rsf na=360 df=0.25 md=SF_HUGE aper=SF_HUGE nc=0 parab=y verb=n nt=1001 dt=0.001''','''''')
+rsf.doc.progs['sfescrt2']=sfescrt2
+

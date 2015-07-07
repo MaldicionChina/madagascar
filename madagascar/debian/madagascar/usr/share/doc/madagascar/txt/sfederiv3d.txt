@@ -1,0 +1,13 @@
+Program sfederiv3d | 
+[SYNOPSIS]
+sfederiv3d ccc=Fccc.rsf < Fspk.rsf zdel=Fzdel.rsf xdel=Fxdel.rsf ydel=Fydel.rsf verb=n stat=y domain=
+[PARAMETERS]
+file    | ccc | = |   | 	auxiliary input file name
+string  | domain | = |   | 	
+bool    | stat | =y |  [y/n] | 	stationary operator 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+file    | xdel | = |   | 	auxiliary output file name
+file    | ydel | = |   | 	auxiliary output file name
+file    | zdel | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/jyan

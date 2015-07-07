@@ -1,0 +1,12 @@
+Program sfangle2 | Another illustration of angle gathers.
+[SYNOPSIS]
+sfangle2 > angle.rsf nx=451 ny=451 dx=0.1 dy=0.1 zx=0. zy=0.
+[PARAMETERS]
+float   | dx | =0.1 |   | 	
+float   | dy | =0.1 |   | 	
+int     | nx | =451 |   | 	
+int     | ny | =451 |   | 	
+float   | zx | =0. |   | 	
+float   | zy | =0. |   | 	
+[DIRECTORY]
+user/fomels

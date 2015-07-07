@@ -1,0 +1,17 @@
+Program sfwarpscan | Multicomponent data registration analysis. 
+[SYNOPSIS]
+sfwarpscan < in.rsf > warped.rsf other=other.rsf verb=y ng=1 g0= dg=g0 rect1=1 rect2=1 rect3=1 rect4=1 niter=10 accuracy=
+[PARAMETERS]
+int     | accuracy | = |  [1-4] | 	interpolation accuracy 
+float   | dg | =g0 |   | 	gamma sampling 
+float   | g0 | = |   | 	gamma origin 
+int     | ng | =1 |   | 	number of gamma values 
+int     | niter | =10 |   | 	number of iterations 
+file    | other | = |   | 	auxiliary input file name
+int     | rect1 | =1 |   | 	vertical smoothing 
+int     | rect2 | =1 |   | 	gamma smoothing 
+int     | rect3 | =1 |   | 	in-line smoothing 
+int     | rect4 | =1 |   | 	cross-line smoothing 
+bool    | verb | =y |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/fomels

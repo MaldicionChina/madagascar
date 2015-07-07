@@ -1,0 +1,23 @@
+Program sflfd2_25b | 2-D Fourth-order Optimized Finite-difference wave extrapolation 
+[SYNOPSIS]
+sflfd2_25b > out.rsf vel=vel.rsf < source.rsf G=G.rsf s1=files1.rsf s2=files2.rsf dt= nt= isx= isz= nbt=100 nbb=100 nbl=100 nbr=100 ct=0.002 cb=0.002 cl=0.002 cr=0.002 jm=10
+[PARAMETERS]
+file    | G | = |   | 	auxiliary input file name
+float   | cb | =0.002 |   | 	decaying parameter
+float   | cl | =0.002 |   | 	decaying parameter
+float   | cr | =0.002 |   | 	decaying parameter
+float   | ct | =0.002 |   | 	decaying parameter
+float   | dt | = |   | 	
+int     | isx | = |   | 	
+int     | isz | = |   | 	
+int     | jm | =10 |   | 	
+int     | nbb | =100 |   | 	
+int     | nbl | =100 |   | 	
+int     | nbr | =100 |   | 	
+int     | nbt | =100 |   | 	
+int     | nt | = |   | 	
+file    | s1 | = |   | 	auxiliary input file name
+file    | s2 | = |   | 	auxiliary input file name
+file    | vel | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/songxl

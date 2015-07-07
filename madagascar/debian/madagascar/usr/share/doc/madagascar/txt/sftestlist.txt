@@ -1,0 +1,22 @@
+Program sftestlist | Inventory test results of Madagascar example book directories.
+[SYNOPSIS]
+sftestlist levels=3 outfile= untested=n
+[COMMENTS]
+Scan a directory tree (or list of directory trees) to a given depth,
+and inventory the contents and test results.
+
+The inventory occurs only at the specified depth (default 3), not the
+intervening depths.  Directories named .svn are skipped.  Only
+directories containing an SConstruct file are listed.
+
+Examples (from within $RSFSRC):
+
+sftestlist book                         # inventory of book
+sftestlist levels=2 book/geostats       # inventory of book/geostats
+
+[PARAMETERS]
+int     | levels | =3 |   | 	directory search depth
+string  | outfile | = |   | 	file name for detailed inventory table, default none
+bool    | untested | =n |  [y/n] | 	list untested examples?
+[DIRECTORY]
+user/jennings

@@ -1,0 +1,618 @@
+file /mnt/Archivos/Universidad_de_Antioquia/Proyectos/C3_LINUX/debian_packaging/paquetes/En_Proceso/madagascar/Paquete/madagascar-1.7/SConstruct,line 37:
+	Configure(confdir = .sconf_temp)
+scons: Configure: checking platform ... 
+scons: Configure: (cached) linux [debian]
+
+scons: Configure: checking for C compiler ... 
+scons: Configure: (cached) gcc
+
+scons: Configure: checking if gcc works ... 
+.sconf_temp/conftest_0.c <-
+  |
+  |    int main(int argc,char* argv[]) {
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_0.o -c -O2 .sconf_temp/conftest_0.c
+gcc -o .sconf_temp/sfconftest_0 .sconf_temp/conftest_0.o
+scons: Configure: yes
+
+scons: Configure: checking if gcc accepts '-x c -std=gnu99 -Wall -pedantic' ... 
+.sconf_temp/conftest_1.c <-
+  |
+  |    int main(int argc,char* argv[]) {
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_1.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_1.c
+scons: Configure: yes
+
+scons: Configure: checking for ar ... 
+scons: Configure: (cached) ar
+
+scons: Configure: checking for libraries ... 
+.sconf_temp/conftest_2.c <-
+  |
+  |    #include <rpc/types.h>
+  |    #include <rpc/xdr.h>
+  |    int main(int argc,char* argv[]) {
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_2.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_2.c
+gcc -o .sconf_temp/sfconftest_2 .sconf_temp/conftest_2.o -lm
+scons: Configure: ['m']
+
+scons: Configure: checking complex support ... 
+.sconf_temp/conftest_3.c <-
+  |
+  |    #include <complex.h>
+  |    #include <math.h>
+  |    int main(int argc,char* argv[]) {
+  |    float complex c;
+  |    float f;
+  |    c = 0.0;
+  |    f = cabsf(ccosf(c));
+  |    return (int) f;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_3.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_3.c
+gcc -o .sconf_temp/sfconftest_3 .sconf_temp/conftest_3.o -lm
+scons: Configure: yes
+
+scons: Configure: checking for X11 headers ... 
+scons: Configure: (cached) no
+
+scons: Configure: checking for OpenGL ... 
+.sconf_temp/conftest_4.c <-
+  |
+  |    #ifdef __APPLE__
+  |    #include <OpenGL/glu.h>
+  |    #include <GLUT/glut.h>
+  |    #else
+  |    #include <GL/glu.h>
+  |    #include <GL/glut.h>
+  |    #endif
+  |    int main(int argc,char* argv[]) {
+  |    glutInit (&argc, argv);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_4.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_4.c
+gcc -o .sconf_temp/sfconftest_4 .sconf_temp/conftest_4.o -lm -lGL -lGLU -lglut
+scons: Configure: yes
+
+scons: Configure: checking for sfpen ... 
+scons: Configure: (cached) oglpen
+
+scons: Configure: checking for ppm ... 
+.sconf_temp/conftest_5.c <-
+  |
+  |    #include <ppm.h>
+  |    int main(int argc,char* argv[]) {
+  |    ppm_init(&argc,argv);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_5.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_5.c
+.sconf_temp/conftest_5.c:2:21: fatal error: ppm.h: No such file or directory
+     #include <ppm.h>
+                     ^
+compilation terminated.
+.sconf_temp/conftest_6.c <-
+  |
+  |    #include <ppm.h>
+  |    int main(int argc,char* argv[]) {
+  |    ppm_init(&argc,argv);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_6.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_6.c
+.sconf_temp/conftest_6.c:2:21: fatal error: ppm.h: No such file or directory
+     #include <ppm.h>
+                     ^
+compilation terminated.
+scons: Configure: no
+
+scons: Configure: checking for tiff ... 
+.sconf_temp/conftest_7.c <-
+  |
+  |    #include <tiffio.h>
+  |    int main(int argc,char* argv[]) {
+  |    TIFF *tiffout;
+  |    tiffout = TIFFOpen("test.tif","wb");
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_7.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_7.c
+.sconf_temp/conftest_7.c:2:24: fatal error: tiffio.h: No such file or directory
+     #include <tiffio.h>
+                        ^
+compilation terminated.
+scons: Configure: no
+
+scons: Configure: checking for GD (PNG) ... 
+.sconf_temp/conftest_8.c <-
+  |
+  |    #include <gd.h>
+  |    int main(int argc,char* argv[]) {
+  |    gdImagePtr image;
+  |    image = gdImageCreate(10,10);
+  |    gdImageSetClip(image,0,0,1,1);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_8.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_8.c
+.sconf_temp/conftest_8.c:2:20: fatal error: gd.h: No such file or directory
+     #include <gd.h>
+                    ^
+compilation terminated.
+scons: Configure: no
+
+scons: Configure: checking for plplot ... 
+.sconf_temp/conftest_9.c <-
+  |
+  |    #include <plplot.h>
+  |    #include <plplotP.h>
+  |    #include <plstrm.h>
+  |    int main (int argc, char *argv[]) {
+  |    plinit ();
+  |    pladv (0);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_9.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_9.c
+.sconf_temp/conftest_9.c:2:24: fatal error: plplot.h: No such file or directory
+     #include <plplot.h>
+                        ^
+compilation terminated.
+scons: Configure: no
+
+scons: Configure: checking for ffmpeg ... 
+.sconf_temp/conftest_10.c <-
+  |
+  |    #include <avcodec.h>
+  |    int main (int argc, char *argv[]) {
+  |    #if LIBAVCODEC_VERSION_MAJOR < 54
+  |    avcodec_init ();
+  |    #endif
+  |    avcodec_register_all ();
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_10.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_10.c
+.sconf_temp/conftest_10.c:2:25: fatal error: avcodec.h: No such file or directory
+     #include <avcodec.h>
+                         ^
+compilation terminated.
+.sconf_temp/conftest_11.c <-
+  |
+  |    #include <avcodec.h>
+  |    int main (int argc, char *argv[]) {
+  |    #if LIBAVCODEC_VERSION_MAJOR < 54
+  |    avcodec_init ();
+  |    #endif
+  |    avcodec_register_all ();
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_11.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_11.c
+.sconf_temp/conftest_11.c:2:25: fatal error: avcodec.h: No such file or directory
+     #include <avcodec.h>
+                         ^
+compilation terminated.
+scons: Configure: no
+
+scons: Configure: checking for cairo (PNG) ... 
+.sconf_temp/conftest_12.c <-
+  |
+  |    #include <cairo.h>
+  |    int main(int argc,char* argv[]) {
+  |    cairo_surface_t *surface;
+  |    surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 10, 10);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_12.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_12.c
+.sconf_temp/conftest_12.c:2:23: fatal error: cairo.h: No such file or directory
+     #include <cairo.h>
+                       ^
+compilation terminated.
+scons: Configure: no
+
+scons: Configure: checking for jpeg ... 
+.sconf_temp/conftest_13.c <-
+  |
+  |    #include <stdio.h>
+  |    #include <jpeglib.h>
+  |    int main(int argc,char* argv[]) {
+  |    struct jpeg_compress_struct jpeg;
+  |    struct jpeg_error_mgr jpeg_err;
+  |    jpeg.err = jpeg_std_error(&jpeg_err);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_13.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_13.c
+.sconf_temp/conftest_13.c: In function 'main':
+.sconf_temp/conftest_13.c:5:33: warning: variable 'jpeg' set but not used [-Wunused-but-set-variable]
+     struct jpeg_compress_struct jpeg;
+                                 ^
+gcc -o .sconf_temp/sfconftest_13 .sconf_temp/conftest_13.o -lm -ljpeg
+scons: Configure: yes
+
+scons: Configure: checking for BLAS ... 
+.sconf_temp/conftest_14.c <-
+  |
+  |    #ifdef __APPLE__
+  |    #include <Accelerate/Accelerate.h>
+  |    #else
+  |    #ifdef HAVE_MKL
+  |    #include <mkl.h>
+  |    #else 
+  |    #include <cblas.h>
+  |    #endif
+  |    #endif
+  |    int main(int argc,char* argv[]) {
+  |    float d, x[]={1.,2.,3.}, y[]={3.,2.,1.};
+  |    d = cblas_sdot(3,x,1,y,1);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_14.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_14.c
+.sconf_temp/conftest_14.c: In function 'main':
+.sconf_temp/conftest_14.c:12:11: warning: variable 'd' set but not used [-Wunused-but-set-variable]
+     float d, x[]={1.,2.,3.}, y[]={3.,2.,1.};
+           ^
+gcc -o .sconf_temp/sfconftest_14 .sconf_temp/conftest_14.o -lm
+.sconf_temp/conftest_14.o: In function `main':
+conftest_14.c:(.text.startup+0x58): undefined reference to `cblas_sdot'
+collect2: error: ld returned 1 exit status
+.sconf_temp/conftest_15.c <-
+  |
+  |    #ifdef __APPLE__
+  |    #include <Accelerate/Accelerate.h>
+  |    #else
+  |    #ifdef HAVE_MKL
+  |    #include <mkl.h>
+  |    #else 
+  |    #include <cblas.h>
+  |    #endif
+  |    #endif
+  |    int main(int argc,char* argv[]) {
+  |    float d, x[]={1.,2.,3.}, y[]={3.,2.,1.};
+  |    d = cblas_sdot(3,x,1,y,1);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_15.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_15.c
+.sconf_temp/conftest_15.c: In function 'main':
+.sconf_temp/conftest_15.c:12:11: warning: variable 'd' set but not used [-Wunused-but-set-variable]
+     float d, x[]={1.,2.,3.}, y[]={3.,2.,1.};
+           ^
+gcc -o .sconf_temp/sfconftest_15 .sconf_temp/conftest_15.o -lm -lblas
+scons: Configure: yes
+
+scons: Configure: checking for LAPACK ... 
+.sconf_temp/conftest_16.c <-
+  |
+  |    void dgesv_(int *n, int *nrhs, double *a,
+  |    int *lda, int *ipiv, double *b, int *ldb, int *info);
+  |    int main(int argc,char* argv[]) {
+  |    int N=2, NRHS=1, LDA=2, LDB=2;
+  |    double A[]={0.0,1.0,2.0,3.0};
+  |    double B[]={0.0,1.0};
+  |    int IPIV[2], INFO;
+  |    dgesv_(&N, &NRHS, A, &LDA, &IPIV, B, &LDB, &INFO);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_16.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_16.c
+.sconf_temp/conftest_16.c: In function 'main':
+.sconf_temp/conftest_16.c:9:32: warning: passing argument 5 of 'dgesv_' from incompatible pointer type
+     dgesv_(&N, &NRHS, A, &LDA, &IPIV, B, &LDB, &INFO);
+                                ^
+.sconf_temp/conftest_16.c:2:10: note: expected 'int *' but argument is of type 'int (*)[2]'
+     void dgesv_(int *n, int *nrhs, double *a,
+          ^
+gcc -o .sconf_temp/sfconftest_16 .sconf_temp/conftest_16.o -lm -lblas
+.sconf_temp/conftest_16.o: In function `main':
+conftest_16.c:(.text.startup+0x8f): undefined reference to `dgesv_'
+collect2: error: ld returned 1 exit status
+.sconf_temp/conftest_17.c <-
+  |
+  |    void dgesv_(int *n, int *nrhs, double *a,
+  |    int *lda, int *ipiv, double *b, int *ldb, int *info);
+  |    int main(int argc,char* argv[]) {
+  |    int N=2, NRHS=1, LDA=2, LDB=2;
+  |    double A[]={0.0,1.0,2.0,3.0};
+  |    double B[]={0.0,1.0};
+  |    int IPIV[2], INFO;
+  |    dgesv_(&N, &NRHS, A, &LDA, &IPIV, B, &LDB, &INFO);
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_17.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_17.c
+.sconf_temp/conftest_17.c: In function 'main':
+.sconf_temp/conftest_17.c:9:32: warning: passing argument 5 of 'dgesv_' from incompatible pointer type
+     dgesv_(&N, &NRHS, A, &LDA, &IPIV, B, &LDB, &INFO);
+                                ^
+.sconf_temp/conftest_17.c:2:10: note: expected 'int *' but argument is of type 'int (*)[2]'
+     void dgesv_(int *n, int *nrhs, double *a,
+          ^
+gcc -o .sconf_temp/sfconftest_17 .sconf_temp/conftest_17.o -lm -lblas -llapack -lblas
+scons: Configure: yes
+
+scons: Configure: checking for SWIG ... 
+scons: Configure: (cached) no
+
+scons: Configure: checking for numpy ... 
+scons: Configure: (cached) yes
+
+scons: Configure: checking API options ... 
+scons: Configure: (cached) []
+
+scons: Configure: checking for C++ compiler ... 
+scons: Configure: (cached) g++
+
+scons: Configure: checking if g++ works ... 
+.sconf_temp/conftest_18.cc <-
+  |
+  |        #include <valarray>
+  |        int main(int argc,char* argv[]) {
+  |        return 0;
+  |        }
+  |
+g++ -o .sconf_temp/conftest_18.o -c -O2 .sconf_temp/conftest_18.cc
+g++ -o .sconf_temp/sfconftest_18 .sconf_temp/conftest_18.o -lm -lblas -llapack -lblas
+scons: Configure: yes
+
+scons: Configure: checking if g++ accepts '-Wall -pedantic' ... 
+.sconf_temp/conftest_19.cc <-
+  |
+  |        #include <valarray>
+  |        int main(int argc,char* argv[]) {
+  |        return 0;
+  |        }
+  |
+g++ -o .sconf_temp/conftest_19.o -c -O2 -Wall -pedantic .sconf_temp/conftest_19.cc
+scons: Configure: yes
+
+scons: Configure: checking for MPICC ... 
+scons: Configure: (cached) /usr/bin/mpicc
+
+scons: Configure: checking if /usr/bin/mpicc works ... 
+.sconf_temp/conftest_20.c <-
+  |
+  |        #include <mpi.h>
+  |        int main(int argc,char* argv[]) {
+  |        MPI_Init(&argc,&argv);
+  |        MPI_Finalize();
+  |        }
+  |
+/usr/bin/mpicc -o .sconf_temp/conftest_20.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_20.c
+/usr/bin/mpicc -o .sconf_temp/sfconftest_20 .sconf_temp/conftest_20.o -lm -lblas -llapack -lblas
+scons: Configure: yes
+
+scons: Configure: checking for MPICXX ... 
+scons: Configure: (cached) /usr/bin/mpicxx
+
+scons: Configure: checking if /usr/bin/mpicxx works ... 
+.sconf_temp/conftest_21.cc <-
+  |
+  |        #include <mpi.h>
+  |        int main(int argc,char* argv[]) {
+  |        MPI_Init(&argc,&argv);
+  |        MPI_Finalize();
+  |        }
+  |
+/usr/bin/mpicxx -o .sconf_temp/conftest_21.o -c -O2 -Wall -pedantic .sconf_temp/conftest_21.cc
+In file included from .sconf_temp/conftest_21.cc:2:0:
+/usr/lib/openmpi/include/mpi.h:139:35: warning: ISO C++ 1998 does not support 'long long' [-Wlong-long]
+ #define OMPI_MPI_OFFSET_TYPE long long
+                                   ^
+/usr/lib/openmpi/include/mpi.h:318:9: note: in expansion of macro 'OMPI_MPI_OFFSET_TYPE'
+ typedef OMPI_MPI_OFFSET_TYPE MPI_Offset;
+         ^
+/usr/bin/mpicxx -o .sconf_temp/sfconftest_21 .sconf_temp/conftest_21.o -lm -lblas -llapack -lblas
+scons: Configure: yes
+
+scons: Configure: checking for MPIRUN ... 
+scons: Configure: (cached) /usr/bin/mpirun
+
+scons: Configure: checking for Posix threads ... 
+.sconf_temp/conftest_22.c <-
+  |
+  |    #include <pthread.h>
+  |    #include <stdlib.h>
+  |    int main(void) {
+  |    pthread_t peers;
+  |    pthread_create(&peers, NULL, NULL, NULL);
+  |    return 0;
+  |    }
+  |    
+gcc -o .sconf_temp/conftest_22.o -c -O2 -x c -std=gnu99 -Wall -pedantic .sconf_temp/conftest_22.c
+.sconf_temp/conftest_22.c: In function 'main':
+.sconf_temp/conftest_22.c:6:5: warning: null argument where non-null required (argument 3) [-Wnonnull]
+     pthread_create(&peers, NULL, NULL, NULL);
+     ^
+gcc -o .sconf_temp/sfconftest_22 -pthread .sconf_temp/conftest_22.o -lm -lblas -llapack -lblas
+scons: Configure: yes
+
+scons: Configure: checking for OpenMP ... 
+.sconf_temp/conftest_23.c <-
+  |
+  |    #include <omp.h>
+  |    int main(void) {
+  |    int nt;
+  |#pragma omp parallel
+  |{
+  |    nt = omp_get_num_threads();
+  |}
+  |    return 0;
+  |    }
+  |    
+gcc -o .sconf_temp/conftest_23.o -c -O2 -x c -std=gnu99 -Wall -pedantic -fopenmp .sconf_temp/conftest_23.c
+.sconf_temp/conftest_23.c: In function 'main':
+.sconf_temp/conftest_23.c:4:9: warning: variable 'nt' set but not used [-Wunused-but-set-variable]
+     int nt;
+         ^
+gcc -o .sconf_temp/sfconftest_23 -pthread -fopenmp .sconf_temp/conftest_23.o -lm -lblas -llapack -lblas -lgomp
+scons: Configure: yes
+
+scons: Configure: checking for CUDA ... 
+scons: Configure: (cached) no
+
+scons: Configure: checking for FFTW ... 
+.sconf_temp/conftest_24.c <-
+  |
+  |    #include <fftw3.h>
+  |    int main(int argc,char* argv[]) {
+  |    fftwf_complex *in;
+  |    fftwf_plan p;
+  |    in = (fftwf_complex*) fftwf_malloc(sizeof(fftwf_complex) * 10);
+  |    p = fftwf_plan_dft_1d(10, in, in, FFTW_FORWARD, FFTW_ESTIMATE);
+  |    fftwf_destroy_plan(p);
+  |    fftwf_free(in); 
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_24.o -c -O2 -x c -std=gnu99 -Wall -pedantic -fopenmp .sconf_temp/conftest_24.c
+gcc -o .sconf_temp/sfconftest_24 -pthread -fopenmp .sconf_temp/conftest_24.o -lm -lblas -llapack -lblas -lgomp
+.sconf_temp/conftest_24.o: In function `main':
+conftest_24.c:(.text.startup+0x7): undefined reference to `fftwf_malloc'
+conftest_24.c:(.text.startup+0x25): undefined reference to `fftwf_plan_dft_1d'
+conftest_24.c:(.text.startup+0x2d): undefined reference to `fftwf_destroy_plan'
+conftest_24.c:(.text.startup+0x35): undefined reference to `fftwf_free'
+collect2: error: ld returned 1 exit status
+.sconf_temp/conftest_25.c <-
+  |
+  |    #include <fftw3.h>
+  |    int main(int argc,char* argv[]) {
+  |    fftwf_complex *in;
+  |    fftwf_plan p;
+  |    in = (fftwf_complex*) fftwf_malloc(sizeof(fftwf_complex) * 10);
+  |    p = fftwf_plan_dft_1d(10, in, in, FFTW_FORWARD, FFTW_ESTIMATE);
+  |    fftwf_destroy_plan(p);
+  |    fftwf_free(in); 
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_25.o -c -O2 -x c -std=gnu99 -Wall -pedantic -fopenmp .sconf_temp/conftest_25.c
+gcc -o .sconf_temp/sfconftest_25 -pthread -fopenmp .sconf_temp/conftest_25.o -lm -lblas -llapack -lblas -lgomp -lfftw3f
+scons: Configure: yes
+
+scons: Configure: checking if FFTW supports threads ... 
+.sconf_temp/conftest_26.c <-
+  |
+  |    #include <fftw3.h>
+  |    int main(int argc,char* argv[]) {
+  |    fftwf_init_threads();
+  |    fftwf_plan_with_nthreads(1);
+  |    fftwf_cleanup_threads();
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_26.o -c -O2 -x c -std=gnu99 -Wall -pedantic -fopenmp .sconf_temp/conftest_26.c
+gcc -o .sconf_temp/sfconftest_26 -pthread -fopenmp .sconf_temp/conftest_26.o -lm -lblas -llapack -lblas -lgomp -lfftw3f
+.sconf_temp/conftest_26.o: In function `main':
+conftest_26.c:(.text.startup+0x5): undefined reference to `fftwf_init_threads'
+conftest_26.c:(.text.startup+0xf): undefined reference to `fftwf_plan_with_nthreads'
+conftest_26.c:(.text.startup+0x14): undefined reference to `fftwf_cleanup_threads'
+collect2: error: ld returned 1 exit status
+.sconf_temp/conftest_27.c <-
+  |
+  |    #include <fftw3.h>
+  |    int main(int argc,char* argv[]) {
+  |    fftwf_init_threads();
+  |    fftwf_plan_with_nthreads(1);
+  |    fftwf_cleanup_threads();
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_27.o -c -O2 -x c -std=gnu99 -Wall -pedantic -fopenmp .sconf_temp/conftest_27.c
+gcc -o .sconf_temp/sfconftest_27 -pthread -fopenmp .sconf_temp/conftest_27.o -lm -lblas -llapack -lblas -lgomp -lfftw3f -lfftw3f_threads
+scons: Configure: yes
+
+scons: Configure: checking for SuiteSparse ... 
+.sconf_temp/conftest_28.c <-
+  |
+  |    #include <umfpack.h>
+  |    /* #include <lbfgs.h> */
+  |    int main(void) {
+  |    int    n = 3;
+  |    int    Ap [ ] = {0,2,4,6};
+  |    int    Ai [ ] = {0,1,0,2,1,2};
+  |    double Ax [ ] = {2.,3.,3.,-1.,4.,-3.};
+  |    double *null = (double *) NULL;
+  |    void *Symbolic;
+  |    /* lbfgs_parameter_t param; */
+  |    (void) umfpack_di_symbolic (n, n, Ap, Ai, Ax, &Symbolic, null, null);
+  |    umfpack_di_free_symbolic (&Symbolic) ;
+  |    /* lbfgs_parameter_init (&param); */
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_28.o -c -O2 -x c -std=gnu99 -Wall -pedantic -fopenmp -I/usr/include/suitesparse .sconf_temp/conftest_28.c
+.sconf_temp/conftest_28.c:2:25: fatal error: umfpack.h: No such file or directory
+     #include <umfpack.h>
+                         ^
+compilation terminated.
+.sconf_temp/conftest_29.c <-
+  |
+  |    #include <umfpack.h>
+  |    /* #include <lbfgs.h> */
+  |    int main(void) {
+  |    int    n = 3;
+  |    int    Ap [ ] = {0,2,4,6};
+  |    int    Ai [ ] = {0,1,0,2,1,2};
+  |    double Ax [ ] = {2.,3.,3.,-1.,4.,-3.};
+  |    double *null = (double *) NULL;
+  |    void *Symbolic;
+  |    /* lbfgs_parameter_t param; */
+  |    (void) umfpack_di_symbolic (n, n, Ap, Ai, Ax, &Symbolic, null, null);
+  |    umfpack_di_free_symbolic (&Symbolic) ;
+  |    /* lbfgs_parameter_init (&param); */
+  |    return 0;
+  |    }
+  |
+gcc -o .sconf_temp/conftest_29.o -c -O2 -x c -std=gnu99 -Wall -pedantic -fopenmp -I/usr/include/suitesparse .sconf_temp/conftest_29.c
+.sconf_temp/conftest_29.c:2:25: fatal error: umfpack.h: No such file or directory
+     #include <umfpack.h>
+                         ^
+compilation terminated.
+scons: Configure: no
+
+.sconf_temp/conftest_30.c <-
+  |
+  |        #include <fftw3.h>
+  |        int main(int argc,char* argv[]) {
+  |        fftwf_complex *in;
+  |        fftwf_plan p;
+  |        in = (fftwf_complex*) fftwf_malloc(sizeof(fftwf_complex) * 10);
+  |        p = fftwf_plan_dft_1d(10, in, in, FFTW_FORWARD, FFTW_ESTIMATE);
+  |        fftwf_destroy_plan(p);
+  |        fftwf_free(in);
+  |        return 0;
+  |        }
+  |
+gcc -o .sconf_temp/conftest_30.o -c -O2 -x c -std=gnu99 -Wall -pedantic -fopenmp .sconf_temp/conftest_30.c
+gcc -o .sconf_temp/sfconftest_30 -pthread -fopenmp .sconf_temp/conftest_30.o -lm -lblas -llapack -lblas -lgomp -lfftw3f -lfftw3f_threads
+scons: Configure: checking for pfft ... 
+.sconf_temp/conftest_31.c <-
+  |
+  |            #include <pfft.h>
+  |            int main(int argc, char **argv){
+  |            MPI_Init(&argc, &argv);
+  |            pfftf_init();
+  |            MPI_Finalize();
+  |            return 0;
+  |            }
+  |
+/usr/bin/mpicc -o .sconf_temp/conftest_31.o -c -O2 -x c -std=gnu99 -Wall -pedantic -fopenmp -I/usr/local/include .sconf_temp/conftest_31.c
+.sconf_temp/conftest_31.c:2:30: fatal error: pfft.h: No such file or directory
+             #include <pfft.h>
+                              ^
+compilation terminated.
+scons: Configure: no
+
+

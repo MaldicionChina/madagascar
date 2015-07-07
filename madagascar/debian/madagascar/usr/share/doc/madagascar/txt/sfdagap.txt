@@ -1,0 +1,23 @@
+Program sfdagap | Reflection event apex protector/removal for dip-angle gathers.
+[SYNOPSIS]
+sfdagap < dagFile.rsf dips=dipFile.rsf > taperFile.rsf ddep=y pwidth=10.f greyarea=10.f dz=20.f
+[COMMENTS]
+
+   May be used for migration aperture optimization or for reflected energy
+   supression. For the last multiply the output on -1.
+
+   Input:
+   dagFile.rsf - input dip-angle gathers;
+   dipFile.rsf - dips esitimated in the image domain. The dips are in degree (!)
+
+   Output:
+   taperFile.rsf - mask for input dip-angle gathers
+
+[PARAMETERS]
+bool    | ddep | =y |  [y/n] | 	if y, taper depends on depth; if n, no 
+string  | dips | = |   | 	dips esitimated in the image domain (in degree) (auxiliary input file name)
+float   | dz | =20.f |   | 	half of a migrated wave length 
+float   | greyarea | =10.f |   | 	width of event tail taper (in degree) 
+float   | pwidth | =10.f |   | 	protected width (in degree) 
+[DIRECTORY]
+user/aklokov

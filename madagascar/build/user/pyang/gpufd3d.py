@@ -1,0 +1,17 @@
+sfgpufd3d = rsf.doc.rsfprog('sfgpufd3d','user/pyang/Mgpufd3d.cu','''GPU-based finite difference on 3-D grid''')
+sfgpufd3d.par('verb',rsf.doc.rsfpar('bool','n','','''verbosit2 '''))
+sfgpufd3d.par('nt',rsf.doc.rsfpar('int','','','''total number of time steps '''))
+sfgpufd3d.par('kt',rsf.doc.rsfpar('int','','','''record wavefield at time kt '''))
+sfgpufd3d.par('dt',rsf.doc.rsfpar('float','','','''time sampling interval '''))
+sfgpufd3d.par('fm',rsf.doc.rsfpar('float','20','','''dominant frequency of Ricker wavelet '''))
+sfgpufd3d.par('ns',rsf.doc.rsfpar('int','1','','''number of sources '''))
+sfgpufd3d.par('szbeg',rsf.doc.rsfpar('int','','','''source beginning of z-axis '''))
+sfgpufd3d.par('sxbeg',rsf.doc.rsfpar('int','','','''source beginning of x-axis '''))
+sfgpufd3d.par('sybeg',rsf.doc.rsfpar('int','','','''source beginning of y-axis '''))
+sfgpufd3d.par('jsz',rsf.doc.rsfpar('int','','','''source jump interval in z-axis '''))
+sfgpufd3d.par('jsx',rsf.doc.rsfpar('int','','','''source jump interval in x-axis '''))
+sfgpufd3d.par('jsy',rsf.doc.rsfpar('int','','','''source jump interval in y-axis '''))
+sfgpufd3d.version('1.7')
+sfgpufd3d.synopsis('''sfgpufd3d < Fv.rsf > Fw.rsf verb=n nt= kt= dt= fm=20 ns=1 szbeg= sxbeg= sybeg= jsz= jsx= jsy=''','''''')
+rsf.doc.progs['sfgpufd3d']=sfgpufd3d
+

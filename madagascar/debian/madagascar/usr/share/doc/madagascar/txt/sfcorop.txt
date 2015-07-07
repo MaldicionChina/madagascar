@@ -1,0 +1,16 @@
+Program sfcorop | 
+[SYNOPSIS]
+sfcorop opr=Fopr.rsf < Fcor.rsf > Fwfl.rsf verb=n adj=n ncor=100
+[COMMENTS]
+Correlation operator w/ adjoint
+wfl [file] : is taken from stdin
+opr [file] : is taken from  "opr"
+Requires both files to have the same dimensions
+
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag
+int     | ncor | =100 |   | 	
+file    | opr | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag
+[DIRECTORY]
+user/psava

@@ -1,0 +1,13 @@
+Program sfwei | 3-D modeling/migration with extended SSF 
+[SYNOPSIS]
+sfwei slo=Fslo.rsf < Fsou.rsf dat=Frec.rsf > Fcic.rsf coo=Fcoo.rsf cip=Feic.rsf > Fwfl.rsf verb=n causal=n causal=n irun=
+[PARAMETERS]
+bool    | causal | =n |  [y/n] | 	causality 
+file    | cip | = |   | 	auxiliary output file name
+file    | coo | = |   | 	auxiliary input file name
+file    | dat | = |   | 	auxiliary input file name
+string  | irun | = |   | 	
+file    | slo | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/psava

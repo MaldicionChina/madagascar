@@ -1,0 +1,11 @@
+Program sflrmatrix | Lowrank matrix decomposition
+[SYNOPSIS]
+sflrmatrix name=mfile.rsf < in.rsf > out.rsf seed=time(NULL eps=1.e-4 npk=20 outputs=2
+[PARAMETERS]
+        | eps | =1.e-4 |   | 	tolerance
+file    | name | = |   | 	auxiliary output file name
+        | npk | =20 |   | 	maximum rank
+        | outputs | =2 |   | 	number of outputs (2 or 3)
+        | seed | =time(NULL |   | 	
+[DIRECTORY]
+user/lexing

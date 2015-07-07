@@ -1,0 +1,9 @@
+Program sfcreate | Creates just the ascii header from parameters
+[SYNOPSIS]
+sfcreate > out.rsf n#=
+[COMMENTS]
+Wrapper for sf_fileflush (creating RSF header from params) 
+[PARAMETERS]
+int     | n# | = |   | 	size of #-th axis 
+[DIRECTORY]
+user/ivlad

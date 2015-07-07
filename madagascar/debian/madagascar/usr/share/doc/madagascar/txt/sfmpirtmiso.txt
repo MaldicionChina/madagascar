@@ -1,0 +1,38 @@
+Program sfmpirtmiso | isotropic reverse-time migration 
+[SYNOPSIS]
+sfmpirtmiso velo=fvelo.rsf sour=fsour.rsf nz= nz= tz= dz= dz= dt= z0= x0= bzl= bzh= bxl= bxh= czl= czh= cxl= cxh= j3= nh= ns= dh= ds= h0= s0= zr= zs= nH= nC= dH= dC= C0= mode= tau=
+[PARAMETERS]
+int     | C0 | = |   | 	
+int     | bxh | = |   | 	
+int     | bxl | = |   | 	
+int     | bzh | = |   | 	
+int     | bzl | = |   | 	
+float   | cxh | = |   | 	
+float   | cxl | = |   | 	
+float   | czh | = |   | 	
+float   | czl | = |   | 	
+int     | dC | = |   | 	
+int     | dH | = |   | 	
+float   | dh | = |   | 	
+float   | ds | = |   | 	
+float   | dt | = |   | 	
+float   | dz | = |   | 	
+float   | h0 | = |   | 	
+int     | j3 | = |   | 	
+int     | mode | = |   | 	
+int     | nC | = |   | 	
+int     | nH | = |   | 	
+int     | nh | = |   | 	
+int     | ns | = |   | 	
+int     | nz | = |   | 	
+float   | s0 | = |   | 	
+file    | sour | = |   | 	auxiliary input file name
+int     | tau | = |   | 	
+int     | tz | = |   | 	
+file    | velo | = |   | 	auxiliary input file name
+float   | x0 | = |   | 	
+float   | z0 | = |   | 	
+float   | zr | = |   | 	
+float   | zs | = |   | 	
+[DIRECTORY]
+user/xuxin

@@ -1,0 +1,14 @@
+Program sfapef | Estimate adaptive nonstationary PEF on aliased traces. 
+[SYNOPSIS]
+sfapef < mat.rsf > flt.rsf pred=pre.rsf maskin=maskin.rsf maskout=maskout.rsf a= jump=2 dim=mdim niter=100 verb=n
+[PARAMETERS]
+ints    | a | = |   | 	 [ndim]
+int     | dim | =mdim |   | 	number of dimensions 
+int     | jump | =2 |   | 	Jump parameter 
+string  | maskin | = |   | 	optional input mask file (auxiliary input file name)
+string  | maskout | = |   | 	optional output mask file (auxiliary output file name)
+int     | niter | =100 |   | 	number of iterations 
+string  | pred | = |   | 	auxiliary output file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/yliu

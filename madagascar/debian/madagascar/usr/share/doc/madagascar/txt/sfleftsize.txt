@@ -1,0 +1,9 @@
+Program sfleftsize | Computes Ni+1 x Ni+2 x ...
+[SYNOPSIS]
+sfleftsize < in.rsf i=0
+[COMMENTS]
+Wrapper for sf_leftsize
+[PARAMETERS]
+int     | i | =0 |   | 	What size to start counting from. i=0 gets total number of elements 
+[DIRECTORY]
+user/ivlad

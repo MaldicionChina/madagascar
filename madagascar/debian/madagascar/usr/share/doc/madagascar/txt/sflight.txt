@@ -1,0 +1,9 @@
+Program sflight | Apply 2-D directional high-pass to highlight data.
+[SYNOPSIS]
+sflight < in.rsf > out.rsf ax=1. ay=1. eps=0.
+[PARAMETERS]
+float   | ax | =1. |   | 	x direction 
+float   | ay | =1. |   | 	y direction 
+float   | eps | =0. |   | 	highpass filter parameter; if eps=0, apply derivative 
+[DIRECTORY]
+user/gee

@@ -1,0 +1,9 @@
+Program sfpca | KL transform. 
+[SYNOPSIS]
+sfpca < in.rsf > out.rsf verb=y nc=n1 eta=0.9
+[PARAMETERS]
+float   | eta | =0.9 |   | 	energy ratio for signal subspace [ 0 eta < 1 ]
+int     | nc | =n1 |   | 	number of components [ 0 < nc < n1 ] 
+bool    | verb | =y |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/chen

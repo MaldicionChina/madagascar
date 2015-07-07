@@ -1,0 +1,5 @@
+Program sffft | Fourier transform as a linear operator
+[SYNOPSIS]
+sffft
+[DIRECTORY]
+user/fomels

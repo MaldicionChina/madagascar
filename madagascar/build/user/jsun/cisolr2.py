@@ -1,0 +1,15 @@
+sfcisolr2 = rsf.doc.rsfprog('sfcisolr2','user/jsun/Mcisolr2.cc','''Complex lowrank decomposition for 2-D isotropic wave propagation. ''')
+sfcisolr2.par('fft',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfcisolr2.par('left',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sfcisolr2.par('seed',rsf.doc.rsfpar('','time(NULL','',''''''))
+sfcisolr2.par('eps',rsf.doc.rsfpar('','1.e-4','','''tolerance'''))
+sfcisolr2.par('npk',rsf.doc.rsfpar('','20','','''maximum rank'''))
+sfcisolr2.par('dt',rsf.doc.rsfpar('','','','''time step'''))
+sfcisolr2.par('os',rsf.doc.rsfpar('','true','',''''''))
+sfcisolr2.par('sub',rsf.doc.rsfpar('','false','','''for onestep, default false'''))
+sfcisolr2.par('sub',rsf.doc.rsfpar('','true','','''for twostep, default true'''))
+sfcisolr2.par('lap',rsf.doc.rsfpar('','false','',''''''))
+sfcisolr2.version('1.7')
+sfcisolr2.synopsis('''sfcisolr2 < vel.rsf fft=fft.rsf left=left.rsf > right.rsf seed=time(NULL eps=1.e-4 npk=20 dt= os=true sub=false sub=true lap=false''','''''')
+rsf.doc.progs['sfcisolr2']=sfcisolr2
+

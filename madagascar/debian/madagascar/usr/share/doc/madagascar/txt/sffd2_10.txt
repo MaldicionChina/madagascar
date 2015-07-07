@@ -1,0 +1,11 @@
+Program sffd2_10 | 2-D Fourth-order Optimized Finite-difference wave extrapolation 
+[SYNOPSIS]
+sffd2_10 > out.rsf vel=vel.rsf < source.rsf dt= nt= isx= isz=
+[PARAMETERS]
+float   | dt | = |   | 	
+int     | isx | = |   | 	
+int     | isz | = |   | 	
+int     | nt | = |   | 	
+file    | vel | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/songxl

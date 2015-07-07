@@ -1,0 +1,9 @@
+Program sfthreshold2 | 2-D Soft thresholding. 
+[SYNOPSIS]
+sfthreshold2 < in.rsf > out.rsf thr=thr.rsf verb=n pclip=99.
+[PARAMETERS]
+float   | pclip | =99. |   | 	
+string  | thr | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/yliu

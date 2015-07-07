@@ -1,0 +1,16 @@
+Program sfstiff3d | stiffness tensor for 3D TTI models
+[SYNOPSIS]
+sfstiff3d vp=Fvp.rsf vs=Fvs.rsf ro=Fro.rsf epsilon=Fepsilon.rsf delta=Fdelta.rsf gamma=Fgamma.rsf nu=Fnu.rsf alpha=Falpha.rsf > Fcc.rsf verb=n dim=2
+[PARAMETERS]
+file    | alpha | = |   | 	auxiliary input file name
+file    | delta | = |   | 	auxiliary input file name
+int     | dim | =2 |   | 	verbosity flag 
+file    | epsilon | = |   | 	auxiliary input file name
+file    | gamma | = |   | 	auxiliary input file name
+file    | nu | = |   | 	auxiliary input file name
+file    | ro | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+file    | vp | = |   | 	auxiliary input file name
+file    | vs | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/jyan

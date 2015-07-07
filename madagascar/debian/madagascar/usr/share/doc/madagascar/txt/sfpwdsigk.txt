@@ -1,0 +1,17 @@
+Program sfpwdsigk | Signal component separation using plane-wave destruction. 
+[SYNOPSIS]
+sfpwdsigk < in.rsf dips=dips.rsf > out.rsf weight=weight.rsf niter=50 nliter=1 eps=0. verb=n order=1
+[COMMENTS]
+
+The program works with 2-D data.
+
+[PARAMETERS]
+file    | dips | = |   | 	auxiliary input file name
+float   | eps | =0. |   | 	regularization parameter 
+int     | niter | =50 |   | 	maximum number of iterations 
+int     | nliter | =1 |   | 	number of reweighting iterations 
+int     | order | =1 |   | 	accuracy order 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+string  | weight | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/pwd

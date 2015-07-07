@@ -1,0 +1,11 @@
+Program sfwuab | Wrapper for Utilities Acting on Binaries
+[SYNOPSIS]
+sfwuab prog= inp= tpar= ipar= verb=n
+[PARAMETERS]
+string  | inp | = |   | 	Input file
+string  | ipar | = |   | 	Independent params, i.e. "perc=100 cmap=rgb"
+string  | prog | = |   | 	Non-madagascar utility
+string  | tpar | = |   | 	Translated params, i.e.: "ni1=n1 ni2=n2"
+bool    | verb | =n |  [y/n] | 	
+[DIRECTORY]
+user/ivlad

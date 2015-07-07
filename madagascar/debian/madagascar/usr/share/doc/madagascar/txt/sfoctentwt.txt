@@ -1,0 +1,12 @@
+Program sfoctentwt | Tent-like weight for out-of-core patching. 
+[SYNOPSIS]
+sfoctentwt > wallwt.rsf windwt=windwt.rsf w= k= a= center= dim=2
+[PARAMETERS]
+ints    | a | = |   | 	filter size  [dim]
+ints    | center | = |   | 	 [dim]
+int     | dim | =2 |   | 	number of dimensions 
+ints    | k | = |   | 	number of windows  [dim]
+ints    | w | = |   | 	window size  [dim]
+file    | windwt | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/fomels

@@ -1,0 +1,7 @@
+Program sfshift1 | Generate shifts for 1-D regularized autoregression. 
+[SYNOPSIS]
+sfshift1 < in.rsf > shift.rsf ns=
+[PARAMETERS]
+int     | ns | = |   | 	number of shifts 
+[DIRECTORY]
+user/fomels

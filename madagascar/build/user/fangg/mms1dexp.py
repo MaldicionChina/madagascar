@@ -1,0 +1,18 @@
+sfmms1dexp = rsf.doc.rsfprog('sfmms1dexp','user/fangg/Mmms1dexp.c','''1D method of manufactured solution using Gaussian pulsa''')
+sfmms1dexp.par('dvel',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfmms1dexp.par('den',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfmms1dexp.par('velhf',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfmms1dexp.par('dvelhf',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfmms1dexp.par('denhf',rsf.doc.rsfpar('file   ',desc='''auxiliary input file name'''))
+sfmms1dexp.par('presrc',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sfmms1dexp.par('velsrc',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sfmms1dexp.par('preinit',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sfmms1dexp.par('velinit',rsf.doc.rsfpar('file   ',desc='''auxiliary output file name'''))
+sfmms1dexp.par('nt',rsf.doc.rsfpar('int','','','''number of time step'''))
+sfmms1dexp.par('dt',rsf.doc.rsfpar('float','','','''time step'''))
+sfmms1dexp.par('slx',rsf.doc.rsfpar('float','nx*dx*0.5','','''center of source location: x'''))
+sfmms1dexp.par('alpha',rsf.doc.rsfpar('float','1.0e-2','','''source parameter'''))
+sfmms1dexp.version('1.7')
+sfmms1dexp.synopsis('''sfmms1dexp < Fvel.rsf dvel=Fdvel.rsf den=Fden.rsf velhf=Fvelhf.rsf dvelhf=Fdvelhf.rsf denhf=Fdenhf.rsf presrc=Fpsrc.rsf velsrc=Fvsrc.rsf preinit=Fpint.rsf velinit=Fvint.rsf > Fmms.rsf nt= dt= slx=nx*dx*0.5 alpha=1.0e-2''','''''')
+rsf.doc.progs['sfmms1dexp']=sfmms1dexp
+

@@ -1,0 +1,9 @@
+Program sfacd2d | time-domain acoustic FD modeling 
+[SYNOPSIS]
+sfacd2d < Fw.rsf > Fo.rsf vel=Fv.rsf ref=Fr.rsf verb=n
+[PARAMETERS]
+file    | ref | = |   | 	auxiliary input file name
+file    | vel | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	setup I/O files 
+[DIRECTORY]
+user/hpcss

@@ -1,0 +1,204 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sfclip2</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sfclip2</strong></big></big> (1.7)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="http://sourceforge.net/p/rsf/code/HEAD/tree/branches/madagascar-1.7/system/generic/Mclip2.c">system/generic/Mclip2.c</a></font></td></tr></table>
+    One- or two-sided data clipping.
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sfclip2 < in.rsf > out.rsf upper=+FLT_MAX lower=-FLT_MAX</td></tr></table><br>
+sfclip2 is a generalization of sfclip.<br>
+<br>
+Clip values above xu:         sfclip2 < in.rsf > out.rsf upper=xu<br>
+Clip values below xl:         sfclip2 < in.rsf > out.rsf lower=xl<br>
+Clip values outside [xu,xl]:  sfclip2 < in.rsf > out.rsf upper=xu lower=xl<br>
+<br>
+sfclip2 < in.rsf > out.rsf upper=x lower=-x<br>
+<br>
+is equivalent to<br>
+<br>
+sfclip < in.rsf > out.rsf clip=x<br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>lower=-FLT_MAX</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	lower clip value <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>float   <strong>upper=+FLT_MAX</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	upper clip value <br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#eeaa77">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Used In</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>CWP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/cwp/geo2008InterferometricImagingCondition/circle.html">geo2008InterferometricImagingCondition/circle</a><br>
+                        
+                        <a href="book/cwp/geo2008InterferometricImagingCondition/sact1.html">geo2008InterferometricImagingCondition/sact1</a><br>
+                        
+                        <a href="book/cwp/pept2011MicroearthquakeMonitoring/saf1.html">pept2011MicroearthquakeMonitoring/saf1</a><br>
+                        
+                        <a href="book/cwp/pept2011MicroearthquakeMonitoring/saf3.html">pept2011MicroearthquakeMonitoring/saf3</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GEE</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/gee/lsq/antoine.html">lsq/antoine</a><br>
+                        
+                        <a href="book/gee/lsq/lomask.html">lsq/lomask</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GEO391</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/geo391/hw6/seabeam.html">hw6/seabeam</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>GEOSTATS</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/geostats/simulate/rfield.html">simulate/rfield</a><br>
+                        
+                        <a href="book/geostats/simulate/simple.html">simulate/simple</a><br>
+                        
+                        <a href="book/geostats/spatial_stats/correlogram.html">spatial_stats/correlogram</a><br>
+                        
+                        <a href="book/geostats/spatial_stats/covariance.html">spatial_stats/covariance</a><br>
+                        
+                        <a href="book/geostats/spatial_stats/gr_variogram.html">spatial_stats/gr_variogram</a><br>
+                        
+                        <a href="book/geostats/spatial_stats/variogram.html">spatial_stats/variogram</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>RSF</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/rsf/school/complex.html">school/complex</a><br>
+                        
+                        <a href="book/rsf/school/single.html">school/single</a><br>
+                        
+                        <a href="book/rsf/tutorials/sthelens.html">tutorials/sthelens</a><br>
+                        
+                        <a href="book/rsf/tutorials/wedge.html">tutorials/wedge</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>SEP</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/sep/super/tau.html">super/tau</a><br>
+                        
+                        <a href="book/sep/vc2/beivc.html">vc2/beivc</a><br>
+                        
+                        <a href="book/sep/vc2/sigvc.html">vc2/sigvc</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>SWAG</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/swag/itime/oz2.html">itime/oz2</a><br>
+                        
+                        <a href="book/swag/itime/oz6.html">itime/oz6</a><br>
+                        
+                        <a href="book/swag/itime/syn.html">itime/syn</a><br>
+                        
+                        <a href="book/swag/tau/iso.html">tau/iso</a><br>
+                        </td></tr></table>
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ffd8c8">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#000000" face="helvetica, arial"><big><strong>TCCS</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ffd8c8"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+                        <a href="book/tccs/diffr/fault.html">diffr/fault</a><br>
+                        
+                        <a href="book/tccs/diffr/gom.html">diffr/gom</a><br>
+                        
+                        <a href="book/tccs/nar/chirp.html">nar/chirp</a><br>
+                        
+                        <a href="book/tccs/nar/trace.html">nar/trace</a><br>
+                        
+                        <a href="book/tccs/nmo3/azimuthtest.html">nmo3/azimuthtest</a><br>
+                        
+                        <a href="book/tccs/nmodeblend/simple.html">nmodeblend/simple</a><br>
+                        
+                        <a href="book/tccs/shape/beivc.html">shape/beivc</a><br>
+                        
+                        <a href="book/tccs/strat/spec-decom.html">strat/spec-decom</a><br>
+                        
+                        <a href="book/tccs/time2depth2/beinew.html">time2depth2/beinew</a><br>
+                        
+                        <a href="book/tccs/uncert/beivc.html">uncert/beivc</a><br>
+                        </td></tr></table></td></tr></table>
+    </body></html>

@@ -1,0 +1,20 @@
+Program sfinvrec1 | 1-D inverse interpolation with recursive filtering. 
+[SYNOPSIS]
+sfinvrec1 < in.rsf > out.rsf filt=filt.rsf lag=lag.rsf nx= xmin= xmax= x0=xmin dx= spline=n nw=2 verb=n niter=nx eps=0.2 movie=n head=
+[PARAMETERS]
+float   | dx | = |   | 	grid sampling 
+float   | eps | =0.2 |   | 	regularization parameter 
+file    | filt | = |   | 	auxiliary input file name
+string  | head | = |   | 	
+string  | lag | = |   | 	optional input file with filter lags (auxiliary input file name)
+bool    | movie | =n |  [y/n] | 	verbosity flag 
+int     | niter | =nx |   | 	number of conjugate-gradient iterations 
+int     | nw | =2 |   | 	interpolator size 
+int     | nx | = |   | 	number of bins 
+bool    | spline | =n |  [y/n] | 	if use spline interpolation 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+float   | x0 | =xmin |   | 	grid origin 
+float   | xmax | = |   | 	
+float   | xmin | = |   | 	grid size 
+[DIRECTORY]
+user/gee

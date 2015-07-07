@@ -1,0 +1,15 @@
+Program sftwofreq2 | 2-D two spectral component estimation.
+[SYNOPSIS]
+sftwofreq2 < in.rsf > out.rsf mask=mask.rsf niter=5 eps=1 lam=1 p0=1. q0=1. p1=-1. q1=1. verb=n < data.rsf > dip.rsf
+[PARAMETERS]
+float   | eps | =1 |   | 	vertical smoothness 
+float   | lam | =1 |   | 	horizontal smoothness 
+string  | mask | = |   | 	auxiliary input file name
+int     | niter | =5 |   | 	number of iterations 
+float   | p0 | =1. |   | 	initial first component 
+float   | p1 | =-1. |   | 	initial second component 
+float   | q0 | =1. |   | 	initial first component 
+float   | q1 | =1. |   | 	initial second component 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/fomels

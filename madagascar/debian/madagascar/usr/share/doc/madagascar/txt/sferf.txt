@@ -1,0 +1,11 @@
+Program sferf | Bandpass filtering using erf function. 
+[SYNOPSIS]
+sferf < in.rsf > out.rsf flo=-1. fhi=-1. rect=1 spline=n der=n
+[PARAMETERS]
+bool    | der | =n |  [y/n] | 	compute derivative 
+float   | fhi | =-1. |   | 	high frequency in band 
+float   | flo | =-1. |   | 	low frequency in band 
+float   | rect | =1 |   | 	filter sharpness 
+bool    | spline | =n |  [y/n] | 	if use B-spline erf 
+[DIRECTORY]
+user/fomels

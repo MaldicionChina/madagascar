@@ -1,0 +1,16 @@
+sfslant = rsf.doc.rsfprog('sfslant','system/seismic/Mslant.c','''Time-space-domain Radon transform (slant stack) ''')
+sfslant.par('verb',rsf.doc.rsfpar('bool','n','','''verbosity flag '''))
+sfslant.par('adj',rsf.doc.rsfpar('bool','n','','''adjoint flag '''))
+sfslant.par('rho',rsf.doc.rsfpar('bool','y','','''rho filtering '''))
+sfslant.par('anti',rsf.doc.rsfpar('float','1.','','''antialiasing '''))
+sfslant.par('np',rsf.doc.rsfpar('int','','','''number of p values (if adj=y) '''))
+sfslant.par('dp',rsf.doc.rsfpar('float','','','''p sampling (if adj=y) '''))
+sfslant.par('p0',rsf.doc.rsfpar('float','','','''p origin (if adj=y) '''))
+sfslant.par('x0',rsf.doc.rsfpar('float','','','''offset origin '''))
+sfslant.par('dx',rsf.doc.rsfpar('float','','','''offset sampling '''))
+sfslant.par('nx',rsf.doc.rsfpar('int','','','''number of offsets '''))
+sfslant.par('p1',rsf.doc.rsfpar('float','0.','','''reference slope '''))
+sfslant.version('1.7')
+sfslant.synopsis('''sfslant < in.rsf > out.rsf verb=n adj=n rho=y anti=1. np= dp= p0= x0= dx= nx= p1=0.''','''''')
+rsf.doc.progs['sfslant']=sfslant
+

@@ -1,0 +1,11 @@
+Program sflsrtm2d | 2-D zero-offset least-squares reverse time migration (LSRTM)
+[SYNOPSIS]
+sflsrtm2d < data.rsf > imag.rsf vel=modl.rsf n0=0 verb=n niter=10 tol=1.e-12
+[PARAMETERS]
+int     | n0 | =0 |   | 	shot depth in the grid 
+int     | niter | =10 |   | 	totol number of least-squares iteration
+float   | tol | =1.e-12 |   | 	tolerance of inversion 
+file    | vel | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity 
+[DIRECTORY]
+user/pyang

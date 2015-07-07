@@ -1,0 +1,9 @@
+Program sfwarpadd | Add a perturbation to the warping function.
+[SYNOPSIS]
+sfwarpadd < in.rsf add=add.rsf > sum.rsf accuracy= m1=n1*2
+[PARAMETERS]
+int     | accuracy | = |   | 	Interpolation accuracy order 
+file    | add | = |   | 	auxiliary input file name
+int     | m1 | =n1*2 |   | 	Trace pading 
+[DIRECTORY]
+user/fomels

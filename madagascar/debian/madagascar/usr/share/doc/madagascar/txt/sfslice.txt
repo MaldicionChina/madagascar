@@ -1,0 +1,11 @@
+Program sfslice | Extract a slice using picked surface (usually from a stack or a semblance).
+[SYNOPSIS]
+sfslice < in.rsf pick=pick.rsf > out.rsf
+[COMMENTS]
+
+See also: sfpick.
+
+[PARAMETERS]
+file    | pick | = |   | 	auxiliary input file name
+[DIRECTORY]
+system/generic

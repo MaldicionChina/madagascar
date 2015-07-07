@@ -1,0 +1,10 @@
+Program sfdix | Convert RMS to interval velocity using LS and shaping regularization. 
+[SYNOPSIS]
+sfdix < vrms.rsf > vint.rsf weight=weight.rsf vrmsout=vout.rsf niter=100 rect#=(1,1,...)
+[PARAMETERS]
+int     | niter | =100 |   | 	maximum number of iterations 
+string  | rect# | =(1,1,...) |   | 	smoothing radius on #-th axis 
+string  | vrmsout | = |   | 	optionally, output predicted vrms (auxiliary output file name)
+string  | weight | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/fomels

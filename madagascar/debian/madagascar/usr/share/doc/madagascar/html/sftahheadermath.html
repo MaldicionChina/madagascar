@@ -1,0 +1,128 @@
+
+    <!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+    <html><head><title>RSF: sftahheadermath</title>
+    <style type="text/css"><!--
+    TT { font-family: lucidatypewriter, lucida console, courier }
+    --></style></head><body bgcolor="#f0f0f8">
+    
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#7799ee">
+    <td valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sftahheadermath</strong></big></big> (1.7)</font></td
+    ><td align=right valign=bottom
+    ><font color="#ffffff" face="helvetica, arial"><a href="./index.html">index</a><br><a href="http://sourceforge.net/p/rsf/code/HEAD/tree/branches/madagascar-1.7/user/karl/Mtahheadermath.c">user/karl/Mtahheadermath.c</a></font></td></tr></table>
+    read Trace and Header (tah), compute header values
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#aa55cc">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#fffff" face="helvetica, arial"><big><strong>Synopsis</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">sftahheadermath < in.rsf > out.rsf verbose=1 output= outputkey=</td></tr></table><br>
+   Known functions for float data: <br>
+   cos,  sin,  tan,  acos,  asin,  atan, <br>
+   cosh, sinh, tanh, acosh, asinh, atanh,<br>
+   exp,  log,  sqrt, abs, erf, erfc, sign<br>
+<br>
+   Known functions for int data: sign, abs<br>
+<br>
+   modeled on sfheademath.  This program outputs the whole header.  It was<br>
+   a building block for sftahheadermath.<br>
+<br>
+   tah is the abbreviation of Trace And Header.  Madagascar programs <br>
+   that begin with sftah are a designed to:<br>
+   1- read trace and headers from separate rsf files and write them to <br>
+   standard output (ie sftahread)<br>
+   2- filter programs that read and write standard input/output and <br>
+   process the tah data (eg sftahnmo, sftahstack)<br>
+   3- read tah data from standard input and write separate rsf files for <br>
+   the trace and headers data (ie sftahwrite)<br>
+<br>
+   These programs allow Seismic Unix (su) like processing in Madagascar.  <br>
+   Some programs have su like names.<br>
+<br>
+   Some programs in this suite are sftahread, sftahgethw, ftahhdrmath, <br>
+   and sftahwrite.<br>
+<br>
+   The sftahheadermath updates a trace header with a new value computed from<br>
+   input trace headers.  <br>
+<br>
+   See also sftahmakeskey.<br>
+<br>
+   EXAMPLE:<br>
+<br>
+   sftahread \<br>
+   verbose=1 \<br>
+   input=npr3_gathers.rsf \<br>
+   | sftahgethw \<br>
+   verbose=0  \<br>
+   key=sx,sy,gx,gy,offset  \<br>
+   >/dev/null<br>
+<br>
+   The headers are in the file npr3_gathers_hdr.rsf, <br>
+   the headers parameter default.  The headers are merged with the trace <br>
+   amplitudes and the tah data sent down the pipe for sftahgethw.  The <br>
+   source and group coordinates and offset (sx,sy,gx,gy,offset) are <br>
+   printed to STDERR.  Traces are sent to STDOUT, which is directed to<br>
+   /dev/null (the bit bucket).<br>
+<br>
+   PARAMETERS<br>
+   string output= no default<br>
+<br>
+   An equation to compute using the header keys.  Equations should<br>
+   problable be enclosed in quotes, ie ", to the equation can include<br>
+   multiplication, *, or blanks.  <br>
+   For example, to compute the midpoint x input:<br>
+   output="(sx+gx)/2.0)"<br>
+<br>
+   string outputkey= no default<br>
+   the name of the output trace header key to put the evaluation of<br>
+   output.  For example to put the average of sx and gx into cdpx input:<br>
+   outputkey=cdpx<br>
+<br>
+
+    <p>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#ee77aa">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Parameters</strong></big></font></td></tr>
+    
+        <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>output=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	Describes the output in a mathematical notation. <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#f0f0f8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>string  <strong>outputkey=</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	name of the header key to put the results of the output equation <br>
+</font></td></tr></table>
+    
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0
+    summary="heading">
+    <tr bgcolor="#ffc8d8">
+    <td valign=bottom>
+    <font color="#000000" face="helvetica, arial">&nbsp;<br>int     <strong>verbose=1</strong> </font></td
+    ><td align=right valign=bottom
+    ><font color="#000000" face="helvetica, arial">	<br>
+<br>
+       flag to control amount of print<br>
+       0 terse, 1 informative, 2 chatty, 3 debug<br>
+    <br>
+</font></td></tr></table>
+    
+</td></tr></table>
+    </body></html>

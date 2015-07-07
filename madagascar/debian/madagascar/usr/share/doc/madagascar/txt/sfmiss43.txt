@@ -1,0 +1,12 @@
+Program sfmiss43 | 3-D missing data interpolation with adaptive PEFs. 
+[SYNOPSIS]
+sfmiss43 < in.rsf filt=fil.rsf > out.rsf mask=mask.rsf niter=100 exact=y eps=0. verb=n
+[PARAMETERS]
+float   | eps | =0. |   | 	regularization parameter 
+bool    | exact | =y |  [y/n] | 	If y, preserve the known data values 
+file    | filt | = |   | 	auxiliary input file name
+string  | mask | = |   | 	optional input mask file for known data (auxiliary input file name)
+int     | niter | =100 |   | 	Number of iterations 
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+[DIRECTORY]
+user/yliu

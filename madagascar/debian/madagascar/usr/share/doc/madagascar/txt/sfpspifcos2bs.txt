@@ -1,0 +1,16 @@
+Program sfpspifcos2bs | 1-D finite-difference wave extrapolation 
+[SYNOPSIS]
+sfpspifcos2bs < inp.rsf > out.rsf vel=vel.rsf source=source.rsf opt=y dt= nt= nv= isx= isz= nb=30 c=0.01
+[PARAMETERS]
+float   | c | =0.01 |   | 	decaying parameter
+float   | dt | = |   | 	
+int     | isx | = |   | 	
+int     | isz | = |   | 	
+int     | nb | =30 |   | 	
+int     | nt | = |   | 	
+int     | nv | = |   | 	
+bool    | opt | =y |  [y/n] | 	if y, determine optimal size for efficiency 
+file    | source | = |   | 	auxiliary input file name
+file    | vel | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/songxl

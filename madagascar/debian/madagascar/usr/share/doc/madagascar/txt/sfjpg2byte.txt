@@ -1,0 +1,5 @@
+Program sfjpg2byte | Convert JPEG image to byte RSF. 
+[SYNOPSIS]
+sfjpg2byte > out.rsf < file.jpeg 
+[DIRECTORY]
+user/fomels

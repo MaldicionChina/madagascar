@@ -1,0 +1,5 @@
+Program sfcabs | Absolute value complex data. 
+[SYNOPSIS]
+sfcabs < fin.rsf > fout.rsf
+[DIRECTORY]
+user/chenyk

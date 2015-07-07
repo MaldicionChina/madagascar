@@ -1,0 +1,17 @@
+Program sfsplit | Splits file into slices along the last dimension
+[SYNOPSIS]
+sfsplit verb=n inp= outdir=(out_basenm+ivlad.ext nthick=1
+[COMMENTS]
+Usage:
+
+sfsplit inp=file.rsf outdir=[file_split.rsf] nthick=[1]
+
+Parameter nthick gives the maximum thickness of a slice. The last slice may
+be thinner.
+[PARAMETERS]
+string  | inp | = |   | 	ifile.rsf
+int     | nthick | =1 |   | 	slice thickness
+string  | outdir | =(out_basenm+ivlad.ext |   | 	
+bool    | verb | =n |  [y/n] | 	
+[DIRECTORY]
+user/ivlad

@@ -1,0 +1,19 @@
+Program sfprep4plot | Resamples a 2-D dataset to the desired picture resolution, with antialias
+[SYNOPSIS]
+sfprep4plot inp= out= verb=n h=768 w=1024 h= w= unit=px ppi= prar=y
+[COMMENTS]
+Only one of the h and w parameters needs to be specified.
+If prar=n, no action will be taken on axis for which h/w was not specified
+If prar=y and only one par (h or w) is specified, the picture will scale
+along both axes until it is of the specified dimension.
+[PARAMETERS]
+string  | h | = |   | 	
+string  | inp | = |   | 	input file
+string  | out | = |   | 	output file
+int     | ppi | = |   | 	outp. resolution (px/in). Necessary when unit!=px
+bool    | prar | =y |  [y/n] | 	if y, PReserve Aspect Ratio of input
+string  | unit | =px |   | 	unit of h and w. Can be: px, mm, cm, in
+bool    | verb | =n |  [y/n] | 	if y, print system commands, outputs
+string  | w | = |   | 	
+[DIRECTORY]
+user/ivlad

@@ -1,0 +1,17 @@
+Program sfmodelcreate | Create a dipping layer model for HTI testing purposes.  Has fixed velocity structure, but can change dip of layer and degree of anisotropy.
+[SYNOPSIS]
+sfmodelcreate < Fu.rsf > Fc.rsf ompchunk=1 verb=y aniso=n allaniso=n ein=.1 din=.1 gin=.2 rho=2. d=n3/6. a=1 b=1
+[PARAMETERS]
+float   | a | =1 |   | 	Parameter in dipping plane: ax+by+cz+d=0 
+bool    | allaniso | =n |  [y/n] | 	flag (y/N) whether entire model is anisotropic 
+bool    | aniso | =n |  [y/n] | 	flag (y/N) for anisotropic layer #2 
+float   | b | =1 |   | 	Parameter in dipping plane: ax+by+cz+d=0 
+float   | d | =n3/6. |   | 	Parameter in dipping plane: ax+by+cz+d=0 
+float   | din | =.1 |   | 	delta anisotropy parameter 
+float   | ein | =.1 |   | 	epsilon anisotropy parameter 
+float   | gin | =.2 |   | 	gamma anisotropy parameter 
+int     | ompchunk | =1 |   | 	set the omp chunk size 
+float   | rho | =2. |   | 	Background Density model 
+bool    | verb | =y |  [y/n] | 	verbose or note (Y/n) 
+[DIRECTORY]
+user/jeff

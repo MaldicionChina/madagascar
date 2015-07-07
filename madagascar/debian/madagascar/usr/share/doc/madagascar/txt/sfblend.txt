@@ -1,0 +1,12 @@
+Program sfblend | Seismic blending operator.
+[SYNOPSIS]
+sfblend < in.rsf > out.rsf verbose=1 shot_time_in= shot_time_out=
+[COMMENTS]
+ Custom program to blend the seismic data.
+
+[PARAMETERS]
+string  | shot_time_in | = |   | 	
+string  | shot_time_out | = |   | 	
+int     | verbose | =1 |   | 	0 terse, 1 informative, 2 chatty, 3 debug 
+[DIRECTORY]
+user/chenyk

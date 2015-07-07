@@ -1,0 +1,16 @@
+sfimpl2 = rsf.doc.rsfprog('sfimpl2','system/generic/Mimpl2.c','''2-D anisotropic diffusion. ''')
+sfimpl2.par('rect1',rsf.doc.rsfpar('float','','','''vertical smoothing '''))
+sfimpl2.par('rect2',rsf.doc.rsfpar('float','','','''horizontal smoothing '''))
+sfimpl2.par('tau',rsf.doc.rsfpar('float','0.1','','''smoothing time '''))
+sfimpl2.par('pclip',rsf.doc.rsfpar('float','50.','','''percentage clip for the gradient '''))
+sfimpl2.par('up',rsf.doc.rsfpar('bool','n','','''smoothing style '''))
+sfimpl2.par('verb',rsf.doc.rsfpar('bool','n','','''verbosity flag '''))
+sfimpl2.par('nsnap',rsf.doc.rsfpar('int','1','','''number of snapshots '''))
+sfimpl2.par('lin',rsf.doc.rsfpar('bool','n','','''if linear operator '''))
+sfimpl2.par('adj',rsf.doc.rsfpar('bool','n','','''adjoint flag '''))
+sfimpl2.par('dist',rsf.doc.rsfpar('string ',desc='''inverse distance file (input) '''))
+sfimpl2.par('snap',rsf.doc.rsfpar('string ',desc='''snapshot file (output) '''))
+sfimpl2.version('1.7')
+sfimpl2.synopsis('''sfimpl2 < in.rsf > out.rsf rect1= rect2= tau=0.1 pclip=50. up=n verb=n nsnap=1 lin=n adj=n dist= snap=''','''''')
+rsf.doc.progs['sfimpl2']=sfimpl2
+

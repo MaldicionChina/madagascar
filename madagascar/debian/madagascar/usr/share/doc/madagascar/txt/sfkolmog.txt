@@ -1,0 +1,9 @@
+Program sfkolmog | Kolmogoroff spectral factorization. 
+[SYNOPSIS]
+sfkolmog < in.rsf > out.rsf spec=n lag=0 shift=0
+[PARAMETERS]
+int     | lag | =0 |   | 	lag for asymmetric part 
+int     | shift | =0 |   | 	time shift 
+bool    | spec | =n |  [y/n] | 	if y, the input is spectrum squared; n, time-domain signal 
+[DIRECTORY]
+user/gee

@@ -1,0 +1,12 @@
+Program sfisolrsg1 | Lowrank decomposition for 1-D isotropic wave propagation. 
+[SYNOPSIS]
+sfisolrsg1 < vel.rsf fft=fft.rsf left=left.rsf > right.rsf seed=time(NULL eps=1.e-4 npk=20 dt=
+[PARAMETERS]
+        | dt | = |   | 	time step
+        | eps | =1.e-4 |   | 	tolerance
+file    | fft | = |   | 	auxiliary input file name
+file    | left | = |   | 	auxiliary output file name
+        | npk | =20 |   | 	maximum rank
+        | seed | =time(NULL |   | 	
+[DIRECTORY]
+user/fangg

@@ -1,0 +1,8 @@
+Program sfframe | Create a frame for binning.
+[SYNOPSIS]
+sfframe < in.rsf > out.rsf xyz=xyzs.rsf base=0.
+[PARAMETERS]
+float   | base | =0. |   | 	base to be subtracted from z 
+file    | xyz | = |   | 	auxiliary input file name
+[DIRECTORY]
+user/gee

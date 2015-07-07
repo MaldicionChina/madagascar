@@ -1,0 +1,28 @@
+Program sfpwave3d | 
+[SYNOPSIS]
+sfpwave3d > Fdat.rsf verb=n nt= ot= dt= nx= ox= dx= ny= oy= dy= nz= oz= dz= vel=1.0 cx=1.0 cy=1.0 cz=1.0
+[COMMENTS]
+generate a plane in t-x-y-z space
+cx x + cy y + cz z - vel t = 0
+(the plane goes through the origin)
+
+[PARAMETERS]
+float   | cx | =1.0 |   | 	
+float   | cy | =1.0 |   | 	
+float   | cz | =1.0 |   | 	
+float   | dt | = |   | 	
+float   | dx | = |   | 	
+float   | dy | = |   | 	
+float   | dz | = |   | 	
+int     | nt | = |   | 	
+int     | nx | = |   | 	
+int     | ny | = |   | 	
+int     | nz | = |   | 	
+float   | ot | = |   | 	
+float   | ox | = |   | 	
+float   | oy | = |   | 	
+float   | oz | = |   | 	
+float   | vel | =1.0 |   | 	
+bool    | verb | =n |  [y/n] | 	verbosity flag
+[DIRECTORY]
+user/psava

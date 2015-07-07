@@ -1,0 +1,12 @@
+Program sfpmshape2 | Missing data interpolation in 2-D using plane-wave destruction and shaping regularization. 
+[SYNOPSIS]
+sfpmshape2 < in.rsf > out.rsf dip=dip.rsf mask=mask.rsf niter=100 order=1 rect1=3 rect2=3
+[PARAMETERS]
+file    | dip | = |   | 	auxiliary input file name
+string  | mask | = |   | 	auxiliary input file name
+int     | niter | =100 |   | 	number of iterations 
+int     | order | =1 |   | 	accuracy order 
+int     | rect1 | =3 |   | 	
+int     | rect2 | =3 |   | 	smoothing radius 
+[DIRECTORY]
+user/pwd

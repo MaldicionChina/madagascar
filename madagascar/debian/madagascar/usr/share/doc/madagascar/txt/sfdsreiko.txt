@@ -1,0 +1,14 @@
+Program sfdsreiko | Double square-root eikonal solver (2D) 
+[SYNOPSIS]
+sfdsreiko < in.rsf > out.rsf mask=mask.rsf flag=flag.rsf alpha=alpha.rsf velocity=y thres=5.e-5 tol=1.e-3 nloop=10 causal=y
+[PARAMETERS]
+string  | alpha | = |   | 	auxiliary output file name
+bool    | causal | =y |  [y/n] | 	if y, neglect non-causal branches of DSR 
+string  | flag | = |   | 	auxiliary output file name
+string  | mask | = |   | 	auxiliary input file name
+int     | nloop | =10 |   | 	number of bisection root-search 
+float   | thres | =5.e-5 |   | 	threshold (percentage) 
+float   | tol | =1.e-3 |   | 	tolerance for bisection root-search 
+bool    | velocity | =y |  [y/n] | 	if y, the input is velocity; n, slowness squared 
+[DIRECTORY]
+user/llisiw

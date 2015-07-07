@@ -1,0 +1,17 @@
+Program sfescrt2 | Escape tables by ray tracing with escape equations in 2-D. 
+[SYNOPSIS]
+sfescrt2 < spdom.rsf > out.rsf traj=traj.rsf vspl=vspline.rsf na=360 df=0.25 md=SF_HUGE aper=SF_HUGE nc=0 parab=y verb=n nt=1001 dt=0.001
+[PARAMETERS]
+float   | aper | =SF_HUGE |   | 	Maximum aperture in x and y directions from current point (default - up to model boundaries) 
+float   | df | =0.25 |   | 	< Maximum distance to travel per step (fraction of the cell size) >
+float   | dt | =0.001 |   | 	Time sampling 
+float   | md | =SF_HUGE |   | 	Maximum distance for a ray to travel (default - up to model boundaries) 
+int     | na | =360 |   | 	Number of phase angles 
+int     | nc | =0 |   | 	Number of threads to use for ray tracing (OMP_NUM_THREADS by default) 
+int     | nt | =1001 |   | 	Number of time samples for each trajectory 
+bool    | parab | =y |  [y/n] | 	y - use parabolic approximation of trajectories, n - straight line 
+string  | traj | = |   | 	Trajectory output (auxiliary output file name)
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+string  | vspl | = |   | 	Spline coefficients for velocity model (auxiliary input file name)
+[DIRECTORY]
+user/cram

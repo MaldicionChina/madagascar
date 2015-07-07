@@ -1,0 +1,15 @@
+Program sffactorn | Missing data interpolation with 3-D plane-wave filter. 
+[SYNOPSIS]
+sffactorn < in.rsf > out.rsf dip=dip.rsf mask=mask.rsf eps=0.001 nt= nx= npx=100 npy=100 niter=10 miter=10
+[PARAMETERS]
+file    | dip | = |   | 	auxiliary input file name
+float   | eps | =0.001 |   | 	
+file    | mask | = |   | 	auxiliary input file name
+int     | miter | =10 |   | 	number of interpolation iterations 
+int     | niter | =10 |   | 	number of factorization iterations 
+int     | npx | =100 |   | 	
+int     | npy | =100 |   | 	
+int     | nt | = |   | 	
+int     | nx | = |   | 	
+[DIRECTORY]
+user/gee

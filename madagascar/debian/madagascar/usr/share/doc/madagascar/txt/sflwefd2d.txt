@@ -1,0 +1,26 @@
+Program sflwefd2d | linearized acoustic time-domain FD modeling 
+[SYNOPSIS]
+sflwefd2d < Fwav.rsf sou=Fsou.rsf rec=Frec.rsf vel=Fvel.rsf den=Fden.rsf ref=Fref.rsf wfl=Fwfl.rsf > Fdat.rsf liw=Fliw.rsf lid=Flid.rsf ompchunk=1 ompnth=0 verb=n snap=n free=n expl=n jdata=1 jsnap=nt nqz=sf_n(a1) nqx=sf_n(a2) oqz=sf_o(a1) oqx=sf_o(a2)
+[PARAMETERS]
+file    | den | = |   | 	auxiliary input file name
+bool    | expl | =n |  [y/n] | 	"exploding reflector" 
+bool    | free | =n |  [y/n] | 	free surface flag 
+int     | jdata | =1 |   | 	
+int     | jsnap | =nt |   | 	
+file    | lid | = |   | 	auxiliary output file name
+file    | liw | = |   | 	auxiliary output file name
+int     | nqx | =sf_n(a2) |   | 	
+int     | nqz | =sf_n(a1) |   | 	
+int     | ompchunk | =1 |   | 	OpenMP data chunk size 
+int     | ompnth | =0 |   | 	OpenMP available threads 
+float   | oqx | =sf_o(a2) |   | 	
+float   | oqz | =sf_o(a1) |   | 	
+file    | rec | = |   | 	auxiliary input file name
+file    | ref | = |   | 	auxiliary input file name
+bool    | snap | =n |  [y/n] | 	wavefield snapshots flag 
+file    | sou | = |   | 	auxiliary input file name
+file    | vel | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	verbosity flag 
+file    | wfl | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/psava

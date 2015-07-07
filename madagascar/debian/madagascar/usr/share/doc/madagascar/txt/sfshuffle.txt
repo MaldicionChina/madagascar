@@ -1,0 +1,9 @@
+Program sfshuffle | shuffle the data
+[SYNOPSIS]
+sfshuffle < pi.rsf > po.rsf axis=2 seed=n2 inv=n
+[PARAMETERS]
+int     | axis | =2 |   | 	
+bool    | inv | =n |  [y/n] | 	
+int     | seed | =n2 |   | 	
+[DIRECTORY]
+user/chen

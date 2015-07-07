@@ -1,0 +1,36 @@
+Program sfawefd2d | 2D acoustic time-domain FD modeling 
+[SYNOPSIS]
+sfawefd2d < file_wav.rsf vel=file_vel.rsf sou=file_src.rsf rec=file_rec.rsf > file_dat.rsf wfl=file_wfl.rsf den=file_den.rsf verb=n snap=n expl=n dabc=n cden=n adj=n fsrf=n nbell=5 optfd=n fdorder=4 hybridbc=n sinc=n jsnap=nt jdata=1 nqz=sf_n(az) nqx=sf_n(ax) oqz=sf_o(az) oqx=sf_o(ax) dqz=sf_d(az) dqx=sf_d(ax)
+[COMMENTS]
+   2Nth order in space, 2nd order in time
+   with optimized FD scheme option and hybrid one-way ABC option 
+   adj flag indicates backwards source injection, not exact adjoint propagator
+
+[PARAMETERS]
+bool    | adj | =n |  [y/n] | 	adjoint flag 
+string  | cden | = |   | 	Constant density
+bool    | dabc | =n |  [y/n] | 	Absorbing BC 
+file    | den | = |   | 	auxiliary input file name
+float   | dqx | =sf_d(ax) |   | 	Saved wfld window dx 
+float   | dqz | =sf_d(az) |   | 	Saved wfld window dz 
+bool    | expl | =n |  [y/n] | 	Multiple sources, one wvlt
+int     | fdorder | =4 |   | 	spatial FD order 
+bool    | fsrf | =n |  [y/n] | 	Free surface flag 
+bool    | hybridbc | =n |  [y/n] | 	hybrid Absorbing BC 
+int     | jdata | =1 |   | 	# of t steps at which to save receiver data 
+int     | jsnap | =nt |   | 	# of t steps at which to save wavefield 
+int     | nbell | =5 |   | 	gaussian for source injection 
+int     | nqx | =sf_n(ax) |   | 	Saved wfld window nx 
+int     | nqz | =sf_n(az) |   | 	Saved wfld window nz 
+bool    | optfd | =n |  [y/n] | 	optimized FD coefficients flag 
+float   | oqx | =sf_o(ax) |   | 	Saved wfld window ox 
+float   | oqz | =sf_o(az) |   | 	Saved wfld window oz 
+file    | rec | = |   | 	auxiliary input file name
+bool    | sinc | =n |  [y/n] | 	sinc source injection 
+bool    | snap | =n |  [y/n] | 	Wavefield snapshots flag 
+file    | sou | = |   | 	auxiliary input file name
+file    | vel | = |   | 	auxiliary input file name
+bool    | verb | =n |  [y/n] | 	Verbosity flag 
+file    | wfl | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/cwp

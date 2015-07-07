@@ -1,0 +1,17 @@
+Program sffftexp0 | 2-D FFT-based zero-offset exploding reflector modeling/migration  
+[SYNOPSIS]
+sffftexp0 < data.rsf > image.rsf snaps=snaps.rsf left=left.rsf right=right.rsf mig=n cmplx=n pad1=1 nz= dz= nt= dt= snap=0
+[PARAMETERS]
+bool    | cmplx | =n |  [y/n] | 	use complex FFT 
+float   | dt | = |   | 	time sampling (if modeling) 
+float   | dz | = |   | 	time sampling (if migration) 
+file    | left | = |   | 	auxiliary input file name
+bool    | mig | =n |  [y/n] | 	if n, modeling; if y, migration 
+int     | nt | = |   | 	time samples (if modeling) 
+int     | nz | = |   | 	time samples (if migration) 
+int     | pad1 | =1 |   | 	padding factor on the first axis 
+file    | right | = |   | 	auxiliary input file name
+int     | snap | =0 |   | 	interval for snapshots 
+file    | snaps | = |   | 	auxiliary output file name
+[DIRECTORY]
+user/fomels

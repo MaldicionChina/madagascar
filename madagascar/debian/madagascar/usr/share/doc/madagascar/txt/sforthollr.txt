@@ -1,0 +1,13 @@
+Program sforthollr | Lowrank decomposition for 3-D orthorhombic wave propagation with linearization. 
+[SYNOPSIS]
+sforthollr < velz.rsf fft=fft.rsf > middle.rsf left=left.rsf right=right.rsf seed=time(NULL eps=1.e-4 npk=20 dt=
+[PARAMETERS]
+        | dt | = |   | 	time step
+        | eps | =1.e-4 |   | 	tolerance
+file    | fft | = |   | 	auxiliary input file name
+file    | left | = |   | 	auxiliary output file name
+        | npk | =20 |   | 	maximum rank
+file    | right | = |   | 	auxiliary output file name
+        | seed | =time(NULL |   | 	
+[DIRECTORY]
+user/songxl

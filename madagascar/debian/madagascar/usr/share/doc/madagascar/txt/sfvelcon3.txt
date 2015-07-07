@@ -1,0 +1,10 @@
+Program sfvelcon3 | 3-D finite-difference velocity continuation on a helix 
+[SYNOPSIS]
+sfvelcon3 < inp.rsf > out.rsf adj=y inv=1 nv=nt vel=1.
+[PARAMETERS]
+bool    | adj | =y |  [y/n] | 	forward or backward continuation 
+int     | inv | =1 |   | 	inversion type 
+int     | nv | =nt |   | 	velocity steps 
+float   | vel | =1. |   | 	initial velocity 
+[DIRECTORY]
+user/gee

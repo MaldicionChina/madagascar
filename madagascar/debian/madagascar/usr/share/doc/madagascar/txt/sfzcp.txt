@@ -1,0 +1,7 @@
+Program sfzcp | Copies header of float file, fills output binary with zeros
+[SYNOPSIS]
+sfzcp
+[COMMENTS]
+Usage: sfzcp file1.rsf file2.rsf
+[DIRECTORY]
+user/ivlad

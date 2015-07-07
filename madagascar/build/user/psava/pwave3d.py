@@ -1,0 +1,25 @@
+sfpwave3d = rsf.doc.rsfprog('sfpwave3d','user/psava/Mpwave3d.py','''''')
+sfpwave3d.par('verb',rsf.doc.rsfpar('bool','n','','''verbosity flag'''))
+sfpwave3d.par('nt',rsf.doc.rsfpar('int','','',''''''))
+sfpwave3d.par('ot',rsf.doc.rsfpar('float','','',''''''))
+sfpwave3d.par('dt',rsf.doc.rsfpar('float','','',''''''))
+sfpwave3d.par('nx',rsf.doc.rsfpar('int','','',''''''))
+sfpwave3d.par('ox',rsf.doc.rsfpar('float','','',''''''))
+sfpwave3d.par('dx',rsf.doc.rsfpar('float','','',''''''))
+sfpwave3d.par('ny',rsf.doc.rsfpar('int','','',''''''))
+sfpwave3d.par('oy',rsf.doc.rsfpar('float','','',''''''))
+sfpwave3d.par('dy',rsf.doc.rsfpar('float','','',''''''))
+sfpwave3d.par('nz',rsf.doc.rsfpar('int','','',''''''))
+sfpwave3d.par('oz',rsf.doc.rsfpar('float','','',''''''))
+sfpwave3d.par('dz',rsf.doc.rsfpar('float','','',''''''))
+sfpwave3d.par('vel',rsf.doc.rsfpar('float','1.0','',''''''))
+sfpwave3d.par('cx',rsf.doc.rsfpar('float','1.0','',''''''))
+sfpwave3d.par('cy',rsf.doc.rsfpar('float','1.0','',''''''))
+sfpwave3d.par('cz',rsf.doc.rsfpar('float','1.0','',''''''))
+sfpwave3d.version('1.7')
+sfpwave3d.synopsis('''sfpwave3d > Fdat.rsf verb=n nt= ot= dt= nx= ox= dx= ny= oy= dy= nz= oz= dz= vel=1.0 cx=1.0 cy=1.0 cz=1.0''','''generate a plane in t-x-y-z space
+cx x + cy y + cz z - vel t = 0
+(the plane goes through the origin)
+''')
+rsf.doc.progs['sfpwave3d']=sfpwave3d
+
