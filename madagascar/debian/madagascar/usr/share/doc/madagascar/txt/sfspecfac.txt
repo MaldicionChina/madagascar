@@ -1,7 +1,0 @@
-Program sfspecfac | (Maximum dimension is 3)
-[SYNOPSIS]
-sfspecfac < in.rsf > out.rsf acfile=acfile.rsf
-[PARAMETERS]
-file    | acfile | = |   | 	auxiliary output file name
-[DIRECTORY]
-user/ridder

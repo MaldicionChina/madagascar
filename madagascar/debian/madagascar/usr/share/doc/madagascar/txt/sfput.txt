@@ -1,5 +1,0 @@
-Program sfput | Input parameters into a header. 
-[SYNOPSIS]
-sfput < in.rsf > out.rsf [parameter=value list]
-[DIRECTORY]
-system/main

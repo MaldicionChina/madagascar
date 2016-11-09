@@ -1,5 +1,0 @@
-Program vpellipse | 
-[SYNOPSIS]
-vpellipse > plot.vpl
-[DIRECTORY]
-plot/test

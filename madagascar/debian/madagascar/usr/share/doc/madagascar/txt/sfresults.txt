@@ -1,5 +1,0 @@
-Program sfresults | Explore project results
-[SYNOPSIS]
-sfresults
-[DIRECTORY]
-user/fomels

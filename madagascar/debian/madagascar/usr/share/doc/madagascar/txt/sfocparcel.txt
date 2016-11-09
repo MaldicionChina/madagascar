@@ -1,8 +1,0 @@
-Program sfocparcel | Patching test for out-of-core patching. 
-[SYNOPSIS]
-sfocparcel < in.rsf > out.rsf w= k=
-[PARAMETERS]
-ints    | k | = |   | 	 [dim]
-ints    | w | = |   | 	 [dim]
-[DIRECTORY]
-user/fomels

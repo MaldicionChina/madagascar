@@ -1,8 +1,0 @@
-Program sfpldb | Plot Debugger - convert vplot to ascii. 
-[SYNOPSIS]
-sfpldb
-[COMMENTS]
-
-See also vplotdiff. 
-[DIRECTORY]
-plot/main

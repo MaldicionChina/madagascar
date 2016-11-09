@@ -1,5 +1,0 @@
-Program sfacd | None
-[SYNOPSIS]
-sfacd
-[DIRECTORY]
-trip/iwave/acd/main

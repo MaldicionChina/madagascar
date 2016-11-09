@@ -1,5 +1,0 @@
-Program sfwxresults | Explore project results
-[SYNOPSIS]
-sfwxresults
-[DIRECTORY]
-user/fomels

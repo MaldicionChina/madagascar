@@ -1,5 +1,0 @@
-Program sfacdvpe | None
-[SYNOPSIS]
-sfacdvpe
-[DIRECTORY]
-trip/iwave/acd/main

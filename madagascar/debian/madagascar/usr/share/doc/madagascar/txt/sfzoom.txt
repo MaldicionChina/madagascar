@@ -1,5 +1,0 @@
-Program sfzoom | Show data with zoom
-[SYNOPSIS]
-sfzoom
-[DIRECTORY]
-user/fomels

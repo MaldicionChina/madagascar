@@ -1,5 +1,0 @@
-Program sfmpirtmvti | VTI reverse-time migration 
-[SYNOPSIS]
-sfmpirtmvti
-[DIRECTORY]
-user/xuxin

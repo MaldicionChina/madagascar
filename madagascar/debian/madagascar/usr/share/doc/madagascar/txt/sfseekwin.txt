@@ -1,9 +1,0 @@
-Program sfseekwin | Cannot take input from a pipe because stdin cannot be seeked through
-[SYNOPSIS]
-sfseekwin < in.rsf > out.rsf whence=sf_seek_set nseek=10          nread=10         
-[PARAMETERS]
-        | nread | =10          |   | 	
-        | nseek | =10          |   | 	
-        | whence | =sf_seek_set |   | 	
-[DIRECTORY]
-user/ivlad

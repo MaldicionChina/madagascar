@@ -1,5 +1,0 @@
-Program vpcsp | 
-[SYNOPSIS]
-vpcsp > plot.vpl
-[DIRECTORY]
-plot/test

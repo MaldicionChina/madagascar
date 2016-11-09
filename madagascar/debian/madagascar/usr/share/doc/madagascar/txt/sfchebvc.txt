@@ -1,8 +1,0 @@
-Program sfchebvc | Post-stack 2-D velocity continuation by Chebyshev-tau method. 
-[SYNOPSIS]
-sfchebvc < in.rsf > out.rsf nv= vel=
-[PARAMETERS]
-int     | nv | = |   | 	
-float   | vel | = |   | 	
-[DIRECTORY]
-user/fomels

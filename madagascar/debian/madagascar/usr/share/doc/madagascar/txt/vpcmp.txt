@@ -1,5 +1,0 @@
-Program vpcmp | 
-[SYNOPSIS]
-vpcmp > plot.vpl
-[DIRECTORY]
-plot/test

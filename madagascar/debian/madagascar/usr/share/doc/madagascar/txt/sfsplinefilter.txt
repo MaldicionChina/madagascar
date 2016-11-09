@@ -1,7 +1,0 @@
-Program sfsplinefilter | Convert data to B-spline coefficients. 
-[SYNOPSIS]
-sfsplinefilter < in.rsf > out.rsf nw=
-[PARAMETERS]
-int     | nw | = |   | 	filter size 
-[DIRECTORY]
-system/generic

@@ -1,5 +1,0 @@
-Program sfasg | None
-[SYNOPSIS]
-sfasg
-[DIRECTORY]
-trip/iwave/asg/main
